@@ -20,5 +20,5 @@ Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019
 * Only grades and written homework solutions are available at [BlackBoard](https://classes.alaska.edu).
 
 <br>
-[<img src="GitHub-Mark-32px.png" align="right">](https://github.com/uaf-math251/uaf-math251.github.io "This page is a github repo.")
+[<img src="GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math302 "This page is a github repo.")
 
