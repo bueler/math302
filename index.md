@@ -1,6 +1,6 @@
 ---
 layout: course-page
-title: Math F302 UX1 Differential Equations
+title: Math F302 UX1 Differential Equations in Spring 2019 at UAF
 ---
 
 **FIXME:  THIS PAGE IS UNDER CONSTRUCTION**
