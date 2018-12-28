@@ -82,6 +82,18 @@ body {
 }
 
 .main-body {
+   // Clicks via 'onclick' make the screen flash on Safari mobile without this.
+  -webkit-tap-highlight-color: transparent;
+
+  a {
+    color: $color-link-fresh;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $color-link-visited;
+  }
+
   .page-header{
     height: $header-height;
     background-color: $color-pageheader-background;
@@ -184,21 +196,6 @@ li {
   margin-top: 0px;
   margin-bottom: 5px;
   padding-left: 20px;
-}
-
-.main-body {
-   // Clicks via 'onclick' make the screen flash on Safari mobile without this.
-  -webkit-tap-highlight-color: transparent;
-
-  a {
-    color: $color-link-fresh;
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: $color-link-visited;
-  }
-
 }
 
 .indent {
