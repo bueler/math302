@@ -1,5 +1,5 @@
 semester: Fall 2018
-home: assets/schedule  # FIXME
+home: assets/latex  # FIXME
 midterm1:
   blank: schedule.pdf  # FIXME
   solutions: schedule.pdf  # FIXME
