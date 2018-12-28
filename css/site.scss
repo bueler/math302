@@ -12,10 +12,17 @@ $header-height: 50px;
 $thin-space: 5px;
 $med-space: 10px;
 
-$color-link-fresh: #4459e2;             // cornflower
-$color-pageheader-background: #8bb1ef;  // pale-cornflower
-$color-button-background: #8bb1ef;      // pale-cornflower
-$color-link-visited: #224d93;           // deep-cornflower
+//$color-link-fresh: #4459e2;             // cornflower
+//$color-pageheader-background: #8bb1ef;  // pale-cornflower
+//$color-button-background: #8bb1ef;      // pale-cornflower
+//$color-link-visited: #224d93;           // deep-cornflower
+//$color-background: #ccc;                // light-gray
+
+// various colors from https://coolors.co/browser/latest/1
+$color-pageheader-background: #fa7041;
+$color-button-background: #fa7041;
+$color-link-fresh: #3587a4;
+$color-link-visited: #4392f1;
 $color-background: #ccc;                // light-gray
 
 * { 
