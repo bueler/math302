@@ -5,7 +5,9 @@ title: Math F302 UX1 Differential Equations
 
 **FIXME:  THIS PAGE IS UNDER CONSTRUCTION**
 
-Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019**.  We are in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
+Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019** at [UAF](http://www.uaf.edu/).
+
+[Ed Bueler](http://bueler.github.io/), the instructor, is in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
 ### Getting Started
 
