@@ -3,26 +3,31 @@
 ---
 
 $sans-font-stack: Verdana, Arial, Helvetica, sans-serif;
-$full-screen-sidenav-allotment: 200px;
+
+$smallscreen: 600px;
+$full-screen-sidenav-allotment: 170px;
 $mobile-screen-sidenav-allotment: 40px;
 $header-height: 50px;
+
 $thin-space: 5px;
 $med-space: 10px;
 
-$cornflower: #4459e2;
-$pale-cornflower: #8bb1ef;
-$deep-cornflower: #224d93;
-$light-gray: #ccc;
-$smallscreen: 600px;
+$color-link-fresh: #4459e2;             // cornflower
+$color-pageheader-background: #8bb1ef;  // pale-cornflower
+$color-button-background: #8bb1ef;      // pale-cornflower
+$color-link-visited: #224d93;           // deep-cornflower
+$color-background: #ccc;                // light-gray
 
 * { 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; 
 }
+
 html { background: white; 
   height: 100%;
 }
+
 body { 
   font-family: $sans-font-stack; 
   // Body has a default margin. Override.
@@ -39,7 +44,7 @@ body {
   left: 0;
   overflow-x: hidden;
   display: block;
-  background-color: $light-gray;
+  background-color: $color-background;
   box-sizing: border-box; 
   transition: 0.3s;
 
@@ -49,11 +54,11 @@ body {
       font-size: 120%;
       text-decoration: none;
       display: block;
-      color: $cornflower;
+      color: $color-link-fresh;
     }
 
     a:hover {
-        background-color: $pale-cornflower;
+        background-color: $color-button-background;
     }
   } 
 
@@ -79,12 +84,11 @@ body {
 .main-body {
   .page-header{
     height: $header-height;
-    background-color: $pale-cornflower;
+    background-color: $color-pageheader-background;
     font-size: 120%;
     font-weight: bold;
     line-height: $header-height;
     padding-left: $med-space;
-
 
     a {
       padding: 0;
@@ -119,7 +123,7 @@ body {
     display: inline;
 
     border-radius: 5px;
-    background-color: $light-gray;
+    background-color: $color-background;
     border-style: solid;
     border-width: 2px;
 }
@@ -132,9 +136,8 @@ body {
     left: 0px;
     top: 0px;
 
-    background-color: $pale-cornflower;
+    background-color: $color-pageheader-background;  // match pageheader
 }
-
 
 h3 {
   margin-bottom: 10px;
@@ -188,12 +191,12 @@ li {
   -webkit-tap-highlight-color: transparent;
 
   a {
-    color: $cornflower;
+    color: $color-link-fresh;
     text-decoration: none;
   }
 
   a:visited {
-    color: $deep-cornflower;  
+    color: $color-link-visited;
   }
 
 }
@@ -201,7 +204,6 @@ li {
 .indent {
   padding-left: 20px;  
 }
-
 
 @media only screen and (max-width: 600px){
   .hide-small{display:none!important}
@@ -232,11 +234,9 @@ li {
   }
 }
 
-
 img {
   white-space: nowrap;  
 }
-
 
 div.x-scroll{
   overflow-x: scroll;  
@@ -281,13 +281,11 @@ table.inner {
 a.button {
   padding: 12px 12px 12px 12px;
   color: black;
-  background-color: $pale-cornflower;
+  background-color: $color-button-background;
   font: bold 20px;
 }
+
 a.button:visited {
   color: black;  
-}
-a.button:hover {
-  background-color: $cornflower;
 }
 
