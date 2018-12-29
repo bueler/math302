@@ -5,7 +5,7 @@ title: Exams
 
 ## Exams
 
-Midterm and Final Exams (blank copies and solutions) will appear here after they occur.  See the [schedule](assets/latex/schedule.pdf) for all Exam dates.
+Midterm and Final Exams (blank copies and solutions) will appear here after they occur.  See the [schedule](schedule.pdf) for all Exam dates.
 
 <!---
 <div class="x-scroll">
