@@ -13,7 +13,7 @@ Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019
 
 * See the [schedule](assets/latex/schedule.pdf).  Go there often to find out what happens next.
 
-* Course communication (e.g announcements!) will use [Piazza]().  Start by [signing up with Piazza]().
+* Course communication (e.g announcements!) will use [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).  Start by [signing up with Piazza](https://piazza.com/uaf/spring2019/math302ux1).
 
 * See the [Week 1](week1) menu item ...
 
