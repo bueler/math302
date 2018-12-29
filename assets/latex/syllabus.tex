@@ -1,0 +1,271 @@
+
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH F302 UX1: Differential Equations}}
+\rhead{\large\sf\textbf{Spring 2019 Syllabus}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+
+\begin{document}
+
+% \heading{Course Description}
+
+\strut\par\vskip-12pt
+\heading{Essential Information}
+
+\quad \begin{tabularx}{\textwidth}{lX}
+\emph{Websites} & \hspace{-3mm} \begin{tabular}[t]{ll}
+                  \href{https://bueler.github.io/math302/}{\tt bueler.github.io/math302} \phantom{sdfjaldsj adslfj} & main course page \\
+                  \href{https://piazza.com/uaf/spring2019/math302ux1/home}{\tt piazza.com/uaf/spring2019/math302ux1/home} & course communication \\
+                  \href{https://webassign.net/}{\tt webassign.net} & class key: \texttt{uaf 3982 1786} \\
+                  \href{https://classes.alaska.edu/}{\tt classes.alaska.edu} & only for grades
+                  \end{tabular} \\
+ & \\
+\emph{Required Text} & \textsl{A First Course in Differential Equations with Modeling Applications}, 11th edition, Dennis G. Zill, 2018 (\texttt{ISBN-13:\,978-1337604994}) \\
+\emph{Required Material} & WebAssign Access Code (as bundled above) \\
+\emph{Optional Material} & \textit{Student Solutions Manual for Zill's A First Course in Differential Equations with Modeling Applications}, 11th Edition (\texttt{ISBN-13:\,978-1305965737}) \\
+    & (Solutions to selected odd-numbered exercises; available on Amazon) \\
+\emph{Prerequisite} & MATH 253 Calculus III.
+\end{tabularx}
+
+\heading{FIXME: DON'T BELIEVE ANYTHING FROM HERE ON}
+
+\heading{Class Time}
+FIXME
+
+\heading{Tentative Schedule}
+The course website contains a schedule for the semester listing
+the topics to be covered each class, the dates each assignment is due,
+the topics of every quiz, and so forth. You should consult this schedule
+routinely.  Any minor adjustments to the schedule will be announced in advance.
+
+\heading{Office Hours and Communication}
+Individual instructors will schedule formal office hours,
+which will be listed on web sites accessible from the main
+course webpage.
+
+We will use the Piazza social media site for announcements and after-class questions and discussions.  Go to
+
+\centerline{\href{https://piazza.com/uaf/spring2019/math251}{\tt piazza.com/uaf/spring2019/math251}}
+
+\noindent or see the course web page for instructions on how to sign up.
+
+When you sign up for Piazza, you will provide an email address. This should be an address you check with some regularity; we expect you to receive all messages emailed to this account.
+
+\heading{Online Course Materials}
+Most course materials (e.g., this syllabus, quiz/exam solutions, study materials, etc.) will be posted on the course webpage.  Certain course materials, namely \emph{grades} and \emph{solutions to the written homework}, are available on BlackBoard, which you can access via the main course website.
+
+\heading{Description, Course Goals \& Student Learning Outcomes}
+The catalog description: \textsl{Nature and origin of differential equations, first order equations and solutions, linear differential equations with constant coefficients, systems of equations, power series solutions, operational methods, and applications.}
+
+%\begin{clist}
+%\item 
+%\end{clist}
+
+\heading{Weeks 1 \& 2 Logistics}
+The first week of the course is devoted to prerequisite review.  The homework and quiz mechanics for the first two weeks are different from the remainder of the semester.
+
+Instead of the usual homework, you will be working with a program called ALEKS PPL to refresh past skills, and the first quiz will be an ALEKS-based test.  During the first weeks you will:
+
+\begin{clist}
+\item enroll in the Spring 2019 Calculus I Cohort of ALEKS PPL,
+\item complete an initial placement test (approx 1-2 hours) by Wednesday, January 16 at 11:59pm,
+\item complete 90\% of the ALEKS pie \: OR \: spend 10 hours in Learning Mode by Monday, Monday, January 21 at 11:59pm; this will count as your first homework grade,
+\item complete a proctored ALEKS PPL test (approx 1-2 hours) on Tuesday, January 22, which will count as your first \textbf{two} quiz grades.
+\end{clist}
+
+There will not be a standard recitation on January 22.  Rather, you will schedule a time slot to take your PPL test at the UAF library.
+
+\heading{Evaluation and Grades}
+Grades are determined as follows.  (Each component of the grade is discussed below.)
+ 
+\begin{multicols}{2}
+
+\begin{tabular}{|c|c|}
+\hline
+Webassign Homework& 7.5\%\\
+\hline
+Written Homework& 7.5\% \\
+\hline
+Quizes& 15\% \\
+\hline
+Midterm 1 & 15\% \\
+\hline
+Derivative Proficiency& 7.5\%\\
+\hline
+Midterm 2 & 15\%  \\
+\hline
+Integral Proficiency& 7.5\%\\
+\hline
+Final Exam& 25\% \\
+\hline
+total& 100\%\\
+\hline
+\end{tabular}
+
+\vskip 6pt
+Letter grades will be assigned according to the following scale.
+This scale is a guarantee; the instructors reserve the right to lower the thresholds. 
+
+\def\sts{\hskip 0.5em}
+\strut\hbox to\hsize{\vbox{\halign{#\hfil\sts&#\hfil\ts&#\hfil\sts&#
+\hfil\ts&#\hfil\sts&#\hfil   \cr
+A+ & 97--100\% & C+ & 77--79\% & F  & $<$ 60\%\cr
+
+A & 93--96\% &  C & 70--76\%&&\cr
+A- & 90--92\% & C- & not given&&\cr
+B+ & 87--89\% & D+ & 67--69\%&&\cr
+B &  83--86\% & D & 63--66\%&&\cr
+B- & 80-82\% & D- & 60--62\%&&\cr
+}}\hfil}
+\end{multicols}
+
+\heading{Homework}
+Homework in this class comes in two varieties: online homework via WebAssign, and written homework on paper.
+
+\subheading{Written Homework}
+Written homework is due approximately weekly according to the schedule
+found on the main course website, typically every Monday.  
+Homework is \textbf{due at the start of your lecture} 
+on the day it is due, and
+late homework is not accepted. No homework grades are dropped. All written homework assignments are equally weighted. Solutions will appear on Blackboard. 
+
+The written homework problems typically consist of more challenging
+or interesting exercises, and allow you to practice presenting 
+a solution suitable for reading by another human being. You are 
+encouraged to work with others to solve these problems, and you 
+have access to the Math Lab to get help.  However, when you 
+write up your final solutions, you need to do so on your own.
+
+Presentation matters. You must show all relevant work, your writing
+should be legibile, and it should be easy for the grader to follow
+your reasoning. At the discretion of the grader, points will be deducted 
+for poor presentation.  To aid in presentation, you should expect
+to first prepare a draft of your solutions, and then a final edition to
+be graded.
+
+\subheading{WebAssign} 
+Starting week 2, online WebAssign homework will be assigned multiple times each week. These problems consist of more routine exercises and and allow
+you to receive immediate feedback on correctness.  You are welcome
+to use your text and a calculator to help solve these problems, but
+the use of more sophisticated tools (e.g., Wolfram Alpha) will undermine
+the benefit to you of the homework, and may leave you unprepared for
+the quizzes and exams.
+
+Logistics:
+
+\begin{clist}
+\item You will need a WebAssign code.  Texts purchased from the UAF 
+bookstore include one; otherwise, a code can be purchased from
+WebAssign directly. WebAssign can be used for two weeks in a ``trial''
+period, which you can take advantage of if you are uncertain about
+you placement in this class.
+\item Instructions for logging in to WebAssign can be found on the course website.
+\item You (usually) get 5 chances to get a problem correct. 
+\item Each assignment is due at 11 pm. 
+\item You may request an automatic 3-day extension though you will only be allowed to earn back half the remaining points. 
+\item Each WebAssign assignment is equally weighted. No scores are dropped.
+\end{clist}
+
+\heading{Recitation and Quizzes}
+The recitation hour is focused on reviewing material from the previous week, asking questions related to this material, preparing for quizzes and exams, and taking the weekly quiz.
+
+The quiz will cover the material taught in the classes held since the previous quiz; specific topics can be found in the schedule on the course website.  Quizzes are equally weighted, and are given under testing conditions; books, notes, and calculators are not allowed.  Performance on the quizzes is a better indicator of exam performance, and how well you are learning the course material, than homework which may be done with the input of tutors/friends/internet/etc.
+
+Quizzes cannot be made up except with a documented excused absence.  \emph{The lowest regular quiz grade, not including the ALEKS Quiz 1, will be dropped.}  Solutions to quizzes will be posted on the course webpage.
+
+\heading{Midterms}
+There are two midterm exams this semester, to be held on the dates in the schedule on the course website.  The midterms are the same for all sections; they are prepared and approved by all instructors teaching the course. Midterms are given in the evenings in one of two time slots: (A) 5pm-6pm or (B) 6pm-7pm. Note that students choosing time slot A will be required to stay in the classroom until 6pm.
+
+A student who cannot attend either time slot \emph{must notify his/her instructor at least one week in advance} in order to make other arrangments.
+
+Make-up midterms will be given only for documented excused absences.
+
+\heading{Proficiencies}
+A proficiency is an exam covering a routine skill.  In this course we have two of these, one for derivatives and one for integrals, on the dates listed in the online schedule.  Proficiencies will be graded on a binary scale for each problem (no partial credit).  Students must earn a minimum score to earn credit, otherwise a 0 score will be awarded. Multiple attempts (three for the derivative proficiency but only two for the integral proficiency) will be allowed to earn this credit.  Details will be announced prior to each proficiency.
+
+\heading{Final Exam}
+The cumulative final exam will be held at the day/time listed in the online schedule. A make-up final exam will be given only in extenuating circumstances, for documented and excused reasons at the discretion of the instructors.
+
+\heading{Tutoring and Resources}
+\vskip -30pt\strut
+\begin{clist}
+	\item The Math and Stat Lab, Chapman Building Room 305, offers walk-in tutoring, with no appointment needed.  See\, \href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab}}\, for schedules and availability.
+	\item Free one-on-one (or small group) tutoring is available in Chapman Building Room 201. You must schedule an appointment at\, \href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab}}.
+	\item Student Support Services offers free tutoring in many subjects to students who qualify for their program.
+	\item ASUAF offers private tutoring for a small fee (based on student income).
+\end{clist}
+
+\heading{Rules and Policies}
+\vskip -20pt
+\subheading{Participation and Attendance}
+Class and recitation attendance is mandatory. Students who stop participating in the course will be withdrawn. Examples of inadequate participation include,
+but are not limited to:
+\begin{clist}
+\item missing class five times
+\item not completing or not turning in \textbf{three} written homework assignments
+\item failing to participate in classroom activities
+\item repeatedly failing tests and quizzes with no attempt at remediation
+\end{clist}
+
+\subheading{Disability Services}
+The Office of Disability Services implements the
+Americans with Disabilities Act (ADA), and ensures that UAF students
+have equal access to the campus and course materials. The instructors will work with
+the Office of Disability Services (208 Whitaker, 474-5655) to provide
+reasonable accommodations to students with disabilities.
+
+\subheading{Student Protections and Services}
+Every qualified student is welcome in our classes.  As needed, we are happy to work with you, Disability Services, Military and Veteran Services, Rural Student Services, etc. to find reasonable accomodations. Students at this university are protected against sexual harassment and discrimination (Title IX), and minors have additional protections. \textit{As required,} if we notice or are informed of \textit{certain types} of misconduct, then we are required to report it to the appropriate authorities.  For more information on your rights as a student and the resources available to you, please go to the following site: \href{https://cms-test.alaska.edu/handbook/}{\texttt{https://cms-test.alaska.edu/handbook/}}.
+
+\subheading{Incomplete Grade} 
+Incomplete (I) will only be given in DMS courses in cases where the student has completed the majority (normally all but the last three weeks) of a course with a grade of C or better, but for personal reasons beyond his/her control has been unable to complete the course during the regular term. Negligence or indifference are not acceptable reasons for the granting of an incomplete grade. 
+
+\subheading{Late Withdrawals} 
+A withdrawal after the deadline (currently 9 weeks into the semester) from a DMS course will normally be granted only in cases where the student is performing satisfactorily (i.e., C or better) in a course, but has exceptional reasons, beyond his/her control, for being unable to complete the course. These exceptional reasons should be detailed in writing to the instructor, department head and dean.
+
+\subheading{No Early Final Examinations}
+Final examinations for DMS courses shall not be held earlier than the date and time published in the official term schedule. Normally, a student will not be allowed to take a final exam early. Exceptions can be made by individual instructors, but should only be allowed in exceptional circumstances and in a manner which doesn't endanger the security of the exam.
+
+\subheading{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not be tolerated.  It is a violation of the Student Code of Conduct and will be punished according to UAF procedures.
+
+\vfill
+\hfill \scriptsize syllabus version: \today \normalsize
+
+\end{document}
