@@ -3,10 +3,10 @@ sidenav_title: 'Math 302'
 docs:
 
 - title: Syllabus
-  url: assets/latex/syllabus.pdf
+  url: syllabus.pdf  # rebuild by "make syllabus.pdf" in assets/latex/
 
 - title: Schedule
-  url: assets/latex/schedule.pdf
+  url: schedule.pdf  # rebuild by "make schedule.pdf" in assets/latex/
 
 - title: Week 1
   url: week1.html
