@@ -21,8 +21,8 @@ $med-space: 10px;
 // various colors from https://coolors.co/browser/latest/1
 $color-pageheader-background: #fa7041;
 $color-button-background: #fa7041;
-$color-link-fresh: #3587a4;
-$color-link-visited: #4392f1;
+$color-link-fresh: #20B2AA;
+$color-link-visited: #008080;
 $color-background: #ccc;                // light-gray
 
 * { 
@@ -61,7 +61,7 @@ body {
       font-size: 120%;
       text-decoration: none;
       display: block;
-      color: $color-link-fresh;
+      color: $color-link-visited;
     }
 
     a:hover {
