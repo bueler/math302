@@ -7,5 +7,5 @@ all: schedule.pdf
 .PHONY: clean
 
 clean:
-	@rm -f *.aux *.log *.synctex.gz
+	@rm -f *.aux *.log *.out *.synctex.gz
 
