@@ -21,7 +21,9 @@ Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019
 
 ### Important Links
 
-* Only grades and written homework solutions are available at [BlackBoard](https://classes.alaska.edu).
+* [WebAssign](https://www.webassign.net/) &nbsp; &nbsp; (homework)
+* [BlackBoard](https://classes.alaska.edu) &nbsp; &nbsp; (for grades)
+* [Bueler's office hours](http://bueler.github.io/OffHrs.htm)
 
 <br>
 [<img src="GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math302 "This page is a github repo.")
