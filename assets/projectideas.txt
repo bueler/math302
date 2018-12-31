@@ -1,0 +1,5 @@
+at simiode:
+
+1-005-S-OilSlick           basic exponential model from data
+1-011-S-Kinetics           demos separation of variables
+4-055-S-ShatterWineGlass   uses  y'' + c y = sin(t)
