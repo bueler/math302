@@ -15,7 +15,7 @@ Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019
 
 * Course communication (e.g announcements!) will use [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).  Start by [signing up with Piazza](https://piazza.com/uaf/spring2019/math302ux1).
 
-* Go to [WebAssign](https://www.webassign.net/) and sign in with the class key: &nbsp; <code>uaf 3982 1786</code>
+* Go to [WebAssign](https://www.webassign.net/) and sign in with the class key: &nbsp; <code>uaf 3982 1786</code>  &nbsp; You will also need the Access Code which comes with your textbook.
 
 * See [Week 1](week1).
 
