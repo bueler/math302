@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
+
+\usepackage{graphicx,color,enumitem}
+\usepackage{amsmath,amsthm,amsbsy}
+\usepackage{palatino}
+
+\usepackage{tikz}
+
+%% Setup aproblem environment, 
+%% aproblem items
+%% subproblems environment
+%% subproblem items
+\makeatletter
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newlength\probsep
+\newlength\pshrinking
+\newif\iffirstprob
+
+\newenvironment{aproblems}%
+  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
+  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
+  \let\hproblem\aproblem
+  \advance\linewidth -\pshrinking
+  \advance\@totalleftmargin\pshrinking
+  \advance\leftskip\pshrinking}%
+  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
+
+\newcommand{\aproblem}{%
+  \setcounter{subprobcount}{0}%
+  \stepcounter{probcount}%
+  \def\@currentlabel{\arabic{probcount}}%
+  \ifhmode
+    \unskip \par
+  \fi
+%  \addpenalty{-4000}%
+  \iffirstprob\else\addvspace\probsep\fi
+  \firstprobfalse
+  \hskip -\labelwidth\hskip -\labelsep 
+  \hbox to\labelwidth{\hss\textbf{\arabic{probcount}.}}\hskip\labelsep
+}%
+
+\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
+\newcommand{\skipproblem}{\stepcounter{probcount}}
+
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+
+\doclabel{Math F302 UX1: Mini-Project 1}
+\docdate{due noon Thursday 17 January 2019}
+
+\begin{document}
+\renewcommand{\d}{\displaystyle}
+
+\strut
+\centerline{{\Large \textsc{Highpoints of Calculus}}}
+
+\medskip
+
+\begin{quote}
+Below is a review of some calculus you will need for this course in differential equations.  However, this first Mini-Project is also a test of whether you are able to successfully submit your work in this online course!
+
+\medskip
+\fbox{\begin{minipage}[t]{0.875\textwidth}
+\small
+\emph{Logistics.}  Please fill in the blanks below with complete and legible answers.  You may do this either by
+\begin{itemize}
+\item electronically-editing the PDF or
+\item printing this blank version and writing your answers with pencil or pen.
+\end{itemize}
+In the first case, save your completed document as a PDF.  In the second case you should scan or photograph your completed document and then figure out how to save it as a PDF.  In any case \emph{you must produce a PDF for submission}.  Submit it by uploading the PDF using the Google Form you were sent for uploading this Mini-Project.
+\end{minipage}}
+\end{quote}
+
+\bigskip
+
+\begin{aproblems}
+\aproblem \emph{Chain rule.}  Recall the chain rule
+    $$\left[f\left(g(x)\right)\right]' = f'\left(g(x)\right)\, g'(x)$$
+
+\noindent (a) \, Compute the derivative.  Identify the outer function $f(x)$ and the inner function $g(x)$ you used.
+    $$\left[\sqrt{\arctan x + 3 x}\right]' = \hspace{4.0in}$$
+
+\vfill
+
+\noindent (b) \, Construct your own chain rule example; make it non-trivial but not too complicated. 
+\begin{align*}
+f(x) &= \phantom{\sin x sdfakljdklja f sdabj adfs asdfk afdklj asdf \Big|}\\
+g(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
+\left[f\left(g(x)\right)\right]' &=  \phantom{\Big|}
+\end{align*}
+
+\vspace{0.5in}
+\noindent (\emph{Remember that $x^k,e^x,\ln x,b^x,\log_b x,\sin x,\cos x,\tan x,\sec x,\arcsin x$ are some common functions from calculus which you must be able to correctly differentiate!  You might use this problem to practice the ones that are least familiar.})
+
+\newpage
+\aproblem \emph{Integration by substitution.}  Starting with basics, remember that the indefinite integral just means ``anti-derivative''.  In fact
+    $$\int f(x)\,dx = F(x) + C$$
+means exactly the same thing as
+    $$\left(F(x)\right)' = f(x).$$
+You can do some integrals just by recognizing a derivative, perhaps with some fiddling with constants.
+
+\noindent (a) \, Compute the indefinite integral:
+    $$\int \frac{1}{x}\,dx = \hspace{4.0in}$$
+
+\bigskip
+
+\noindent (b) \, Compute the indefinite integral:
+    $$\int 3^{2x}\,dx = \hspace{4.0in}$$
+
+\bigskip
+
+Integration by substitution is \textbf{the chain rule in reverse}.  For example, from \textbf{1} (a) we have
+\begin{align*}
+\int \frac{\sec^2 x + 3}{\sqrt{\arctan x + 3 x}}\,dx &= \int \frac{du}{\sqrt{u}} \hspace{1.0in} [\text{with } u=\arctan x + 3x] \\
+  &= 2 u^{1/2} + C = 2 \sqrt{\arctan x + 3 x} + C
+\end{align*}
+(It is common to need to fiddle with constant factors like the ``$2$'' here.)  In general:
+   $$\int f'(g(x)) g'(x)\,dx = \int f'(u)\,du = f(u) + C = f(g(u)) + C$$
+
+\noindent (c) \, Turn \textbf{1} (b) into an integration by substitution.
+
+\vfill
+
+\newpage
+\aproblem  FIXME
+
+\end{aproblems}
+
+\end{document}
