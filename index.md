@@ -3,13 +3,17 @@ layout: course-page
 title: Math F302 UX1 Differential Equations in Spring 2019 at UAF
 ---
 
-**FIXME:  THIS PAGE IS UNDER CONSTRUCTION**
+<br>
+<h2>Class materials will be ready on January 7.  Until then, please be patient as this online class is under construction.</h2>
+<br>
 
 Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019** at [UAF](http://www.uaf.edu/).
 
 [Ed Bueler](http://bueler.github.io/), the instructor, is in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
 ### Getting Started
+
+* Read the [syllabus](syllabus.pdf).
 
 * See the [schedule](schedule.pdf).  Go there often to find out what happens next.
 
