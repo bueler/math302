@@ -69,7 +69,7 @@
 \renewcommand{\d}{\displaystyle}
 
 \strut
-\centerline{{\Large \textsc{Highpoints of Calculus}}}
+\centerline{{\Large \textsc{High Points of Calculus}}}
 
 \medskip
 
@@ -139,8 +139,16 @@ Integration by substitution is \textbf{the chain rule in reverse}.  For example,
 \vfill
 
 \newpage
-\aproblem  FIXME
+\aproblem  \emph{Product rule and integration-by-parts.}  The product rule
+    $$\left[u(x) v(x)\right]' = u'(x) v(x) + u(x) v'(x)$$
+can be used in reverse too.  The indefinite integral of both sides of the above gives
+    $$u(x) v(x) = \int u'(x) v(x)\,dx + \int u(x) v'(x)\,dx.$$
+The main use of this is to exchange one of the last two integrals for the other; \emph{that} is integration-by-parts:
+    $$\int u(x) v'(x)\,dx = u(x) v(x) - \int u'(x) v(x)\,dx.$$
+You probably have it memorized as
+    $$\int u\, dv = u v - \int v\,du.$$
 
+\noindent (a) \, FIXME
 \end{aproblems}
 
 \end{document}
