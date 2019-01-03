@@ -61,6 +61,7 @@
 \parindent 0pt
 \parskip 6pt plus 1pt
 
+\newcommand{\epart}[1]{\noindent \textbf{(#1)} \,}
 
 \doclabel{Math F302 UX1: Mini-Project 1}
 \docdate{due noon Thursday 17 January 2019}
@@ -94,12 +95,12 @@ In the first case, save your completed document as a PDF.  In the second case yo
 \aproblem \emph{Chain rule.}  Recall the chain rule
     $$\left[f\left(g(x)\right)\right]' = f'\left(g(x)\right)\, g'(x)$$
 
-\noindent (a) \, Compute the derivative.  Identify the outer function $f(x)$ and the inner function $g(x)$ you used.
+\epart{a} Compute the derivative.  Identify the outer function $f(x)$ and the inner function $g(x)$ you used.
     $$\left[\sqrt{\arctan x + 3 x}\right]' = \hspace{4.0in}$$
 
 \vfill
 
-\noindent (b) \, Construct your own chain rule example; make it non-trivial but not too complicated. 
+\epart{b} Construct your own chain rule example.  (\emph{Make it non-trivial but not too complicated.  In particular, neither $f(x)$ nor $g(x)$ should be as simple as a linear function, i.e.~$ax+b$.})
 \begin{align*}
 f(x) &= \phantom{\sin x sdfakljdklja f sdabj adfs asdfk afdklj asdf \Big|}\\
 g(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
@@ -116,17 +117,17 @@ means exactly the same thing as
     $$\left(F(x)\right)' = f(x).$$
 You can do some integrals just by recognizing a derivative, perhaps with some fiddling with constants.
 
-\noindent (a) \, Compute the indefinite integral:
+\epart{a} Compute the indefinite integral:
     $$\int \frac{1}{x}\,dx = \hspace{4.0in}$$
 
 \bigskip
 
-\noindent (b) \, Compute the indefinite integral:
+\epart{b} Compute the indefinite integral:
     $$\int 3^{2x}\,dx = \hspace{4.0in}$$
 
 \bigskip
 
-Integration by substitution is \textbf{the chain rule in reverse}.  For example, from \textbf{1} (a) we have
+Integration by substitution is \textbf{the chain rule in reverse}.  For example, from \textbf{1 (a)} we have
 \begin{align*}
 \int \frac{\sec^2 x + 3}{\sqrt{\arctan x + 3 x}}\,dx &= \int \frac{du}{\sqrt{u}} \hspace{1.0in} [\text{with } u=\arctan x + 3x] \\
   &= 2 u^{1/2} + C = 2 \sqrt{\arctan x + 3 x} + C
@@ -134,7 +135,7 @@ Integration by substitution is \textbf{the chain rule in reverse}.  For example,
 (It is common to need to fiddle with constant factors like the ``$2$'' here.)  In general:
    $$\int f'(g(x)) g'(x)\,dx = \int f'(u)\,du = f(u) + C = f(g(u)) + C$$
 
-\noindent (c) \, Turn \textbf{1} (b) into an integration by substitution.
+\epart{c} Turn \textbf{1 (b)} into an integration by substitution.
 
 \vfill
 
@@ -148,7 +149,44 @@ The main use of this is to exchange one of the last two integrals for the other;
 You probably have it memorized as
     $$\int u\, dv = u v - \int v\,du.$$
 
-\noindent (a) \, FIXME
+\epart{a} Construct your own product rule example.  (\emph{Again, make it non-trivial but not too complicated; $u(x),v(x)$ should not be as simple linear functions.})
+\begin{align*}
+u(x) &= \phantom{\sin x sdfakljdklja f sdabj adfs asdfk afdklj asdf \Big|}\\
+v(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
+\left[u(x) v(x)\right]' &=  \phantom{\Big|}
+\end{align*}
+
+\vspace{0.3in}
+
+\epart{b} Take the example in \textbf{(a)} and turn it into an integration-by-parts example.
+
+\vfill
+
+\newpage
+\aproblem  \emph{Fundamental Theorem of Calculus (FTC).}  When you compute a definite integral by hand you usually use a form of the FTC:
+    $$\int_a^b f(x)\,dx = F(b) - F(a) \qquad \text{where } F'(x) = f(x)$$
+This form of the FTC says that doing an integral is the same as un-doing a derivative.  Recall that if you do such an integral by substitution then you can change the limits:
+    $$\int_{x=a}^{x=b} f(g(x))\,g'(x)\,dx = \int_{u=g(a)}^{u=g(b)} f(u)\,du = F(g(b)) - F(g(a))$$
+
+\epart{a}  Compute
+    $$\int_{\pi/6}^{\pi/2} \frac{\cos x}{1 + 9 \sin^2 x}\,dx = \phantom{\int_{3/2}^3 \frac{du/3}{1+u^2} =} \hspace{3.0in}$$
+
+\vspace{0.5in}
+
+But there is another form of the FTC, often called FTC I.  It says that a derivative un-does an integral:
+    $$\frac{d}{dx} \left(\int_a^x f(t)\,dt\right) = f(x)$$
+The integral inside the parentheses computes the area under the curve $y=f(t)$ from $t=a$ to $t=x$, and one should think of this area varying as $x$ changes.  Thus it defines a function, namely $g(x) = \int_a^x f(t)\,dt$.  You can answer some questions about this function even if you cannot find an antiderivative of the integrand.
+
+\epart{b}  Suppose we define
+    $$g(x) = \int_0^x \sin(e^t)\,dt$$
+Compute the exact value of $g(0)$.
+
+\vspace{0.5in}
+
+\epart{c}  For the same function $g(x)$, find $g'(x)$.
+
+\vfill
+
 \end{aproblems}
 
 \end{document}
