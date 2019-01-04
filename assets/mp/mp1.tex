@@ -75,7 +75,7 @@
 \medskip
 
 \begin{quote}
-Below is a review of some calculus you will need for this course in differential equations.  However, this first Mini-Project is also a test of whether you are able to successfully submit your work in this online course!
+This is a review of some calculus you will need for differential equations.  However, this first Mini-Project is also a test of whether you are able to successfully submit your work in this online course!
 
 \medskip
 \fbox{\begin{minipage}[t]{0.875\textwidth}
@@ -85,7 +85,7 @@ Below is a review of some calculus you will need for this course in differential
 \item electronically-editing the PDF or
 \item printing this blank version and writing your answers with pencil or pen.
 \end{itemize}
-In the first case, save your completed document as a PDF.  In the second case you should scan or photograph your completed document and then figure out how to save it as a PDF.  In any case \emph{you must produce a PDF for submission}.  Submit it by uploading the PDF using the Google Form you were sent for uploading this Mini-Project.
+In the first case, save your completed document as a PDF.  In the second case you should scan or photograph your completed document and then figure out how to save it as a PDF.  In any case \emph{you must produce a PDF for submission}.  Then submit it by uploading using the Google Form link.
 \end{minipage}}
 \end{quote}
 
@@ -95,12 +95,12 @@ In the first case, save your completed document as a PDF.  In the second case yo
 \aproblem \emph{Chain rule.}  Recall the chain rule
     $$\left[f\left(g(x)\right)\right]' = f'\left(g(x)\right)\, g'(x)$$
 
-\epart{a} Compute the derivative.  Identify the outer function $f(x)$ and the inner function $g(x)$ you used.
-    $$\left[\sqrt{\arctan x + 3 x}\right]' = \hspace{4.0in}$$
+\epart{a} Identify an outer function $f(x)$ and an inner function $g(x)$ if $f(g(x))=\sqrt{\tan x + 3 x}$.  Then compute the following derivative.
+    $$\left[\sqrt{\tan x + 3 x}\right]' = \hspace{4.0in}$$
 
 \vfill
 
-\epart{b} Construct your own chain rule example.  (\emph{Make it non-trivial but not too complicated.  In particular, neither $f(x)$ nor $g(x)$ should be as simple as a linear function, i.e.~$ax+b$.})
+\epart{b} Construct your own chain rule example:
 \begin{align*}
 f(x) &= \phantom{\sin x sdfakljdklja f sdabj adfs asdfk afdklj asdf \Big|}\\
 g(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
@@ -108,14 +108,12 @@ g(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
 \end{align*}
 
 \vspace{0.5in}
-\noindent (\emph{Remember that $x^k,e^x,\ln x,b^x,\log_b x,\sin x,\cos x,\tan x,\sec x,\arcsin x$ are some common functions from calculus which you must be able to correctly differentiate!  You might use this problem to practice the ones that are least familiar.})
+\noindent (\emph{Make it different from} \textbf{(a)} \emph{and non-trivial but not too complicated.  In particular, neither $f(x)$ nor $g(x)$ should be as simple as a linear function, i.e.~$ax+b$.  Remember that $x^k,e^x,\ln x,b^x$, $\log_b x,\sin x,\cos x,\tan x,\sec x,\arcsin x$ are common functions from calculus which you must be able to correctly differentiate!  Use this problem to practice those that are least familiar?})
 
 \newpage
-\aproblem \emph{Integration by substitution.}  Starting with basics, remember that the indefinite integral just means ``anti-derivative''.  In fact
-    $$\int f(x)\,dx = F(x) + C$$
-means exactly the same thing as
-    $$\left(F(x)\right)' = f(x).$$
-You can do some integrals just by recognizing a derivative, perhaps with some fiddling with constants.
+\aproblem \emph{Integration by substitution.}  Remember that the indefinite integral just means ``anti-derivative,'' so $\int f(x)\,dx = F(x) + C$ means exactly the same thing as $\left(F(x)\right)' = f(x)$.
+
+In any case you can do some integrals just by recognizing a derivative, perhaps with some fiddling with constants.
 
 \epart{a} Compute the indefinite integral:
     $$\int \frac{1}{x}\,dx = \hspace{4.0in}$$
@@ -127,15 +125,17 @@ You can do some integrals just by recognizing a derivative, perhaps with some fi
 
 \bigskip
 
-Integration by substitution is \textbf{the chain rule in reverse}.  For example, from \textbf{1 (a)} we have
+Substitution is \textbf{the chain rule in reverse}.  For example, from \textbf{1 (a)} we have
 \begin{align*}
-\int \frac{\sec^2 x + 3}{\sqrt{\arctan x + 3 x}}\,dx &= \int \frac{du}{\sqrt{u}} \hspace{1.0in} [\text{with } u=\arctan x + 3x] \\
-  &= 2 u^{1/2} + C = 2 \sqrt{\arctan x + 3 x} + C
+\int \frac{\sec^2 x + 3}{\sqrt{\tan x + 3 x}}\,dx &= \int \frac{du}{\sqrt{u}} \hspace{1.0in} [\text{with } u=\tan x + 3x] \\
+  &= 2 u^{1/2} + C = 2 \sqrt{\tan x + 3 x} + C
 \end{align*}
 (It is common to need to fiddle with constant factors like the ``$2$'' here.)  In general:
    $$\int f'(g(x)) g'(x)\,dx = \int f'(u)\,du = f(u) + C = f(g(u)) + C$$
 
-\epart{c} Turn \textbf{1 (b)} into an integration by substitution.
+\medskip
+
+\epart{c} Turn your chain rule example in \textbf{1 (b)} into an integration by substitution.
 
 \vfill
 
@@ -144,28 +144,34 @@ Integration by substitution is \textbf{the chain rule in reverse}.  For example,
     $$\left[u(x) v(x)\right]' = u'(x) v(x) + u(x) v'(x)$$
 can be used in reverse too.  The indefinite integral of both sides of the above gives
     $$u(x) v(x) = \int u'(x) v(x)\,dx + \int u(x) v'(x)\,dx.$$
-The main use of this is to exchange one of the last two integrals for the other; \emph{that} is integration-by-parts:
+The main use of this is to exchange one of the last two integrals for the other, which is integration-by-parts:
     $$\int u(x) v'(x)\,dx = u(x) v(x) - \int u'(x) v(x)\,dx.$$
-You probably have it memorized as
-    $$\int u\, dv = u v - \int v\,du.$$
+(You probably have this memorized as $\int u\, dv = u v - \int v\,du$.)
 
-\epart{a} Construct your own product rule example.  (\emph{Again, make it non-trivial but not too complicated; $u(x),v(x)$ should not be as simple linear functions.})
+\medskip
+
+\epart{a} Construct your own product rule example:
 \begin{align*}
 u(x) &= \phantom{\sin x sdfakljdklja f sdabj adfs asdfk afdklj asdf \Big|}\\
 v(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
 \left[u(x) v(x)\right]' &=  \phantom{\Big|}
 \end{align*}
 
-\vspace{0.3in}
+\vspace{0.2in}
+(\emph{Again, make it non-trivial but not too complicated.})
 
-\epart{b} Take the example in \textbf{(a)} and turn it into an integration-by-parts example.
+\medskip
+
+\epart{b} Turn the above example into an integration-by-parts example.
 
 \vfill
 
 \newpage
 \aproblem  \emph{Fundamental Theorem of Calculus (FTC).}  When you compute a definite integral by hand you usually use a form of the FTC:
     $$\int_a^b f(x)\,dx = F(b) - F(a) \qquad \text{where } F'(x) = f(x)$$
-This form of the FTC says that doing an integral is the same as un-doing a derivative.  Recall that if you do such an integral by substitution then you can change the limits:
+This says that doing an integral is the same as un-doing a derivative.
+
+Recall that if you do a definite integral by substitution then you can change the limits:
     $$\int_{x=a}^{x=b} f(g(x))\,g'(x)\,dx = \int_{u=g(a)}^{u=g(b)} f(u)\,du = F(g(b)) - F(g(a))$$
 
 \epart{a}  Compute
@@ -173,13 +179,13 @@ This form of the FTC says that doing an integral is the same as un-doing a deriv
 
 \vspace{0.5in}
 
-But there is another form of the FTC, often called FTC I.  It says that a derivative un-does an integral:
+There is another form of the FTC, often called ``FTC I.''  It says that a derivative un-does an integral:
     $$\frac{d}{dx} \left(\int_a^x f(t)\,dt\right) = f(x)$$
-The integral inside the parentheses computes the area under the curve $y=f(t)$ from $t=a$ to $t=x$, and one should think of this area varying as $x$ changes.  Thus it defines a function, namely $g(x) = \int_a^x f(t)\,dt$.  You can answer some questions about this function even if you cannot find an antiderivative of the integrand.
+The integral inside the parentheses computes the area under the curve $y=f(t)$ from $t=a$ to $t=x$.  One should think of this area varying as $x$ changes, thus defining a function $g(x) = \int_a^x f(t)\,dt$.  One may answer some questions about $g(x)$ even when an antiderivative of the integrand is not known.
 
 \epart{b}  Suppose we define
-    $$g(x) = \int_0^x \sin(e^t)\,dt$$
-Compute the exact value of $g(0)$.
+    $$g(x) = \int_2^x \sin(e^t)\,dt$$
+Compute the exact value of $g(2)$.
 
 \vspace{0.5in}
 
