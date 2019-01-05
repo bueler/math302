@@ -40,11 +40,11 @@
 \begin{frame}{definitions}
 
 \begin{itemize}
-\item there is an unknown function in every differential equation
+\item idea: a differential equation contains an \emph{unknown function}
     \begin{itemize}
     \item context or tradition may identify it
     \end{itemize}
-\item an \emph{ordinary differential equation} (ODE) uses the kind of derivatives from calculus I and II
+\item an \emph{ordinary differential equation} (ODE) uses the kind of derivatives in calculus I and II
     \begin{itemize}
     \item primes ($y' = dy/dx$) or dots ($\dot y = dy/dt$) are often used to denote ordinary derivatives
     \item examples of ODEs:
@@ -56,18 +56,16 @@ y' &= x + y^2 && \dots \text{ exactly the same} \\
 \end{align*}
     \item the unknown function in an ODE depends on one variable
     \end{itemize}
-
-\medskip
-\item MATH 302 is about ODEs
 \end{itemize}
 \end{frame}
 
 \begin{frame}{contrast with PDEs}
 
 \begin{itemize}
-\item there are also \emph{partial differential equations} (PDEs)
+\item MATH 302 is about ODEs
+\item \dots but there are also \emph{partial differential equations} (PDEs)
     \begin{itemize}
-    \item subscripts are often used for partial derivatives
+    \item subscripts are often used to denote partial derivatives
     \item examples:
 \begin{align*}
 \frac{\partial^2 u}{\partial t^2} &= c^2 \frac{\partial^2 u}{\partial x^2} && u(t,x) \text{ is unknown function} \\
@@ -76,9 +74,10 @@ w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
 \end{align*}
     \item the unknown function in a PDE depends on more than one variable
     \end{itemize}
-
-\vspace{3mm}
-\item Do not worry about PDEs!  I mention them to explain why people say ``ODE''.  In fact MATH 421 covers PDEs.
+\item do not worry about PDEs!; they are covered in MATH 421
+    \begin{itemize}
+    \item mentioned here to explain why people say ``ODE''
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -92,7 +91,7 @@ w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
     \end{itemize}
 \item examples:
     \begin{enumerate}
-    \item $y' = x + y^2$ has order 1
+    \item $y' = x + y^2$ has order one
     \item $\ddot u = - c u$ has order two
         \begin{itemize}
         \item $c$ is just a constant in this context
@@ -106,20 +105,25 @@ w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
 
 \begin{itemize}
 \item there is more terminology to come \dots but let's \emph{do} something
-\item the two operations you will do with differential equations are \emph{verifying that a given function is a solution} or \emph{constructing a solution}
+\item two common operations with differential equations are
+    \begin{itemize}
+    \item \emph{verify} that a given function is a solution
+    \item \emph{construct} a solution (``solve the differential equation'')
+    \end{itemize}
+
 \item \emph{example}:  verify that $y(x) = \sin(3 x)$ solves $y''+9y=0$
 
 \vspace{10mm}
 \item \emph{example}:  construct a solution to $y'=y^2$
 
-\vspace{10mm}
+\vspace{30mm}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{visualization of solutions}
 
 \begin{itemize}
-\item a given differential equation (almost) always has many solutions
+\item a given differential equation generally has many solutions
 \item \emph{example (a)}: show that for any value of the \emph{parameter} $A$ the function $y(x) = A e^{-x^2/2}$ solves $\frac{dy}{dx} = - x y$
 
 \vspace{15mm}
@@ -135,6 +139,7 @@ w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
 \begin{frame}{linear}
 
 \begin{itemize}
+\item back to terminology
 \item a differential equation is \emph{linear} if it can be written as a sum with only first powers on the unknown function and its derivatives
 \item examples:
     \begin{itemize}
@@ -164,6 +169,16 @@ w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
 \item we will be able to solve some nonlinear ODEs, but we will be systematic about solving linear ODEs
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}{implicit solution}
+
+\begin{itemize}
+\item first, remember implicit differentiation
+\item FIXME
+\end{itemize}
+\end{frame}
+
 
 \begin{frame}{extras}
 
