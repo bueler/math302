@@ -131,10 +131,57 @@ w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{foo}
+
+\begin{frame}{linear}
 
 \begin{itemize}
-\item foo
+\item a differential equation is \emph{linear} if it can be written as a sum with only first powers on the unknown function and its derivatives
+\item examples:
+    \begin{itemize}
+    \item $3 y'' - 7 y' + 8 y = \sin x$ is linear because it is in the form
+        $$a_2(x) \frac{d^2y}{dx^2} + a_1(x) \frac{dy}{dx} + a_0(x) y = g(x)$$
+    \item $x \frac{y'}{y} = x^2 + 5$ is linear because it it \emph{can} be written in the form
+        $$a_1(x) \frac{dy}{dx} + a_0(x) y = g(x)$$
+    (set: $a_1(x)=x$, $a_0(x)=-x^2-5$, $g(x)=0$)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{nonlinear}
+
+\begin{itemize}
+\item linear differential equations are special and easier
+    \begin{itemize}
+    \item nature has been generous by allowing good linear differential equation models of surprisingly-many situations
+    \end{itemize}
+\item most differential equations are \emph{nonlinear} which only means they are not linear
+\item examples:
+    \begin{itemize}
+    \item $y' = y^2$ is nonlinear
+    \item $y'' + \sin y =0$ is nonlinear
+    \end{itemize}
+\item we will be able to solve some nonlinear ODEs, but we will be systematic about solving linear ODEs
+\end{itemize}
+\end{frame}
+
+\begin{frame}{extras}
+
+the book mentions more terminology; none of this is terribly important, but it gets used in the rest of the semester:
+\begin{itemize}
+\item[page 5] \emph{normal form} means the highest derivative is on the left; the normal form of $y' - y^2=0$ is $y'=y^2$, and the normal form of $u''+9u=e^t$ is $u'' = e^t - 9u$
+\item[page 7] a function $y(x)$ can be discontinuous but when the book uses the term \emph{solution} for $y(x)$ then it solves a differential equation \emph{and} we assume it is continuous on some interval
+\item[page 11] a function like $F(x) = \int_a^x g(t)\,dt$ is an \emph{integral-defined function}; the most important thing to know is that the derivative is easy: $F'(x)=g(x)$ \hfill $\longleftarrow$ \emph{see Mini-project 1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{standard expectations}
+
+\textbf{expectations}:  to learn this material, just watching this video is \emph{not} enough
+\begin{itemize}
+\item you need to \emph{read} section 1.1 in the textbook
+\item you need to \emph{do} the WebAssign exercises for section 1.1
+\item you need to \emph{look around} for other videos and related content; start with the Week 1 page at \href{https://bueler.github.io/math302/}{bueler.github.io/math302}
 \end{itemize}
 \end{frame}
 
