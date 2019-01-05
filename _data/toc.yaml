@@ -8,6 +8,9 @@ docs:
 - title: Schedule
   url: schedule.pdf  # rebuild by "make schedule.pdf" in assets/latex/
 
+- title: Proctoring
+  url: proctoring.pdf  # rebuild by "make proctoring.pdf" in assets/latex/
+
 - title: Week 1
   url: week1.html
 
