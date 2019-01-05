@@ -19,12 +19,116 @@
 
 \begin{document}
 
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+
 \begin{frame}
 \titlepage
 
-%\vspace{30mm}
 \centerline{\tiny textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
 %\color{green!40!blue}
+\end{frame}
+
+\begin{frame}{basic}
+
+\begin{itemize}
+\item a \emph{differential equation} is an equation with a derivative somewhere in it
+\end{itemize}
+\end{frame}
+
+\begin{frame}{definitions}
+
+\begin{itemize}
+\item there is an unknown function in every differential equation
+    \begin{itemize}
+    \item context or tradition may identify it
+    \end{itemize}
+\item an \emph{ordinary differential equation} (ODE) uses the kind of derivatives from calculus I and II
+    \begin{itemize}
+    \item primes ($y' = dy/dx$) or dots ($\dot y = dy/dt$) are often used to denote ordinary derivatives
+    \item examples of ODEs:
+\begin{align*}
+\frac{dy}{dx} &= x + y^2 && y(x) \text{ is unknown function} \\
+y' &= x + y^2 && \dots \text{ exactly the same} \\
+\frac{d^2 u}{dt^2} &= - c u && u(t) \text{ is unknown function} \\
+\ddot u &= - c u && \dots \text{ exactly the same}
+\end{align*}
+    \item the unknown function in an ODE depends on one variable
+    \end{itemize}
+
+\medskip
+\item MATH 302 is about ODEs
+\end{itemize}
+\end{frame}
+
+\begin{frame}{contrast with PDEs}
+
+\begin{itemize}
+\item there are also \emph{partial differential equations} (PDEs)
+    \begin{itemize}
+    \item subscripts are often used for partial derivatives
+    \item examples:
+\begin{align*}
+\frac{\partial^2 u}{\partial t^2} &= c^2 \frac{\partial^2 u}{\partial x^2} && u(t,x) \text{ is unknown function} \\
+u_{tt} &= c^2 u_{xx} && \dots \text{ exactly the same PDE} \\
+w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
+\end{align*}
+    \item the unknown function in a PDE depends on more than one variable
+    \end{itemize}
+
+\vspace{3mm}
+\item Do not worry about PDEs!  I mention them to explain why people say ``ODE''.  In fact MATH 421 covers PDEs.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{order}
+
+\begin{itemize}
+\item the \emph{order} of a differential equation is the maximum number of derivatives
+    \begin{itemize}
+    \item order has nothing to do with powers or exponentials
+    \item most of the differential equations in MATH 302 have order 1 or order 2
+    \end{itemize}
+\item examples:
+    \begin{enumerate}
+    \item $y' = x + y^2$ has order 1
+    \item $\ddot u = - c u$ has order two
+        \begin{itemize}
+        \item $c$ is just a constant in this context
+        \end{itemize}
+    \item $y^3 + \frac{d^4 y}{dx^4} = \big(\frac{d^2 y}{dx^2} + \sin x\big)^5$ has order four
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{two main operations on ODEs}
+
+\begin{itemize}
+\item there is more terminology to come \dots but let's \emph{do} something
+\item the two operations you will do with differential equations are \emph{verifying that a given function is a solution} or \emph{constructing a solution}
+\item \emph{example}:  verify that $y(x) = \sin(3 x)$ solves $y''+9y=0$
+
+\vspace{10mm}
+\item \emph{example}:  construct a solution to $y'=y^2$
+
+\vspace{10mm}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{visualization of solutions}
+
+\begin{itemize}
+\item a given differential equation (almost) always has many solutions
+\item \emph{example (a)}: show that for any value of the \emph{parameter} $A$ the function $y(x) = A e^{-x^2/2}$ solves $\frac{dy}{dx} = - x y$
+
+\vspace{15mm}
+\item \emph{example (b)}: sketch several \emph{particular} solutions from \emph{(a)}
+
+\vspace{25mm}
+
+\phantom{foo}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{foo}
