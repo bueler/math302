@@ -1,11 +1,11 @@
 ---
 layout: course-page
-title: Exams
+title: Solutions
 ---
 
-## Exams
+## Solutions to Quizzes and Exams
 
-Midterm and Final Exams (blank copies and solutions) will appear here after they occur.  See the [schedule](schedule.pdf) for all Exam dates.
+Blank copies of, and solutions to, the Quizzes, Midterm Exams, and the Final Exam will appear here after they occur.  See the [schedule](schedule.pdf) for all Quiz/Exam dates.
 
 <!---
 <div class="x-scroll">

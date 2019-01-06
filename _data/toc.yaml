@@ -11,6 +11,9 @@ docs:
 - title: Proctoring
   url: proctoring.pdf  # rebuild by "make proctoring.pdf" in assets/latex/
 
+- title: Solutions
+  url: solutions.html
+
 - title: Week 1
   url: week1.html
 
@@ -52,10 +55,4 @@ docs:
 
 - title: Week 14
   url: FIXME
-
-- title: Quizzes
-  url: quizzes.html
-
-- title: Exams
-  url: exams.html
 
