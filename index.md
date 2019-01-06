@@ -17,9 +17,9 @@ Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019
 
 * See the [schedule](schedule.pdf).  Go there often to find out what happens next.
 
-* See the one-page description of [proctor assessments](proctoring.pdf) in this course.
+* See the one-page description of [proctored assessments](proctoring.pdf) in this course.
 
-* Course communication (e.g announcements!) will use [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).  Start by [signing up with Piazza](https://piazza.com/uaf/spring2019/math302ux1).
+* Course communication (e.g announcements and hints on homework) will use [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).  Start by [signing up with Piazza](https://piazza.com/uaf/spring2019/math302ux1).
 
 * Go to [WebAssign](https://www.webassign.net/) and sign in with the class key: &nbsp; <code>uaf 3982 1786</code>  &nbsp; You will also need the Access Code which comes with your textbook.
 
