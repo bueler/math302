@@ -4,6 +4,8 @@
 \usepackage{fancybox}
 \usepackage{environ}
 
+\usepackage{tikz}
+
 \beamertemplatenavigationsymbolsempty
 
 \title{1.2 Initial-Value Problems}
@@ -32,14 +34,17 @@
 \end{frame}
 
 
-\begin{frame}{main purpose}
+\begin{frame}{main purpose of DEs}
 
 \begin{itemize}
-\item the main purpose of differential equations (DEs) in science and engineering is \emph{prediction}
-    \begin{itemize}
-    \item \emph{models} which are capable of prediction
-    \item more on this in section 1.3
-    \end{itemize}
+\item the main purpose of differential equations (DEs) in science and engineering:
+
+\bigskip
+
+    \centerline{\alert{DEs are models which are capable of prediction}}
+
+\bigskip
+
 \item two things are needed to make a prediction:
 \begin{align*}
 \begin{matrix}
@@ -51,6 +56,7 @@
 \text{of current state}
 \end{matrix} && \iff && &\text{initial conditions}
 \end{align*}
+\item sections 1.1 and 1.2 introduce these two things
 \end{itemize}
 \end{frame}
 
@@ -58,22 +64,27 @@
 \begin{frame}{prediction models}
 
 \begin{itemize}
-\item DEs do \emph{not} ``know the future'' as perfect predictions
-\item they are \emph{models} which are \emph{capable} of prediction
+\item all professionals are skeptics about using math for predictions
+\item DEs do \emph{not} ``know the future''
+\item \dots but they are \emph{models} which are \emph{capable} of prediction
 \item next two slides are examples
-\item \emph{do not worry about understanding the specific equations on the next two slides}
 \end{itemize}
+
+\bigskip
+\begin{quote}
+\alert{caution:}  do \alert{not} worry about understanding the specific equations on the next two slides
+\end{quote}
 \end{frame}
 
 
-\begin{frame}{amazing-accuracy prediction model}
+\begin{frame}{an amazingly-accurate \\ real prediction model}
 
 \begin{columns}
 \begin{column}{0.55\textwidth}
 \begin{itemize}
 \item Newton's theory of gravitation gives remarkably-accurate predictions of planets, satellites, and space probes
-\item the DEs at right for many particles interacting by gravity
-\item coupled, nonlinear, 2nd-order ODEs for the position $\mathbf{r}_i$ of each object with mass $m_i$
+\item the DEs at right are Newton's model of many particles interacting by gravity,
+\item \dots a system of coupled, nonlinear, 2nd-order ODEs for the position $\mathbf{r}_i$ of each object with mass $m_i$
 \item adding corrections for relativity makes these predictions practically perfect
 \end{itemize}
 \end{column}
@@ -88,16 +99,16 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \end{frame}
 
 
-\begin{frame}{pretty-good prediction model}
+\begin{frame}{a pretty-good \\ real prediction model}
 
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item \emph{weather prediction} uses a system of PDEs for fluids
-\item predictions have been refined over time by comparing prediction to what actually happened
-\item now we have $\sim$6 days of good predictions
-\item equations at right
-\item more on models in section 1.3; we will start with single ODEs not systems of PDEs!
+\item \emph{weather prediction} uses Euler's fluid model of the atmosphere
+\item \dots a system of PDEs; equations at right
+\item predictions have been refined by comparing prediction to what actually happened
+\item \dots now we get about 6 days of good/helpful predictions
+\item \small \dots and \emph{don't worry} \dots this course is about ODEs and \emph{not} systems of PDEs
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -113,12 +124,49 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \end{frame}
 
 
+\begin{frame}{what kind of student are you?}
+
+\begin{itemize}
+\item did you skip the last two slides because you want to know how to do the homework problems quicker?
+\item for the students I have taught in math classes I observe that
+    \begin{itemize}
+    \item better students choose to be curious and interested
+    \item better students have at least some tentative trust that teachers are seeking an easy path through the whole subject
+    \end{itemize}
+
+\bigskip
+\item \dots in any case, there \emph{will} be homework about DE models in section 1.3
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{example 1}
 
 \begin{itemize}
-\item section 1.2 is about initial conditions and how they ``pick out'' one prediction (solution) from all the solutions of a differential equation
-\item first order
+\item \emph{example}: here is the single most important ODE:
+    $$y' = y$$
+\item it is first-order and linear
+\item just by thinking you can write down all of its solutions:
+    $$y(x) = \hspace{5.0in}$$
+\item and you can graph several particular solutions:
+
+\begin{tikzpicture}[scale=1.0]
+  \draw[-latex] (-2,0) -- (2,0) node[xshift=2mm] {$x$};
+  \draw[-latex] (0,-1) -- (0,1) node[yshift=2mm] {$y$};
+\end{tikzpicture}
 \end{itemize}
+
+\vfill
+\end{frame}
+
+\begin{frame}{example 1, cont.}
+
+\begin{itemize}
+\item but section 1.2 is about initial conditions
+\item initial conditions ``pick out'' one prediction (solution) from all the solutions of a differential equation
+\end{itemize}
+
+\vfill
 \end{frame}
 
 \begin{frame}{example 2}
