@@ -127,15 +127,16 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \begin{frame}{what kind of student are you?}
 
 \begin{itemize}
-\item did you skip the last two slides because you want to know how to do the homework problems quicker?
-\item for the students I have taught in math classes I observe that
+\item did you skip the last few slides because you want to know how to do the homework problems quicker?
+\item I observe that
     \begin{itemize}
-    \item better students choose to be curious and interested
-    \item better students have at least some tentative trust that teachers are seeking an easy path through the whole subject
+    \item \emph{better} students choose to be curious and interested
+    \item \emph{better} students have at least some tentative trust that teachers are seeking an easy path through the whole subject
     \end{itemize}
+\item \dots and I've seen a lot of the students in math classes
 
 \bigskip
-\item \dots in any case, there \emph{will} be homework about DE models in section 1.3
+\item in any case, there \emph{will} be homework about DE models in section 1.3 \dots coming soon
 \end{itemize}
 \end{frame}
 
@@ -145,13 +146,17 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \begin{itemize}
 \item \emph{example}: here is the single most important ODE:
     $$y' = y$$
-\item it is first-order and linear
+
+\vspace{-4mm}
+    \begin{itemize}
+    \item it is first-order and linear
+    \end{itemize}
 \item just by thinking you can write down all of its solutions:
     $$y(x) = \hspace{5.0in}$$
-\item and you can graph several particular solutions:
+\item please graph and label several particular solutions:
 
-\begin{tikzpicture}[scale=1.0]
-  \draw[-latex] (-2,0) -- (2,0) node[xshift=2mm] {$x$};
+\begin{tikzpicture}[scale=1.5]
+  \draw[-latex] (-3,0) -- (3,0) node[xshift=2mm] {$x$};
   \draw[-latex] (0,-1) -- (0,1) node[yshift=2mm] {$y$};
 \end{tikzpicture}
 \end{itemize}
@@ -159,11 +164,28 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \vfill
 \end{frame}
 
+
 \begin{frame}{example 1, cont.}
 
 \begin{itemize}
-\item but section 1.2 is about initial conditions
 \item initial conditions ``pick out'' one prediction (solution) from all the solutions of a differential equation
+\item \emph{for example}, fill in the table:
+
+\begin{tabular}{l|l}
+ODE IVP & solution \phantom{sldafjdlkajf sd adsfkj asdf} \\ \hline
+$y' = y, \, y(0)=3$ & $y(x)=$ \phantom{$\Big|$} \\ \hline
+$y' = y, \, y(3)=-1$ & $y(x)=$ \phantom{$\Big|$} \\ \hline
+$y' = y, \, y(-1)=1$ & $y(x)=$ \phantom{$\Big|$} \\ \hline
+\end{tabular}
+
+\smallskip
+\item graph them:
+
+\vspace{-5mm}
+\begin{tikzpicture}[scale=1.5]
+  \draw[-latex] (-3,0) -- (3,0) node[xshift=2mm] {$x$};
+  \draw[-latex] (0,-1) -- (0,1) node[yshift=2mm] {$y$};
+\end{tikzpicture}
 \end{itemize}
 
 \vfill
@@ -172,9 +194,39 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \begin{frame}{example 2}
 
 \begin{itemize}
-\item 2nd order
+\item \emph{example}.  as we will show later,
+    $$y(x) = c_1 \sin(3x) + c_2 \cos(3x)$$
+is the general solution of ($=$ is all of the solutions of)
+    $$y'' + 9 y = 0$$
+\item so solve this 2nd-order linear ODE IVP:
+    $$y'' + 9y = 0, \quad y(0)=2, \, y'(0)=-1$$
 \end{itemize}
+
+\vspace{25mm}
 \end{frame}
+
+
+\begin{frame}{example 3}
+
+\begin{itemize}
+\item \emph{example}.  solve this 2nd-order linear ODE IVP:
+    $$y'' + 9y = 0, \quad y(2)=-3, \, y'(2)=0$$
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{example 4}
+
+\begin{itemize}
+\item \emph{example}.  solve this 2nd-order linear ODE IVP:
+    $$y'' + 9y = 0, \quad y(0)=0, \, y(2)=3$$
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
 
 \begin{frame}{general IVP}
 
