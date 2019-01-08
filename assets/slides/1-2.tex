@@ -72,7 +72,7 @@
 
 \bigskip
 \begin{quote}
-\alert{caution:}  do \alert{not} worry about understanding the specific equations on the next two slides
+\alert{don't worry}: about understanding the specific equations on the next two slides
 \end{quote}
 \end{frame}
 
@@ -83,7 +83,7 @@
 \begin{column}{0.55\textwidth}
 \begin{itemize}
 \item Newton's theory of gravitation gives remarkably-accurate predictions of planets, satellites, and space probes
-\item the DEs at right are Newton's model of many particles interacting by gravity,
+\item the DEs at right are Newton's model of many particles interacting by gravity
 \item \dots a system of coupled, nonlinear, 2nd-order ODEs for the position $\mathbf{r}_i$ of each object with mass $m_i$
 \item adding corrections for relativity makes these predictions practically perfect
 \end{itemize}
@@ -108,7 +108,6 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \item \dots a system of PDEs; equations at right
 \item predictions have been refined by comparing prediction to what actually happened
 \item \dots now we get about 6 days of good/helpful predictions
-\item \small \dots and \emph{don't worry} \dots this course is about ODEs and \emph{not} systems of PDEs
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -121,6 +120,11 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
 \qquad \href{https://en.wikipedia.org/wiki/Euler_equations_(fluid_dynamics)}{\texttt{Euler\_equations\_(fluid\_dynamics)}}
 \end{column}
 \end{columns}
+
+\bigskip
+\begin{quote}
+\alert{don't worry}: this course is about ODEs and \emph{not} systems of PDEs
+\end{quote}
 \end{frame}
 
 
@@ -133,7 +137,6 @@ $$\frac{d^2 \mathbf{r}_i}{dt^2} = G \sum_{j\ne i} \frac{m_i m_j}{|\mathbf{r}_j -
     \item \emph{better} students choose to be curious and interested
     \item \emph{better} students have at least some tentative trust that teachers are seeking an easy path through the whole subject
     \end{itemize}
-\item \dots and I've seen a lot of the students in math classes
 
 \bigskip
 \item in any case, there \emph{will} be homework about DE models in section 1.3 \dots coming soon
@@ -194,11 +197,11 @@ $y' = y, \, y(-1)=1$ & $y(x)=$ \phantom{$\Big|$} \\ \hline
 \begin{frame}{example 2}
 
 \begin{itemize}
-\item \emph{example}.  as we will show later,
+\item as we will show later,
     $$y(x) = c_1 \sin(3x) + c_2 \cos(3x)$$
-is the general solution of ($=$ is all of the solutions of)
+is the general solution of ($=$ all of the solutions of)
     $$y'' + 9 y = 0$$
-\item so solve this 2nd-order linear ODE IVP:
+\item \emph{example}.  solve this 2nd-order linear ODE IVP:
     $$y'' + 9y = 0, \quad y(0)=2, \, y'(0)=-1$$
 \end{itemize}
 
@@ -209,7 +212,7 @@ is the general solution of ($=$ is all of the solutions of)
 \begin{frame}{example 3}
 
 \begin{itemize}
-\item \emph{example}.  solve this 2nd-order linear ODE IVP:
+\item \emph{example}.  now solve this 2nd-order linear ODE IVP:
     $$y'' + 9y = 0, \quad y(2)=-3, \, y'(2)=0$$
 \end{itemize}
 
@@ -220,16 +223,15 @@ is the general solution of ($=$ is all of the solutions of)
 \begin{frame}{example 4}
 
 \begin{itemize}
-\item \emph{example}.  solve this:
+\item \emph{example}.  now solve this problem:
     $$y'' + 9y = 0, \quad y(0)=0, \, y(1)=3$$
 
 \vspace{40mm}
 \item the above has \emph{boundary} conditions at $x=0$ and $x=1$
-\item this is potentially problematic, for example:
     \begin{itemize}
-    \item $y'' + 9y = 0, \, y(0)=0, \, y(\pi/3)=3$ has \emph{no} solutions
+    \item \emph{not} an IVP
+    \item potentially problematic; for example, $y'' + 9y = 0, \, y(0)=0, \, y(\pi/3)=3$ has \emph{no} solutions
     \end{itemize}
-conditions
 \end{itemize}
 \end{frame}
 
@@ -237,7 +239,10 @@ conditions
 \begin{frame}{general IVP}
 
 \begin{itemize}
-\item in Math 302 we will stick to \emph{initial} conditions, and not do boundary 
+\item in Math 302 we will stick to \emph{initial} conditions
+    \begin{itemize}
+    \item \emph{not} boundary conditions
+    \end{itemize}
 \item the general form of an initial-value problem for an ordinary differential equation (ODE IVP):
 \begin{align*}
 \frac{d^n y}{dx^n} &= f(x,y,y',\dots,y^{(n-1)}) \\
@@ -260,9 +265,9 @@ y^{(n-1)}(x_0) &= y_{n-1}
 \begin{itemize}
 \item as suggested earlier, the main idea is that an ODE IVP is a \emph{model capable of prediction}
     \begin{itemize}
-    \item you have the law of how things change ($=$ the DE) and the current state ($=$ the initial values)
+    \item law of how things change ($=$ the DE) plus the current state ($=$ the initial values)
     \end{itemize}
-\item but two fundamental questions need ``yes'' as an answer if we are to have a prediction:
+\item to have a prediction, two questions need ``yes'' answers:
     \begin{enumerate}
     \item does a solution of the ODE IVP exist?
     \item is there only one solution of ODE IVP?
@@ -275,18 +280,16 @@ y^{(n-1)}(x_0) &= y_{n-1}
 \begin{frame}{theorem about main idea}
 
 \begin{itemize}
-\item nicely-behaved first-order ODE IVPs the answer to both questions is ``yes'' as we hoped
+\item for nicely-behaved first-order ODE IVPs, the answer to both questions is ``yes''!
     \begin{itemize}
     \item ``nicely-behaved'' means that the differential equation is continuous enough
     \end{itemize}
-\item below is Theorem 1.2.1 about the first-order ODE IVP
-\begin{equation}
-    y' = f(x,y), \quad y(x_0) = y_0
-\end{equation}
+\item consider the first-order ODE IVP
+    $$(\ast) \qquad y' = f(x,y), \quad y(x_0) = y_0 \hspace{50mm}$$
 \end{itemize}
 
-\begin{theorem}
-Let $R$ be a rectangle in the $xy$ plane that contains $(x_0,y_0)$ in the interior.  Suppose that $f(x,y)$ in (1) is continuous and the $\partial f/\partial y(x,y)$ is also continous.  Then there is exactly one solution to ODE IVP, but it may only be defined for a short part of the $x$-axis around $x_0$, i.e.~on an open interval $(x_0-h,x_0+h)$.
+\begin{theorem}[1.2.1]
+Let $R$ be a rectangle in the $xy$ plane that contains $(x_0,y_0)$ in the interior.  Suppose that $f(x,y)$ in $(\ast)$ is continuous and the $\frac{\partial f}{\partial y}(x,y)$ is also continous.  Then there is exactly one solution to ODE IVP, but it may only be defined for a short part of the $x$-axis around $x_0$, i.e.~on an open interval $(x_0-h,x_0+h)$.
 \end{theorem}
 \end{frame}
 
@@ -294,14 +297,16 @@ Let $R$ be a rectangle in the $xy$ plane that contains $(x_0,y_0)$ in the interi
 \begin{frame}{an example}
 
 \begin{itemize}
-\item the last slide was very ``mathy''
-\item an example helps know what it means
-\item \emph{example}.  verify that both $y(x)=0$ and $y(x)=c x^{3/2}$, for a certain nonzero $c$, solve the ODE IVP
+\item the last slide was ``mathy''; an example helps give meaning
+\item \emph{example}.  verify that both $y(x)=0$ and $y(x)=c x^{3/2}$, for some nonzero $c$, solve the ODE IVP
     $$y' = y^{1/3}, \quad y(0)=0$$
 
-\vspace{35mm}
-\item in the above example $\partial f/\partial y = (1/3)x^{-2/3}$; this is not continuous on a rectangle around $(0,0)$
-\item the theorem on the last slide is true but this example shows you need $f(x,y)$ to be nice
+\vspace{30mm}
+\item in the above example $\frac{\partial f}{\partial y} = \frac{1}{3} y^{-2/3}$
+    \begin{itemize}
+        \item it is not continuous on any rectangle around $(0,0)$
+    \end{itemize}
+\item the theorem on the last slide is true but this example shows you \emph{do} need $f(x,y)$ to be nice
 \end{itemize}
 \end{frame}
 
@@ -309,18 +314,22 @@ Let $R$ be a rectangle in the $xy$ plane that contains $(x_0,y_0)$ in the interi
 \begin{frame}{conclusion}
 
 \begin{itemize}
-\item the main idea of section 1.2 is this slogan:
+\item the main idea of section 1.2 is in this slogan:
 
 \bigskip
 
 \begin{quote}
-\alert{if you add initial condition(s) to a differential equation then you can get a single solution}
+\alert{if you add initial condition(s) to a differential equation then you can get a single solution}, which can be used to predict
 \end{quote}
 
 \bigskip
 
-\item the theorem says this is actually true of first-order ODE IVPs ($y'=f(x,y)$) with a single initial value ($y(x_0)=y_0$) as long as the function $f$ is nice
-\item for $n$th-order ODEs we expect to need $n$ values
+\item Theorem 1.2.1 says this is actually true of first-order ODE IVPs ($y'=f(x,y)$) with a single initial value ($y(x_0)=y_0$) as long as the function $f$ is nice
+\item \emph{important notes}:
+    \begin{itemize}
+    \item to use the language of prediction, we would call $x<x_0$ the ``past'' and $x>x_0$ the ``future''
+    \item for $n$th-order ODEs (second-order, third-order, etc.) the Theorem does not directly apply, but we expect to need $n$ numbers to give adequate initial conditions/values
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -331,7 +340,12 @@ Let $R$ be a rectangle in the $xy$ plane that contains $(x_0,y_0)$ in the interi
 \begin{itemize}
 \item \emph{read} section 1.2 in the textbook
 \item \emph{do} the WebAssign exercises for section 1.2
-\item \emph{think} about the these ideas
+\item \emph{think} about these ideas
+
+\bigskip
+\item see this page for more on Theorem 1.2.1:
+
+\centerline{\href{https://en.wikipedia.org/wiki/Picard-Lindelof_theorem}{\texttt{en.wikipedia.org/wiki/Picard-Lindel\"of\_theorem}}}
 \end{itemize}
 \end{frame}
 
