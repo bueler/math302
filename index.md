@@ -3,7 +3,7 @@ layout: course-page
 title: Math F302 UX1 Differential Equations in Spring 2019 at UAF
 ---
 
-Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019** at [UAF](http://www.uaf.edu/).
+Welcome to the homepage of **Math F302 UX1 Differential Equations in Spring 2019**.
 
 [Ed Bueler](http://bueler.github.io/), the instructor, is in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
@@ -19,7 +19,7 @@ Welcome to the homepage of Math F302 UX1 Differential Equations in **Spring 2019
 
 * Go to [WebAssign](https://www.webassign.net/) and sign in with the class key: &nbsp; <code>uaf 3982 1786</code>  &nbsp; You will also need the Access Code which comes with your textbook.
 
-* See [Week 1](week1).
+* See [Week 1](week1), then [Week 2](week2), and so on.
 
 ### Important Links
 
