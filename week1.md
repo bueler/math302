@@ -15,7 +15,7 @@ This week is about an introduction to differential equations (DEs), of course.  
 * [blank slides for section 1.1](assets/slides/1-1.pdf)
 * [video: Bueler talks slides for section 1.1](https://drive.explaineverything.com/thecode/UNGQFSV)
 * [blank Mini-Project 1](assets/mp/mp1.pdf)
-* [link for submitting Mini-Project 1](https://docs.google.com/forms/d/e/1FAIpQLSeoURKbu4cTWw0wGhLfuiMjBODipJlRBCNd8cyza3tRRrg8Yw/viewform?usp=sf_link)
+* [link for submitting Mini-Project 1](https://drive.google.com/open?id=11Z5AwOQbANU3RWWKvTGujPmkKydTvdz4fWR_zuiAW1I)
 
 ### Tuesday 1/15
 * work on above stuff
