@@ -97,6 +97,10 @@ body {
     text-decoration: none;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   a:visited {
     color: $color-link-visited;
   }
