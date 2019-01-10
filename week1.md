@@ -26,7 +26,7 @@ This week is about an introduction to differential equations (DEs), of course.  
 * [WebAssign 1.1 part A](https://www.webassign.net/) **due at 11pm**
 
 ### Thursday 1/17
-* Mini-Project 1, _High Points of Calculus_, **due at noon** via [this link](https://docs.google.com/forms/d/e/1FAIpQLSeoURKbu4cTWw0wGhLfuiMjBODipJlRBCNd8cyza3tRRrg8Yw/viewform?usp=sf_link)
+* Mini-Project 1, _High Points of Calculus_, **due at 11pm** via [this link](https://docs.google.com/forms/d/e/1FAIpQLSeoURKbu4cTWw0wGhLfuiMjBODipJlRBCNd8cyza3tRRrg8Yw/viewform?usp=sf_link)
 * [work on WebAssign 1.1 part B](https://www.webassign.net/)
 
 ### Friday 1/18
