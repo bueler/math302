@@ -16,21 +16,21 @@ This week is about differential equations as models and about ways to picture di
 * [work on WebAssign 1.2](https://www.webassign.net/)
 
 ### Tuesday 1/22
-* [WebAssign 1.2](https://www.webassign.net/) **due at 11pm**
+* [WebAssign 1.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 1/23
-* proctored Quiz 1 covers 1.1--1.2
+* <span style="color:blue">**proctored Quiz 1 covers 1.1 and 1.2**</span>
 * [blank slides for section 1.3](assets/slides/1-3.pdf)
-* video: Bueler talks  slides for section 1.3 _BUELER TODO_
+* video: Bueler talks over slides for section 1.3 _BUELER TODO_
 
 ### Thursday 1/24
-* proctored Quiz 1 covers 1.1--1.2
+* <span style="color:blue">**proctored Quiz 1 covers 1.1 and 1.2**</span>
 * [work on WebAssign 1.3](https://www.webassign.net/)
 
 ### Friday 1/25
 * blank slides for section 2.1 _BUELER TODO_
-* video: Bueler talks  slides for section 2.1 _BUELER TODO_
-* [WebAssign 1.3](https://www.webassign.net/) **due at 11pm**
+* video: Bueler talks over slides for section 2.1 _BUELER TODO_
+* [WebAssign 1.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Gil Strang at MIT: Pictures of the solutions](https://www.youtube.com/watch?v=cDfWtSqGiBY)
