@@ -36,13 +36,18 @@
 \begin{frame}{DEs as models}
 
 \begin{itemize}
-\item I have already described differential equations models
+\item I have already pushed differential equations as models
     \begin{itemize}
     \item made a big deal of it in previous slides!
     \end{itemize}
+\item the goal of the exercises in \S 1.3 is to \alert{write down} a differential equation as a model of some situation
+    \begin{itemize}
+    \item generally don't need to solve the DE
+    \item generally first-order DE
+    \end{itemize}
 \item for section \S 1.3 my plan is:
     \begin{itemize}
-    \item I will work-through several exercises in these slides, and
+    \item \emph{I} will work-through \alert{four} exercises in these slides, and
     \item \emph{you} will actually read the examples in the section
     \end{itemize}
 \end{itemize}
@@ -89,12 +94,13 @@ where $k_b,k_d$ are two new \emph{positive} constants
 
 \begin{itemize}
 \item the new model combines the stuff on last slide:
-    $$\frac{dP}{dt} = k_b P - k_d P = (k_b-k_d) P$$
-\item thus new model is really the old model (1):
-    $$\frac{dP}{dt} = k P \quad \text{ where } k = k_b-k_d$$
+    $$\frac{dP}{dt} = k_b P - k_d P$$
+\item show this new model is really the old model (1):
+    %$$\frac{dP}{dt} = k P \quad \text{ where } k = k_b-k_d$$
+\vspace{20mm}
 
 \bigskip
-\item \emph{conclusion}.  by thinking this through we see that (1) \emph{already allowed} births and deaths, with $k=k_b-k_d$
+\item \emph{conclusion}.  we see that (1) \emph{already allows} births and deaths, with $k=k_b-k_d$
 
 \bigskip
 \item \alert{please go back and actually \emph{read} the ``Population Dynamics'' example on page 23}
@@ -106,81 +112,103 @@ where $k_b,k_d$ are two new \emph{positive} constants
 
 \scriptsize
 \begin{quotation}
-\noindent \textbf{5}.  A cup of coffee cools according to Newton's law of cooling (3).  Use data from the graph of temperature $T(t)$ [below] to estimate the constants $T_m$, $T_0$, and $k$ in a model of the form of a first order initial-value problem: $dT/dt = k(T-T_0)$, $T(0)=T_0$.
+\noindent \textbf{5}.  A cup of coffee cools according to Newton's law of cooling.  Use data from the graph of temperature $T(t)$ [below] to estimate the constants $T_m$, $T_0$, and $k$ in a model of the form of a first order initial-value problem: $dT/dt = k(T-T_m)$, $T(0)=T_0$.
 \end{quotation}
 
+\vspace{-4mm}
+
+\small
 \begin{itemize}
-\item X
+\item Newton's law of cooling says that an object with temperature $T(t)$ warms or cools at a rate proportional to the difference between $T(t)$ and the ambient temperature $T_m$: \quad $dT/dt = k(T-T_m)$
+\item solve by extracting numbers from the graph:
 \end{itemize}
 
-\includegraphics[width=0.4\textwidth]{exercise-5-1-3}
+\vspace{-1mm}
+
+\includegraphics[width=0.37\textwidth]{exercise-5-1-3}
 \end{frame}
 
 
 \begin{frame}{exercise 21 in \S 1.3}
 
-\begin{itemize}
-\item X
-\end{itemize}
+\begin{columns}
+\begin{column}{0.75\textwidth}
+\scriptsize
+\begin{quotation}
+\noindent \textbf{21}.  A small single-stage rocket is launched vertically as shown.  Once launched, the rocket consumes its fuel, and so its total mass $m(t)$ varies with time $t>0$.  If it is assumed that the positive direction is upward, air resistance is proportional to the instantaneous velocity $v$ of the rocket, and $R$ is the upward thrust or force, then construct a mathematical model for the velocity $v(t)$ of the rocket.
+\end{quotation}
 
-\includegraphics[width=0.25\textwidth]{exercise-21-1-3}
+\small
+\begin{itemize}
+\item hint 1: when the mass is changing with time, Newton's law is
+\begin{equation}
+F = \frac{d}{dt}\left(mv\right) \tag{17}
+\end{equation}
+where $F$ is the net force on the body and $mv$ is the momentum
+\item hint 2: on page 27 there is a model for air resistance used in equation (14): $F_2 = - k v$
+\end{itemize}
+\end{column}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=\textwidth]{exercise-21-1-3}
+\end{column}
+\end{columns}
+
+
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exercise 21, cont.}
 
 \begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
+\item collect the forces to get the net force:
 
+$$F = \hspace{70mm}$$
+\vspace{10mm}
 
-\begin{frame}{X}
+\item now we can write down the model:
 
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
+\vspace{30mm}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exercise 10 in \S 1.3}
 
+\scriptsize
+\begin{quotation}
+\noindent \textbf{10}.  Suppose that a large mixing tank initially holds 300 gallons of water in which 50 pounds of salt have been dissolved.  Another brine solution is pumped into the tank at a rate of 3 gallons per minute [gal/min], and when the solution is well-stirred it is then pumped out at a slower rate of 2 gal/min.  If the concentration of the solution entering is 2 pounds per gallon [lb/gal], determine a differential equation for the amount of salt $A(t)$ in the tank at time $t>0$.
+\end{quotation}
+
+\small
 \begin{itemize}
-\item X
+\item $A(t)$ is amount of salt in pounds [lb]; what is $A(0)$?
+\item what is $V(t)$, the total solution volume?
+\item write down the differential equation for $\frac{dA}{dt}$:
+
+\vspace{30mm}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exercise 10, extended and fully-solved}
 
 \begin{itemize}
-\item X
+\item what is a function $A(t)$ satisfying the ODE IVP?:
+    $$\frac{dA}{dt} = 6 - \frac{2}{300+t} A, \quad A(0)=50$$
+\item one may verify that
+
+\vspace{-5mm}
+    $$A(t) = 2 (300+t) - 550 \left(\frac{300}{300+t}\right)^2$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item get it using methods in \S 2.3
+    \end{itemize}
+
+\centerline{\includegraphics[width=0.8\textwidth]{exercise-10-1-3}}
 \end{itemize}
 \end{frame}
+
 
 
 \begin{frame}{expectations}
@@ -188,11 +216,14 @@ where $k_b,k_d$ are two new \emph{positive} constants
 to learn this material, just watching this video is \emph{not} enough; also
 \begin{itemize}
 \item \emph{read} section 1.3 in the textbook
+    \begin{itemize}
+    \item for instance, actually \emph{read} the ``Mixtures'' example on p.~25 and the ``Falling Bodies and Air Resistance'' example on p.~27
+    \end{itemize}
 \item \emph{do} the WebAssign exercises for section 1.3
 \item see the other ``found online'' videos at the bottom of the week 2 page:
-\end{itemize}
 
 \centerline{\href{https://bueler.github.io/math302/week2.html}{\tt \color{cyan} bueler.github.io/math302/week2.html}}
+\end{itemize}
 \end{frame}
 
 \end{document}
