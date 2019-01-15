@@ -20,31 +20,31 @@
 
 %\setbeamercolor{normal text}{fg=white,bg=black}
 
-%\NewEnviron{rightframe}[1][]{%
-%\begin{frame}[t]
-%\frametitle{#1}
-%\begin{columns}
-%\begin{column}{0.4\textwidth}
-%%nothing
-%\end{column}
-%\begin{column}{0.6\textwidth}
-%\BODY
-%\end{column}
-%\end{columns}
-%\end{frame}
-%}
+\NewEnviron{rightframe}[1][]{%
+\begin{frame}[t]
+\frametitle{#1}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+%nothing
+\end{column}
+\begin{column}{0.6\textwidth}
+\BODY
+\end{column}
+\end{columns}
+\end{frame}
+}
 
 
 \begin{document}
 
-\begin{frame}
+\begin{rightframe}[]
 \titlepage
 
 \vspace{30mm}
 \tiny {\color{blue!30} D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
-\end{frame}
+\end{rightframe}
 
-\begin{frame}
+\begin{rightframe}[]
 a \emph{separable} differential equation can be put in the form
         $$\frac{dy}{dx} = g(x) h(y)$$
 \only<2-3>{
@@ -66,9 +66,9 @@ a \emph{separable} differential equation can be put in the form
         $$p(y) \frac{dy}{dx} = g(x)$$
 where $p(y)=1/h(y)$
 }
-\end{frame}
+\end{rightframe}
 
-\begin{frame}
+\begin{rightframe}[]
 how to solve separable equations?
 
 \emph{answer}.  clear denominators in
@@ -80,48 +80,48 @@ to get
 \only<2>{
 this works because of the chain rule
 }
-\end{frame}
+\end{rightframe}
 
-\begin{frame}
+\begin{rightframe}[]
 \begin{itemize}
 \item \textbf{Example.}
     $$\frac{dy}{dx} = x y^2$$
 \end{itemize}
-\end{frame}
+\end{rightframe}
 
-\begin{frame}
+\begin{rightframe}[]
 some familiar equations are separable
 \begin{itemize}
 \item \textbf{Example.}
     $$\frac{dy}{dx} = - 5 y$$
 \end{itemize}
-\end{frame}
+\end{rightframe}
 
-\begin{frame}
+\begin{rightframe}[]
 what if there are initial conditions?
 \begin{itemize}
 \item \textbf{Example.}  Find $z(t)$ if
     $$z' = \frac{e^{-z}}{t}$$
 and if $z(4)=1$
 \end{itemize}
-\end{frame}
+\end{rightframe}
 
-\begin{frame}
+\begin{rightframe}[]
 you may end up only knowing the solution implicitly
 \begin{itemize}
 \item \textbf{Example.}
     $$\frac{dy}{dx} = \frac{x(1-x)}{y(2+y)}$$
 \end{itemize}
-\end{frame}
+\end{rightframe}
 
-\begin{frame}
+\begin{rightframe}[]
 \emph{expectations}.  you must \emph{read} section 2.2 to learn about some pitfalls, including
 \begin{itemize}
 \item making sure you find all solutions
 \item how to write solutions if you can't do the integrals by hand
 \end{itemize}
 \only<2>{and \emph{doing exercises} is essential}
-\end{frame}
+\end{rightframe}
 
 \end{document}
 
