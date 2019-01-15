@@ -36,6 +36,5 @@ This week is about differential equations as models and about ways to picture di
 * [Gil Strang at MIT: Pictures of the solutions](https://www.youtube.com/watch?v=cDfWtSqGiBY)
 * [Khan Academy: Exponential Models and Differential Equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-differential-equations-new/ab-7-8/v/modeling-population-with-simple-differential-equation)
 
-<br>
 <hr>
 <a align="left" href="week1">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week3">next week --\></a>
