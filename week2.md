@@ -9,7 +9,7 @@ Welcome to Week 2 of [MATH F302 UX1 in Spring 2019](index.html)!
 
 Make sure to read the [syllabus](syllabus.pdf), the [schedule](schedule.pdf), and [how to set up proctoring](proctoring.pdf).  The first Quiz is scheduled for this week.
 
-This week is about FIXME
+This week is about differential equations as models and about ways to picture differential equations, using direction fields and phase portraits, even before we can find formulas for their solutions.  The formulas get going in [Week 3](week3).
 
 ### Monday 1/21
 * Alaska Civil Rights Day
@@ -21,15 +21,15 @@ This week is about FIXME
 ### Wednesday 1/23
 * proctored Quiz 1 covers 1.1--1.2
 * [blank slides for section 1.3](assets/slides/1-3.pdf)
-* [video: Bueler talks  slides for section 1.3](FIXME) _BUELER TODO_
+* video: Bueler talks  slides for section 1.3 _BUELER TODO_
 
 ### Thursday 1/24
 * proctored Quiz 1 covers 1.1--1.2
 * [work on WebAssign 1.3](https://www.webassign.net/)
 
 ### Friday 1/25
-* [blank slides for section 2.1](FIXME) _BUELER TODO_
-* [video: Bueler talks  slides for section 2.1](FIXME) _BUELER TODO_
+* blank slides for section 2.1 _BUELER TODO_
+* video: Bueler talks  slides for section 2.1 _BUELER TODO_
 * [WebAssign 1.3](https://www.webassign.net/) **due at 11pm**
 
 ### found online
