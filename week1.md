@@ -41,3 +41,6 @@ This week is about an introduction to differential equations (DEs), of course.  
 * [Gil Strang at MIT: The calculus you need](https://www.youtube.com/watch?v=f0BxAtprWts)
 * [Khan Academy: DE Introduction](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations)
 
+<br>
+<hr>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week2">next week --\></a>
