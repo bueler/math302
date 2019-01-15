@@ -21,7 +21,7 @@ This week is about differential equations as models and about ways to picture di
 ### Wednesday 1/23
 * <span style="color:blue">**proctored Quiz 1 covers 1.1 and 1.2**</span>
 * [blank slides for section 1.3](assets/slides/1-3.pdf)
-* video: Bueler talks over slides for section 1.3 _BUELER TODO_
+* [video: Bueler talks over slides for section 1.3](https://drive.explaineverything.com/thecode/XJLMBWB)
 
 ### Thursday 1/24
 * <span style="color:blue">**proctored Quiz 1 covers 1.1 and 1.2**</span>
