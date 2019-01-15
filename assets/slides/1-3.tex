@@ -33,19 +33,22 @@
 \end{frame}
 
 
-\begin{frame}{as models}
+\begin{frame}{DEs as models}
 
 \begin{itemize}
-\item I have already made a big deal of differential equations (DEs) as models!
-\item for section 1.3 my plan is:
+\item I have already described differential equations models
     \begin{itemize}
-    \item \emph{you} will actually read the examples in the section, and
-    \item \emph{I} will work-through several exercises in these slides
+    \item made a big deal of it in previous slides!
+    \end{itemize}
+\item for section \S 1.3 my plan is:
+    \begin{itemize}
+    \item I will work-through several exercises in these slides, and
+    \item \emph{you} will actually read the examples in the section
     \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{exercise 2 in section 1.3}
+\begin{frame}{exercise 2 in \S 1.3}
 
 \scriptsize
 \begin{quotation}
@@ -56,31 +59,26 @@
 \vspace{-3mm}
 
 \begin{itemize}
-\item the population model in (1) is simply that the rate of change is proportional to the population: $\frac{dP}{dt} = k P$
+\item the population model in (1) is simply that the rate of change of population is proportional to the population: $\frac{dP}{dt} = k P$
 \item this exercise asks for ``another model'' where ``both the birth rate and death rate are proportional'' to $P(t)$
     \begin{itemize}
-    \item note $P(t)$ \emph{is} ``the population present at time $t>0$''
+    \item $P(t) =$ ``the population present at time $t>0$''
     \end{itemize}
-\item in the new model we want ``the rate at which the population changes'' to be the \emph{net} rate
+\item in the new model we want $\frac{dP}{dt}$ to be the \emph{net} rate
 \item the net rate is ``the difference between the rate of births and the rate of deaths''
-\item next slide: the equations are briefer than all these words!
 \end{itemize}
 \end{frame}
+
 
 \begin{frame}{exercise 2 cont.}
 
 \begin{itemize}
-\item lets give names:
-    \begin{itemize}
-    \item ``rate of births'' $= R_b$
-    \item ``rate of deaths'' $= R_d$
-    \end{itemize}
 \item the rate at which the population changes is net rate:
-    $$\frac{dP}{dt} = R_b - R_d$$
+    $$\frac{dP}{dt} = (\text{rate of births}) - (\text{rate of deaths})$$
 \item both the birth rate and death rate are proportional to $P(t)$:
 \begin{align*}
-    R_b &= k_b P \\
-    R_d &= k_d P
+    (\text{rate of births}) &= k_b P \\
+    (\text{rate of deaths}) &= k_d P
 \end{align*}
 where $k_b,k_d$ are two new \emph{positive} constants
 \end{itemize}
@@ -92,11 +90,11 @@ where $k_b,k_d$ are two new \emph{positive} constants
 \begin{itemize}
 \item the new model combines the stuff on last slide:
     $$\frac{dP}{dt} = k_b P - k_d P = (k_b-k_d) P$$
-\item thus new model is really the old model:
+\item thus new model is really the old model (1):
     $$\frac{dP}{dt} = k P \quad \text{ where } k = k_b-k_d$$
-    \begin{itemize}
-    \item by thinking this through we see that (1) already allowed births and deaths
-    \end{itemize}
+
+\bigskip
+\item \emph{conclusion}.  by thinking this through we see that (1) \emph{already allowed} births and deaths, with $k=k_b-k_d$
 
 \bigskip
 \item \alert{please go back and actually \emph{read} the ``Population Dynamics'' example on page 23}
@@ -104,13 +102,28 @@ where $k_b,k_d$ are two new \emph{positive} constants
 \end{frame}
 
 
-\begin{frame}{exercise 5 in section 1.3}
+\begin{frame}{exercise 5 in \S 1.3}
+
+\scriptsize
+\begin{quotation}
+\noindent \textbf{5}.  A cup of coffee cools according to Newton's law of cooling (3).  Use data from the graph of temperature $T(t)$ [below] to estimate the constants $T_m$, $T_0$, and $k$ in a model of the form of a first order initial-value problem: $dT/dt = k(T-T_0)$, $T(0)=T_0$.
+\end{quotation}
 
 \begin{itemize}
 \item X
 \end{itemize}
 
 \includegraphics[width=0.4\textwidth]{exercise-5-1-3}
+\end{frame}
+
+
+\begin{frame}{exercise 21 in \S 1.3}
+
+\begin{itemize}
+\item X
+\end{itemize}
+
+\includegraphics[width=0.25\textwidth]{exercise-21-1-3}
 \end{frame}
 
 
