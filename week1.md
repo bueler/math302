@@ -32,7 +32,6 @@ This week is about an introduction to differential equations (DEs), of course.  
 * [blank slides for section 1.2](assets/slides/1-2.pdf)
 * [video: Bueler talks over slides for section 1.2](https://drive.explaineverything.com/thecode/HMUREFK)
 * [WebAssign 1.1 part B](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
-* last day to drop/add
 
 
 ### found online
