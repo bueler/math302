@@ -15,7 +15,6 @@ This week is about an introduction to differential equations (DEs), of course.  
 * [blank slides for section 1.1](assets/slides/1-1.pdf)
 * [video: Bueler talks over slides for section 1.1](https://drive.explaineverything.com/thecode/ADHUMVD)  <-- _link to corrected video!_
 * [blank Mini-Project 1](assets/mp/mp1.pdf)
-* [link for submitting Mini-Project 1](https://goo.gl/forms/YwMmBGf3x0FqyEAA3); you may need to log in to your `alaska.edu` account to use this link
 
 ### Tuesday 1/15
 * [work on WebAssign 1.1 part A](https://www.webassign.net/)
@@ -25,7 +24,7 @@ This week is about an introduction to differential equations (DEs), of course.  
 * [WebAssign 1.1 part A](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Thursday 1/17
-* Mini-Project 1, _High Points of Calculus_, <span style="color:orange">**due at 11pm**</span> via [this link](https://docs.google.com/forms/d/e/1FAIpQLSeoURKbu4cTWw0wGhLfuiMjBODipJlRBCNd8cyza3tRRrg8Yw/viewform?usp=sf_link)
+* Mini-Project 1, _High Points of Calculus_, <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 1](https://docs.google.com/forms/d/e/1FAIpQLSeoURKbu4cTWw0wGhLfuiMjBODipJlRBCNd8cyza3tRRrg8Yw/viewform?usp=sf_link); you may need to log in to your `alaska.edu` account to use this link
 * [work on WebAssign 1.1 part B](https://www.webassign.net/)
 
 ### Friday 1/18
