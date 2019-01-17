@@ -13,7 +13,7 @@ This week is about an introduction to differential equations (DEs), of course.  
 
 ### Monday 1/14
 * [blank slides for section 1.1](assets/slides/1-1.pdf)
-* [video: Bueler talks over slides for section 1.1](https://drive.explaineverything.com/thecode/UNGQFSV)
+* [video: Bueler talks over slides for section 1.1](https://drive.explaineverything.com/thecode/ADHUMVD)  <-- _link to corrected video!_
 * [blank Mini-Project 1](assets/mp/mp1.pdf)
 * [link for submitting Mini-Project 1](https://goo.gl/forms/YwMmBGf3x0FqyEAA3); you may need to log in to your `alaska.edu` account to use this link
 
