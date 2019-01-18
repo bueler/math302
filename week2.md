@@ -36,6 +36,7 @@ This week is about differential equations as models and about ways to picture di
 ### found online
 * [Gil Strang at MIT: Pictures of the solutions](https://www.youtube.com/watch?v=cDfWtSqGiBY)
 * [Khan Academy: Exponential Models and Differential Equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-differential-equations-new/ab-7-8/v/modeling-population-with-simple-differential-equation)
+* [wikipedia page for "slope field"](https://en.wikipedia.org/wiki/Slope_field) has short codes for plotting them
 
 <hr>
 <a align="left" href="week1">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week3">next week --\></a>
