@@ -9,18 +9,23 @@ Example 1:
     import dirfield as df
     def f(x,y) : return -y
     df.dirfield(f,[0,2,-3,4])  # first argument is function
-                               # second is box:  [x0,x1,y0,y1]
-    df.genfig('foo.png')
+                               # second argument is box:  [x0,x1,y0,y1]
+    df.genfig('example.png')
 
-Example 2:
+Example 2, showing only field:
     import dirfield as df
-    df.runexample()
+    df.runexample1()
+
+Example 3, showing field and solution:
+    import dirfield as df
+    df.runexample2()
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-def dirfield(f,xybox,mx=11,my=11,showaxes=True,axescolor='k',slopescolor='b'):
+def dirfield(f,xybox,mx=11,my=11,showaxes=True,axescolor='k',
+             slopescolor='b',slopeslinewidth=3):
     """Plots direction fields.
     Example:
         def f(x, y) : return y
@@ -48,7 +53,7 @@ def dirfield(f,xybox,mx=11,my=11,showaxes=True,axescolor='k',slopescolor='b'):
             theta = np.arctan(m)
             plt.plot([x[j]-lhx*np.cos(theta),x[j]+lhx*np.cos(theta)],
                      [y[k]-lhy*np.sin(theta),y[k]+lhy*np.sin(theta)],
-                     lw=3,color=slopescolor)
+                     lw=slopeslinewidth,color=slopescolor)
 
 def genfig(name,transparent=False,trim=False):
     """
@@ -60,10 +65,22 @@ def genfig(name,transparent=False,trim=False):
         from subprocess import call
         call(['mogrify','-trim',name])
 
-def runexample():
-    print("generating direction field for  y' + y = x + 3 ...")
+def runexample1():
+    print("showing direction field for  y' = x - y")
     def f(x,y):
-        return x+3-y
-    dirfield(f,[-3,5,0,8],mx=20,my=16,slopescolor='r')
+        return x-y
+    xybox = [-3,3,-3,3]
+    dirfield(f,xybox,mx=12,my=12,slopescolor='b',slopeslinewidth=1.5)
     genfig('example-field.png',trim=True)
+
+def runexample2():
+    print("showing direction field and solution for  y' = x - y, y(0)=2")
+    def f(x,y):
+        return x-y
+    xybox = [-3,5,0,8]
+    dirfield(f,xybox,mx=20,my=16,slopescolor='b',slopeslinewidth=1.5)
+    xx = np.linspace(-1.2,5.0,101)
+    plt.plot(xx,xx-1.0+3.0*np.exp(-xx),'r')
+    plt.plot(0.0,2.0,'k.',markersize=12)
+    genfig('example-field-solution.png',trim=True)
 
