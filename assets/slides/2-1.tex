@@ -37,22 +37,128 @@
 \begin{frame}{meaning of a differential equation}
 
 \begin{itemize}
-\item let's start over on the meaning of a (first-order) differential equation:
+\item start over on the meaning of a (first-order) DE:
     $$\frac{dy}{dx} = f(x,y)$$
-\item as long as we have a formula for $f$ then we have a clear statement that
+
+\vspace{-2mm}
+    \begin{enumerate}
+    \item the left side is the \emph{slope} of the solution $y(x)$
+    \item given a pair $(x,y)$, the right side computes a number $f(x,y)$
+    \end{enumerate}
+\item thus a differential equation \emph{is} a statement:
     $$\begin{matrix}
     \text{the slope of the} \\
-    \text{solution } y 
+    \text{solution } y(x) 
     \end{matrix} \quad \stackrel{\text{equals}}{=} \quad
     \begin{matrix}
     \text{a known function of} \\
     \text{the location } (x,y)
     \end{matrix}$$
-\item this literal reading of the differenential equation means that
+\item this literal reading of the DE means that
 
-\centerline{\alert{we can draw a picture of the differential equation itself}}
+\centerline{\alert{we can \emph{draw} a picture of the DE itself}}
 
-\item we can draw the picture whether or not we can do the calculus/algebra to find a solution (formula for) $y(x)$
+\item \dots whether or not we can do the calculus/algebra to find a formula for $y(x)$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{direction field}
+
+\begin{itemize}
+\item again, $\frac{dy}{dx} = f(x,y)$ should be read as a way of computing a slope ($dy/dx$) at each location in the plane ($(x,y)$)
+\item you can create a \emph{direction field} or \emph{slope field}:
+    \begin{enumerate}
+    \item generate a grid of point in the $x$--$y$ plane
+    \item for each point, draw a short line with the slope given by $f(x,y)$ at that point
+    \end{enumerate}
+\item see also: \small \href{https://en.wikipedia.org/wiki/Slope_field}{\color{blue} \texttt{en.wikipedia.org/wiki/Slope\_field}} \normalsize
+
+\bigskip
+\item \begin{minipage}[t]{0.375\textwidth}
+\emph{Example.}  By hand, draw a direction field for
+$$\frac{dy}{dx} = x-y$$
+on the square
+$$-3 \le x \le 3, -3 \le y \le 3$$
+\end{minipage} 
+
+\vspace{20mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{a computer is wanted}
+
+\begin{itemize}
+\item o.k., I acknowledge \emph{happily} that this is a job for a computer
+\item see ``found online'' at the \href{https://bueler.github.io/math302/week2.html}{\color{blue} Week 2 tab}
+\item \emph{Example.}  Use a computer to draw a direction field for
+$\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
+
+\bigskip
+\emph{Solution}:
+
+\vspace{-5mm}
+\hfill \includegraphics[width=0.5\textwidth]{figs/example-field}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{picturing ODE IVPs}
+
+\begin{itemize}
+\item recall that we are often solving initial value problems
+\item one can \emph{see} the solution in the direction field
+
+\bigskip
+\item \begin{minipage}[t]{0.37\textwidth}
+\emph{Example.}  Use the direction field for
+$\frac{dy}{dx} = x-y$ to sketch the solution of
+    $$\frac{dy}{dx} = x-y, \quad y(0)=2$$
+\end{minipage}
+
+\vspace{-25mm}
+\hfill \includegraphics[width=0.5\textwidth]{figs/example-field-solution}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
 \end{itemize}
 \end{frame}
 
