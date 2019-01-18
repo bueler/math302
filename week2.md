@@ -37,7 +37,10 @@ This week is about differential equations as models and about ways to picture di
 * [Gil Strang at MIT: Pictures of the solutions](https://www.youtube.com/watch?v=cDfWtSqGiBY)
 * [Khan Academy: Exponential Models and Differential Equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-differential-equations-new/ab-7-8/v/modeling-population-with-simple-differential-equation)
 * [wikipedia page for "slope field"](https://en.wikipedia.org/wiki/Slope_field) has short codes for plotting them
-* [desmos "Slope Field Generator"](https://www.desmos.com/calculator/p7vd3cdmei)
+* I wrote a [python code dirfield.py](other) for generating direction fields
+* there is a [Slope Field Generator](https://www.desmos.com/calculator/p7vd3cdmei) at [desmos.com](https://www.desmos.com)
+* there is a slope field web applet at [slopefield.nathangrigg.net](http://slopefield.nathangrigg.net/)
+* and many more you can find ...
 
 <hr>
 <a align="left" href="week1">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week3">next week --\></a>
