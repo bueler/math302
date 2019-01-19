@@ -1,7 +1,7 @@
 \documentclass{beamer}
 
 \usepackage[utf8]{inputenc}
-\usepackage{fancybox}
+\usepackage{fancybox,fancyvrb}
 \usepackage{environ}
 \usepackage{tikz}
 
@@ -94,6 +94,8 @@ $$-3 \le x \le 3, -3 \le y \le 3$$
     \begin{itemize}
     \item for computer tools,  see ``found online'' at the \href{https://bueler.github.io/math302/week2.html}{\color{blue} Week 2 tab}
     \end{itemize}
+
+\medskip
 \item \emph{Example.}  Use a computer to draw a direction field for
 $\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
 
@@ -101,7 +103,13 @@ $\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
 \emph{Solution}:
 
 \vspace{-3mm}
-\hfill \includegraphics[width=0.55\textwidth]{figs/example-field} \phantom{as dfjadl dsf}
+\hfill \includegraphics[width=0.5\textwidth]{figs/example-field} \phantom{as dfjadl dsf}
+
+\medskip
+\scriptsize
+\texttt{def f(x,y):  return x - y}  \hfill $\longleftarrow$ \emph{from my Python code}
+
+\texttt{dirfield(f,[-3,3,-3,3],mx=12,my=12)}
 \end{itemize}
 \end{frame}
 
@@ -113,15 +121,59 @@ $\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
 \item \emph{next main idea}:  one can \emph{see} the solution to an ODE IVP by plotting the initial point in the plane and then following the direction field from that point
 
 \bigskip
-\item \begin{minipage}[t]{0.37\textwidth}
+\item \begin{minipage}[t]{0.32\textwidth} \small
 \emph{Example.}  Use the direction field for
 $\frac{dy}{dx} = x-y$ to sketch the solution of
-    $$\frac{dy}{dx} = x-y, \quad y(0)=2$$
+    $$\frac{dy}{dx} = x-y, \, y(0)=2$$
 \end{minipage}
 
 \vspace{-25mm}
-\hfill \includegraphics[width=0.5\textwidth]{figs/example-field-solution}
+\hfill \includegraphics[width=0.55\textwidth]{figs/example-field-solution}
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 9 in \S 2.1}
+
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\small
+\noindent \textbf{9}.  \emph{Use computer software to obtain a direction field for the given differential equation.  By hand, sketch an approximate solution curve passing through each of the given points.}
+
+$$\frac{dy}{dx} = 0.2 x^2 + y$$
+
+\noindent \textbf{(a)} \quad $y(0)=\tfrac{1}{2}$
+
+\noindent \textbf{(b)} \quad $y(2)=-1$
+
+\vspace{10mm}
+
+\tiny
+\texttt{def f(x,y):}
+
+\hspace{3mm} \texttt{return 0.2*x**2 + y}
+
+\texttt{dirfield(f,[-2,5,-3,3],mx=12,my=12)}
+\end{column}
+\begin{column}{0.55\textwidth}
+
+\hspace{-10mm} \includegraphics[width=1.15\textwidth]{figs/exercise-9-2-1}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\begin{tabular}{c|c|c}
+ & autonomous & nonautonomous \\ \hline
+linear \Large\strut & $y' = c y$ & $y' + P(x) y = f(x)$ \\ \hline
+nonlinear \Large\strut & $y' = f(y)$ & $y'=f(x,y)$
+\end{tabular}
 \end{frame}
 
 
@@ -141,27 +193,27 @@ $\frac{dy}{dx} = x-y$ to sketch the solution of
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{looking ahead to next two sections}
 
 \begin{itemize}
 \item X
 \end{itemize}
-\end{frame}
 
+\begin{tabular}{c|c|c}
+ & autonomous & nonautonomous \\ \hline
+linear \Large\strut & $y' = c y$ & $y' + P(x) y = f(x)$ \\ \hline
+nonlinear \Large\strut & $y' = f(y)$ & 
 
-\begin{frame}{X}
+\begin{minipage}{45mm}
+\medskip
 
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
+\small
+    \begin{tabular}{c|c}
+    separable & nonseparable \\ \hline
+    $y'=g(x)h(y)$ & $y'=f(x,y)$
+    \end{tabular}
+\end{minipage}
+\end{tabular}
 \end{frame}
 
 
@@ -176,6 +228,7 @@ to learn this material, just watching this video is \emph{not} enough; also
 \item see the other ``found online'' videos at bottom of this page:
 
 \centerline{\href{https://bueler.github.io/math302/week2.html}{\tt \color{cyan} bueler.github.io/math302/week2.html}}
+\item FIXME: regarding programming (optional) and interacting with computer (obligatory)
 \end{itemize}
 \end{frame}
 
