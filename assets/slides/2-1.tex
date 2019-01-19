@@ -43,9 +43,9 @@
 \vspace{-2mm}
     \begin{enumerate}
     \item the left side is the \emph{slope} of the solution $y(x)$
-    \item given a pair $(x,y)$, the right side computes a number $f(x,y)$
+    \item given a point $(x,y)$, the right side computes a number $f(x,y)$
     \end{enumerate}
-\item thus a differential equation \emph{is} a statement:
+\item thus a differential equation (DE) says:
     $$\begin{matrix}
     \text{the slope of the} \\
     \text{solution } y(x) 
@@ -66,10 +66,10 @@
 \begin{frame}{direction field}
 
 \begin{itemize}
-\item again, $\frac{dy}{dx} = f(x,y)$ should be read as a way of computing a slope ($dy/dx$) at each location in the plane ($(x,y)$)
-\item you can create a \emph{direction field} or \emph{slope field}:
+\item \emph{main idea}: DE $\frac{dy}{dx} = f(x,y)$ should be read as computing a slope $m=\frac{dy}{dx}$ at each  point $(x,y)$
+\item \dots so we create a \emph{direction field} or \emph{slope field}:
     \begin{enumerate}
-    \item generate a grid of point in the $x$--$y$ plane
+    \item generate a grid of point in the $x$,$y$ plane
     \item for each point, draw a short line with the slope given by $f(x,y)$ at that point
     \end{enumerate}
 \item see also: \small \href{https://en.wikipedia.org/wiki/Slope_field}{\color{blue} \texttt{en.wikipedia.org/wiki/Slope\_field}} \normalsize
@@ -87,19 +87,21 @@ $$-3 \le x \le 3, -3 \le y \le 3$$
 \end{frame}
 
 
-\begin{frame}{a computer is wanted}
+\begin{frame}{computers are useful}
 
 \begin{itemize}
-\item o.k., I acknowledge \emph{happily} that this is a job for a computer
-\item see ``found online'' at the \href{https://bueler.github.io/math302/week2.html}{\color{blue} Week 2 tab}
+\item I acknowledge \emph{happily} that this is a job for a computer
+    \begin{itemize}
+    \item for computer tools,  see ``found online'' at the \href{https://bueler.github.io/math302/week2.html}{\color{blue} Week 2 tab}
+    \end{itemize}
 \item \emph{Example.}  Use a computer to draw a direction field for
 $\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
 
 \bigskip
 \emph{Solution}:
 
-\vspace{-5mm}
-\hfill \includegraphics[width=0.5\textwidth]{figs/example-field}
+\vspace{-3mm}
+\hfill \includegraphics[width=0.55\textwidth]{figs/example-field} \phantom{as dfjadl dsf}
 \end{itemize}
 \end{frame}
 
@@ -108,7 +110,7 @@ $\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
 
 \begin{itemize}
 \item recall that we are often solving initial value problems
-\item one can \emph{see} the solution in the direction field
+\item \emph{next main idea}:  one can \emph{see} the solution to an ODE IVP by plotting the initial point in the plane and then following the direction field from that point
 
 \bigskip
 \item \begin{minipage}[t]{0.37\textwidth}
