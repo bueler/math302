@@ -72,7 +72,7 @@
     \item generate a grid of point in the $x$,$y$ plane
     \item for each point, draw a short line with the slope given by $f(x,y)$ at that point
     \end{enumerate}
-\item see also: \small \href{https://en.wikipedia.org/wiki/Slope_field}{\color{blue} \texttt{en.wikipedia.org/wiki/Slope\_field}} \normalsize
+\item see also: \small \href{https://en.wikipedia.org/wiki/Slope_field}{\color{cyan} \texttt{en.wikipedia.org/wiki/Slope\_field}} \normalsize
 
 \bigskip
 \item \begin{minipage}[t]{0.375\textwidth}
@@ -92,7 +92,7 @@ $$-3 \le x \le 3, -3 \le y \le 3$$
 \begin{itemize}
 \item I acknowledge \emph{happily} that this is a job for a computer
     \begin{itemize}
-    \item for computer tools,  see ``found online'' at the \href{https://bueler.github.io/math302/week2.html}{\color{blue} Week 2 tab}
+    \item for computer tools,  see ``found online'' at the \href{https://bueler.github.io/math302/week2.html}{\color{cyan} Week 2 tab}
     \end{itemize}
 
 \medskip
@@ -180,9 +180,19 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 \begin{frame}{autonomous first-order DEs}
 
 \begin{itemize}
-\item \emph{definition}. FIXME
-\item Example.  FIXME
-\item Non-example.  FIXME
+\item \emph{definition}. a first-order differential equation is \emph{autonomous} if the function does not depend on the independent variable:
+    $$\frac{dy}{dx} = f(y)$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item ``autonomous'' means ``independent of direct control''
+    \item autonomous DE is not directly controlled by input variable $x$
+    \item \dots but the \emph{solution} $y(x)$ is still a function of $x$
+    \end{itemize}
+\item Example.
+    $$\frac{dy}{dx} = \sqrt{\sin(y)}$$
+\item Non-example.
+    $$\frac{dy}{dx} = x-y$$
 \end{itemize}
 \end{frame}
 
@@ -190,17 +200,91 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 \begin{frame}{classification of first-order DEs}
 
 \begin{itemize}
-\item  FIXME
-\end{itemize}
+\item we will see that ``autonomous'' means ''easy to visualize''
+\item using definitions from sections 1.1 and 2.1 we already have a \emph{classification} of first-order DEs:
+
+\medskip
+\begin{center}
 \begin{tabular}{c|c|c}
  & autonomous & nonautonomous \\ \hline
-linear \Large\strut & $y' = c\, y$ & $y' + P(x) y = g(x)$ \\ \hline
+linear \Large\strut & $y' = c\, y + d$ & $y' + P(x) y = g(x)$ \\ \hline
 nonlinear \Large\strut & $y' = f(y)$ & $y'=f(x,y)$
 \end{tabular}
+\end{center}
+
+\medskip
+    \begin{itemize}
+    \item which can we already solve by guess-and-check?
+    \end{itemize}
+\end{itemize}
+
+\vspace{20mm}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{picturing autonomous DEs}
+
+\begin{itemize}
+\item the direction field of an autonomous DE is redundant
+\item it can be simplified into a one-dimensional \emph{phase portrait} or \emph{phase line}
+
+\medskip
+\item \begin{minipage}[t]{0.36\textwidth} \small
+Example.  Use a computer to draw the direction field for $x \in [-3,3]$ and $y\in [-\pi,\pi]$.  Then simplify the direction field into a phase portrait. 
+    $$\frac{dy}{dx} = \cos(2y)$$
+\end{minipage}
+
+\vspace{-36mm}
+\hfill \includegraphics[width=0.45\textwidth]{figs/autonomous-cos} \phantom{dfjsdf}
+% import numpy as np
+% def f(x,y):  return np.cos(2*y)
+% df.dirfield(f,[-3,3,-np.pi,np.pi],mx=21,my=21,slopeslinewidth=1.5)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{critical points of autonomous DEs}
+
+\begin{itemize}
+\item a value $y=c$ of an autonomous first-order DE
+    $$\frac{dy}{dx} \stackrel{(\ast)}{=} f(y)$$
+is called a \emph{critical point} if $f(c)=0$
+    \begin{itemize}
+    \item a.k.a.~\emph{equilibrium point} or \emph{stationary point}
+    \end{itemize}
+
+\medskip
+\item if $y=c$ is a critical point of ($\ast$) then $y=c$ is a solution of ($\ast$)
+
+\medskip
+\item Example.  $y=\pi/4$ is a critical point \emph{and a solution} of
+    $$\frac{dy}{dx} = \cos(2y)$$
+
+\vspace{5mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example}
+
+\begin{itemize}
+\small
+\item \begin{minipage}[t]{0.4\textwidth}
+Example.  By hand, sketch the phase portrait of
+   $$\frac{dz}{dt} = z + z^3$$
+and show all critical points.  Then sketch the graph of solutions to the ODE IVP with the following initial values.
+    \begin{itemize}
+    \item[\color{black} \textbf{(a)}] $z(0)=1$
+    \item[\color{black} \textbf{(b)}] $z(0)=-1/2$
+    \item[\color{black} \textbf{(c)}] $z(0)=-1$
+    \item[\color{black} \textbf{(c)}] $z(0)=-2$
+    \end{itemize}
+\end{minipage}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{classifying critical points}
 
 \begin{itemize}
 \item X
@@ -208,26 +292,21 @@ nonlinear \Large\strut & $y' = f(y)$ & $y'=f(x,y)$
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exercise 27 in \S 2.1}
 
 \begin{itemize}
 \item X
 \end{itemize}
 \end{frame}
 
-\begin{frame}{X}
+
+\begin{frame}{exercise 40 in \S 2.1}
 
 \begin{itemize}
 \item X
 \end{itemize}
 \end{frame}
 
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
 
 \begin{frame}{X}
 
@@ -245,7 +324,7 @@ nonlinear \Large\strut & $y' = f(y)$ & $y'=f(x,y)$
 
 \begin{tabular}{c|c|c}
  & autonomous & nonautonomous \\ \hline
-linear \Large\strut & $y' = c\, y$ & $y' + P(x) y = g(x)$ \\ \hline
+linear \Large\strut & $y' = c\, y + d$ & $y' + P(x) y = g(x)$ \\ \hline
 nonlinear \Large\strut & $y' = f(y)$ & 
 
 \begin{minipage}{45mm}
@@ -261,18 +340,29 @@ nonlinear \Large\strut & $y' = f(y)$ &
 \end{frame}
 
 
-
-
 \begin{frame}{expectations}
 
 to learn this material, just watching this video is \emph{not} enough; also
 \begin{itemize}
-\item \emph{read} section 2.1 in the textbook
-\item \emph{do} the WebAssign exercises for section 2.1
-\item see the other ``found online'' videos at bottom of this page:
+\item see ``found online'' videos and direction-field plotters at
 
 \centerline{\href{https://bueler.github.io/math302/week2.html}{\tt \color{cyan} bueler.github.io/math302/week2.html}}
-\item FIXME: regarding programming (optional) and interacting with computer (obligatory)
+\item \emph{read} section 2.1 in the textbook
+    \begin{itemize}
+    \item a large new vocabulary in this section
+    \item the language of \emph{qualitative} differential equations
+    \item I did not cover ``translation property'' on page 43; read that!
+    \end{itemize}
+\item \emph{do} the WebAssign exercises for section 2.1
+    \begin{itemize}
+    \item get more out of these by \emph{not} using the internet to cheat!
+    \end{itemize}
+\item you \emph{don't} have to know programming to do this class
+    \begin{itemize}
+    \item \dots but interacting with the computer is obligatory!
+    \item find tools (e.g.~\href{https://www.desmos.com/}{\color{cyan} desmos} or \href{https://www.wolframalpha.com/}{\color{cyan} Wolfram alpha}) to do jobs
+    \item I will show a few lines of Matlab or Python when there is a  computer-suitable job
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
