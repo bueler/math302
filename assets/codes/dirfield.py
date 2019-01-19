@@ -24,7 +24,9 @@ Example 3, showing field and solution:
 import numpy as np
 import matplotlib.pyplot as plt
 
-def dirfield(f,xybox,mx=11,my=11,showaxes=True,axescolor='k',
+def dirfield(f,xybox,
+             mx=11,my=11,
+             tickbox=True,showaxes=True,axescolor='k',
              slopescolor='b',slopeslinewidth=3):
     """Plots direction fields.
     Example:
@@ -38,7 +40,8 @@ def dirfield(f,xybox,mx=11,my=11,showaxes=True,axescolor='k',
     xx, yy = np.meshgrid(x,y)
 
     plt.clf()
-    plt.axis('off')
+    if not tickbox:
+        plt.axis('off')
     if showaxes:
         plt.plot([xybox[0]-1.5*dx, xybox[1]+1.5*dx],[0,0],
                  lw=1,color=axescolor)
