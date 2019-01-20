@@ -37,7 +37,7 @@
 \begin{frame}{meaning of a differential equation}
 
 \begin{itemize}
-\item start over on the meaning of a (first-order) DE:
+\item start over on the meaning of a differential equation (DE):
     $$\frac{dy}{dx} = f(x,y)$$
 
 \vspace{-2mm}
@@ -45,7 +45,7 @@
     \item the left side is the \emph{slope} of the solution $y(x)$
     \item given a point $(x,y)$, the right side computes a number $f(x,y)$
     \end{enumerate}
-\item thus a differential equation (DE) says:
+\item thus a first-order DE says:
     $$\begin{matrix}
     \text{the slope of the} \\
     \text{solution } y(x) 
@@ -58,7 +58,9 @@
 
 \centerline{\alert{we can \emph{draw} a picture of the DE itself}}
 
-\item \dots whether or not we can do the calculus/algebra to find a formula for $y(x)$
+    \begin{itemize}
+    \item whether or not we can do the calculus/algebra to find a formula for $y(x)$
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -66,20 +68,20 @@
 \begin{frame}{direction field}
 
 \begin{itemize}
-\item \emph{main idea}: DE $\frac{dy}{dx} = f(x,y)$ should be read as computing a slope $m=\frac{dy}{dx}$ at each  point $(x,y)$
-\item \dots so we create a \emph{direction field} or \emph{slope field}:
-    \begin{enumerate}
-    \item generate a grid of point in the $x$,$y$ plane
-    \item for each point, draw a short line with the slope given by $f(x,y)$ at that point
-    \end{enumerate}
-\item see also: \small \href{https://en.wikipedia.org/wiki/Slope_field}{\color{cyan} \texttt{en.wikipedia.org/wiki/Slope\_field}} \normalsize
+\item \emph{main idea}: $\frac{dy}{dx} = f(x,y)$ should be read as computing a slope $m=\frac{dy}{dx}$ at each point $(x,y)$
 
 \bigskip
-\item \begin{minipage}[t]{0.375\textwidth}
+\item we can create a \emph{direction field} or \emph{slope field}:
+    \begin{enumerate}
+    \item generate a grid of point in the $x$,$y$ plane
+    \item for each point, draw a short line segment with the slope given by $f(x,y)$ at that point
+    \end{enumerate}
+
+\bigskip
+\item \begin{minipage}[t]{0.39\textwidth}
 \emph{Example.}  By hand, draw a direction field for
 $$\frac{dy}{dx} = x-y$$
-on the square
-$$-3 \le x \le 3, -3 \le y \le 3$$
+on the square $-3 \le x \le 3$, $-3 \le y \le 3$
 \end{minipage} 
 
 \vspace{20mm}
@@ -93,6 +95,7 @@ $$-3 \le x \le 3, -3 \le y \le 3$$
 \item I acknowledge \emph{happily} that this is a job for a computer
     \begin{itemize}
     \item for computer tools,  see ``found online'' at the \href{https://bueler.github.io/math302/week2.html}{\color{cyan} Week 2 tab}
+    \item see also: \href{https://en.wikipedia.org/wiki/Slope_field}{\color{cyan} \texttt{en.wikipedia.org/wiki/Slope\_field}}
     \end{itemize}
 
 \medskip
@@ -118,16 +121,20 @@ $\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
 
 \begin{itemize}
 \item recall that we are often solving initial value problems
-\item \emph{next main idea}:  one can \emph{see} the solution to an ODE IVP by plotting the initial point in the plane and then following the direction field from that point
+\item \emph{next main idea}:  one can \emph{see} the solution to an ODE IVP by plotting the initial point in the plane and then following the direction field both ways from that point
 
 \bigskip
 \item \begin{minipage}[t]{0.32\textwidth} \small
 \emph{Example.}  Use the direction field for
-$\frac{dy}{dx} = x-y$ to sketch the solution of
+$\frac{dy}{dx} = x-y$ to sketch the solution $y(x)$ of
     $$\frac{dy}{dx} = x-y, \, y(0)=2$$
+
+    \begin{itemize}
+    \item soon: methods in \S 2.3 will give a formula for $y(x)$
+    \end{itemize}
 \end{minipage}
 
-\vspace{-25mm}
+\vspace{-45mm}
 \hfill \includegraphics[width=0.55\textwidth]{figs/example-field-solution}
 \end{itemize}
 \end{frame}
@@ -146,12 +153,10 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 
 \noindent \textbf{(b)} \quad $y(2)=-1$
 
-\vspace{10mm}
+\vspace{15mm}
 
-\tiny
-\texttt{def f(x,y):}
-
-\hspace{3mm} \texttt{return 0.2*x**2 + y}
+\scriptsize
+\texttt{def f(x,y):  return 0.2*x**2 + y}
 
 \texttt{dirfield(f,[-2,5,-3,3],mx=12,my=12)}
 \end{column}
@@ -171,8 +176,8 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
     \item direction fields for 1st-order DEs
     \item autonomous 1st-order DEs
     \end{itemize}
-\item \emph{in practice: equally-important topics!}
-\item both topics are about \emph{picturing DEs}, but ``autonomous'' is a special case where we can draw two kinds of pictures
+\item equally-important topics!
+\item both topics are about \emph{picturing DEs}, but ``autonomous'' is a special case where we can draw a simpler picture
 \end{itemize}
 \end{frame}
 
@@ -185,14 +190,15 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 
 \vspace{-2mm}
     \begin{itemize}
-    \item ``autonomous'' means ``independent of direct control''
-    \item autonomous DE is not directly controlled by input variable $x$
+    \item ``autonomous'' means ``independent of control''
+    \item \dots above DE is not directly controlled by input variable $x$
     \item \dots but the \emph{solution} $y(x)$ is still a function of $x$
+    \item a big idea: fundamental laws of nature are autonomous DEs
     \end{itemize}
 \item Example.
-    $$\frac{dy}{dx} = \sqrt{\sin(y)}$$
-\item Non-example.
-    $$\frac{dy}{dx} = x-y$$
+    $$\frac{dy}{dx} = \sqrt{\sin(y)} \quad \text{is autonomous}$$
+\item Example.
+    $$\frac{dy}{dx} = x-y \quad \text{is \emph{not} autonomous}$$
 \end{itemize}
 \end{frame}
 
@@ -200,7 +206,7 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 \begin{frame}{classification of first-order DEs}
 
 \begin{itemize}
-\item we will see that ``autonomous'' means ''easy to visualize''
+\item we will see that ``autonomous'' also means ``easier to visualize,'' but not always easy to solve
 \item using definitions from sections 1.1 and 2.1 we already have a \emph{classification} of first-order DEs:
 
 \medskip
@@ -225,17 +231,21 @@ nonlinear \Large\strut & $y' = f(y)$ & $y'=f(x,y)$
 \begin{frame}{picturing autonomous DEs}
 
 \begin{itemize}
-\item the direction field of an autonomous DE is redundant
-\item it can be simplified into a one-dimensional \emph{phase portrait} or \emph{phase line}
+\item the direction field of an autonomous DE has redundancies
+\item simplified picture: a one-dimensional \emph{phase portrait}
+    \begin{itemize}
+    \item a.k.a.~\emph{phase line}
+    \item easiest to explain by an example \dots
+    \end{itemize}
 
 \medskip
-\item \begin{minipage}[t]{0.36\textwidth} \small
-Example.  Use a computer to draw the direction field for $x \in [-3,3]$ and $y\in [-\pi,\pi]$.  Then simplify the direction field into a phase portrait. 
+\item \begin{minipage}[t]{0.32\textwidth} \small
+Example.  Use a computer to draw the direction field for $x \in [-3,3]$ and $y\in [-\pi,\pi]$.  Then draw the phase portrait. 
     $$\frac{dy}{dx} = \cos(2y)$$
 \end{minipage}
 
-\vspace{-36mm}
-\hfill \includegraphics[width=0.45\textwidth]{figs/autonomous-cos} \phantom{dfjsdf}
+\vspace{-30mm}
+\hfill \includegraphics[width=0.5\textwidth]{figs/autonomous-cos} \phantom{dfjsdf}
 % import numpy as np
 % def f(x,y):  return np.cos(2*y)
 % df.dirfield(f,[-3,3,-np.pi,np.pi],mx=21,my=21,slopeslinewidth=1.5)
@@ -246,18 +256,17 @@ Example.  Use a computer to draw the direction field for $x \in [-3,3]$ and $y\i
 \begin{frame}{critical points of autonomous DEs}
 
 \begin{itemize}
-\item a value $y=c$ of an autonomous first-order DE
-    $$\frac{dy}{dx} \stackrel{(\ast)}{=} f(y)$$
-is called a \emph{critical point} if $f(c)=0$
+\item consider an autonomous first-order DE: \quad $\frac{dy}{dx} = f(y)$
+\item a value $y=c$ is called a \emph{critical point} if $f(c)=0$
     \begin{itemize}
     \item a.k.a.~\emph{equilibrium point} or \emph{stationary point}
     \end{itemize}
 
 \medskip
-\item if $y=c$ is a critical point of ($\ast$) then $y=c$ is a solution of ($\ast$)
+\item if $y=c$ is a critical point then $y(x)=c$ is a solution!
 
 \medskip
-\item Example.  $y=\pi/4$ is a critical point \emph{and a solution} of
+\item Example.  $y=\frac{\pi}{4}$ is a critical point \emph{and a solution} of
     $$\frac{dy}{dx} = \cos(2y)$$
 
 \vspace{5mm}
@@ -265,13 +274,13 @@ is called a \emph{critical point} if $f(c)=0$
 \end{frame}
 
 
-\begin{frame}{example}
+\begin{frame}{phase portrait example}
 
 \begin{itemize}
 \small
 \item \begin{minipage}[t]{0.4\textwidth}
 Example.  By hand, sketch the phase portrait of
-   $$\frac{dz}{dt} = z + z^3$$
+   $$\frac{dz}{dt} = z^2 + z^3$$
 and show all critical points.  Then sketch the graph of solutions to the ODE IVP with the following initial values.
     \begin{itemize}
     \item[\color{black} \textbf{(a)}] $z(0)=1$
@@ -287,41 +296,96 @@ and show all critical points.  Then sketch the graph of solutions to the ODE IVP
 \begin{frame}{classifying critical points}
 
 \begin{itemize}
-\item X
+\item in summary, to draw a phase portrait you
+    \begin{itemize}
+    \item solve $f(y)=0$ for the critical points
+    \item between critical points you evaluate the sign of $f(y)$ and draw an up or down arrow accordingly
+    \end{itemize}
+\item \dots and you see the idea behind the following classification
+
+\medskip
+\item a critical point $y=c$ is
+    \begin{itemize}
+    \item \emph{attracting} or \emph{asymptotically stable} if
+\begin{equation}
+        \lim_{x \to \infty} y(x) = c   \tag{$\ast$}
+\end{equation}
+    for all initial points $(x_0,y_0)$ where $y_0$ is close to $c$,
+    \item \emph{semi-stable} if ($\ast$) only happens for $y_0$ one side of $c$, and
+    \item \emph{repelling} or \emph{asymptotically unstable} otherwise
+    \end{itemize}
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{examples, cont.}
+
+\small
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+\item Example. Find and classify the critical points of
+   $$\frac{dy}{dx} = \cos(2y)$$
+
+\vspace{40mm}
+\end{itemize}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}{examples, cont.}
+
+\small
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+\item Example. Find and classify the critical points of
+   $$\frac{dz}{dt} = z^2 + z^3$$
+
+\vspace{40mm}
+\end{itemize}
+\end{minipage}
 \end{frame}
 
 
 \begin{frame}{exercise 27 in \S 2.1}
 
-\begin{itemize}
-\item X
-\end{itemize}
+\small
+\begin{minipage}[t]{0.45\textwidth}
+\noindent \textbf{27}.  \emph{Find the critical points and phase portrait.  Classify each critical point as asymptotically stable, unstable, or semi-stable.  By hand, sketch typical solution curves in the regions in the $xy$--plane determined by the graphs of the equilibrium solutions.}
+
+$$\frac{dy}{dx} = y \ln(y+2)$$
+\end{minipage}
+
+\vspace{20mm}
 \end{frame}
 
 
 \begin{frame}{exercise 40 in \S 2.1}
 
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
+\small
+\begin{minipage}[t]{0.5\textwidth}
+\noindent \textbf{40}.  \emph{The autonomous differential equation}
 
+\vspace{-2mm}
+$$m \frac{dv}{dt} = m g - k v,$$
+\emph{where $k$ is a positive constant and $g$ is the acceleration due to gravity, is a model for the velocity $v$ of a body of mass $m$ that is falling under gravity.  The term $-kv$, which is air resistance, implies that the velocity will not increase without bound as $t$ increases.  Use a phase portrait to find the limiting, or \emph{terminal} velocity of the body.}
+\end{minipage}
 
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
+\vspace{10mm}
 \end{frame}
 
 
 \begin{frame}{looking ahead: next two sections 2.2, 2.3}
 
 \begin{itemize}
-\item X
+\item the first four sections of the textbook (1.1, 1.2, 1.3, 2.1) are about the \emph{meaning} of differential equations
+    \begin{itemize}
+    \item in my experience, such meaning \emph{is} the important take-home from a course in differential equations!
+    \end{itemize}
+\item but for the next few sections we will address \alert{how to find formulas} for solutions $y(x)$
+\item looking ahead to the next two sections:
 \end{itemize}
 
+\bigskip
 \begin{tabular}{c|c|c}
  & autonomous & nonautonomous \\ \hline
 linear \Large\strut & $y' = c\, y + d$ & $y' + P(x) y = g(x)$ \\ \hline
@@ -340,28 +404,35 @@ nonlinear \Large\strut & $y' = f(y)$ &
 \end{frame}
 
 
+\begin{frame}{this is not a CS class}
+
+\begin{itemize}
+\item you \emph{don't} have to know programming to do this class
+    \begin{itemize}
+    \item \dots \alert{but} interacting with a computer is obligatory!
+    \item so you must seek-out tools such as \href{https://www.desmos.com/}{\color{cyan} desmos} or \href{https://www.wolframalpha.com/}{\color{cyan} Wolfram alpha} which allow you to do particular computer jobs like generating direction fields
+    \item I will generally show a few lines of Matlab or Python when there is a computer-suitable job \emph{and} I'll link to programming-free tools
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{expectations}
 
 to learn this material, just watching this video is \emph{not} enough; also
 \begin{itemize}
-\item see ``found online'' videos and direction-field plotters at
+\item \emph{watch} ``found online'' videos at
 
 \centerline{\href{https://bueler.github.io/math302/week2.html}{\tt \color{cyan} bueler.github.io/math302/week2.html}}
+\item \emph{try-out} direction-field plotters linked at the same place
 \item \emph{read} section 2.1 in the textbook
     \begin{itemize}
-    \item a large new vocabulary in this section
-    \item the language of \emph{qualitative} differential equations
+    \item a large new vocabulary in this section, namely the language of \emph{qualitative} differential equations
     \item I did not cover ``translation property'' on page 43; read that!
     \end{itemize}
 \item \emph{do} the WebAssign exercises for section 2.1
     \begin{itemize}
     \item get more out of these by \emph{not} using the internet to cheat!
-    \end{itemize}
-\item you \emph{don't} have to know programming to do this class
-    \begin{itemize}
-    \item \dots but interacting with the computer is obligatory!
-    \item find tools (e.g.~\href{https://www.desmos.com/}{\color{cyan} desmos} or \href{https://www.wolframalpha.com/}{\color{cyan} Wolfram alpha}) to do jobs
-    \item I will show a few lines of Matlab or Python when there is a  computer-suitable job
     \end{itemize}
 \end{itemize}
 \end{frame}
