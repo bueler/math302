@@ -11,10 +11,7 @@ docs:
 - title: Proctoring
   url: proctoring.pdf  # rebuild by "make proctoring.pdf" in assets/latex/
 
-- title: Solutions
-  url: solutions.html
-
-- title: Other
+- title: Other     # has codes I wrote; mostly see weekN.md for content
   url: other.html
 
 - title: Week 1
