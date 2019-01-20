@@ -7,7 +7,9 @@ title: Week 2
 
 Welcome to Week 2 of [MATH F302 UX1 in Spring 2019](index.html)!
 
-Make sure to read the [syllabus](syllabus.pdf), the [schedule](schedule.pdf), and [how to set up proctoring](proctoring.pdf).  The first Quiz is scheduled for this week.
+Make sure to read the [syllabus](syllabus.pdf), the [schedule](schedule.pdf), and [how to set up proctoring](proctoring.pdf).  Keep up to date with announcements, and communicate with students and the instructor, at [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+
+The first proctored Quiz is scheduled for Wednesday or Thursday of this week!
 
 This week is about differential equations as models and about ways to picture differential equations, using direction fields and phase portraits, even before we can find formulas for their solutions.  The formulas get going in [Week 3](week3).
 
