@@ -29,7 +29,7 @@ This week is about differential equations as models and about ways to picture di
 
 ### Friday 1/25
 * [blank slides for section 2.1](assets/slides/2-1.pdf)
-* video: Bueler talks over slides for section 2.1 _BUELER TODO_
+* [video: Bueler talks over slides for section 2.1](https://drive.explaineverything.com/thecode/BECRMSX)
 * [WebAssign 1.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 * last day to drop/add
 
