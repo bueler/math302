@@ -11,7 +11,7 @@ Make sure to read the [syllabus](syllabus.pdf), the [schedule](schedule.pdf), an
 
 The first proctored Quiz is scheduled for Wednesday or Thursday of this week!
 
-This week is about differential equations as models and about ways to picture differential equations, using direction fields and phase portraits, even before we can find formulas for their solutions.  The formulas get going in [Week 3](week3).
+This week is about differential equations as models.  It is also about ways to picture differential equations using direction fields and phase portraits; such visualization can happen even if we cannot find solution formulas.  Such formulas get seriously going in [Week 3](week3).
 
 ### Monday 1/21
 * Alaska Civil Rights Day
