@@ -132,18 +132,16 @@ is \emph{exact} if there is $f(x,y)$ so that the form is a differential:
 \begin{frame}{example 1}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.65\textwidth}
 \begin{itemize}
-\item I will do an example
-\item \dots uses ``miracle'' at one step
-\item \dots not sustainable
+\item my first example uses a ``miracle'' at one step \dots this is not sustainable
 \item Example 1: solve
     $$y' = \frac{2y}{3y-2x}$$
 
-\vspace{30mm}
+\vspace{40mm}
 \end{itemize}
 \end{column}
-\begin{column}{0.4\textwidth}
+\begin{column}{0.35\textwidth}
 \includegraphics[width=\textwidth]{figs/miracle}
 
 \vspace{20mm}
@@ -151,20 +149,34 @@ is \emph{exact} if there is $f(x,y)$ so that the form is a differential:
 \end{columns}
 \end{frame}
 
+
 \begin{frame}{example 1, cont.}
 
-\begin{itemize}
-\item Example 1: solve
-    $$y' = $$
-\end{itemize}
+[Example 1, continued: solve $y' = \frac{2y}{3y-2x}$]
+
+\vspace{60mm}
 \end{frame}
 
-\begin{frame}{X}
+
+\begin{frame}{how to tell if it is exact}
 
 \begin{itemize}
-\item X
-\item 
+\item two concerns with above method:
+    \begin{enumerate}
+    \item the differential form has to be exact!  how do you tell?
+    \item depending on guessing $f(x,y)$---i.e.~needing a miracle of insight---is bad
+    \end{enumerate}
+\item the following theorem addresses the first concern
 \end{itemize}
+
+\begin{theorem}
+The differential form $M(x,y)\,dx + N(x,y)\,dy$ is exact if and only if
+    $$\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$$
+\end{theorem}
+
+\begin{proof}
+foo
+\end{proof}
 \end{frame}
 
 \begin{frame}{X}
