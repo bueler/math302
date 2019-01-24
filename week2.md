@@ -39,7 +39,7 @@ This week is about differential equations as models.  It is also about ways to p
 * [Gil Strang at MIT: Pictures of the solutions](https://www.youtube.com/watch?v=cDfWtSqGiBY)
 * [Khan Academy: Exponential Models and Differential Equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-differential-equations-new/ab-7-8/v/modeling-population-with-simple-differential-equation)
 * [wikipedia page for "slope field"](https://en.wikipedia.org/wiki/Slope_field) has short codes for plotting them
-* I wrote a [python code dirfield.py](other) for generating direction fields
+* I wrote a [Python code dirfield.py](other) for generating direction fields
 * there is a [Slope Field Generator](https://www.desmos.com/calculator/p7vd3cdmei) at [desmos.com](https://www.desmos.com)
 * there is a slope field web applet at [slopefield.nathangrigg.net](http://slopefield.nathangrigg.net/)
 * and many more you can find ...
