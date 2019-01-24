@@ -37,7 +37,7 @@
 
 \begin{frame}{three objects from calculus III}
 
-to get started on exact equations we recall these two ideas:
+to get started on exact equations we recall these ideas:
 \begin{enumerate}
 \item \begin{minipage}[t]{0.4\textwidth}
 \emph{vector fields}:
@@ -49,7 +49,7 @@ to get started on exact equations we recall these two ideas:
     \item like a slope field
 
     \vspace{-2mm}
-    \item \dots but with magnitudes
+    \item \dots but \emph{with} magnitudes
     \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
@@ -77,22 +77,25 @@ to get started on exact equations we recall these two ideas:
 \begin{frame}{a major idea}
 
 \begin{itemize}
-\item \emph{not obvious but true}: some vector fields are gradients and some are not!
+\item \emph{some vector fields are gradients and some are not:}
 
 \medskip
     \begin{itemize}
-    \item Example: $\vF=\cos(x+y)\ih + (y+\cos(x+y))\jh$ \emph{is} a gradient
+    \item Example which \emph{is} a gradient:
+        $$\vF=\cos(x+y)\ih + (y+\cos(x+y))\jh$$
         $$\text{supply an $f$:} \hspace{4.0in}$$
         % f(x,y) = \frac{1}{2} y^2 + \sin(x+y)
 
 \medskip
-    \item Example: $\vF=\cos(x+y)\ih + (x+\cos(x+y))\jh$ is \emph{not} a gradient
+    \item Example which is \emph{not} a gradient:
+        $$\vF=\cos(x+y)\ih + (x+\cos(x+y))\jh$$
         $$\text{explain why: \hspace{1.0in} \dots ?} \hspace{2.0in}$$
         % dM/dy = -\sin(x+y),  dN/dx = 1 - \sin(x+y)
     \end{itemize}
 \item \emph{same idea}: some forms
     $$M(x,y)\,dx + N(x,y)\,dy$$
 are the differentials of an $f$---they're \alert{exact}---and some are not
+\item these ideas are \emph{not obvious}, but true!
 \end{itemize}
 \end{frame}
 
@@ -100,12 +103,13 @@ are the differentials of an $f$---they're \alert{exact}---and some are not
 \begin{frame}{recall differentials}
 
 \begin{itemize}
-\item \emph{differentials} were introduced in calc.~I as a way to think about linearizations: $df = f'(x)\,dx$
-\item for ODEs we need differentials for functions of 2 variables:
+\item \emph{differentials} were introduced in first-semester calculus as a style for linearizations: $df = f'(x)\,dx$
+\item now we need differentials for functions of 2 variables:
     $$f=f(x,y) \qquad \implies \qquad df = \frac{\partial f}{\partial x}\,dx + \frac{\partial f}{\partial y}\,dy$$
 
 \vspace{-2mm}
     \begin{itemize}
+    \item see calculus III
     \item differential of $f(x,y)$ describes the tangent plane to the surface $z=f(x,y)$
     \item the differential contains the same information as the gradient
     \item \alert{note:} you need to be able to compute partial derivatives!
@@ -122,7 +126,7 @@ are the differentials of an $f$---they're \alert{exact}---and some are not
 \begin{itemize}
 \item \emph{definition:}  a differential form
     $$M(x,y)\,dx + N(x,y)\,dy$$
-is \emph{exact} if there is $f(x,y)$ so that the form is a differential:
+is \alert{\emph{exact}} if there is $f(x,y)$ so that the form is a differential:
     $$M = \frac{\partial f}{\partial x}, \qquad N = \frac{\partial f}{\partial y}$$
 \item \alert{main idea:} if we can rewrite an ODE as an exact differential form then we can solve the ODE
 \end{itemize}
@@ -150,23 +154,15 @@ is \emph{exact} if there is $f(x,y)$ so that the form is a differential:
 \end{frame}
 
 
-\begin{frame}{example 1, cont.}
-
-[Example 1, continued: solve $y' = \frac{2y}{3y-2x}$]
-
-\vspace{60mm}
-\end{frame}
-
-
 \begin{frame}{how to tell if it is exact}
 
 \begin{itemize}
 \item two concerns with above method:
     \begin{enumerate}
     \item the differential form has to be exact!  how do you tell?
-    \item depending on guessing $f(x,y)$---i.e.~needing a miracle of insight---is bad
+    \item I guessed $f(x,y)$; this is bad---needed miracle
     \end{enumerate}
-\item the following theorem addresses the first concern
+\item the following theorem addresses concern 1
 \end{itemize}
 
 \begin{theorem}
@@ -179,6 +175,7 @@ foo
 \end{proof}
 \end{frame}
 
+
 \begin{frame}{X}
 
 \begin{itemize}
@@ -186,6 +183,25 @@ foo
 \item 
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\item 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\item 
+\end{itemize}
+\end{frame}
+
 
 \begin{frame}{expectations}
 
