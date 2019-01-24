@@ -37,6 +37,7 @@ This week have one more type of first-order DE for which a solution formula may 
 ### found online
 * [Khan Academy: Exact equations and integrating factors](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations#exact-equations)
 * random video [Exact differential equations](https://www.youtube.com/watch?v=bwASJWS8ltM)
+* I wrote a [Matlab code streamcyl.m](other) for Example 5 in the section 2.4 slides
 * [Khan Academy: Euler's method (in a calculus course)](https://www.youtube.com/watch?v=q87L9R9v274)
 * [Euler's Method: A simple table that always works](https://www.youtube.com/watch?v=8cW_CQ77ayI)
 * [Solving ODEs in Matlab: Euler](https://www.mathworks.com/videos/solving-odes-in-matlab-1-euler-ode1-117526.html)
