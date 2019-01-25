@@ -11,7 +11,7 @@ Remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://pia
 
 Proctored Quiz 3 should be done on Wednesday or Thursday.  Note Mini-Project 2 is due _this week_ on Thursday 2/7.
 
-This week have one more type of first-order DE for which a solution formula may be found, namely _exact equations_.  Then we skip section 2.5; it collects a few more solvable DEs which are not very memorable and can be looked-up as needed.  Then we do something really important and general in section 2.6: use a straightforward computer loop (iteration) called _Euler's method_ to approximately solve an ODE IVP.
+This week have one more type of first-order DE for which a solution formula may be found, namely the _exact equations_ in section 2.4.  Then we skip section 2.5; it collects a few more solvable DEs which are not very memorable and can be looked-up as needed.  Then we do something really important and general in section 2.6: use a straightforward computer loop (iteration) called _Euler's method_ to approximately solve an ODE IVP.
 
 ### Monday 2/4
 * blank slides for section 2.4 _BUELER TODO_
