@@ -221,12 +221,12 @@ The differential form $M(x,y)\,dx + N(x,y)\,dy$ is exact if and only if
 \begin{frame}{straight from the book}
 
 \begin{itemize}
-\item the above examples have been straight from the book
+\item last two examples are from the book
     \begin{itemize}
     \item example 3 was \#5 in \S 2.4
     \item example 4 was \#22 in \S 2.4
+    \item expect problems like these on Quizzes and Exam!
     \end{itemize}
-\item expect problems like these on Quizzes and Exams
 
 \bigskip \bigskip
 \item the next example is \#46 in \S 2.4
@@ -242,14 +242,14 @@ The differential form $M(x,y)\,dx + N(x,y)\,dy$ is exact if and only if
 \begin{itemize}
 \item Example 5:  the differential equation
     $$\frac{2xy}{(x^2+y^2)^2}\,dx + \left(1 + \frac{y^2-x^2}{(x^2+y^2)^2}\right)\,dy = 0$$
-describes a family of curves which are the ``streamlines'' of a fluid flowing around a circular cylinder
+describes a family of curves which are the ``streamlines'' of an idealized fluid flowing around a circular cylinder
 
     \begin{itemize}
     \item[(a)] solve the differential equation
         \begin{itemize}
-        \item[$\circ$] get a general, but \emph{implicit}, solution
+        \item[$\circ$] get a general, but implicit, solution
         \end{itemize}
-    \item[(b)] there is one value of $c$ giving an explicit solution; find that
+    \item[(b)] there is one value of $c$ giving an explicit solution; find it
     \item[(c)] plot solution curves for $c=0,\pm 0.2, \pm 0.4, \pm 0.6, \pm 0.8$ using a contour plotting tool
     \end{itemize}
 \end{itemize}
@@ -262,16 +262,24 @@ describes a family of curves which are the ``streamlines'' of a fluid flowing ar
 \begin{frame}{example 5, cont.}
 
 \begin{itemize}
-\item X
+\item[(a)] solve the differential equation \dots as exact, naturally
 \end{itemize}
+
+\vspace{65mm}
 \end{frame}
 
 
 \begin{frame}{example 5, cont.$^2$}
+\end{frame}
+
+
+\begin{frame}{example 5, cont.$^3$}
 
 \begin{itemize}
-\item X
+\item[(b)] for what value of $c$ can one find an explicit solution?
 \end{itemize}
+
+\vspace{60mm}
 \end{frame}
 
 
@@ -279,7 +287,7 @@ describes a family of curves which are the ``streamlines'' of a fluid flowing ar
 \frametitle{example 5, finished}
 
 \begin{itemize}
-\item Matlab/Octave code:
+\item[(c)] contour plot \dots here is Matlab/Octave code:
 \begin{Verbatim}[fontsize=\footnotesize]
 f = @(x,y) y.*(1.0 - 1.0./(x.^2+y.^2));    % define function
 x = -3:.1:3;  [xx,yy] = meshgrid(x,x);     % grid of points
@@ -314,8 +322,8 @@ to learn this material, just watching this video is \emph{not} enough; also
 \centerline{partial derivatives, and integrals, are rusty}
 
 \begin{itemize}
-\item fix this now!
-\item actually \emph{read} the relevant parts of a calculus book, starting with the first material on: (i) partial derivatives, (ii) vector fields, (iii) gradients, (iv) differentials
+\item work on fixing this now!
+\item actually \emph{read} the relevant parts of a calculus book, starting with material on: (i) partial derivatives, (ii) vector fields, (iii) gradients, (iv) differentials
 \item find a calc.~III student and try to help them learn these topics
 \end{itemize}
 \end{frame}
