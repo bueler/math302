@@ -15,7 +15,7 @@ This week have one more type of first-order DE for which a solution formula may 
 
 ### Monday 2/4
 * [blank slides for section 2.4](assets/slides/2-4.pdf)
-* video: Bueler talks over slides for section 2.4 _BUELER TODO_
+* [video: Bueler talks over slides for section 2.4](https://drive.explaineverything.com/thecode/TWGUGNF)
 * [work on WebAssign 2.3](https://www.webassign.net/)
 
 ### Tuesday 2/5
