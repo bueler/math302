@@ -25,7 +25,7 @@ Welcome to the homepage of **Math F302 UX1 Differential Equations in Spring 2019
 
 * [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home) &nbsp; &nbsp; (communication)
 * [WebAssign](https://www.webassign.net/) &nbsp; &nbsp; (homework)
-* [BlackBoard](https://classes.alaska.edu) &nbsp; &nbsp; (grades _AND SOLUTIONS_)
+* [BlackBoard](https://classes.alaska.edu) &nbsp; &nbsp; (grades and solutions)
 * [Bueler's office hours](http://bueler.github.io/OffHrs.htm)
 
 <br>
