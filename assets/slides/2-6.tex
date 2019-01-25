@@ -53,7 +53,7 @@
 \bigskip
 \item where do we stand?:
 \begin{quote}
-all the by-hand fancy calculus and algebra techniques so far \alert{don't} handle many problems
+there are some problems we can do, but many for where our by-hand calculus/algebra techniques so far \alert{don't} work
 \end{quote}
 \end{itemize}
 \end{frame}
@@ -95,7 +95,7 @@ Solution version 2: \emph{Make a computer follow the direction field.}
 \hfill \includegraphics[width=0.7\textwidth]{figs/sequence-2}
 
 \begin{itemize}
-\item this is still only approximate
+\item this is still only approximate because we go straight
 \end{itemize}
 \end{frame}
 
@@ -121,7 +121,7 @@ Solution version 4: \emph{Do it more accurately by smaller steps}
 \hfill \includegraphics[width=0.7\textwidth]{figs/sequence-4}
 
 \begin{itemize}
-\item this is \emph{still} only approximate
+\item the blue slope lines are not really needed \dots
 \end{itemize}
 \end{frame}
 
@@ -141,7 +141,7 @@ Solution version 5: \emph{Smaller steps.}
 
 \begin{frame}{example 1, cont.$^6$}
 
-Solution version 2: \emph{Make the computer do more work.}
+Solution version 6: \emph{Smaller.  (Make the computer do more work.)}
 
 \bigskip
 \hfill \includegraphics[width=0.7\textwidth]{figs/sequence-6}
@@ -152,15 +152,43 @@ Solution version 2: \emph{Make the computer do more work.}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{Euler's method}
 
 \begin{itemize}
-\item X
+\item the idea of following the direction field, in a straight line for a short distance, and repeating, is \emph{Euler's method}
+\item for the differential equation $\frac{dy}{dx} = f(x,y)$, Euler's method is
+        $$y_{n+1} = y_n + h\, f(x_n,y_n)$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item $h\ne 0$ is a step size you get to choose
+    \item the next $x$-value is always $h$ away from the last: $x_{n+1} = x_n + h$
+    \item this is a formula to understand \emph{and} memorize
+    \item \dots and to put in computer programs
+    \end{itemize}
+\item in the previous slides we had $f(x,y)=x-y^2$, starting values $(x_0,y_0)=(0,1)$, and four values of $h$: $h=1,0.5,0.25,0.125$
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{a derivation of Euler's method}
+
+\begin{itemize}
+\item easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$
+\item suppose we are at a point $(x_n,y_n)$
+    \begin{itemize}
+    \item this might be the initial point $(x_0,y_0)$
+    \end{itemize}
+\item the slope is $m=f(x_n,y_n)$ so the line we want is
+    $$y-y_n = f(x_n,y_n)(x-x_n)$$
+\item we want to move to a new location $x_{n+1}=x_n+h$ so $x-x_n=h$ and $y=y_{n+1}$
+\item thus
+    $$y_{n+1} = y_n + h\, f(x_n,y_n)$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 2}
 
 \begin{itemize}
 \item X
