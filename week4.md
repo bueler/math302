@@ -22,10 +22,10 @@ This week have one more type of first-order DE for which a solution formula may 
 * [WebAssign 2.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 2/6
-* <span style="color:blue">**proctored Quiz 3 covers 2.2 and 2.3**</span>
+* <span style="color:blue">**proctored Quiz 3 covers 2.2 and 2.3**</span> _BUELER TODO_
 
 ### Thursday 2/7
-* <span style="color:blue">**proctored Quiz 3 covers 2.2 and 2.3**</span>
+* <span style="color:blue">**proctored Quiz 3 covers 2.2 and 2.3**</span> _BUELER TODO_
 * Mini-Project 2 due at this link _BUELER TODO_
 * [work on WebAssign 2.4](https://www.webassign.net/)
 
