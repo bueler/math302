@@ -39,7 +39,7 @@
 \begin{frame}{where we stand}
 
 \begin{itemize}
-\item we have methods from recent sections for generating by-hand solutions to first-order differential equations:
+\item we now have methods for generating by-hand solutions to first-order differential equations:
     \begin{itemize}
     \item[2.2] separable equations: $y'=g(x)h(y)$
     \item[2.3] linear equations: $y'+P(x)y=f(x)$
@@ -47,14 +47,16 @@
     \end{itemize}
 \item there are further methods \dots such as in section 2.5
     \begin{itemize}
-    \item but \alert{we are skipping \S 2.5} because these methods are un-memorable and weak IMHO
+    \item but \alert{we are skipping \S 2.5}; its methods are weak
     \end{itemize}
 
 \bigskip
 \item where do we stand?:
-\begin{quote}
-there are some problems we can do, but many for where our by-hand calculus/algebra techniques so far \alert{don't} work
-\end{quote}
+    \begin{itemize}
+    \item \emph{there are some problems we can do \dots}
+    \item \emph{but often our by-hand calculus/algebra techniques \alert{don't} work}
+    \end{itemize}
+\item this situation is permanent
 \end{itemize}
 \end{frame}
 
@@ -68,7 +70,7 @@ in particular, find $y(4)$
 \end{itemize}
 
 \medskip
-Solution version 0: \emph{Explain why the previous methods don't apply.}
+Solution version 0: \emph{Explain why 2.3--2.5 methods don't apply.}
 
 \vspace{50mm}
 \end{frame}
@@ -76,7 +78,7 @@ Solution version 0: \emph{Explain why the previous methods don't apply.}
 
 \begin{frame}{example 1, cont.}
 
-Solution version 1: \emph{Solve it using a direction field and a pen.}
+Solution version 1: \emph{Solve it using a direction field and a pencil.}
 
 \bigskip
 \hfill \includegraphics[width=0.7\textwidth]{figs/sequence-1}
@@ -156,15 +158,17 @@ Solution version 6: \emph{Smaller.  (Make the computer do more work.)}
 
 \begin{itemize}
 \item the idea of following the direction field, in a straight line for a short distance, and repeating, is \emph{Euler's method}
-\item for the differential equation $\frac{dy}{dx} = f(x,y)$, Euler's method is
-        $$y_{n+1} = y_n + h\, f(x_n,y_n)$$
+\item for the general DE $\frac{dy}{dx} = f(x,y)$, Euler's method is
+\begin{equation}
+    y_{n+1} = y_n + h\, f(x_n,y_n)   \tag{$\ast$}
+\end{equation}
 
 \vspace{-2mm}
     \begin{itemize}
-    \item $h\ne 0$ is a step size you get to choose
+    \item $h\ne 0$ is a step size \emph{you must choose}
     \item the next $x$-value is always $h$ away from the last: $x_{n+1} = x_n + h$
-    \item this is a formula to understand \emph{and} memorize
-    \item \dots and to put in computer programs
+    \item ($\ast$) is a formula to understand \emph{and} memorize
+    \item \dots and put in computer programs
     \end{itemize}
 \item in the previous slides we had $f(x,y)=x-y^2$, starting values $(x_0,y_0)=(0,1)$, and four values of $h$: $h=1,0.5,0.25,0.125$
 \end{itemize}
@@ -173,8 +177,8 @@ Solution version 6: \emph{Smaller.  (Make the computer do more work.)}
 
 \begin{frame}{a derivation of Euler's method}
 
+easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$, as follows:
 \begin{itemize}
-\item easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$
 \item suppose we are at a point $(x_n,y_n)$
     \begin{itemize}
     \item this might be the initial point $(x_0,y_0)$
@@ -183,7 +187,40 @@ Solution version 6: \emph{Smaller.  (Make the computer do more work.)}
     $$y-y_n = f(x_n,y_n)(x-x_n)$$
 \item we want to move to a new location $x_{n+1}=x_n+h$ so $x-x_n=h$ and $y=y_{n+1}$
 \item thus
-    $$y_{n+1} = y_n + h\, f(x_n,y_n)$$
+    $$y_{n+1} - y_n = f(x_n,y_n)\, h$$
+\item i.e.~$y_{n+1} = y_n + h\, f(x_n,y_n)$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{measuring accuracy}
+
+\begin{itemize}
+\item assume we are solving an ODE IVP:  \, $\frac{dy}{dx} = f(x,y)$, $y(x_0)=y_0$
+\item if know the exact solution $y(x)$ then we can measure (evaluate) the error in the approximation, i.e.
+    $$y_n \approx y(x_n)$$
+    \vspace{-4mm}
+    \begin{itemize}
+    \item ``$y_n$'' is the number produced by Euler's method
+    \item ``$y(x_n)$'' is the exact solution at the $x$-value $x_n$
+    \end{itemize}
+\item there are two common ways to report the error:
+    \begin{enumerate}
+    \item \emph{absolute error} $=|y(x_n) - y_n|$
+    \item \emph{relative error} $=\frac{|y(x_n) - y_n|}{|y(x_n)|}$
+    \end{enumerate}
+\item absolute error is the distance between actual value and approximation
+\item relative error divides this by the actual value
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{big caveat about measuring accuracy}
+
+\begin{itemize}
+\item you can only compute absolute or relative error \emph{if} the exact solution is known
+\item \dots but often the reason we use a numerical method like Euler's is \alert{because the exact solution is \emph{not} known}
+\item so examples where the absolute or relative error is computed are automatically ``toy examples''
 \end{itemize}
 \end{frame}
 
@@ -191,41 +228,153 @@ Solution version 6: \emph{Smaller.  (Make the computer do more work.)}
 \begin{frame}{example 2}
 
 \begin{itemize}
-\item X
+\item this is exercise \#3 in \S 2.6 \dots a ``toy example''
+\item Example 2:  for the ODE IVP
+    $$y'=y, \quad y(0)=1$$
+
+    \begin{itemize}
+    \item[(a)] use Euler's method to get a 4-decimal approximation of $y(1)$
+        \begin{itemize}
+        \item[$\circ$] use $h=0.1$ first, and then $h=0.05$
+        \end{itemize}
+    \item[(b)] find the exact solution
+    \item[(c)] show in a table: $x_n$, $y_n$, the exact value $y(x_n)$, the absolute error, and the relative error
+    \end{itemize}
 \end{itemize}
-\end{frame}
 
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
+\vspace{40mm}
 \end{frame}
 
 
 \begin{frame}[fragile]
-\frametitle{example 5, finished}
+\frametitle{example 2, cont.}
 
 \begin{itemize}
-\item[(c)] contour plot \dots here is Matlab/Octave code:
-\begin{Verbatim}[fontsize=\footnotesize]
-f = @(x,y) y.*(1.0 - 1.0./(x.^2+y.^2));    % define function
-x = -3:.1:3;  [xx,yy] = meshgrid(x,x);     % grid of points
-c = -0.8:0.2:0.8;                          % contours we want
-h = contour(xx,yy,f(xx,yy),c,'k');         % black contours
-clabel(h)                                  % ... with labels
-axis equal                                 % looks better
-\end{Verbatim}
+\item so one can proceed by hand, but its tedious work \dots
+\item and it is an original purpose for which electronic computers were designed
+\item I used the Matlab/Octave code below
+    \begin{itemize}
+    \item see \href{https://bueler.github.io/math302/assets/codes/simpleeuler.m}{\color{cyan} \texttt{simpleeuler.m}} at the ``other'' tab on the course webpage
+    \end{itemize}
 \end{itemize}
+
+\bigskip
+\begin{Verbatim}[fontsize=\footnotesize]
+h = 0.1;               % change to e.g. h=0.05
+N = 10;                % change to e.g. N=20
+x = 0;
+y = 1;
+for n = 1:N+1
+    exact = exp(x);
+    [x, y, exact, abs(y-exact), 100*abs(y-exact)/abs(exact)]
+    y = y + h * y;     % this IS Euler's method
+    x = x + h;
+end
+\end{Verbatim}
+\end{frame}
+
+
+\begin{frame}{example 2, cont.~cont.}
+
+\begin{itemize}
+\item the code produces the table below when $h=0.1$ and we take $N=10$ steps \dots giving $4.58\%$ relative error at $x=1$
+
+\medskip
+\footnotesize
+\begin{tabular}{ccccc}
+$x_n$ & $y_n$ & actual value & abs.~error & rel.~error \\ \hline
+0.00 & 1.0000 & 1.0000 & 0.0000 & 0.00 \\
+0.10 & 1.1000 & 1.1052 & 0.0052 & 0.47 \\
+0.20 & 1.2100 & 1.2214 & 0.0114 & 0.93 \\
+0.30 & 1.3310 & 1.3499 & 0.0189 & 1.40 \\
+0.40 & 1.4641 & 1.4918 & 0.0277 & 1.86 \\
+0.50 & 1.6105 & 1.6487 & 0.0382 & 2.32 \\
+0.60 & 1.7716 & 1.8221 & 0.0506 & 2.77 \\
+0.70 & 1.9487 & 2.0138 & 0.0650 & 3.23 \\
+0.80 & 2.1436 & 2.2255 & 0.0820 & 3.68 \\
+0.90 & 2.3579 & 2.4596 & 0.1017 & 4.13 \\
+1.00 & 2.5937 & 2.7183 & 0.1245 & 4.58
+\end{tabular}
+
+\normalsize
+\medskip
+\item for $h=0.001$ and $N=1000$ I get 0.05\% rel.~error:
+   $$y_{1000} = 2.71692 \approx 2.71828 = y(1)$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 2, cont.$^3$; $h=0.05$, $N=20$ case}
+
+\scriptsize
+\begin{tabular}{ccccc}
+$x_n$ & $y_n$ & actual value & abs.~error & rel.~error \\ \hline
+0.00 & 1.0000 & 1.0000 & 0.0000 & 0.00 \\
+0.05 & 1.0500 & 1.0513 & 0.0013 & 0.12 \\
+0.10 & 1.1025 & 1.1052 & 0.0027 & 0.24 \\
+0.15 & 1.1576 & 1.1618 & 0.0042 & 0.36 \\
+0.20 & 1.2155 & 1.2214 & 0.0059 & 0.48 \\
+0.25 & 1.2763 & 1.2840 & 0.0077 & 0.60 \\
+0.30 & 1.3401 & 1.3499 & 0.0098 & 0.72 \\
+0.35 & 1.4071 & 1.4191 & 0.0120 & 0.84 \\
+0.40 & 1.4775 & 1.4918 & 0.0144 & 0.96 \\
+0.45 & 1.5513 & 1.5683 & 0.0170 & 1.08 \\
+0.50 & 1.6289 & 1.6487 & 0.0198 & 1.20 \\
+0.55 & 1.7103 & 1.7333 & 0.0229 & 1.32 \\
+0.60 & 1.7959 & 1.8221 & 0.0263 & 1.44 \\
+0.65 & 1.8856 & 1.9155 & 0.0299 & 1.56 \\
+0.70 & 1.9799 & 2.0138 & 0.0338 & 1.68 \\
+0.75 & 2.0789 & 2.1170 & 0.0381 & 1.80 \\
+0.80 & 2.1829 & 2.2255 & 0.0427 & 1.92 \\
+0.85 & 2.2920 & 2.3396 & 0.0476 & 2.04 \\
+0.90 & 2.4066 & 2.4596 & 0.0530 & 2.15 \\
+0.95 & 2.5270 & 2.5857 & 0.0588 & 2.27 \\
+1.00 & 2.6533 & 2.7183 & 0.0650 & 2.39
+\end{tabular}
+\end{frame}
+
+
+\begin{frame}{example 2, cont.$^4$}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{figs/simpleeuler}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{another derivation of Euler's method}
+
+\begin{itemize}
+\item start with the DE
+    $$\frac{dy}{dx} = f(x,y)$$
+\item remember what a derivative is!:
+    $$\lim_{h\to 0} \frac{y(x+h)-y(x)}{h} = f(x,y(x))$$
+\item think: $y(x)$ is current value and $y(x+h)$ is next value
+\item drop the limit and adopt this as a method:
+    $$\frac{y_{n+1}-y_n}{h} = f(x_n,y_n)$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item at this point $y_n$ and $y(x_n)$ mean different things!
+    \end{itemize}
+\item rewrite as Euler's method before:  $y_{n+1} = y_n + h f(x_n,y_n)$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{are there better methods?}
+
+\begin{itemize}
+\item yes!
+\item here is a derivation, by picture, of the ``explicit midpoint rule''
+    \begin{itemize}
+    \item a.k.a.~``modified Euler method''
+    \item see \href{https://en.wikipedia.org/wiki/Midpoint_method}{\color{cyan} Wikipedia page for ``midpoint method''}
+    \item it is ``second order'' so it gets same accuracy in 10 steps that Euler does in 100 steps
+    \end{itemize}
+\end{itemize}
+
+\vspace{50mm}
 \end{frame}
 
 
@@ -241,8 +390,14 @@ axis equal                                 % looks better
      \centerline{\href{https://bueler.github.io/math302/week4.html}{\tt \color{cyan} bueler.github.io/math302/week4.html}}
      \item \emph{try-out} Euler's method codes at the same link
      \item \emph{read} section 2.6 in the textbook
+         \begin{itemize}
+         \item mentions the well-known ``fourth order Runge-Kutta method'', even better than the explicit midpoint rule above
+         \end{itemize}
      \item \emph{do} the WebAssign exercises for section 2.6
      \end{itemize}
+
+\bigskip
+\item by the way, Euler's and other numerical methods return in Chapter 9 \dots
 \end{itemize}
 \end{frame}
 

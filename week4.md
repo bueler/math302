@@ -30,7 +30,7 @@ This week have one more type of first-order DE for which a solution formula may 
 * [work on WebAssign 2.4](https://www.webassign.net/)
 
 ### Friday 2/8
-* blank slides for section 2.6 _BUELER TODO_
+* [blank slides for section 2.6](assets/slides/2-6.pdf)
 * video: Bueler talks over slides for section 2.6 _BUELER TODO_
 * [WebAssign 2.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
