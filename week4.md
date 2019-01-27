@@ -26,7 +26,7 @@ This week have one more type of first-order DE for which a solution formula may 
 
 ### Thursday 2/7
 * <span style="color:blue">**proctored Quiz 3 covers 2.2 and 2.3**</span> _BUELER TODO_
-* Mini-Project 2, _Timing the Spread of an Oil Slick_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 1](FIXME); you may need to log in to your `alaska.edu` account to use this link
+* Mini-Project 2, _Timing the Spread of an Oil Slick_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 1](https://goo.gl/forms/wnQQsKxObqHMtrIp1); you may need to log in to your `alaska.edu` account to use this link
 
 * [work on WebAssign 2.4](https://www.webassign.net/)
 
