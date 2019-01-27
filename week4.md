@@ -31,7 +31,7 @@ This week have one more type of first-order DE for which a solution formula may 
 
 ### Friday 2/8
 * [blank slides for section 2.6](assets/slides/2-6.pdf)
-* video: Bueler talks over slides for section 2.6 _BUELER TODO_
+* [video: Bueler talks over slides for section 2.6](https://drive.explaineverything.com/thecode/LKSLJBU)
 * [WebAssign 2.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
