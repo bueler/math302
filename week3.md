@@ -18,7 +18,7 @@ This week we get a serious start on actually _solving_ first-order differential 
 ### Monday 1/28
 * [blank slides for section 2.2](assets/slides/2-2.pdf)
 * [video: Bueler uses learning glass for section 2.2](https://media.uaf.edu/media/t/0_i3wqx2b1)
-* blank Mini-Project 2 _BUELER TODO_
+* [blank Mini-Project 2](assets/mp/mp2.pdf)
 * [work on WebAssign 2.1](https://www.webassign.net/)
 
 ### Tuesday 1/29

@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
+
+\usepackage{graphicx,color,enumitem}
+\usepackage{amsmath,amsthm,amsbsy}
+\usepackage{palatino}
+
+\usepackage{tikz}
+\usepackage[colorlinks=true]{hyperref}
+
+%% Setup aproblem environment, 
+%% aproblem items
+%% subproblems environment
+%% subproblem items
+\makeatletter
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newlength\probsep
+\newlength\pshrinking
+\newif\iffirstprob
+
+\newenvironment{aproblems}%
+  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
+  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
+  \let\hproblem\aproblem
+  \advance\linewidth -\pshrinking
+  \advance\@totalleftmargin\pshrinking
+  \advance\leftskip\pshrinking}%
+  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
+
+\newcommand{\aproblem}{%
+  \setcounter{subprobcount}{0}%
+  \stepcounter{probcount}%
+  \def\@currentlabel{\arabic{probcount}}%
+  \ifhmode
+    \unskip \par
+  \fi
+%  \addpenalty{-4000}%
+  \iffirstprob\else\addvspace\probsep\fi
+  \firstprobfalse
+  \hskip -\labelwidth\hskip -\labelsep 
+  \hbox to\labelwidth{\hss\textbf{\arabic{probcount}.}}\hskip\labelsep
+}%
+
+\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
+\newcommand{\skipproblem}{\stepcounter{probcount}}
+
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+\newcommand{\epart}[1]{\noindent \textbf{(#1)} \,}
+
+\doclabel{Math F302 UX1: Mini-Project 2}
+\docdate{due \emph{at 11pm} on Thursday 7 February 2019}
+
+\begin{document}
+\renewcommand{\d}{\displaystyle}
+
+\strut
+\centerline{{\Large \textsc{Timing the Spread of an Oil Slick}}}
+
+\medskip
+\small
+\begin{quote}
+\textbf{Instructions.}  \emph{Write your solutions neatly on separate sheets of paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts, i.e.~``\emph{(a)}'', ``\emph{(b)}'', \dots as below.  Your final document, which should \emph{not} be your first draft, should be at most four pages; two or three pages is most appropriate.}
+
+\emph{Submit your PDF by uploading using the link (to a Google Form) on the ``Week 4'' page at the main course page} \href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}.  \emph{If you wrote on paper, scan or photograph your completed document.\footnote{\emph{If you use a phone then make the lighting good and line things up carefully!  Use a scanner app.}}  In any case generate an easily-readable PDF!}
+\end{quote}
+
+\normalsize
+\bigskip
+
+
+\textbf{The story \cite{Winkel2015}.}  An oil spill of a fixed amount of oil occurs Prince William Sound.  (Who caused it is not at issue here.)  An oil slick spreads.  Over the course of four days a helicopter is dispatched seven times to photograph the oil slick, at somewhat irregular intervals as weather allows.  On each flight, as the helicopter arrives over the slick, the observer takes a picture.  The helicopter remains on site for precisely 10 minutes and the observer takes another picture.  Then they head home.  For each of seven trips the size (area) of the slick is measured from each photograph.  This gives Table 1 below.  Because of a failure of communication on the helicopter, neither pilot nor observer records the time of day of the initial arrival,\footnote{Let's suppose this is before the era of GPS-in-the-camera.  In any case, stick to the story!} so the time of each picture is not known even though  the 10 minute gap between pictures is precise.
+
+\bigskip
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+initial observation & 10 minutes later \\ \hline
+1.047 & 1.139 \\
+2.005 & 2.087 \\
+3.348 & 3.413 \\
+5.719 & 5.765 \\
+7.273 & 7.304 \\
+8.410 & 8.426 \\
+9.117 & 9.127 \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{-4mm}
+\caption{Size of slick in square miles.}
+\end{table}
+
+\bigskip
+
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}
+\item Let $A(t)$ be the area of the slick.  On $A$ versus $t$ axes, make a rough sketch of all the data in Table 1.  Use minutes and square miles as units on the axes.   You may assume $t=0$ is the time of the first photograph.
+
+(\emph{You do \emph{not} know the time of each photograph, so there is uncertainty about where on the $t$-axis to put the data!  Make a \emph{sketch} anyway!  Recognizing what you do and do not know when making this \emph{sketch} should help you understand the situation.})
+
+\item The data in Table 1 allows you to estimate the rate of change of $A(t)$ at the time of each of the seven flights.  Generate these seven estimated values.
+
+\item In a precise graph---use a computer or at least grid paper---plot the rate of change on the $y$-axis versus the area on the $x$-axis.  (\emph{Your plot should have seven dots.})  What do you see?  Can you fit this data?
+
+\item You should be able to build a precise model of the form
+    $$\frac{dA}{dt} = f(A),$$
+an autonomous first-order ODE.  The right-side function $f(A)$ is a simple kind of function but you will need to fit data get a formula for it; do so.
+
+\item You should now have a particular ODE IVP to solve.  This is your model.  Solve it for $A(t)$ using techniques you know.  Now state your \emph{formula} for $A(t)$.
+
+\item Using a new and precise graph---computer recommended but grid paper will work---plot the solution $A(t)$ to your model.
+
+\item The solution $A(t)$ allows you to approximate the time of the start of each of the last six flights.  Estimate these times in minutes.  Include the new points on the graph in \textbf{(f)}.
+\end{enumerate}
+
+\begin{thebibliography}{1}
+
+\bibitem{Winkel2015}
+B.~Winkel, \textit{Spread of Oil Slick}, SIMIODE Modeling Scenario 1-005-S-OilSlick, 2015.  \url{https://www.simiode.org/resources/196}.  Modified and adapted by Bueler.
+
+\end{thebibliography}
+
+\end{document}

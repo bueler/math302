@@ -24,7 +24,7 @@ This week is about an introduction to differential equations (DEs), of course.  
 * [WebAssign 1.1 part A](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Thursday 1/17
-* Mini-Project 1, _High Points of Calculus_, <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 1](https://docs.google.com/forms/d/e/1FAIpQLSeoURKbu4cTWw0wGhLfuiMjBODipJlRBCNd8cyza3tRRrg8Yw/viewform?usp=sf_link); you may need to log in to your `alaska.edu` account to use this link
+* Mini-Project 1, _High Points of Calculus_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 1](https://docs.google.com/forms/d/e/1FAIpQLSeoURKbu4cTWw0wGhLfuiMjBODipJlRBCNd8cyza3tRRrg8Yw/viewform?usp=sf_link); you may need to log in to your `alaska.edu` account to use this link
 * [work on WebAssign 1.1 part B](https://www.webassign.net/)
 
 ### Friday 1/18
