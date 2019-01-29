@@ -1,0 +1,155 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox,fancyvrb}
+\usepackage{environ}
+\usepackage{tikz}
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\usetheme{Pittsburgh}
+
+\newcommand{\grad}{\nabla}
+\newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
+
+\title{3.1 Linear Models}
+
+\subtitle{a lesson for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{\tiny \today}
+
+
+\begin{document}
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+%\color{green!40!blue}
+\end{frame}
+
+
+\newcommand\mynum[1]{{\renewcommand{\insertenumlabel}{#1}%
+      \usebeamertemplate{enumerate item} \,}}
+
+\begin{frame}{linear models}
+
+\begin{itemize}
+\item mostly not new material!
+    \begin{itemize}
+    \item we got a good start back in \S1.3
+    \end{itemize}
+\item this section requires ability to solve these types of DEs:
+    \begin{enumerate}
+    \item the easiest DE: $y'=ky$
+    \item separable linear equations from \S2.2: $y'=g(x)y$
+    \item general linear equations from \S2.3: $y'+P(x)y=f(x)$                 
+    \end{enumerate}
+\item the method in \S2.3 handles \emph{all} first-order linear equations, but the other methods are quicker for forms \mynum{1} or \mynum{2}
+\item the rest of these slides are 5 exercises from \S3.1 in this order:
+    \centerline{\# 4, 42, 17, 36, 37}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 4}
+
+\begin{quotation}
+\noindent \textbf{4.} The population of bacteria in a culture grows at a rate proportional to the number of bacteria present at time $t$.  After 3 hours it is observed that 400 bacteria are present.  After 10 hours 2000 bacteria are present.  What was the initial number of bacteria?
+\end{quotation}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{exercise 42}
+
+\begin{quotation}
+\noindent \textbf{42.  Fluctuating Population} \, The differential equation $dP/dt = (k \cos t) p$, where $k$ is a positive constant, is a mathematical model for a population $P(t)$ that undergoes yearly seasonal fluctuations.  Solve the equation subject to $P(0)=P_0$.  Use a graphing utility to graph the solution for different choices of $P_0$ [and $k$]. 
+\end{quotation}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{exercise 42, cont.}
+
+FIXME: figure
+\end{frame}
+
+
+\begin{frame}{exercise 17}
+
+\begin{quotation}
+\noindent \textbf{17.} X
+\end{quotation}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 36 \& 37}
+
+\begin{quotation}
+\noindent \textbf{36.} X
+\end{quotation}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{quotation}
+\noindent \textbf{37.} X
+\end{quotation}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{expectations}
+
+\begin{itemize}
+\item to learn this material, just watching this video is \emph{not} enough!
+
+\item also:
+     \begin{itemize}
+     \item \emph{explore} ``found online'' videos at
+
+     \centerline{\href{https://bueler.github.io/math302/week5.html}{\tt \color{cyan} bueler.github.io/math302/week5.html}}
+     \item \emph{read} section 3.1 in the textbook
+         \begin{itemize}
+         \item for quizzes and exams you must be able to handle the examples like 1-6 in this section
+         \item the one topic you will not be responsible for: ``series circuits,'' and generally electical examples
+         \end{itemize}
+     \item \emph{do} the WebAssign exercises for section 3.1
+     \item \emph{start} Mini-Project 2, which uses a model like in section 3.1
+     \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
+
