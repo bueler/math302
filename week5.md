@@ -9,9 +9,13 @@ Welcome to Week 5 of [MATH F302 UX1 in Spring 2019](index.html)!  As always, rem
 
 This week, proctored Quiz 4 should be done on Wednesday or Thursday.  There is no Mini-Project this week, neither assigned nor due.
 
-Regarding content, we are back to modeling with first-order DEs.  The questions in section 3.1 are about concrete calculations with the solutions of _linear_ first-order DEs.  Mostly these come down to questions about exponential decay and growth.  Section 3.2 is more interesting; there are applications of certain _separable_ equations especially.  Thus we see how useful the method in section 2.2 is.
+Regarding content, we are back to modeling with first-order DEs.  The questions in section 3.1 are about concrete calculations with the solutions of _linear_ first-order DEs.  Mostly these come down to questions about exponential decay and growth.  Section 3.2 is more interesting; there are applications of certain nonlinear and separable equations especially.  We see the utility of the method in section 2.2.
 
-_Next week_ is Midterm 1; it needs to be done on Tuesday, Wednesday, or Thursday of Week 6.  Below is a link to a sample Midterm, and watch for a Piazza message as a brief study guide.
+Midterm 1 covers sections
+
+  1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 2.4, 2.6, 3.1, and 3.2
+
+It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Watch for a Piazza message as a brief study guide.  You will need to get Midterm 1 proctored on Tuesday, Wednesday, or Thursday of Week 6.
 
 ### Monday 2/11
 * blank slides for section 3.1 _BUELER TODO_
