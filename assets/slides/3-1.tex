@@ -102,28 +102,37 @@
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exercise 17, cont.}
 
-\begin{itemize}
-\item X
-\end{itemize}
+\vspace{20mm}
+
+% t=0:.01:7;
+% TT=-320*exp(2*log(7/8)*t) + 390;
+% plot(t,TT,'b'),  hold on,  plot(t,390*ones(size(t)),'k--')
+% plot([0 0.5 1],[70 110 145],'k.','markersize',20)
+% axis([0 7 0 450]),  xlabel t,  ylabel('T(t)')
+\hfill \includegraphics[width=0.65\textwidth]{figs/exercise-17-3-1}
 \end{frame}
 
 
 \begin{frame}{exercise 36}
 
-\begin{minipage}[t]{0.75\textwidth}
+\begin{minipage}[t]{0.8\textwidth}
 \small
 \begin{quotation}
-\noindent \textbf{36. How High?---No Air Resistance} \, Suppose a small cannonball weighing 16 pounds is shot vertically upward, as shown in the Figure, with an initial velocity $v_0 = 300 \text{ft}/\text{s}$.  The answer to the question ``How high does the cannonball go?'' depends on whether we take air resistance into account.
+\noindent \textbf{36. How High?---No Air Resistance} \, Suppose a small cannonball weighing 16 pounds is shot vertically upward, as shown in the Figure, with an initial velocity $v_0 = 300 \text{ft}/\text{s}$.  The answer to ``How high does the cannonball go?'' depends on if we take air resistance into account.
 
-\noindent \textbf{(a)} \, Suppose air resistance is ignored.  If the positive direction is upward then a model for the height $s(t)$ of the cannonball is given by $m d^2s/dt^2 = - mg$ or equivalently $d^2s/dt^2 = - g$.  Since $ds/dt = v(t)$ the last differential equation is the same as $dv/dt = -g$.  We take $g=32 \text{ft}/\text{s}^2$.  Find the velocity $v(t)$ of the cannonball at time $t$.
+\medskip
+\noindent \textbf{(a)} \, Suppose air resistance is ignored.  If the positive direction is upward then a model for the height $s(t)$ of the cannonball is given by $m\, d^2s/dt^2 = - mg$ or equivalently $d^2s/dt^2 = - g$.  Since $ds/dt = v(t)$ the last differential equation is the same as $dv/dt = -g$.  We take $g=32 \text{ft}/\text{s}^2$.  Find the velocity $v(t)$ of the cannonball at time $t$.
 \end{quotation}
 \end{minipage}
-\begin{minipage}[t]{0.25\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
 \vspace{0mm}
-FIXME
+
+\hfill \includegraphics[width=0.8\textwidth]{figs/cannonball-on-head}
 \end{minipage}
+
+\vspace{20mm}
 \end{frame}
 
 
@@ -134,34 +143,36 @@ FIXME
 \noindent \textbf{(b)} \, Use the result in part \textbf{(a)} to determine the height $s(t)$ of the cannonball, measured from ground level.  Find the maximum height attained by the cannonball.
 \end{quotation}
 
-\vspace{50mm}
-\end{frame}
-
-
-\begin{frame}{X}
-
-
-\begin{itemize}
-\item X
-\end{itemize}
+\vspace{60mm}
 \end{frame}
 
 
 \begin{frame}{exercise 37}
 
 \begin{quotation}
-\noindent \textbf{37.  How High?---Linear Air Resistance}  FIXME
+\noindent \textbf{37.  How High?---Linear Air Resistance}  Repeat exercise 36, but this time assume that air resistance is proportional to instantaneous velocity.  In particular, suppose that the constant of proportionality is $k=0.25$.\footnote{Value for $k$ changed to make effect more obvious.}  It stands to reason that the maximum height must be \emph{less} than computed in exercise 36.  Show this.
 \end{quotation}
 
-\vspace{50mm}
+\vspace{40mm}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exercise 37, cont.}
 
-\begin{itemize}
-\item X
-\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{exercise 37, cont.~cont.}
+
+\vspace{20mm}
+
+% t=0:.1:12;
+% plot(t,-32*t+300)
+% hold on,  grid on,  xlabel t,  ylabel('v(t)')
+% Q = 0.25/16;  plot(t,300*exp(-Q*t) + (32/Q)*(exp(-Q*t)-1),'r')
+% legend('without air resistance','WITH air resistance')
+\hfill \includegraphics[width=0.65\textwidth]{figs/exercise-37-3-1}
 \end{frame}
 
 
