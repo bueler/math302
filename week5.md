@@ -40,6 +40,7 @@ It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Wa
 * [WebAssign 3.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
+* a blog on [free fall plus linear air drag force](http://www.sciencebits.com/MR_Stokes_Drag) approaches the same problem as exercises 36 & 37 in section 3.1
 *  _BUELER TODO_
 
 <hr>
