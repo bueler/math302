@@ -40,8 +40,12 @@ It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Wa
 * [WebAssign 3.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
-* a blog on [free fall plus linear air drag force](http://www.sciencebits.com/MR_Stokes_Drag) approaches the same problem as exercises 36 & 37 in section 3.1
-*  _BUELER TODO_
+* [Khan Academy: Modeling population with simple differential equation](https://www.youtube.com/watch?v=IYFkXWlgC_w)
+* random video: [Mixing Problems and Separable Differential Equations](https://www.youtube.com/watch?v=6wk9zWa-Fww)
+* random blog: [free fall plus linear air drag force](http://www.sciencebits.com/MR_Stokes_Drag) approaches the same problem as exercises 36 & 37 in section 3.1
+* random video: [Limited Growth Differential Equation](https://www.youtube.com/watch?v=vzb1PsgrVbc)
+* random video: [Modeling with Differential Equations](https://www.youtube.com/watch?v=RYYTDh4U4nQ)
+* random video: [More Solving Separable Differential Equations](https://www.youtube.com/watch?v=ylORzbeOH0E)
 
 <hr>
 <a align="left" href="week4">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week6">next week --\></a>
