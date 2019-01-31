@@ -18,7 +18,7 @@ Midterm 1 covers sections
 It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Watch for a Piazza message as a brief study guide.  You will need to get Midterm 1 proctored on Tuesday, Wednesday, or Thursday of Week 6.
 
 ### Monday 2/11
-* blank slides for section 3.1 _BUELER TODO_
+* [blank slides for section 3.1](assets/slides/3-1.pdf)
 * video: Bueler talks over slides for section 3.1 _BUELER TODO_
 * [work on WebAssign 2.6](https://www.webassign.net/)
 
