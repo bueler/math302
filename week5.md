@@ -19,7 +19,7 @@ It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Wa
 
 ### Monday 2/11
 * [blank slides for section 3.1](assets/slides/3-1.pdf)
-* video: Bueler talks over slides for section 3.1 _BUELER TODO_
+* [video: Bueler talks over slides for section 3.1](https://drive.explaineverything.com/thecode/MRAFRTS)
 * [work on WebAssign 2.6](https://www.webassign.net/)
 
 ### Tuesday 2/12
