@@ -31,6 +31,7 @@
 \setbeamertemplate{itemize item}{$\bullet$}
 \setbeamertemplate{itemize subitem}{$\circ$}
 
+
 \begin{frame}
 \titlepage
 
@@ -39,24 +40,114 @@
 \end{frame}
 
 
-\begin{frame}{nonlinear models}
+\begin{frame}{outline}
 
 \begin{itemize}
-\item most of the examples in this section are separable linear equations (\S2.2):
-    $$\frac{dy}{dx} = g(x) h(y)$$
-\item these slides show 2 exercises from \S3.2:
-
-\hspace{20mm} \# X, X
+\item like 3.1, section 3.2 has modeling problems
+    \begin{itemize}
+    \item challenging
+    \item uses separable linear equations (\S2.2): $\frac{dy}{dx} = g(x) h(y)$
+    \end{itemize}
+\item plan for these slides:
+    \begin{itemize}
+    \item five standard indefinite integrals
+        \begin{itemize}
+        \item you did them in calculus I and II
+        \item \dots but a reminder is appropriate
+        \end{itemize}
+    \item two explanations of where the ``logistic equation'' comes from
+    \item two exercises from \S3.2
+    \end{itemize} 
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{integrals you will need}
 
 \begin{itemize}
-\item X
+\item {\color{blue} integral 1} was already used in \S3.1:
+    $$\int \frac{dy}{ay+b} = \hspace{80mm}$$
+
+\vspace{10mm}
+\item {\color{blue} integral 2} is sometimes useful:
+    $$\int \frac{dx}{x^2+a^2} = \hspace{80mm}$$
+
+\vspace{25mm}
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}{integrals, cont.}
+
+\begin{itemize}
+\item {\color{blue} integral 3} is the main job in \S3.2:
+    $$\int \frac{dz}{z(a-bz)} = \hspace{80mm}$$
+
+\vspace{50mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{integrals, cont.$^2$}
+
+\begin{itemize}
+\item {\color{blue} integral 4} was needed for first-order linear equations (\S2.3) and will keep re-appearing in chapter 4 and onward:
+    $$\int x^n e^{ax}\,dx = \hspace{80mm}$$
+
+\vspace{40mm}
+    \begin{itemize}
+    \item[case 1] $\int x e^x\,dx = $
+    
+    \bigskip
+    \item[case 2] $\int_0^\infty x^2 e^{-x}\,dx = $
+    
+    \bigskip
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{integrals, cont.$^3$}
+
+\begin{itemize}
+\item {\color{blue} integral 5} \dots same:
+    $$\int e^{at} \cos t\,dt = \hspace{80mm}$$
+
+\vspace{50mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{how to remember integrals}
+
+\begin{itemize}
+\item even if you have a good memory, I think it is silly to try to memorize the \emph{results} above
+\item try to remember what choices which were made, and \emph{why}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{logistic equation: explanation 1}
+
+\begin{quotation}
+\noindent Suppose we have a dish of food, with no bacteria, and we plan to supply enough food and water every hour to sustain the needs of $N$ bacteria.  \textbf{Question}: What will happen when we introduce a few ($=P_0$) bacteria?
+\end{quotation}
+
+\begin{itemize}
+\item \emph{initial model}:  $P(t)$ is population, $P(0)=P_0$, 
+    $$\frac{dP}{dt} = k P$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item has solution $P(t) = P_0 e^{kt}$
+    \item predicts unlimited exponential growth when $k>0$
+    \end{itemize}
+\item \emph{better model}:
+    $$\frac{dP}{dt} = \left(\begin{matrix} \text{coefficient which gets} \\ \text{smaller when } P\approx N\end{matrix} \right) P$$
+    
+\end{itemize}
+\end{frame}
+
 
 
 \begin{frame}{X}
