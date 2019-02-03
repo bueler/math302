@@ -46,11 +46,11 @@
 \item like 3.1, section 3.2 has modeling problems
     \begin{itemize}
     \item challenging
-    \item uses separable linear equations (\S2.2): $\frac{dy}{dx} = g(x) h(y)$
+    \item uses separable linear equations from \S2.2: $\frac{dy}{dx} = g(x) h(y)$
     \end{itemize}
 \item plan for these slides:
     \begin{itemize}
-    \item five standard indefinite integrals
+    \item start with five standard indefinite integrals
         \begin{itemize}
         \item you did them in calculus I and II
         \item \dots but a reminder is appropriate
@@ -94,14 +94,15 @@
 \item {\color{blue} integral 4} was needed for first-order linear equations (\S2.3) and will keep re-appearing in chapter 4 and onward:
     $$\int x^n e^{ax}\,dx = \hspace{80mm}$$
 
-\vspace{40mm}
+\vspace{35mm}
+
     \begin{itemize}
-    \item[case 1] $\int x e^x\,dx = $
+    \item[example (a):] $\int x e^x\,dx = $
     
-    \bigskip
-    \item[case 2] $\int_0^\infty x^2 e^{-x}\,dx = $
+    \bigskip\bigskip
+    \item[example (b):] $\int_0^\infty x^2 e^{-x}\,dx = $
     
-    \bigskip
+    \bigskip\bigskip
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -113,7 +114,7 @@
 \item {\color{blue} integral 5} \dots same:
     $$\int e^{at} \cos t\,dt = \hspace{80mm}$$
 
-\vspace{50mm}
+\vspace{60mm}
 \end{itemize}
 \end{frame}
 
@@ -122,7 +123,15 @@
 
 \begin{itemize}
 \item even if you have a good memory, I think it is silly to try to memorize the \emph{results} above
-\item try to remember what choices which were made, and \emph{why}
+\item but \emph{do}
+    \begin{itemize}
+    \item try to remember what choices which were made, and \emph{why}
+    \item think of integration-by-parts as undoing the product rule
+        \begin{itemize}
+        \item see Mini-Project 1
+        \end{itemize}
+    \item remember how to start partial fractions
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -130,27 +139,68 @@
 \begin{frame}{logistic equation: explanation 1}
 
 \begin{quotation}
-\noindent Suppose we have a dish of food, with no bacteria, and we plan to supply enough food and water every hour to sustain the needs of $N$ bacteria.  \textbf{Question}: What will happen when we introduce a few ($=P_0$) bacteria?
+\noindent Suppose we have a dish with no bacteria, and we plan to supply enough food and water every hour to sustain the needs of $N$ bacteria.  \textbf{Question}: What will happen when we introduce a few bacteria ($P_0 \ll N$)?
 \end{quotation}
 
 \begin{itemize}
-\item \emph{initial model}:  $P(t)$ is population, $P(0)=P_0$, 
+\item \emph{initial model}:  $P(t)$ is population, $P(0)=P_0$, $k>0$,
     $$\frac{dP}{dt} = k P$$
 
 \vspace{-2mm}
     \begin{itemize}
     \item has solution $P(t) = P_0 e^{kt}$
-    \item predicts unlimited exponential growth when $k>0$
+    \item predicts unlimited exponential growth
+    \item at some point (clearly, and in fact!) population growth will be limited by food and water
     \end{itemize}
-\item \emph{better model}:
-    $$\frac{dP}{dt} = \left(\begin{matrix} \text{coefficient which gets} \\ \text{smaller when } P\approx N\end{matrix} \right) P$$
-    
+\item \emph{better model}: make coefficient get smaller as $P$ gets larger
+    $$\frac{dP}{dt} = \left(\begin{matrix} \text{coefficient which gets} \\ \text{smaller when $P$ approaches $N$}\end{matrix} \right) P$$
 \end{itemize}
 \end{frame}
 
 
+\begin{frame}{explanation 1, cont.}
 
-\begin{frame}{X}
+\begin{itemize}
+\item a formula with the desired property:
+    $$\boxed{\frac{dP}{dt} = k \left(1-\frac{P}{N}\right) P} \hspace{50mm}$$
+\item equivalently with $b=k/N >0$:
+    $$\boxed{\frac{dP}{dt} = b P \left(N-P\right)} \hspace{50mm}$$
+\item initial model was linear; this is nonlinear
+     \begin{itemize}
+     \item but separable!
+     \end{itemize}
+\item \emph{exercise:} draw phase portrait and typical solutions
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{logistic equation: explanation 2}
+
+\begin{quotation}
+\noindent Suppose a population changes by two mechanisms, namely births (rate is proportional to current population) and deaths by conflicts between the members of the population (rate is proportional to number of interactions, modeled as the square of the population).
+\end{quotation}
+
+\begin{itemize}
+\item write down the DE, with constants $k>0$ and $\ell>0$:
+    $$\boxed{\frac{dP}{dt} = k P - \ell P^2}$$
+\item equivalently, using $b=\ell$ and $N=k/\ell$, again write as $\frac{dP}{dt} = b P \left(N-P\right)$
+\item look at the three boxed equations \dots \emph{any} of them is the \emph{logistic equation}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{logistic equation: solution}
+
+\begin{itemize}
+\item assuming $b,N$ are positive constants, find the general solution:
+    $$\frac{dP}{dt} = b P \left(N-P\right) \hspace{70mm}$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{exercise 4 in \S3.2}
 
 \begin{itemize}
 \item X
@@ -158,23 +208,7 @@
 \end{frame}
 
 
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
+\begin{frame}{exercise X in \S3.2}
 
 \begin{itemize}
 \item X
@@ -193,9 +227,6 @@
 
      \centerline{\href{https://bueler.github.io/math302/week5.html}{\tt \color{cyan} bueler.github.io/math302/week5.html}}
      \item \emph{read} section 3.2 in the textbook
-         \begin{itemize}
-         \item 
-         \end{itemize}
      \item \emph{do} the WebAssign exercises for section 3.2
      \end{itemize}
 \end{itemize}
