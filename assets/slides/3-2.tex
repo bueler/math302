@@ -138,10 +138,12 @@
 
 \begin{frame}{logistic equation: explanation 1}
 
+\small
 \begin{quotation}
-\noindent Suppose we have a dish with no bacteria, and we plan to supply enough food and water every hour to sustain the needs of $N$ bacteria.  \textbf{Question}: What will happen when we introduce a few bacteria ($P_0 \ll N$)?
+\noindent Suppose we have a dish with no bacteria, and we plan to supply enough food and water every hour to sustain the needs of $N$ bacteria.  Question: What will happen when we introduce a few bacteria ($P_0 \ll N$)?
 \end{quotation}
 
+\normalsize
 \begin{itemize}
 \item \emph{initial model}:  $P(t)$ is population, $P(0)=P_0$, $k>0$,
     $$\frac{dP}{dt} = k P$$
@@ -165,7 +167,7 @@
     $$\boxed{\frac{dP}{dt} = k \left(1-\frac{P}{N}\right) P} \hspace{50mm}$$
 \item equivalently with $b=k/N >0$:
     $$\boxed{\frac{dP}{dt} = b P \left(N-P\right)} \hspace{50mm}$$
-\item initial model was linear; this is nonlinear
+\item initial model was linear; this one is nonlinear
      \begin{itemize}
      \item but separable!
      \end{itemize}
@@ -176,15 +178,21 @@
 
 \begin{frame}{logistic equation: explanation 2}
 
+\small
 \begin{quotation}
 \noindent Suppose a population changes by two mechanisms, namely births (rate is proportional to current population) and deaths by conflicts between the members of the population (rate is proportional to number of interactions, modeled as the square of the population).
 \end{quotation}
 
+\normalsize
 \begin{itemize}
 \item write down the DE, with constants $k>0$ and $\ell>0$:
     $$\boxed{\frac{dP}{dt} = k P - \ell P^2}$$
 \item equivalently, using $b=\ell$ and $N=k/\ell$, again write as $\frac{dP}{dt} = b P \left(N-P\right)$
-\item look at the three boxed equations \dots \emph{any} of them is the \emph{logistic equation}
+\item look at the last three boxed equations
+    \begin{itemize}
+    \item any one is the \emph{logistic equation}
+    \item the three forms are equivalent by renaming variables
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -200,7 +208,47 @@
 \end{frame}
 
 
-\begin{frame}{exercise 4 in \S3.2}
+\begin{frame}[fragile]
+
+\frametitle{exercise 4 in \S3.2}
+
+\small
+\begin{quotation}
+\noindent Census data for the United States between 1790 and 1950 are given in the Table on page 102.  (a)  Construct a logistic population model using the data from 1790, 1850, and 1910.  (b)  Construct a table comparing actual census population with the population predicted by the model in part (a).  Compute the absolute error and percentage relative error for each census year. 
+\end{quotation}
+
+\normalsize
+\begin{itemize}
+\item put the Table in a (Matlab) code
+
+\begin{Verbatim}[fontsize=\scriptsize]
+year = 1790:10:1950;    % list of 17 values
+pop = [  3.929,   5.308,   7.240,   9.638,  12.866, ...
+        17.069,  23.192,  31.433,  38.558,  50.156, ...
+        62.948,  75.996,  91.972, 105.711, 122.775, ...
+       131.669, 150.697];
+\end{Verbatim}
+
+\item plot it; see result on next slide
+
+\begin{Verbatim}[fontsize=\scriptsize]
+plot(year, pop, '.k', 'markersize', 12)
+xlabel('census year'),  ylabel('population in millions')
+axis([1780 1960 0 160]),  grid on
+\end{Verbatim}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 4, cont.}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figs/uscensus}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{exercise 4, cont.$^2$}
 
 \begin{itemize}
 \item X
@@ -208,27 +256,43 @@
 \end{frame}
 
 
-\begin{frame}{exercise X in \S3.2}
+\begin{frame}{exercise 15 in \S3.2}
 
 \begin{itemize}
 \item X
 \end{itemize}
 \end{frame}
 
+
+\begin{frame}{exercise 15, cont.}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
 
 \begin{frame}{expectations}
 
 \begin{itemize}
 \item just watching this video is \emph{not} enough!
-
-\item also:
      \begin{itemize}
      \item see ``found online'' videos at
 
      \centerline{\href{https://bueler.github.io/math302/week5.html}{\tt \color{cyan} bueler.github.io/math302/week5.html}}
      \item \emph{read} section 3.2 in the textbook
+         \begin{itemize}
+         \item \emph{read} example 2 on pages 100--101 regarding a chemical equation
+         \item try various exercises from section 3.2
+         \item but note I will not put any ``leaking tanks''-type questions (exercises 11--14) on quizzes/exams
+         \end{itemize}
      \item \emph{do} the WebAssign exercises for section 3.2
      \end{itemize}
+
+\bigskip
+\item up next are second-order linear equations in section 4.1
+    \begin{itemize}
+    \item we will return to section 3.3 near the end of the course, linking it with material in chapter 8
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
