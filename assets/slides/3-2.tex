@@ -219,7 +219,7 @@
 
 \normalsize
 \begin{itemize}
-\item put the Table in a (Matlab) code
+\item step 1: put the Table in a (Matlab) code
 
 \begin{Verbatim}[fontsize=\scriptsize]
 year = 1790:10:1950;    % list of 17 values
@@ -229,7 +229,7 @@ pop = [  3.929,   5.308,   7.240,   9.638,  12.866, ...
        131.669, 150.697];
 \end{Verbatim}
 
-\item plot it; see result on next slide
+\item \dots and plot it; see result on next slide
 
 \begin{Verbatim}[fontsize=\scriptsize]
 plot(year, pop, '.k', 'markersize', 12)
@@ -245,6 +245,30 @@ axis([1780 1960 0 160]),  grid on
 \begin{center}
 \includegraphics[width=0.75\textwidth]{figs/uscensus}
 \end{center}
+\end{frame}
+
+
+\begin{frame}{exercise 4, cont.$^2$}
+
+\begin{itemize}
+\item we are supposed to construct a logistic model using 1790, 1850, 1910 data
+\item i.e.~use those years to determine $N,\alpha,b$ in $P(t) = \frac{N}{1 + \alpha e^{-Nbt}}$
+\item let $t$ be the number of years after 1790
+\item solve 3 equations in 3 unknowns
+\small
+\begin{align*}
+3.929 &= \frac{N}{1 + \alpha}, \quad 23.192 = \frac{N}{1 + \alpha e^{-60 Nb}}, \quad 91.972 = \frac{N}{1 + \alpha e^{-120 Nb}}
+\end{align*}
+\normalsize
+\item this algebra job is hard; I started by clearing denominators and letting $s=e^{-60b}$:
+\small
+\begin{align*}
+3.929 (1+\alpha) - N &= 0 \\
+23.192 (1 + \alpha s^N) - N &= 0 \\
+91.972 (1 + \alpha s^{2N}) - N &= 0
+\end{align*}
+\item then I used Newton's method (not shown) to get FIXME $N=197.274, \alpha=49.2096, s=0.962509$
+\end{itemize}
 \end{frame}
 
 
