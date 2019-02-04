@@ -14,3 +14,5 @@ Here are some codes I wrote, listed in chronological order:
 * [eulersequence.py](assets/codes/eulersequence.py): Generate a sequence of figures used in [slides for section 2.6](assets/slides/2-6.pdf).
 * [simpleeuler.m](assets/codes/simpleeuler.m): Solve the simplest ODE IVP (y'=y,y(0)=1) by the Euler method.
 * [simpleeulerplot.m](assets/codes/simpleeulerplot.m): A version of the above that plots the solution for h=0.1 and h=0.05.
+* [plotcensus.m](assets/codes/plotcensus.m): plot US census data from exercise 4 in section 3.2; see [slides for section 3.2](assets/slides/3-2.pdf)
+* [fitcensus.m](assets/codes/fitcensus.m): fit logistic model to the US census data; see [slides for section 3.2](assets/slides/3-2.pdf)

@@ -1,5 +1,5 @@
-% USCENSUS  Table of data from page 102 of Zill 11th edition (exercise 4 in
-% section 3.2).  Associated plot.
+% PLOTCENSUS  Record table of data from page 102 of Zill 11th ed., exercise 4
+% in section 3.2, and make associated plot.
 
 year = 1790:10:1950;    % list of 17 values
 pop = [  3.929,   5.308,   7.240,   9.638,  12.866, ...
@@ -7,6 +7,7 @@ pop = [  3.929,   5.308,   7.240,   9.638,  12.866, ...
         62.948,  75.996,  91.972, 105.711, 122.775, ...
        131.669, 150.697];
 
-plot(year, pop, '.k', 'markersize', 14)
+plot(year, pop, '.k', 'markersize', 20)
 xlabel('census year'),  ylabel('population in millions')
 axis([1780 1960 0 160]),  grid on
+

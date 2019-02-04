@@ -45,8 +45,8 @@
 \begin{itemize}
 \item like 3.1, section 3.2 has modeling problems
     \begin{itemize}
-    \item challenging
-    \item uses separable linear equations from \S2.2: $\frac{dy}{dx} = g(x) h(y)$
+    \item \emph{challenging} modeling problems
+    \item mostly using separable equations from \S2.2: $\frac{dy}{dx} = g(x) h(y)$
     \end{itemize}
 \item plan for these slides:
     \begin{itemize}
@@ -56,6 +56,7 @@
         \item \dots but a reminder is appropriate
         \end{itemize}
     \item two explanations of where the ``logistic equation'' comes from
+    \item solve the logistic equation
     \item two exercises from \S3.2
     \end{itemize} 
 \end{itemize}
@@ -126,11 +127,11 @@
 \item but \emph{do}
     \begin{itemize}
     \item try to remember what choices which were made, and \emph{why}
+    \item remember how to start partial fractions
     \item think of integration-by-parts as undoing the product rule
         \begin{itemize}
         \item see Mini-Project 1
         \end{itemize}
-    \item remember how to start partial fractions
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -145,14 +146,14 @@
 
 \normalsize
 \begin{itemize}
-\item \emph{initial model}:  $P(t)$ is population, $P(0)=P_0$, $k>0$,
+\item \emph{model we know}:  $P(t)$ is population, $P(0)=P_0$, $k>0$,
     $$\frac{dP}{dt} = k P$$
 
 \vspace{-2mm}
     \begin{itemize}
     \item has solution $P(t) = P_0 e^{kt}$
     \item predicts unlimited exponential growth
-    \item at some point (clearly, and in fact!) population growth will be limited by food and water
+    \item at some point population growth in dish will be limited by food and water
     \end{itemize}
 \item \emph{better model}: make coefficient get smaller as $P$ gets larger
     $$\frac{dP}{dt} = \left(\begin{matrix} \text{coefficient which gets} \\ \text{smaller when $P$ approaches $N$}\end{matrix} \right) P$$
@@ -167,11 +168,11 @@
     $$\boxed{\frac{dP}{dt} = k \left(1-\frac{P}{N}\right) P} \hspace{50mm}$$
 \item equivalently with $b=k/N >0$:
     $$\boxed{\frac{dP}{dt} = b P \left(N-P\right)} \hspace{50mm}$$
-\item initial model was linear; this one is nonlinear
+\item previous model was linear; this one is nonlinear
      \begin{itemize}
      \item but separable!
      \end{itemize}
-\item \emph{exercise:} draw phase portrait and typical solutions
+\item \emph{at right:} draw phase portrait and typical solutions
 \end{itemize}
 \end{frame}
 
@@ -190,18 +191,30 @@
 \item equivalently, using $b=\ell$ and $N=k/\ell$, again write as $\frac{dP}{dt} = b P \left(N-P\right)$
 \item look at the last three boxed equations
     \begin{itemize}
-    \item any one is the \emph{logistic equation}
-    \item the three forms are equivalent by renaming variables
+    \item they are all called the \emph{logistic equation}
+    \item the three forms are equivalent by renaming the constants
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{logistic equation: solution}
+\begin{frame}{logistic equation: solve}
 
 \begin{itemize}
 \item assuming $b,N$ are positive constants, find the general solution:
     $$\frac{dP}{dt} = b P \left(N-P\right) \hspace{70mm}$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{logistic equation: verify solution}
+
+\begin{itemize}
+\item show that for any $A$,
+    $$P(t)=\frac{N}{1+A e^{-Nbt}}$$
+solves $\frac{dP}{dt} = b P \left(N-P\right)$
 \end{itemize}
 
 \vspace{50mm}
@@ -214,11 +227,12 @@
 
 \small
 \begin{quotation}
-\noindent Census data for the United States between 1790 and 1950 are given in the Table on page 102.  (a)  Construct a logistic population model using the data from 1790, 1850, and 1910.  (b)  Construct a table comparing actual census population with the population predicted by the model in part (a).  Compute the absolute error and percentage relative error for each census year. 
+\noindent Census data for the United States between 1790 and 1950 are given in the Table on page 102.  (a)   Construct a logistic population model using the data from 1790, 1850, and 1910.  (b)  Show a plot comparing actual census population with the population predicted by the model.
 \end{quotation}
 
 \normalsize
 \begin{itemize}
+\item I modified part (b) to make it visual
 \item step 1: put the Table in a (Matlab) code
 
 \begin{Verbatim}[fontsize=\scriptsize]
@@ -232,7 +246,7 @@ pop = [  3.929,   5.308,   7.240,   9.638,  12.866, ...
 \item \dots and plot it; see result on next slide
 
 \begin{Verbatim}[fontsize=\scriptsize]
-plot(year, pop, '.k', 'markersize', 12)
+plot(year, pop, '.k', 'markersize', 20)
 xlabel('census year'),  ylabel('population in millions')
 axis([1780 1960 0 160]),  grid on
 \end{Verbatim}
@@ -243,7 +257,7 @@ axis([1780 1960 0 160]),  grid on
 \begin{frame}{exercise 4, cont.}
 
 \begin{center}
-\includegraphics[width=0.75\textwidth]{figs/uscensus}
+\includegraphics[width=0.75\textwidth]{figs/plotcensus}
 \end{center}
 \end{frame}
 
@@ -251,39 +265,56 @@ axis([1780 1960 0 160]),  grid on
 \begin{frame}{exercise 4, cont.$^2$}
 
 \begin{itemize}
-\item we are supposed to construct a logistic model using 1790, 1850, 1910 data
-\item i.e.~use those years to determine $N,\alpha,b$ in $P(t) = \frac{N}{1 + \alpha e^{-Nbt}}$
+\item we are supposed to construct a logistic model using the 1790, 1850, 1910 populations
+\item we use those years to determine $N,A,b$ in $P(t) = \frac{N}{1 + A e^{-Nbt}}$
 \item let $t$ be the number of years after 1790
-\item solve 3 equations in 3 unknowns
+\item therefore solve 3 equations in 3 unknowns:
 \small
 \begin{align*}
-3.929 &= \frac{N}{1 + \alpha}, \quad 23.192 = \frac{N}{1 + \alpha e^{-60 Nb}}, \quad 91.972 = \frac{N}{1 + \alpha e^{-120 Nb}}
+3.929 &= \frac{N}{1 + A}, \quad 23.192 = \frac{N}{1 + A e^{-60 Nb}}, \quad 91.972 = \frac{N}{1 + A e^{-120 Nb}}
 \end{align*}
 \normalsize
-\item this algebra job is hard; I started by clearing denominators and letting $s=e^{-60b}$:
-\small
-\begin{align*}
-3.929 (1+\alpha) - N &= 0 \\
-23.192 (1 + \alpha s^N) - N &= 0 \\
-91.972 (1 + \alpha s^{2N}) - N &= 0
-\end{align*}
-\item then I used Newton's method (not shown) to get FIXME $N=197.274, \alpha=49.2096, s=0.962509$
+\item this algebra job is hard!
+\item I used Newton's method (not shown) to get
+    $$N=197.274, \quad A=49.2096, \quad b=0.000158863$$
+\item on the next slide I plot $P(t) = \frac{N}{1 + A e^{-Nbt}}$ in red on top of the data; the fit is surprisingly good!
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{exercise 4, cont.$^2$}
+\begin{frame}{exercise 4, finished}
 
+\begin{center}
+\includegraphics[width=0.6\textwidth]{figs/fitcensus}
+\end{center}
+
+\vspace{-2mm}
 \begin{itemize}
-\item X
+\item in our model:
+    $$\lim_{t\to \infty} P(t) = \lim_{t\to \infty} \frac{N}{1 + A e^{-Nbt}} = \frac{N}{1+0} = N = 197 \text{ million}$$
+\item in fact the current US population is quite a bit larger than that, about 328 million at the start of 2019
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}{exercise 15 in \S3.2}
 
+\begin{quotation}
+\noindent \textbf{Air Resistance} \, A DE for the velocity $v$ of a falling mass $m$ subjected to air resistance proportional to the \underline{square} of the velocity is
+    $$m \frac{dv}{dt} = m g - k v^2$$
+where $k>0$ and the positive direction is downward.
+
+(a) Solve the equation subject to $v(0)=v_0$.
+
+(b) Determine the terminal velocity.  Compare to a phase portrait of the DE.
+\end{quotation}
+
 \begin{itemize}
-\item X
+\item I simplified the statement in (b), and removed part (c)
+\item note $m>0$ and $g>0$
+\item my first step is to simplify by dividing by $m$ and factoring $g$:
+    $$\frac{dv}{dt} = g - \frac{k}{m} v^2 = g \left(1 - \frac{k}{mg} v^2\right)$$
+\item let $R=\sqrt{k/(mg)}$ to get form: $\frac{dv}{dt} = g \left(1 - R^2 v^2\right)$
 \end{itemize}
 \end{frame}
 
@@ -291,8 +322,16 @@ axis([1780 1960 0 160]),  grid on
 \begin{frame}{exercise 15, cont.}
 
 \begin{itemize}
-\item X
+\item from last slide we want to solve:
+   $$\frac{dv}{dt} = g \left(1 - R^2 v^2\right) \quad \text{ where } R=\sqrt{\frac{k}{mg}}$$
 \end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{exercise 15, finished}
+
 \end{frame}
 
 \begin{frame}{expectations}
@@ -306,8 +345,8 @@ axis([1780 1960 0 160]),  grid on
      \item \emph{read} section 3.2 in the textbook
          \begin{itemize}
          \item \emph{read} example 2 on pages 100--101 regarding a chemical equation
-         \item try various exercises from section 3.2
-         \item but note I will not put any ``leaking tanks''-type questions (exercises 11--14) on quizzes/exams
+         \item try various exercises from section 3.2, and starting asking good questions on Piazza
+         \item note I will not put any ``leaking tanks''-type questions (exercises 11--14) on quizzes/exams
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 3.2
      \end{itemize}
@@ -315,7 +354,8 @@ axis([1780 1960 0 160]),  grid on
 \bigskip
 \item up next are second-order linear equations in section 4.1
     \begin{itemize}
-    \item we will return to section 3.3 near the end of the course, linking it with material in chapter 8
+    \item for now we skip section 3.3
+    \item we will return to it near the end of the course, linking it with material in chapter 8
     \end{itemize}
 \end{itemize}
 \end{frame}

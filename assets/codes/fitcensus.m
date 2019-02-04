@@ -1,13 +1,14 @@
-% FITCENSUS
+% FITCENSUS  Plot fitted solution.  See PLOTCENSUS first.
 
-uscensus;
+% first run code that records and plots data
+plotcensus;
 
+% parameters from using Newton's method to fit
 N = 197.274;
 A = 49.2096;
-s = 0.962509;
-b = - log(s) / 60.0;
+b = 0.000158863;
 
-hold on
 t = year - 1790.0;
-plot(year,N./(1+A*exp(-N*b*t)),'r')
+P = N ./ (1.0 + A * exp(-N*b*t));
+hold on,  plot(year,P,'r'),  hold off
 
