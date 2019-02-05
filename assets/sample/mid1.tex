@@ -1,0 +1,111 @@
+\documentclass[11pt,reqno]{amsart}
+%\pagestyle{empty} 
+\setlength{\topmargin}{-0.5in} % usually -0.25in
+\addtolength{\textheight}{1.2in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amssymb,xspace,alltt,verbatim}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\usepackage{fancyvrb}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\newtheorem*{lem*}{Lemma}
+
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bbf}{\mathbf{f}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+
+\newcommand{\bF}{\mathbf{F}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+
+\newcommand{\grad}{\nabla}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.} }
+\newcommand{\pts}[1]{(\emph{#1 pts})}
+
+\newcommand{\probpts}[2]{\prob{#1} \pts{#2} \,\,}
+\newcommand{\ppartpts}[2]{\textbf{(#1)} \pts{#2} \,\,}
+\newcommand{\epartpts}[2]{\medskip\noindent \textbf{(#1)} \pts{#2} \,\,}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=ellipse,draw,inner sep=2pt] (char) {#1};}}
+
+\lhead{MATH F302 UX1: \textsl{SAMPLE} Midterm 1}
+
+\rhead{\thepage}
+
+\cfoot{}
+
+\begin{document}
+\hfill \Large Name:\underline{\phantom{Ed Bueler really really long long long name}}
+\medskip
+
+\scriptsize \noindent MATH F302 UX1 Differential Equations (Bueler) \hfill 19--21 February 2019
+\medskip
+
+\Large\centerline{\textbf{\textsl{SAMPLE} Midterm 1}}
+
+\medskip
+\large
+\begin{center}
+\textbf{Proctored.  90 minutes.  100 points total.  No textbook or notes or calculator.  When it makes sense to do so, please \circled{circle} your final answer(s).}
+\end{center}
+
+\bigskip
+\thispagestyle{empty}
+\normalsize
+
+% ?
+\prob{1} \ppartpts{a}{2}  
+\vfill
+
+\epartpts{b}{5}  
+\vfill
+
+
+\probpts{2}{7}  
+\vfill
+
+
+\newpage
+\probpts{3}{7}  
+\vfill
+
+
+
+\noindent \hrulefill
+
+\scriptsize \centerline{ \textsc{space available for computations \hspace{30mm} clearly label anything you want graded}}
+\vspace{5.0in}
+\end{document}
