@@ -36,7 +36,7 @@ It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Wa
 
 ### Friday 2/15
 * [blank slides for section 3.2](assets/slides/3-2.pdf)
-* video: Bueler talks over slides for section 3.2 _BUELER TODO_
+* [video: Bueler talks over slides for section 3.2](https://drive.explaineverything.com/thecode/VZNACNQ)
 * [WebAssign 3.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
