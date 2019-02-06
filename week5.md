@@ -26,12 +26,12 @@ It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Wa
 * [WebAssign 2.6](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 2/13
-* <span style="color:blue">**proctored Quiz 4 covers 2.4 and 2.6**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 4 covers 2.4 and 2.6**</span>
 * sample Midterm 1 _BUELER TODO_
 * solutions to sample Midterm 1 _BUELER TODO_
 
 ### Thursday 2/14
-* <span style="color:blue">**proctored Quiz 4 covers 2.4 and 2.6**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 4 covers 2.4 and 2.6**</span>
 * [work on WebAssign 3.1](https://www.webassign.net/)
 
 ### Friday 2/15
