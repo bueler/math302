@@ -28,7 +28,7 @@ It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Wa
 ### Wednesday 2/13
 * <span style="color:blue">**proctored Quiz 4 covers 2.4 and 2.6**</span>
 * [sample Midterm 1](assets/sample/mid1.pdf)
-* solutions to sample Midterm 1 _BUELER TODO_
+* [solutions to sample Midterm 1](assets/sample/solns-mid1.pdf)
 
 ### Thursday 2/14
 * <span style="color:blue">**proctored Quiz 4 covers 2.4 and 2.6**</span>
