@@ -37,7 +37,10 @@ Regarding new content, _not covered on Midterm 1_, we start into second-order di
 * [WebAssign 4.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
-* _BUELER TODO_
+* [Gil Strang at MIT: Differential Equations and Linear Algebra, 2.1: Second Order Equations](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-21-second-order-equations-117375.html)
+* [Khan Academy: 2nd order linear homogeneous differential equations](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-1)
+* random video: [Intro to solving higher-order differential equations](https://www.youtube.com/watch?v=yPSdm_PONu4)
+* random video: [How to solve second order differential equations](https://www.youtube.com/watch?v=tOtpqZLgxP0)
 
 <hr>
 <a align="left" href="week5">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week7">next week --\></a>
