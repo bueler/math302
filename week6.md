@@ -26,8 +26,6 @@ Regarding new content, _not covered on Midterm 1_, we start into second-order di
 
 ### Wednesday 2/20
 * <span style="color:blue">**proctored Midterm 1**</span> _BUELER TODO_
-* sample Midterm 1 _BUELER TODO_
-* solutions to sample Midterm 1 _BUELER TODO_
 
 ### Thursday 2/21
 * <span style="color:blue">**proctored Midterm 1**</span> _BUELER TODO_

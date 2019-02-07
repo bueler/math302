@@ -15,7 +15,7 @@ Midterm 1 covers sections
 
   1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 2.4, 2.6, 3.1, and 3.2
 
-It happens _next week_, namely Week 6.  Below is a link to a sample Midterm.  Watch for a Piazza message as a brief study guide.  You will need to get Midterm 1 proctored on Tuesday, Wednesday, or Thursday of Week 6.
+It happens _next week_, namely [Week 6](week6).  Below is a link to a sample Midterm.  Watch for a Piazza message as a brief study guide.  You will need to get Midterm 1 proctored on Tuesday, Wednesday, or Thursday of [Week 6](week6).
 
 ### Monday 2/11
 * [blank slides for section 3.1](assets/slides/3-1.pdf)
