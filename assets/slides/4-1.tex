@@ -42,11 +42,125 @@
 
 \begin{frame}{outline}
 
+plan for these slides
+\begin{itemize}
+\item a bit of review of first-order linear equations (\S2.3)
+\item how to solve constant-coefficient, second-order linear equations (from \S4.3)
+\item a whole bunch of new language for higher-order linear equations
+    \begin{itemize}
+    \item basically, \S4.1 is just a bunch of new language
+    \item I like to have some examples to talk about first, thus a bit of \S4.3 first
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{first-order linear DEs: a review}
+
+\begin{itemize}
+\item recall most-general form mentioned in \S2.3:
+    $$a_1(x) y' + a_0(x) y = g(x)$$
+\item you get to practical form by dividing by the leading coefficient:
+    $$y' + P(x) y = f(x)$$
+
+    \begin{itemize}
+    \item \alert{this requires leading coefficient $a_1(x)$ to \emph{not} to be zero} on the interval where we are solving
+    \end{itemize}
+\item Case 1 (\alert{easiest to solve}) are constant-coefficient and homogeneous:
+    $$y' + b y = 0$$
+
+    \begin{itemize}
+    \item \emph{homogeneous} means the right-hand side is zero
+    \item we can see the solution is
+        $$y(x) = A e^{-bx}$$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{first-order linear review cont.}
+
+\begin{itemize}
+\item Case 2 are homogeneous but otherwise general:
+    $$y' + P(x) y = 0$$
+
+    \begin{itemize}
+    \item now we need an integrating factor $\mu(x) = e^{Q(x)}$ where $Q(x) = \int P(x)\,dx$ is any antiderivative of $P(x)$
+    \item multiplying by $\mu$ the equation becomes $\left(\mu(x) y(x)\right)' = 0$
+    \item thus
+        $$e^{Q(x)} y(x) = A$$
+    \item thus the solution is
+        $$y(x) = A e^{-Q(x)} \qquad \text{where } Q=\int P(x)\,dx$$
+    \item homogeneous: \alert{a multiple of a solution is still a solution}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{first-order linear review cont.$^2$}
+
+\begin{itemize}
+\item Case 3 are general first-order linear:
+    $$y' + P(x) y = f(x)$$
+
+    \begin{itemize}
+    \item need same integrating factor as before; multiplying by $\mu=e^{Q(x)}$ the equation becomes $\left(\mu(x) y(x)\right)' = \mu(x) f(x)$
+    \item integrate:
+        $$e^{Q(x)} y(x) = A + \int_a^x e^{Q(t)} f(t)\,dt$$
+
+        \begin{itemize}
+        \item written to emphasize right side has a free constant $A$
+        \end{itemize}
+    \item thus the solution is
+        $$y(x) = A e^{-Q(x)} +  e^{-Q(x)} \int_a^x e^{Q(t)} f(t)\,dt \quad \text{where } Q=\int P(x)\,dx$$
+    \item \alert{solution is the homogeneous solution plus a particular solution}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{higher-order linear DEs}
+
+for $n$th-order linear equations
+\begin{equation}
+    a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = g(x),  \label{generallinear}
+\end{equation}
+\alert{versions all four comments in red on the previous slides still apply:}
+\begin{enumerate}
+\item if $a_n(x)$ is never zero we can divide by it and write
+    $$y^{(n)} + b_{n-1}(x) y^{(n-1)} + \dots + b_1(x) y' + b_0(x) y = f(x)$$
+\item easiest case (\S4.3) is homogeneous and constant coefficient
+    $$a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = 0$$
+\item any multiple of a solution, or sum of solutions, of a homogeneous equation
+\begin{equation}
+    a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = 0  \label{homogeneous}
+\end{equation}
+is again a solution
+\item solutions of \eqref{generallinear} are always solutions of the homogeneous equation \eqref{homogeneous} plus a particular solution
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{X}
+
 \begin{itemize}
 \item X
 \end{itemize}
 \end{frame}
 
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
 
 \begin{frame}{X}
 
@@ -66,7 +180,21 @@
      \centerline{\href{https://bueler.github.io/math302/week6.html}{\tt \color{cyan} bueler.github.io/math302/week6.html}}
      \item \emph{read} section 4.1 in the textbook
          \begin{itemize}
-         \item X
+         \item know the meaning/definitions of:
+
+\bigskip
+             \hspace{-10mm} \begin{tabular}{ll}
+             \emph{homogeneous}                     & \emph{Wronskian} \\
+             \emph{nonhomogeneous}                  & \emph{fundamental set of solutions} \\
+             \emph{associated homogeneous equation} & \emph{general solution} \\
+             \emph{superposition}                   & \emph{particular solution} \\
+             \emph{linearly dependent}              & \emph{complementary function} \\
+             \emph{linearly independent}            &
+             \end{tabular}
+
+\bigskip
+         \item I will not ask questions about ``boundary conditions'' and ``boundary value problems''!
+         \item \dots but it is still quite a bit of new language
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 4.1
      \end{itemize}
