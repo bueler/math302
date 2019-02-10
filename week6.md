@@ -16,7 +16,7 @@ There is no Mini-Project this week, neither assigned nor due.
 Regarding new content, _not covered on Midterm 1_, we start into second-order differential equations.  (And higher order, but if you can handle second order then higher is just more of the same ideas.)  Section 4.1 is _important_ terminology and theory, which is the framework into which the various methods in latter sections is put.  Then we do section 4.3 on constant-coefficient ODEs; in [Week 7](week7) we get back to section 4.2.
 
 ### Monday 2/18
-* blank slides for section 4.1 _BUELER TODO_
+* [blank slides for section 4.1](assets/slides/4-1.pdf)
 * video: Bueler talks over slides for section 4.1 _BUELER TODO_
 * [work on WebAssign 3.2](https://www.webassign.net/)
 
