@@ -49,7 +49,6 @@ plan for these slides
 \item a whole bunch of new language for higher-order linear equations
     \begin{itemize}
     \item basically, \S4.1 is a lot of new words
-    \item \dots so we start with some examples from \S4.3 first
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -101,7 +100,7 @@ plan for these slides
 \begin{frame}{first-order linear review cont.$^2$}
 
 \begin{itemize}
-\item general case: first-order linear
+\item general \emph{nonhomogeneous} case: first-order linear
     $$y' + P(x) y = f(x)$$
 
     \begin{itemize}
@@ -131,8 +130,6 @@ for $n$th-order linear equations
 \end{frame}
 
 
-
-
 \begin{frame}{overview cont.}
 
 \begin{equation*}
@@ -143,7 +140,7 @@ for $n$th-order linear equations
     $$y^{(n)} + b_{n-1}(x) y^{(n-1)} + \dots + b_1(x) y' + b_0(x) y = f(x)$$
 \item easiest case (\S4.3) is homogeneous and constant coefficient
     $$a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = 0$$
-\item for the homogeneous equation
+\item for the associated homogeneous equation to $\ast$,
 \begin{equation*}
     a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = 0
 \end{equation*}
@@ -153,40 +150,182 @@ any multiple of, or sum of, solutions is again a solution
 \end{frame}
 
 
-\begin{frame}{solve a homogeneous, constant-coefficient equation}
+\begin{frame}{solutions exist}
+
+\begin{theorem}  
+\begin{itemize}
+\item Consider the linear DE
+\begin{equation*}
+    a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = g(x)
+\end{equation*}
+If the functions $a_j(x)$ and $g(x)$ are continuous on some interval, and if $a_n(x) \ne 0$ on that interval, then solutions exist.
+\item Furthermore, if $x_0$ is in that interval then there is exactly one solution which satisfies the initial values
+\begin{align*}
+y(x_0) &= y_0 \\
+y'(x_0) &= y_1 \\
+ &\vdots \\
+y^{(n-1)}(x_0) &= y_{n-1}
+\end{align*}
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+
+\begin{frame}{linear, homogeneous, constant-coefficient}
 
 \begin{itemize}
+\item furthermore, linear DEs which are \alert{homogeneous and constant-coefficient always have exponential solutions}
+    \begin{itemize}
+    \item you can always find \emph{at least one solution} $y=e^{mx}$
+    \item \emph{and} multiples and sums of solutions are solutions
+    \end{itemize}
 \item \emph{example 1}: solve, by trying $y(x)=e^{mx}$, the equation
     $$y'' + 4 y' - 5 y = 0$$
 
-\vspace{40mm}
+\vspace{30mm}
 \small
-\noindent \emph{general solution}:
+\noindent \emph{fundamental set} of solutions:
 
 \medskip
+\noindent \emph{general solution}:
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 2}
+
+\begin{itemize}
+\item \emph{example 2}: solve, by trying $y(x)=e^{mx}$, the equation
+    $$y''' + 3 y'' - y' - 3 y = 0$$
+
+\vspace{40mm}
+\small
 \noindent \emph{fundamental set} of solutions:
+
+\medskip
+\noindent \emph{general solution}:
 \end{itemize}
 \end{frame}
 
-\begin{frame}{X}
+
+\begin{frame}{linear combination}
 
 \begin{itemize}
-\item X
+\item examples 1 and 2 are from \S 4.3 but they let me illustrate the language introduced in \S 4.1 \alert{$\longleftarrow$ read this section!}
+\item for example,
+\begin{theorem}
+If $y_1(x), y_2(x), \dots, y_n(x)$ solve a linear and homogeneous DE
+\begin{equation*}
+    a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = 0
+\end{equation*}
+then any linear combination
+    $$y(x) = c_1 y_1(x) + c_2 y_2(x) + \dots + c_n y_n(x)$$
+is also a solution.
+\end{theorem}
+
+\item idea: for linear and homogeneous DEs you can form a more general solution from any set of solutions
+    \begin{itemize}
+    \item see examples 1 and 2
+    \end{itemize}        
 \end{itemize}
 \end{frame}
 
-\begin{frame}{X}
+
+\begin{frame}{linear dependence and independence}
 
 \begin{itemize}
-\item X
+\item a set of functions $\{f_1(x),\dots,f_n(x)\}$ is \emph{linearly dependent} if you can combine with constants $c_1,\dots,c_n$, \underline{some of which} \underline{are not zero}, and get the zero function:
+    $$c_1 f_1(x) + c_2 f_2(x) + \dots + c_n f_n(x) = 0$$
+\item a set is \emph{linearly independent} if it is not linearly dependent
+\item \emph{example}:
+    $$f_1(x) = x^2 + x, \quad f_2(x) = x^2 - x, \quad f_3(x) = 5x$$
+are linearly dependent because
+    $$1\cdot f_1(x) - 1\cdot f_2(x) - \frac{2}{5}\cdot f_3(x) = 0$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{X}
+
+\begin{frame}{example 3}
 
 \begin{itemize}
-\item X
+\item recall from example 1 that $f_1(x)=e^x$ and $f_2(x)=e^{-5x}$ are solutions to $y'' + 4 y' - 5 y = 0$
+\item \emph{example 3}:  Find a solution of the initial value problem
+    $$y'' + 4 y' - 5 y = 0, \quad y(0) = 2, \quad y'(0) = -3$$
+
+\vspace{35mm}
+\item this calculation works because $\{f_1(x),f_2(x)\}=\{e^x,e^{-5x}\}$ is a linearly-independent set
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{checking linear independence}
+
+\begin{itemize}
+\item generally it would require linear algebra thinking to check whether a set of functions is linearly independent
+\item \emph{but} there is a determinant to save you from thinking!
+\item definition.  given functions $f_1(x),\dots,f_n(x)$ the \emph{Wronskian} is the deteriminant where the rows are derivatives:
+    $$W(f_1,\dots,f_n) = \det \left(\begin{bmatrix}
+    f_1 & f_2 & \dots & f_n \\
+    f_1' & f_2' & \dots & f_n' \\
+    \vdots & \vdots & & \vdots \\
+    f_1^{(n)} & f_2^{(n)} & \dots & f_n^{(n)}
+    \end{bmatrix}\right)$$
+\begin{minipage}[t]{0.25\textwidth}
+\item \emph{example 4}: find the Wronskian of $\{e^{-3x},e^{-x},e^{x}\}$
+\end{minipage}
+
+\vspace{15mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{theorem}
+
+\begin{theorem}  Suppose $\{y_1(x),y_2(x),\dots,y_n(x)\}$ are solutions of a homogeneous linear $n$th-order differential equation on some interval.  Then
+\begin{itemize}
+\item The set of solutions is linearly-independent if and only if the Wronskian $W(y_1,\dots,y_n)$ is nonzero on the interval.
+\item If the Wronskian $W(y_1,\dots,y_n)$ is nonzero at some point on the interval then it is nonzero on the whole interval.
+\end{itemize}
+\end{theorem}
+
+\end{frame}
+
+
+\begin{frame}{fundamental set}
+
+definition.  a set of $n$ linearly-independent solutions $\{y_1(x),y_2(x),\dots,y_n(x)\}$ of the homogeneous linear $n$th-order differential equation
+\begin{equation*}
+    a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = 0
+\end{equation*}
+is a \emph{fundamental set of solutions}
+
+\begin{itemize}
+\item once you have a fundamental set then the \emph{general solution} of the above DE is
+    $$y(x) = c_1 y_1(x) + c_2 y_2(x) + \dots + c_n y_n(x)$$
+\item if you have fewer than $n$ solutions, or they are not linearly independent, then the linear combination \emph{is} a solution, but not fully general
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 25 in \S 4.1}
+
+\begin{itemize}
+\item \emph{exercise \#25}:  Verify that the functions form a fundamental set  of solutions on the interval.  Form the general solution.
+    $$y''-2y'+5y=0, \qquad \{e^x\cos 2x,e^x\sin 2x\}, \qquad (-\infty,\infty)$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{exercise 27 in \S 4.1}
+
+\begin{itemize}
+\item \emph{exercise \#27}:  Verify that the functions form a fundamental set  of solutions on the interval.  Form the general solution.
+    $$x^2 y''-6xy'+12y=0, \qquad \{x^3,x^4\}, \qquad (0,\infty)$$
+\end{itemize}
+
+\vspace{50mm}
 \end{frame}
 
 
@@ -204,17 +343,17 @@ any multiple of, or sum of, solutions is again a solution
 
 \bigskip
              \hspace{-10mm} \begin{tabular}{ll}
-             \emph{homogeneous}                     & \emph{Wronskian} \\
-             \emph{nonhomogeneous}                  & \emph{fundamental set of solutions} \\
-             \emph{associated homogeneous equation} & \emph{general solution} \\
+             \emph{homogeneous}                     & \emph{linearly independent} \\
+             \emph{nonhomogeneous}                  & \emph{Wronskian} \\
+             \emph{associated homogeneous equation} & \emph{fundamental set of solutions} \\
+             \emph{linear combination}              & \emph{general solution} \\
              \emph{superposition}                   & \emph{particular solution} \\
-             \emph{linearly dependent}              & \emph{complementary function} \\
-             \emph{linearly independent}            &
-             \end{tabular}
+             \emph{linearly dependent}              & \emph{complementary function}              \end{tabular}
 
 \bigskip
-         \item I will not ask questions about ``boundary conditions'' and ``boundary value problems''!
-         \item \dots but it is still quite a bit of new language
+         \item we will soon focus more on nonhomogeneous equations (\S4.4), but the homogeneous case is central for a while (\S4.3 and then \S4.2)
+         \item \emph{but} during this course I will not ask questions about ``boundary conditions'' and ``boundary value problems''
+         \item there is quite a bit of new language in \S4.1!
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 4.1
      \end{itemize}
