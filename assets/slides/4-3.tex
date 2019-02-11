@@ -91,7 +91,6 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 \end{frame}
 
 
-
 \begin{frame}{example 2}
 
 \begin{itemize}
@@ -103,18 +102,83 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{Euler's helpful identity}
 
 \begin{itemize}
-\item X
+\item Euler recognized the connection between imaginary numbers and trig functions:
+    $$e^{i\theta} = \cos\theta + i \sin\theta$$
+\item \emph{exercise}: Explain \emph{Euler's identity} above using the Taylor series of $e^x,\cos x,\sin x$.  Also draw a picture.
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{example 3}
+
+\begin{itemize}
+\item from Euler's identity we also know
+    $$e^{a+ib} = e^a(\cos b + i \sin b) \hspace{50mm}$$
+\item \emph{example 3}: find the general solution of the ODE
+    $$y''-4y'+5y=0$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{major fact of \S4.3}
+
+\begin{itemize}
+\item fX
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{main recipe of \S4.3}
 
 \begin{itemize}
-\item X
+\item fX
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 5 in \S4.3}
+
+\begin{itemize}
+\item fX
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 23 in \S4.3}
+
+\begin{itemize}
+\item fX
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 69 in \S4.3}
+
+\begin{itemize}
+\item fX
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 69, cont.}
+
+\begin{itemize}
+\item fX
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 55 in \S4.3}
+
+\begin{itemize}
+\item fX
 \end{itemize}
 \end{frame}
 
@@ -159,15 +223,16 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 \begin{itemize}
 \item the following general solutions can all be computed by substituting $y=e^{mx}$, and getting the auxiliary equation, etc.
 \item \dots but it is good to \emph{quickly} see these special cases:
-\newcommand{\genarrow}{\qquad \stackrel{\text{has general solution}}{\longrightarrow} \qquad}
-
+%\newcommand{\genarrow}{\quad \stackrel{\text{\tiny has general solution}}{\longrightarrow} \quad}
+\newcommand{\genarrow}{\qquad \longrightarrow \qquad}
 \begin{align*}
+ &\quad\,\, {\scriptsize \begin{matrix} \text{has general} \\ \text{solution} \end{matrix} } \\
 y' = k y &\genarrow y=Ae^{kx} \\
-y'' - y = 0 &\genarrow \left[\begin{matrix} y=c_1e^x+c_2e^{-x} \\
+y'' + k^2 y = 0 &\genarrow y=c_1\cos(kx) + c_2\sin(kx) \\
+y'' - k^2 y = 0 &\genarrow \left[\begin{matrix} y=c_1e^{kx}+c_2e^{-kx} \\
                                       \text{or} \\
-                                      y=c_1\sinh x + c_2\cosh x\end{matrix}\right] \\
-y'' + y = 0 &\genarrow y=c_1\sin x + c_2\cos x \\
-y'' + y' = 0 &\genarrow y=c_1 + c_2e^x \\
+                                      y=c_1\cosh(k x) + c_2\sinh(k x)\end{matrix}\right] \\
+y'' \pm ky' = 0 &\genarrow y=c_1 + c_2e^{\mp kx} \\
 y'' = 0 &\genarrow y=c_1 + c_2 x
 \end{align*}
 \end{itemize}
