@@ -46,8 +46,8 @@
 \begin{itemize}
 \item recall from previous slides: \underline{linear} DEs which are \underline{homogeneous} and \underline{constant-coefficient} always have exponential solutions
     \begin{itemize}
-    \item you can always find at least one solution $y=e^{mx}$
-    \item the \underline{underlined} words are all important!
+    \item fact: you can always find at least one solution $y=e^{mx}$
+    \item the \underline{underlined} words are all important to this fact
     \end{itemize}
 \item \emph{example 1}: solve the ODE IVP
     $$y'' -2 y' - 4 y = 0, \quad y(-1)=4, \, y'(-1)=0$$
@@ -64,13 +64,11 @@
 \hfill \includegraphics[width=0.5\textwidth]{figs/expodeivp2nd}
 \end{frame}
 
-
-
 \begin{frame}[fragile]
 \frametitle{example 1: how I did it}
 
 \begin{itemize}
-\item I am committed to helping you use a computer for math, so here is how I made the last figure using \Matlab:
+\item here is how I solved for the constants and made the figure using \Matlab:
 
 \bigskip
 \begin{Verbatim}[fontsize=\small]
@@ -85,10 +83,95 @@ plot(x,y),  grid on,  xlabel x,  ylabel y
 axis([-2 0.5 0 50])
 hold on,  plot(-1,4,'ko','markersize',12),  hold off
 \end{Verbatim}
+
+\bigskip
+\item I am committed to helping you use a computer for math!
+
 \end{itemize}
 \end{frame}
 
 
+
+\begin{frame}{example 2}
+
+\begin{itemize}
+\item \emph{example 2}: find the general solution of the ODE
+    $$y'' + y = 0$$
+\end{itemize}
+
+\vspace{55mm}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{hyperbolic functions}
+
+\begin{itemize}
+\item Euler's identity $\alert{e^{i\theta}=\cos\theta+i\sin\theta}$, for complex exponentials, has an analog for real exponentials
+
+\noindent \begin{minipage}[t]{0.45\textwidth}
+\item by definition:
+\begin{align*}
+\cosh x &= \frac{e^x + e^{-x}}{2} \\
+\sinh x &= \frac{e^x - e^{-x}}{2}
+\end{align*}
+
+\vspace{-5mm}
+    \begin{itemize}
+    \item the even and odd parts of the exponential, resp.
+    \item called \emph{hyperbolic} functions
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.46\textwidth}
+\vspace{5mm}
+
+\hfill \includegraphics[width=0.9\textwidth]{figs/coshsinh}
+\end{minipage}
+
+\bigskip
+\item it is easy to see that
+    \begin{itemize}
+    \item $\alert{e^x = \cosh x + \sinh x}$
+    \item $(\cosh x)' = \sinh x$, \, $(\sinh x)' = \cosh x$
+    \item $y=c_1 \cosh x + c_2 \sinh x$ is the general solution to $y''-y=0$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{some nice cases}
+
+\begin{itemize}
+\item the following general solutions can all be computed by substituting $y=e^{mx}$, and getting the auxiliary equation, etc.
+\item \dots but it is good to \emph{quickly} see these special cases:
+\newcommand{\genarrow}{\qquad \stackrel{\text{has general solution}}{\longrightarrow} \qquad}
+
+\begin{align*}
+y' = k y &\genarrow y=Ae^{kx} \\
+y'' - y = 0 &\genarrow \left[\begin{matrix} y=c_1e^x+c_2e^{-x} \\
+                                      \text{or} \\
+                                      y=c_1\sinh x + c_2\cosh x\end{matrix}\right] \\
+y'' + y = 0 &\genarrow y=c_1\sin x + c_2\cos x \\
+y'' + y' = 0 &\genarrow y=c_1 + c_2e^x \\
+y'' = 0 &\genarrow y=c_1 + c_2 x
+\end{align*}
+\end{itemize}
+\end{frame}
 
 
 \begin{frame}{expectations}
