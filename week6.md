@@ -17,7 +17,7 @@ Regarding new content, _not covered on Midterm 1_, we start into second-order di
 
 ### Monday 2/18
 * [blank slides for section 4.1](assets/slides/4-1.pdf)
-* video: Bueler talks over slides for section 4.1 _BUELER TODO_
+* [video: Bueler talks over slides for section 4.1](https://drive.explaineverything.com/thecode/QVRDLMJ)
 * [work on WebAssign 3.2](https://www.webassign.net/)
 
 ### Tuesday 2/19
