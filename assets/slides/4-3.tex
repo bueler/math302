@@ -46,8 +46,8 @@
 \begin{itemize}
 \item recall from \S4.1 slides that \underline{linear} DEs which are \underline{homogeneous} and \underline{constant-coefficient} always have exponential solutions
     \begin{itemize}
-    \item thus you can always find at least one solution $y=e^{mx}$
-    \item but the \underline{underlined} words are all important to this fact
+    \item \emph{fact}: you can always find at least one solution $y=e^{mx}$
+    \item but each of the \underline{underlined} words is important to this fact
     \end{itemize}
 \item \emph{example 1}: solve the ODE IVP
     $$y'' -2 y' - 4 y = 0, \quad y(-1)=4, \, y'(-1)=0$$
@@ -129,15 +129,16 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 
 \begin{frame}{the major facts of \S4.3}
 
-\begin{itemize}
-\item consider constant-coefficient and homogeneous linear ODE
+for constant-coefficient and homogeneous linear ODEs
     $$a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = 0$$
+
+\begin{itemize}
 \item substitution of $y=e^{mx}$ yields (polynomial) \emph{auxiliary equation}
     $$a_n m^n + a_{n-1} m^{n-1} + \dots + a_1 m + a_0 = 0$$
-\item any polynomial equation has at least one \emph{complex} solution
+\item any polynomial eqn.~has at least one \emph{complex} root (solution)
     \begin{itemize}
-    \item auxiliary eqn.~has at least $1$ and at most $n$ distinct solutions
-    \item some solutions may be repeated
+    \item auxiliary eqn.~has at least $1$ and at most $n$ distinct roots
+    \item some roots may be repeated
     \end{itemize}
 \item there is a \underline{recipe (next slide!)} which generates a fundamental set of $n$ real solutions and a general solution to the ODE:
     $$y_1(x),\dots,y_n(x) \quad \implies \quad y(x) = c_1 y_1(x) + \dots + c_n y_n(x)$$
@@ -147,16 +148,16 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 
 \begin{frame}{main recipe of \S4.3}
 
-find all solutions (roots) $m$ of the auxiliary equation, namely
-    $$a_n m^n + a_{n-1} m^{n-1} + \dots + a_1 m + a_0 = 0,$$
-and build the fundamental solution set this way:
+find all roots of the auxiliary equation
+    $$a_n m^n + a_{n-1} m^{n-1} + \dots + a_1 m + a_0 = 0$$
+and then build a fundamental solution set this way:
 \begin{itemize}
-\item[case I]   if $m$ is a real root then
+\item[case I:]   if $m$ is a real root then
     $$e^{mx} \,\, \text{ is in the set}$$
-\item[case II]  if $m$ is a real root which is repeated $k$ times then
-    $$e^{mx}, x e^{mx}, \dots, x^{k-1} e^{mx} \,\, \text{ are in the set}$$
-\item[case III] if $m=a\pm i b$ is a complex root then
-    $$e^{ax} \cos(bx), e^{ax} \sin(bx) \,\, \text{ are in the set}$$
+\item[case II:]  if $m$ is a real root which is repeated $k$ times then
+    $$e^{mx}, \, x e^{mx}, \, \dots, \, x^{k-1} e^{mx} \,\, \text{ are in the set}$$
+\item[case III:] if $m=a\pm i b$ is a complex root then
+    $$e^{ax} \cos(bx), \, e^{ax} \sin(bx) \,\, \text{ are in the set}$$
 \end{itemize}
 \end{frame}
 
@@ -264,7 +265,7 @@ c =
     \begin{itemize}
     \item $\alert{e^x = \cosh x + \sinh x}$
     \item $(\cosh x)' = \sinh x$, \, $(\sinh x)' = \cosh x$
-    \item $y=c_1 \cosh x + c_2 \sinh x$ is the general solution to $y''-y=0$
+    \item $y=c_1 \cosh x + c_2 \sinh x$ is a general solution to $y''-y=0$
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -274,8 +275,7 @@ c =
 
 \begin{itemize}
 \item the following general solutions can all be computed by substituting $y=e^{mx}$, and getting the auxiliary equation, etc.
-\item \dots but it is good to \emph{quickly} see these special cases:
-%\newcommand{\genarrow}{\quad \stackrel{\text{\tiny has general solution}}{\longrightarrow} \quad}
+\item \dots but it is good to \emph{quickly} apply these special cases:
 \newcommand{\genarrow}{\qquad \longrightarrow \qquad}
 \begin{align*}
  &\quad\,\, {\scriptsize \begin{matrix} \text{has general} \\ \text{solution} \end{matrix} } \\
@@ -283,8 +283,7 @@ y' = k y &\genarrow y=Ae^{kx} \\
 y'' + k^2 y = 0 &\genarrow y=c_1\cos(kx) + c_2\sin(kx) \\
 y'' - k^2 y = 0 &\genarrow \left[\begin{matrix} y=c_1e^{kx}+c_2e^{-kx} \\
                                       \text{or} \\
-                                      y=c_1\cosh(k x) + c_2\sinh(k x)\end{matrix}\right] \\
-y'' \pm ky' = 0 &\genarrow y=c_1 + c_2e^{\mp kx} \\
+                                      y=b_1\cosh(k x) + b_2\sinh(k x)\end{matrix}\right] \\
 y'' = 0 &\genarrow y=c_1 + c_2 x
 \end{align*}
 \end{itemize}

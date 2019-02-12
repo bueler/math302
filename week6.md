@@ -9,11 +9,11 @@ Welcome to Week 6 of [MATH F302 UX1 in Spring 2019](index.html)!  As always, rem
 
 This week, **proctored Midterm 1** must be done on Tuesday, Wednesday, or Thursday!  It **covers sections 1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 2.4, 2.6, 3.1, and 3.2**
 
-As illustrated on the sample Midterm---see [Week 5](week5)---the problems on the midterm are very much like the problems you have seen on Quizzes and WebAssign homework.
+The problems on the Midterm are very much like the problems you have seen on Quizzes and WebAssign homework.  For examples, see the sample Midterm on the [Week 5](week5) page.
 
 There is no Mini-Project this week, neither assigned nor due.
 
-Regarding new content, _not covered on Midterm 1_, we start into second-order differential equations.  (And higher order, but if you can handle second order then higher is just more of the same ideas.)  Section 4.1 is _important_ terminology and theory, which is the framework into which the various methods in latter sections is put.  Then we do section 4.3 on constant-coefficient ODEs; in [Week 7](week7) we get back to section 4.2.
+Regarding new content, we start into second-order differential equations.  (We also see higher order DEs.  However, if you can handle second order then higher is just more of the same ideas.)  Section 4.1 is _important_ terminology and theory, the framework into which the various methods in latter sections are put.  Then we do section 4.3 on constant-coefficient ODEs.  In [Week 7](week7) we will get back to section 4.2.
 
 ### Monday 2/18
 * [blank slides for section 4.1](assets/slides/4-1.pdf)
@@ -32,7 +32,7 @@ Regarding new content, _not covered on Midterm 1_, we start into second-order di
 * [work on WebAssign 4.1](https://www.webassign.net/)
 
 ### Friday 2/22
-* blank slides for section 4.3 _BUELER TODO_
+* [blank slides for section 4.3](assets/slides/4-3.pdf)
 * video: Bueler talks over slides for section 4.3 _BUELER TODO_
 * [WebAssign 4.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
