@@ -44,10 +44,10 @@
 \begin{frame}{linear, homogeneous, constant-coefficient}
 
 \begin{itemize}
-\item recall from previous slides: \underline{linear} DEs which are \underline{homogeneous} and \underline{constant-coefficient} always have exponential solutions
+\item recall from \S4.1 slides that \underline{linear} DEs which are \underline{homogeneous} and \underline{constant-coefficient} always have exponential solutions
     \begin{itemize}
-    \item fact: you can always find at least one solution $y=e^{mx}$
-    \item the \underline{underlined} words are all important to this fact
+    \item thus you can always find at least one solution $y=e^{mx}$
+    \item but the \underline{underlined} words are all important to this fact
     \end{itemize}
 \item \emph{example 1}: solve the ODE IVP
     $$y'' -2 y' - 4 y = 0, \quad y(-1)=4, \, y'(-1)=0$$
@@ -107,7 +107,7 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 \begin{itemize}
 \item Euler recognized the connection between imaginary numbers and trig functions:
     $$e^{i\theta} = \cos\theta + i \sin\theta$$
-\item \emph{exercise}: Explain \emph{Euler's identity} above using the Taylor series of $e^x,\cos x,\sin x$.  Also draw a picture.
+\item \emph{exercise}: Explain \emph{Euler's identity} above using the Taylor series of $e^x,\cos x,\sin x$ at basepoint $x_0=0$.  Also draw a picture.
 \end{itemize}
 
 \vspace{50mm}
@@ -127,18 +127,36 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 \end{frame}
 
 
-\begin{frame}{major fact of \S4.3}
+\begin{frame}{the major facts of \S4.3}
 
 \begin{itemize}
-\item fX
+\item consider constant-coefficient and homogeneous linear ODE
+    $$a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = 0$$
+\item substitution of $y=e^{mx}$ yields (polynomial) \emph{auxiliary equation}
+    $$a_n m^n + a_{n-1} m^{n-1} + \dots + a_1 m + a_0 = 0$$
+\item any polynomial equation has at least one \emph{complex} solution
+    \begin{itemize}
+    \item auxiliary eqn.~has at least $1$ and at most $n$ distinct solutions
+    \item some solutions may be repeated
+    \end{itemize}
+\item there is a \underline{recipe (next slide!)} which generates a fundamental set of $n$ real solutions and a general solution to the ODE:
+    $$y_1(x),\dots,y_n(x) \quad \implies \quad y(x) = c_1 y_1(x) + \dots + c_n y_n(x)$$
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}{main recipe of \S4.3}
 
+find all solutions (roots) $m$ of the auxiliary equation, namely
+    $$a_n m^n + a_{n-1} m^{n-1} + \dots + a_1 m + a_0 = 0,$$
+and build the fundamental solution set this way:
 \begin{itemize}
-\item fX
+\item[case I]   if $m$ is a real root then
+    $$e^{mx} \,\, \text{ is in the set}$$
+\item[case II]  if $m$ is a real root which is repeated $k$ times then
+    $$e^{mx}, x e^{mx}, \dots, x^{k-1} e^{mx} \,\, \text{ are in the set}$$
+\item[case III] if $m=a\pm i b$ is a complex root then
+    $$e^{ax} \cos(bx), e^{ax} \sin(bx) \,\, \text{ are in the set}$$
 \end{itemize}
 \end{frame}
 
@@ -146,16 +164,33 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 \begin{frame}{exercise 5 in \S4.3}
 
 \begin{itemize}
-\item fX
+\item \emph{exercise 5}:  find the general solution of the second-order DE
+    $$y''+8y'+16y=0$$
 \end{itemize}
+
+\vspace{60mm}
 \end{frame}
 
 
 \begin{frame}{exercise 23 in \S4.3}
 
 \begin{itemize}
-\item fX
+\item \emph{exercise 23}:  find the general solution of the higher-order DE
+    $$y^{(4)} + y''' + y'' = 0$$
 \end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{exercise 55 in \S4.3}
+
+\begin{itemize}
+\item \emph{exercise 55}:  find a constant-coefficient, homogeneous linear DE whose general solution is
+    $$y(x) = c_1 e^{-x} \cos x + c_2 e^{-x} \sin x$$
+\end{itemize}
+
+\vspace{60mm}
 \end{frame}
 
 
@@ -168,14 +203,6 @@ hold on,  plot(-1,4,'ko','markersize',12),  hold off
 
 
 \begin{frame}{exercise 69, cont.}
-
-\begin{itemize}
-\item fX
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{exercise 55 in \S4.3}
 
 \begin{itemize}
 \item fX
@@ -261,8 +288,8 @@ y'' = 0 &\genarrow y=c_1 + c_2 x
              \emph{general solution}
              \end{tabular}
 
-\bigskip
-         \item why the repeated-roots case generates additional linearly-independent solutions by extra factors of ``$x$'' is explained in \S4.2
+\medskip
+         \item the reasons why the repeated-roots case generates additional linearly-independent solutions via extra factors of ``$x$'' \underline{is explained in \S4.2}
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 4.3
      \end{itemize}
