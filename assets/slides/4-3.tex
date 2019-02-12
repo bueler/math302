@@ -194,19 +194,44 @@ and build the fundamental solution set this way:
 \end{frame}
 
 
-\begin{frame}{exercise 69 in \S4.3}
+\begin{frame}{like exercise 69 in \S4.3}
 
 \begin{itemize}
-\item fX
+\item \emph{like exercise 69}:  solve the ODE IVP
+\begin{align*}
+& 2 y^{(4)} + 13 y''' + 21 y'' + 2 y' - 8 y = 0 \\
+& y(0)=-2, \, y'(0)=6, \, y''(0)=3, \, y'''(0)=\tfrac{1}{2}
+\end{align*}
+\emph{hint}.  you may use a computer algebra system (CAS)
 \end{itemize}
+
+\vspace{50mm}
 \end{frame}
 
 
-\begin{frame}{exercise 69, cont.}
+\begin{frame}[fragile]
+\frametitle{exercise 69: how to do it}
 
-\begin{itemize}
-\item fX
-\end{itemize}
+\begin{Verbatim}[fontsize=\footnotesize]
+>> m = roots([2,13,21,2,-8])'
+m =
+          -4          -2          -1         0.5
+>> A = [1 1 1 1; m; m.^2; m.^3]
+A =
+           1           1           1           1
+          -4          -2          -1         0.5
+          16           4           1        0.25
+         -64          -8          -1       0.125
+>> b = [-2 6 3 0.5]';
+>> c = A \ b
+c =
+    -0.48148
+         5.4
+     -12.222
+      5.3037
+\end{Verbatim}
+
+\footnotesize \alert{\emph{conclusion}:  A computer is very effective \dots if you know where you are going.}
 \end{frame}
 
 
