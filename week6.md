@@ -33,7 +33,7 @@ Regarding new content, we start into second-order differential equations.  (We a
 
 ### Friday 2/22
 * [blank slides for section 4.3](assets/slides/4-3.pdf)
-* video: Bueler talks over slides for section 4.3 _BUELER TODO_
+* [video: Bueler talks over slides for section 4.3](https://expl.ai/XVRHBER)
 * [WebAssign 4.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
