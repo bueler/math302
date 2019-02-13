@@ -21,14 +21,14 @@ Regarding new content, we start into second-order differential equations.  (We a
 * [work on WebAssign 3.2](https://www.webassign.net/)
 
 ### Tuesday 2/19
-* <span style="color:blue">**proctored Midterm 1**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Midterm 1**</span>
 * [WebAssign 3.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 2/20
-* <span style="color:blue">**proctored Midterm 1**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Midterm 1**</span>
 
 ### Thursday 2/21
-* <span style="color:blue">**proctored Midterm 1**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Midterm 1**</span>
 * [work on WebAssign 4.1](https://www.webassign.net/)
 
 ### Friday 2/22
