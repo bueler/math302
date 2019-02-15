@@ -15,7 +15,7 @@ This week we continue solving second-order differential equations.
 
 ### Monday 2/25
 * [blank slides for section 4.2](assets/slides/4-2.pdf)
-* video: Bueler talks over slides for section 4.2 _BUELER TODO_
+* [video: Bueler talks over slides for section 4.2](https://expl.ai/FWYRRZR)
 * blank Mini-Project 3 _BUELER TODO_
 * [work on WebAssign 4.3](https://www.webassign.net/)
 
