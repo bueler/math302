@@ -41,10 +41,10 @@
 \end{frame}
 
 
-\begin{frame}{a 2nd-order example equation}
+\begin{frame}{a 2nd-order example}
 
 \begin{itemize}
-\item let's start with an example that the methods of section 4.3 \emph{do not} handle, but where we can see a path
+\item let's start with an example that the methods of section 4.3 \emph{do not} handle, but where we \emph{can} see the solution
 \item \emph{example 1}: find the general solution
     $$x y'' + y' = 0$$
 \end{itemize}
@@ -63,7 +63,7 @@
 \begin{frame}{the \S4.3 rule needing explanation}
 
 \begin{itemize}
-\item the next example is one we \emph{do} know how to solve, but using a rule which requires justification
+\item the next example is one we \emph{do} know how to solve, but I will use a rule which requires justification
 \item \emph{example 2}:  find the general solution using \S4.3 rules
     $$y'' - 6 y' + 9 y = 0$$
 \end{itemize}
@@ -72,31 +72,32 @@
 \end{frame}
 
 
-\begin{frame}{reducing the order: first illustration}
+\begin{frame}{reducing the order 1: first illustration}
 
 \begin{itemize}
-\item \emph{reduction of order} is a technique to find a \emph{second} linearly-independent solution to a linear and homogeneous differential equation (DE) if you already have a first one $y_1(x)$
-\item the technique:
+\item \emph{reduction of order} is a technique:
     \begin{itemize}
     \item substitute $y(x) = u(x) y_1(x)$
     \item derive a DE for $u$ which has no zeroth-order term
+    \item solve a first-order equation for $w=u'$
     \end{itemize}
-\item \emph{example 3}:  $y_1(x)=e^{3x}$ is a solution; find a second solution
-    $$y'' - 6 y' + 9 y = 0$$
+\item the purpose is key: \alert{find another linearly-independent solution if you already have a first one $y_1(x)$}
+\item \emph{example 3}:  we know $y_1(x)=e^{3x}$ is a solution; find another
+    $$y'' - 6 y' + 9 y = 0 \hspace{70mm}$$
 \end{itemize}
 
 \vspace{50mm}
 \end{frame}
 
 
-\begin{frame}{reducing the order: general case}
+\begin{frame}{reducing the order 2: general case}
 
+suppose $y_1(x)$ is a solution to 2nd-order homogeneous DE
+    $$y'' + P(x) y' +  Q(x) y \stackrel{\ast}{=} 0,$$
+and we seek another solution of the form $y(x) = u(x) y_1(x)$:
 \begin{itemize}
-\item suppose $y_1(x)$ is a solution to 2nd-order homogeneous DE
-    $$y'' + P(x) y' +  Q(x) y \stackrel{\ast}{=} 0$$
-\item seek another solution of the form $y(x) = u(x) y_1(x)$
-\item compute $y' = u' y_1 + u y_1'$ and 
-    $$y'' = u'' y_1 + u' y_1' + u' y_1' + u y_1'' = u'' y_1 + 2 u' y_1' + u y_1''$$
+\item compute $y' = u' y_1 + u y_1'$ and $y'' = u'' y_1 + 2 u' y_1' + u y_1''$
+    $$\hspace{-70mm} \text{\footnotesize  \emph{check it}: } y'' = $$
 \item substitute into $\ast$:
     $$(u'' y_1 + 2 u' y_1' + u y_1'') + P (u' y_1 + u y_1') + Q u y_1 = 0$$
 \item group by derivatives on $u$:
@@ -107,68 +108,95 @@
 \end{frame}
 
 
-\begin{frame}{reducing the order: a first-order equation}
+\begin{frame}{reducing the order 3: a first-order equation}
 
 \begin{itemize}
-\item we are seeking a solution of the form $y(x) = u(x) y_1(x)$ and we know $u$ solves
+\item we are seeking a solution of the form $y = u y_1$, and $u$ solves
     $$y_1 u'' + (2 y_1' + P y_1) u' = 0$$
-\item there is \alert{no zeroth-order term} (i.e.~no $u$ term) so the equation is first-order for $w=u'$:
-    $$y_1 w' + (2 y_1' + P y_1) w = 0$$
-\item which is separable:
-    $$\frac{dw}{dx} = -\frac{(2 y_1' + P y_1) w}{y_1} \quad \iff \quad \frac{dw}{w} = - \left(2 \frac{y_1'}{y_1} + P\right) dx$$
+\item there is \alert{no zeroth-order term} so we can solve it
+\item the equation is first-order and separable for $w=u'$:
+\begin{gather*}
+y_1 w' + (2 y_1' + P y_1) w = 0 \\
+\frac{dw}{dx} = -\frac{(2 y_1' + P y_1) w}{y_1} \\
+\frac{dw}{w} = - \left(2 \frac{y_1'}{y_1} + P\right)\, dx \\
+\int \frac{dw}{w} = - 2 \int \frac{y_1'(x)}{y_1(x)}\,dx - \int P(x)\,dx
+\end{gather*}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{reducing the order: the second solution}
+\begin{frame}{reducing the order 4: the second solution}
 
 \begin{itemize}
-\item the last separable equation ($\frac{dw}{w} = \dots$) has solution
-\begin{align*}
-\ln|w(x)| &= - 2 \int \frac{y_1'(x)}{y_1(x)}\,dx - \int P(x)\,dx + C \\
-          &= - 2 \ln|y_1(x)| - \int P(x)\,dx + C
-\end{align*}
-\item exponentiating gives
-    $$w(x) = c_1 \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}$$
-\item recall $u'=w$ so integrating again gives
+\item continuing:
+\begin{gather*}
+\int \frac{dw}{w} = - 2 \int \frac{y_1'(x)}{y_1(x)}\,dx - \int P(x)\,dx \\
+\ln|w(x)| = - 2 \ln|y_1(x)| - \int P(x)\,dx + C \\
+w(x) = c_1 \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}
+\end{gather*}
+\item recall $u'=w$; thus integrating again gives
     $$u(x) = c_1 \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx + c_2$$
+\item our second solution is the new part of $y=uy_1$:
+    $$y_2(x) = y_1(x) \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx$$
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{example 4}
 
 \begin{itemize}
-\item X
+\item in this example we do a complete story: we \emph{guess} a first solution and derive a second one by reduction of order
+\item \emph{example 4}: find the general solution on $x>0$
+    $$x^2 y'' + 5 x y' + 4 y = 0$$
+\end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{example 4, finished}
+
+\vspace{60mm}
+
+\hfill $y(x) = c_1 x^{-2} + c_2 x^{-2} \ln x$
+\end{frame}
+
+
+\begin{frame}{differential equations \emph{must be} hard}
+
+\begin{itemize}
+\item differential equations \emph{must be} hard
+
+\bigskip
+\begin{proof} The simple (separable) DE
+    $$\frac{dy}{dx} = f(x)$$
+has solution
+    $$y(x) = \int f(x)\,dx.$$
+But integration is hard, for example, try $f(x)=e^{-x^2}$ in the above.
+
+Thus the set of possible problems in DEs is \emph{bigger} than the set of hard integrals, so DEs must be hard.
+\end{proof}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{X}
+
+\begin{frame}{exercise 17 in \S4.2}
 
 \begin{itemize}
-\item X
+\item you can use reduction order on nonhomogeneous problems, if you are careful in understanding where you are going
+\item \emph{exercise 17}:  given that $y_1=e^{-2x}$ solves the homogeneous equation $y''-4y=0$, find the general solution of the nonhomogeneous equation
+    $$y'' - 4y = 2$$
 \end{itemize}
+
+\vspace{50mm}
 \end{frame}
 
-\begin{frame}{X}
 
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
+\begin{frame}{exercise 17, finished}
 
-\begin{frame}{X}
+\vspace{60mm}
 
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
+\hfill $y(x) = c_1 e^{-2x} + c_2 e^{2x} - \frac{1}{2}$
 \end{frame}
 
 
@@ -180,9 +208,17 @@
      \item see ``found online'' videos at
 
      \centerline{\href{https://bueler.github.io/math302/week7.html}{\tt \color{cyan} bueler.github.io/math302/week7.html}}
-     \item \emph{read} section 4.2 in the textbook
-     \item \emph{do} the WebAssign exercises for section 4.2
+     \item \emph{read} \S 4.2 in the textbook
+     \item \emph{do} the WebAssign exercises for \S 4.2
      \end{itemize}
+\item note example 4 is a \emph{Cauchy-Euler} type of differential equation
+     \begin{itemize}
+     \item covered in \S 4.7 \dots which we will skip
+     \end{itemize}
+\item regarding understanding reduction of order, you have a choice:
+     \begin{quotation}
+     \noindent do you memorize \fbox{$y_2(x) = y_1(x) \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx$} or do you substitute $y(x) = u(x) y_1(x)$ and see how it comes out?
+     \end{quotation}
 \end{itemize}
 \end{frame}
 
