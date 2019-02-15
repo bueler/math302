@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[dvipsnames]{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage{fancybox,fancyvrb}
@@ -40,6 +40,129 @@
 %\color{green!40!blue}
 \end{frame}
 
+
+\begin{frame}{a 2nd-order example equation}
+
+\begin{itemize}
+\item let's start with an example that the methods of section 4.3 \emph{do not} handle, but where we can see a path
+\item \emph{example 1}: find the general solution
+    $$x y'' + y' = 0$$
+\end{itemize}
+
+% solve by:
+%  x u' + u = 0
+%  du/u = -dx/x
+%  ln|u| = - ln|x| + c
+%  y' = u = A/x
+%  y = A ln|x| + c_1
+% fund set:  {1,ln|x|}
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{the \S4.3 rule needing explanation}
+
+\begin{itemize}
+\item the next example is one we \emph{do} know how to solve, but using a rule which requires justification
+\item \emph{example 2}:  find the general solution using \S4.3 rules
+    $$y'' - 6 y' + 9 y = 0$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{reducing the order: first illustration}
+
+\begin{itemize}
+\item \emph{reduction of order} is a technique to find a \emph{second} linearly-independent solution to a linear and homogeneous differential equation (DE) if you already have a first one $y_1(x)$
+\item the technique:
+    \begin{itemize}
+    \item substitute $y(x) = u(x) y_1(x)$
+    \item derive a DE for $u$ which has no zeroth-order term
+    \end{itemize}
+\item \emph{example 3}:  $y_1(x)=e^{3x}$ is a solution; find a second solution
+    $$y'' - 6 y' + 9 y = 0$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{reducing the order: general case}
+
+\begin{itemize}
+\item suppose $y_1(x)$ is a solution to 2nd-order homogeneous DE
+    $$y'' + P(x) y' +  Q(x) y \stackrel{\ast}{=} 0$$
+\item seek another solution of the form $y(x) = u(x) y_1(x)$
+\item compute $y' = u' y_1 + u y_1'$ and 
+    $$y'' = u'' y_1 + u' y_1' + u' y_1' + u y_1'' = u'' y_1 + 2 u' y_1' + u y_1''$$
+\item substitute into $\ast$:
+    $$(u'' y_1 + 2 u' y_1' + u y_1'') + P (u' y_1 + u y_1') + Q u y_1 = 0$$
+\item group by derivatives on $u$:
+    $$y_1 u'' + (2 y_1' + P y_1) u' + ({\color{Green} y_1'' + P y_1' + Q y_1}) u = 0$$
+\item term in {\color{Green} green} is zero (\alert{why?}) so $u$ solves
+    $$y_1 u'' + (2 y_1' + P y_1) u' = 0$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{reducing the order: a first-order equation}
+
+\begin{itemize}
+\item we are seeking a solution of the form $y(x) = u(x) y_1(x)$ and we know $u$ solves
+    $$y_1 u'' + (2 y_1' + P y_1) u' = 0$$
+\item there is \alert{no zeroth-order term} (i.e.~no $u$ term) so the equation is first-order for $w=u'$:
+    $$y_1 w' + (2 y_1' + P y_1) w = 0$$
+\item which is separable:
+    $$\frac{dw}{dx} = -\frac{(2 y_1' + P y_1) w}{y_1} \quad \iff \quad \frac{dw}{w} = - \left(2 \frac{y_1'}{y_1} + P\right) dx$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{reducing the order: the second solution}
+
+\begin{itemize}
+\item the last separable equation ($\frac{dw}{w} = \dots$) has solution
+\begin{align*}
+\ln|w(x)| &= - 2 \int \frac{y_1'(x)}{y_1(x)}\,dx - \int P(x)\,dx + C \\
+          &= - 2 \ln|y_1(x)| - \int P(x)\,dx + C
+\end{align*}
+\item exponentiating gives
+    $$w(x) = c_1 \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}$$
+\item recall $u'=w$ so integrating again gives
+    $$u(x) = c_1 \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx + c_2$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
 
 \begin{frame}{X}
 
