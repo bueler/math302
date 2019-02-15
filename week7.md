@@ -35,7 +35,11 @@ This week we continue solving second-order differential equations.
 * [WebAssign 4.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
-* _BUELER TODO_
+* [Khan Academy: Repeated roots of the characteristic equation](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/modal/v/repeated-roots-of-the-characteristic-equation)
+* random video: [Reduction of Order, Basic Example](https://www.youtube.com/watch?v=oQSFW8BIrY0)
+* random video about ["Shortcut" Reduction of Order](https://www.youtube.com/watch?v=Jm395-EPQ1Y) is just the formula in 4.2
+* [Khan Academy: Undetermined coefficients 1](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/modal/v/undetermined-coefficients-1)
+* [Gil Strang at MIT: Method of Undetermined Coefficients](https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/second-order-equations/method-of-undetermined-coefficients/)
 
 <hr>
 <a align="left" href="week6">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week8">next week --\></a>
