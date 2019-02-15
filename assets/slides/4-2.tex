@@ -44,7 +44,7 @@
 \begin{frame}{a 2nd-order example}
 
 \begin{itemize}
-\item let's start with an example that the methods of section 4.3 \emph{do not} handle, but where we \emph{can} see the solution
+\item start with an example for which the methods of section 4.3 \emph{do not} work, but where we \emph{can} see the solution anyway
 \item \emph{example 1}: find the general solution
     $$x y'' + y' = 0$$
 \end{itemize}
@@ -81,7 +81,7 @@
     \item derive a DE for $u$ which has no zeroth-order term
     \item solve a first-order equation for $w=u'$
     \end{itemize}
-\item the purpose is key: \alert{find another linearly-independent solution if you already have a first one $y_1(x)$}
+\item key understanding: the \alert{purpose} is to \alert{find another linearly-independent solution} given you have $y_1(x)$
 \item \emph{example 3}:  we know $y_1(x)=e^{3x}$ is a solution; find another
     $$y'' - 6 y' + 9 y = 0 \hspace{70mm}$$
 \end{itemize}
@@ -97,12 +97,12 @@ suppose $y_1(x)$ is a solution to 2nd-order homogeneous DE
 and we seek another solution of the form $y(x) = u(x) y_1(x)$:
 \begin{itemize}
 \item compute $y' = u' y_1 + u y_1'$ and $y'' = u'' y_1 + 2 u' y_1' + u y_1''$
-    $$\hspace{-70mm} \text{\footnotesize  \emph{check it}: } y'' = $$
+    $$\hspace{-70mm} \text{\footnotesize  \emph{check it}: } \quad y'' = $$
 \item substitute into $\ast$:
     $$(u'' y_1 + 2 u' y_1' + u y_1'') + P (u' y_1 + u y_1') + Q u y_1 = 0$$
 \item group by derivatives on $u$:
     $$y_1 u'' + (2 y_1' + P y_1) u' + ({\color{Green} y_1'' + P y_1' + Q y_1}) u = 0$$
-\item term in {\color{Green} green} is zero (\alert{why?}) so $u$ solves
+\item term in {\color{Green} green} is zero (\emph{why?}) so $u$ solves
     $$y_1 u'' + (2 y_1' + P y_1) u' = 0$$
 \end{itemize}
 \end{frame}
@@ -136,7 +136,7 @@ w(x) = c_1 \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}
 \end{gather*}
 \item recall $u'=w$; thus integrating again gives
     $$u(x) = c_1 \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx + c_2$$
-\item our second solution is the new part of $y=uy_1$:
+\item the second solution is \alert{the new part of $y=uy_1$}:
     $$y_2(x) = y_1(x) \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx$$
 \end{itemize}
 \end{frame}
@@ -145,8 +145,8 @@ w(x) = c_1 \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}
 \begin{frame}{example 4}
 
 \begin{itemize}
-\item in this example we do a complete story: we \emph{guess} a first solution and derive a second one by reduction of order
-\item \emph{example 4}: find the general solution on $x>0$
+\item in this example we tell a complete story: we \emph{guess} a first solution and then derive a second one by reduction of order
+\item \emph{example 4}: find the general solution (for $x>0$)
     $$x^2 y'' + 5 x y' + 4 y = 0$$
 \end{itemize}
 
@@ -165,16 +165,16 @@ w(x) = c_1 \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}
 \begin{frame}{differential equations \emph{must be} hard}
 
 \begin{itemize}
-\item differential equations \emph{must be} hard
+\item differential equations \emph{must be} hard, and sometimes impossible
 
 \bigskip
 \begin{proof} The simple (separable) DE
     $$\frac{dy}{dx} = f(x)$$
 has solution
     $$y(x) = \int f(x)\,dx.$$
-But integration is hard, for example, try $f(x)=e^{-x^2}$ in the above.
+Integration is hard, for example, try $f(x)=e^{-x^2}$ in the above.
 
-Thus the set of possible problems in DEs is \emph{bigger} than the set of hard integrals, so DEs must be hard.
+But the set of possible problems in DEs is \emph{bigger} than the set of hard integrals, so DEs must be hard.
 \end{proof}
 \end{itemize}
 \end{frame}
@@ -215,10 +215,14 @@ Thus the set of possible problems in DEs is \emph{bigger} than the set of hard i
      \begin{itemize}
      \item covered in \S 4.7 \dots which we will skip
      \end{itemize}
-\item regarding understanding reduction of order, you have a choice:
-     \begin{quotation}
-     \noindent do you memorize \fbox{$y_2(x) = y_1(x) \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx$} or do you substitute $y(x) = u(x) y_1(x)$ and see how it comes out?
-     \end{quotation}
+\item to do reduction of order on a quiz or exam you have a \alert{choice}
+\item do you
+     \begin{enumerate}
+     \item memorize \fbox{$y_2(x) = y_1(x) \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx$}?
+
+\medskip
+     \item or substitute $y(x) = u(x) y_1(x)$ and see how it comes out?
+     \end{enumerate}
 \end{itemize}
 \end{frame}
 
