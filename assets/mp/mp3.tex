@@ -4,50 +4,23 @@
 \usepackage{graphicx,color,enumitem}
 \usepackage{amsmath,amsthm,amsbsy}
 \usepackage{palatino}
+\usepackage{mdframed}
 
 \usepackage{tikz}
-\usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true,urlcolor={blue}]{hyperref}
 
-%% Setup aproblem environment, 
-%% aproblem items
-%% subproblems environment
-%% subproblem items
-\makeatletter
-\newcounter{probcount}
-\newcounter{subprobcount}
-\newlength\probsep
-\newlength\pshrinking
-\newif\iffirstprob
+\mdfdefinestyle{exerpartSty}{}
+\theoremstyle{definition}
+\newmdtheoremenv[style=exerpartSty,linewidth=0.5pt, topline=false, bottomline=false, rightline=false,%
+leftmargin=0pt, innerleftmargin=0.4em, rightmargin=0pt, innerrightmargin=0pt, innertopmargin=-5pt ,%
+innerbottommargin=3pt, splittopskip=\topskip, splitbottomskip=0.3\topskip, %
+skipabove=1.3\topsep]{exerpart}{Part}
 
-\newenvironment{aproblems}%
-  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
-  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
-  \let\hproblem\aproblem
-  \advance\linewidth -\pshrinking
-  \advance\@totalleftmargin\pshrinking
-  \advance\leftskip\pshrinking}%
-  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
-
-\newcommand{\aproblem}{%
-  \setcounter{subprobcount}{0}%
-  \stepcounter{probcount}%
-  \def\@currentlabel{\arabic{probcount}}%
-  \ifhmode
-    \unskip \par
-  \fi
-%  \addpenalty{-4000}%
-  \iffirstprob\else\addvspace\probsep\fi
-  \firstprobfalse
-  \hskip -\labelwidth\hskip -\labelsep 
-  \hbox to\labelwidth{\hss\textbf{\arabic{probcount}.}}\hskip\labelsep
-}%
-
-\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
-\newcommand{\skipproblem}{\stepcounter{probcount}}
-
+\renewcommand*{\theexerpart}{(\alph{exerpart})}
 
 %% The following commands put defined left and right headers on the top, and a page number
 %% on the bottom of all pages beyond page 1
+\makeatletter
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
@@ -73,23 +46,21 @@
 \strut
 \centerline{{\Large \textsc{Energy is just a technique}}}
 
-\smallskip
+\medskip
 
 \centerline{{\Large \textsc{for solving differential equations}}}
 
 \medskip
 \small
 \begin{quote}
-\textbf{Instructions.}  \emph{Write your solutions neatly on separate sheets of paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts, i.e.~``\emph{(a)}'', ``\emph{(b)}'', \dots following the headings below.  At each step, show your work neatly.  (Full credit requires both evidence of clear understanding \emph{and} clear writing.)  Your final document, which should \emph{not} be your first draft, should be at most four pages.}
-
-\emph{Submit your PDF by uploading using the link (to a Google Form) on the ``Week 8'' page at the main course page} \href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}.  \emph{If you wrote on paper, scan or photograph your completed document.  (If you use a phone then make the lighting good and line things up carefully!  Use a scanner app.  In any case generate an easily-readable PDF!)}
+\textbf{Instructions.}  Please write your solutions neatly on paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts of your solutions following the headings below, i.e.~$\big|$\textbf{Part (a)}, $\big|$\textbf{Part (b)}, \dots.  In each part show your work neatly because full credit requires both evidence of clear understanding \emph{and} clear writing.  Your final document, \emph{not} your first draft, should be at most four pages.  Submit your PDF by uploading using the link (to a Google Form) on the ``Week 8'' page at the main course page \href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}.  If you wrote on paper, scan or photograph your completed document.  If you use a phone then make the lighting good and line things up carefully!  It is a good idea to use a scanner app.  In any case generate an easily-readable PDF!
 \end{quote}
 
 \normalsize
 \bigskip
+\renewcommand{\baselinestretch}{1.1}
 
-
-\textbf{Energy.}  It is common to talk about natural gas or oil as ``energy.''   We say batteries use chemistry to store ``energy'' which they then deliver as electrical ``energy.''  People who know no physics or math happily discuss the ``energy industry'' and the ``politics of renewable energy''.
+\textbf{Energy.}  It is common to talk about natural gas or oil as ``energy.''   We say batteries use chemicals to store ``energy'' which they then deliver as electrical ``energy.''  People who know no physics or math happily discuss the ``energy industry'' and the ``politics of renewable energy''.
 
 But the idea of energy in this sense is new, younger than the United States of America, and it is arose in physics before entering everyday language:
 
@@ -102,32 +73,54 @@ But the idea of energy in this sense is new, younger than the United States of A
 \end{quotation}
 
 \normalsize
-As a conserved quantity that cannot be created or destroyed, but only transformed, ``energy'' arose as a way of partly solving the differential equations (DEs) of motion.  From the point of view of Newtonian and classical mechanics, \emph{energy} is a \emph{first integral}, a partial solution, of the famous second-order DE
+``Energy'' arose as a way of partly solving the differential equations (DEs) of motion.  In physics it is a conserved quantity that cannot be created or destroyed, but only transformed.  More precisely, from the point of view of Newtonian and classical mechanics, \emph{energy} is a \emph{first integral}, a partial solution, of the famous second-order DE
 \begin{equation}
-    F=ma.  \label{Newton2nd}
+    mx''=F  \label{Newton2nd}
 \end{equation}
-In fact, the energy appears when you use a kind of integrating-factor technique for certain second-order DEs, so in that sense it is comparable to the technique you know for solving first-order linear equations.
+where $x(t)$ is the position (trajectory) of a particle.  In fact, the energy appears when you use a kind of integrating-factor technique for certain second-order DEs, namely equations \eqref{Newton2nd} where the force $F$ depends only on the position $x$ and not on the velocity $x'$.  The integrating factor is different, but in this sense finding the energy it is comparable to the technique you know for solving first-order linear equations.
 
-Our textbook does not discuss energy, which is a bit odd.  Most textbook treatments of DEs include it, but on the other hand energy is often not a used to fully solve the DE.  The energy technique helps understand the DE by identifying a \emph{conserved quantity}, namely the total energy which is a sum of \emph{kinetic} and \emph{potential} energy.  This Mini-Project introduces energy, makes sense of these technical terms, and fixes the book's omission.
+Finding the energy does not fully solve the DE.  However, it clarifies by identifying a \emph{conserved quantity} for solutions, namely the total energy which is a sum of \emph{kinetic} and \emph{potential} energy.  Though most DE textbooks discuss energy, ours does not.  This Mini-Project introduces energy, makes sense of these technical terms, and fixes the book's omission.
 
 \medskip
 \textbf{The first integral.}  We consider second-order, possibly-nonlinear DEs of the form
 \begin{equation}
 y'' = f(y) \label{basicform}
 \end{equation}
+for the unknown function $y(t)$.  (This DE is basically \eqref{Newton2nd}, but written to de-emphasize the connection with physics so that we can think about solving the DE, not what it means.)
+
 Note that $y''$ and $y$ appear in equation \eqref{basicform} but $y'$ does not.  The function $f(y)$ may be linear or nonlinear.
 
-\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
-\begin{enumerate}
-\item To start, find the general solution of \eqref{basicform} if
-    $$f(y) = Ky$$
-where $K$ is any real constant.  (\emph{Hint.}  There are multiple cases, but each is familiar.)
-\item Find the general solution of \eqref{basicform} if $f(y)$ is the linear function
-    $$f(y) = -ky + g$$
+\begin{exerpart}
+Find the general solution of \eqref{basicform} if $f(y)$ is the linear function
+    $$f(y) = -ky - g$$
 where $k$ and $g$ are positive real constants.  (\emph{Hint.}  Easy \S 4.3 and 4.4 problem.)
-\item FIXME
-\end{enumerate}
+\end{exerpart}
 
-FIXME
+We want to make progress solving DE \eqref{basicform}, that is, we want to \emph{integrate}.  But the right side of \eqref{basicform} is not a derivative of anything.  So we multiply both sides by $y'$ and then recognize that both sides \emph{are} derivatives:
+\begin{align}
+y' y'' &= y' f(y) \label{stepone} \\
+\left(\frac{1}{2} (y')^2\right)' &= - \left(P(y)\right)'  \label{steptwo}
+\end{align}
+Here $P(z)$ is a function whose derivative is $-f(z)$:
+    $$P'(z)=-f(z) \quad \text{ or } \quad P(z) = -\int f(z)\,dz.$$
+(As explained later, the extra minus sign is traditional.)  The above are the key steps.  Notice that going from \eqref{steptwo} back to \eqref{stepone}, i.e.~verifying what we have done, requires the chain rule because $y=y(t)$.
+
+\begin{exerpart}
+To show that you understand the chain rule and antiderivative aspects of equations \eqref{stepone} and \eqref{steptwo}, \emph{i)} simplify $\left(\frac{1}{7} (y')^7\right)'$, and \emph{ii)} find $P(z)$ if $f(z)=z-e^{-z}$.
+\end{exerpart}
+
+Now that both sides of \eqref{steptwo} are derivatives, we can integrate both sides and slightly re-arrange, noting there is a constant of integration:
+\begin{equation}
+  \frac{1}{2} (y')^2 + P(y) = C.  \label{firstint}
+\end{equation}
+The left side of equation \eqref{firstint} is called the \emph{energy} of DE \eqref{basicform},
+\begin{equation}
+  E(y,y') = \frac{1}{2} (y')^2 + P(y),  \label{energydefn}
+\end{equation}
+and equation \eqref{firstint} is called the \emph{first integral} of DE \eqref{basicform}.
+
+\begin{exerpart}
+Compute the energy and first integral if $f(y)=-ky-g$ as in \textbf{Part (a)}.
+\end{exerpart}
 
 \end{document}
