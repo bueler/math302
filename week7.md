@@ -23,10 +23,10 @@ This week we continue solving second-order differential equations.
 * [WebAssign 4.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 2/27
-* <span style="color:blue">**proctored Quiz 5 covers 4.1 and 4.3**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 5 covers 4.1 and 4.3**</span>
 
 ### Thursday 2/28
-* <span style="color:blue">**proctored Quiz 5 covers 4.1 and 4.3**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 5 covers 4.1 and 4.3**</span>
 * [work on WebAssign 4.2](https://www.webassign.net/)
 
 ### Friday 3/1
