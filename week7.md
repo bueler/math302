@@ -11,7 +11,7 @@ This week, **Quiz 5** must be done on Wednesday or Thursday.  It **covers sectio
 
 Mini-Project 3 is assigned this week and due [next week](week8) on Thursday March 7.
 
-This week we continue solving second-order differential equations.
+This week we continue solving linear second-order differential equations.  The _reduction of order_ technique in section 4.2 provides a second solution if one solution is already known, and this explains the repeated-root rule seen in section 4.3.  The _undetermined coefficients_ in section 4.3 will be our primary method for solving nonhomogeneous linear equations, supposing we already know the general solution of the associated homogeneous equation.
 
 ### Monday 2/25
 * [blank slides for section 4.2](assets/slides/4-2.pdf)
