@@ -53,7 +53,7 @@ skipabove=1.3\topsep]{exerpart}{Part}
 \medskip
 \small
 \begin{quote}
-\textbf{Instructions.}  Please write your solutions neatly on paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts of your solutions following the headings below, i.e.~$\big|$\textbf{Part (a)}, $\big|$\textbf{Part (b)}, \dots.  In each part show your work neatly because full credit requires both evidence of clear understanding \emph{and} clear writing.  Your final document, \emph{not} your first draft, should be at most four pages.  Submit your PDF by uploading using the link (to a Google Form) on the ``Week 8'' page at the main course page \href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}.  If you wrote on paper, scan or photograph your completed document.  If you use a phone then make the lighting good and line things up carefully!  It is a good idea to use a scanner app.  In any case generate an easily-readable PDF!
+\textbf{Instructions.}  Please write your solutions neatly on paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts of your solutions following the headings below, i.e.~part \textbf{(a)} etc.  In each part show your work neatly; full credit requires evidence of clear understanding \emph{and} clear writing.  Your final document, which is \emph{not} your first draft, should be at most four pages.  Submit your PDF by uploading using the Google Form link on the ``Week 8'' page at \href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}.  If you wrote on paper, scan or photograph your completed document; make the lighting good, line things up carefully, and use a scanner app if appropriate.  In any case \emph{please generate an easily-readable PDF.}
 \end{quote}
 
 \normalsize
@@ -62,33 +62,31 @@ skipabove=1.3\topsep]{exerpart}{Part}
 
 \textbf{Energy.}  It is common to talk about natural gas or oil as ``energy.''   We say batteries use chemicals to store ``energy'' which they then deliver as electrical ``energy.''  People who know no physics or math happily discuss the ``energy industry'' and the ``politics of renewable energy''.
 
-But the idea of energy in this sense is new, younger than the United States of America, and it is arose in physics before entering everyday language:
+But this use of the word ``energy'' is new, younger than the United States of America.  It arose in physics before entering everyday language:
 
 \small
 
 \begin{quotation}
-\noindent \emph{In 1807, Thomas Young was possibly the first to use the term ``energy'' \dots in its modern sense.  Gustave-Gaspard Coriolis described ``kinetic energy'' in 1829 in its modern sense, and in 1853, William Rankine coined the term ``potential energy.''  The law of conservation of energy was also first postulated in the early 19th century \dots}
+\noindent \emph{In 1807, Thomas Young was possibly the first to use the term ``energy'' \dots in its modern sense.  \dots  The law of conservation of energy was also first postulated in the early 19th century \dots}
 
 \hfill \url{https://en.wikipedia.org/wiki/Energy}
 \end{quotation}
 
 \normalsize
-``Energy'' arose as a way of partly solving the differential equations (DEs) of motion.  In physics it is a conserved quantity that cannot be created or destroyed, but only transformed.  More precisely, from the point of view of Newtonian and classical mechanics, \emph{energy} is a \emph{first integral}, a partial solution, of the famous second-order DE
+Energy is an incomplete solution of the differential equations (DEs) of motion.  Its physical interpretation is as a conserved quantity that cannot be created or destroyed but only transformed.  However, from the point of view of Newtonian and classical mechanics, energy is a \emph{first integral} of the famous second-order DE
 \begin{equation}
-    mx''=F  \label{Newton2nd}
+    mx''=F(x)  \label{Newton2nd}
 \end{equation}
-where $x(t)$ is the position (trajectory) of a particle.  In fact, the energy appears when you use a kind of integrating-factor technique for certain second-order DEs, namely equations \eqref{Newton2nd} where the force $F$ depends only on the position $x$ and not on the velocity $x'$.  The integrating factor is different, but in this sense finding the energy it is comparable to the technique you know for solving first-order linear equations.
+where $x(t)$ is the position (trajectory) of a particle.  In fact, as shown below, the energy appears when you use a kind of integrating-factor technique for \eqref{Newton2nd}.  Notice that the force $F$ here depends only on the position $x$ and not on the velocity $x'$.
 
-Finding the energy does not fully solve the DE.  However, it clarifies by identifying a \emph{conserved quantity} for solutions, namely the total energy which is a sum of \emph{kinetic} and \emph{potential} energy.  Though most DE textbooks discuss energy, ours does not.  This Mini-Project introduces energy, makes sense of these technical terms, and fixes the book's omission.
+Finding the energy does not fully solve the DE.  However, it clarifies by identifying a \emph{conserved quantity} for solutions.  Though most DE textbooks discuss energy, ours does not.  This Mini-Project introduces energy, makes sense of these technical terms, and fixes the book's omission.
 
 \medskip
-\textbf{The first integral.}  We consider second-order, possibly-nonlinear DEs of the form
+\textbf{The energy and the first integral.}  For now, consider a second-order possibly-nonlinear DE of the form
 \begin{equation}
-y'' = f(y) \label{basicform}
+y'' = f(y). \label{basicform}
 \end{equation}
-for the unknown function $y(t)$.  (This DE is basically \eqref{Newton2nd}, but written to de-emphasize the connection with physics so that we can think about solving the DE, not what it means.)
-
-Note that $y''$ and $y$ appear in equation \eqref{basicform} but $y'$ does not.  The function $f(y)$ may be linear or nonlinear.
+The solution is an unknown function $y(t)$.  Equation \eqref{basicform} is basically \eqref{Newton2nd}, but written to de-emphasize the connection with physics so that we can just think about solving the DE.  Note that $y'$ does not appear in \eqref{basicform}.  The function $f(y)$ may be linear or nonlinear.
 
 \begin{exerpart}
 Find the general solution of \eqref{basicform} if $f(y)$ is the linear function
@@ -96,31 +94,101 @@ Find the general solution of \eqref{basicform} if $f(y)$ is the linear function
 where $k$ and $g$ are positive real constants.  (\emph{Hint.}  Easy \S 4.3 and 4.4 problem.)
 \end{exerpart}
 
-We want to make progress solving DE \eqref{basicform}, that is, we want to \emph{integrate}.  But the right side of \eqref{basicform} is not a derivative of anything.  So we multiply both sides by $y'$ and then recognize that both sides \emph{are} derivatives:
+We want to make progress solving DE \eqref{basicform}, that is, we want to \emph{integrate}.  But the right side of \eqref{basicform} is not a derivative of anything.  So we multiply both sides by $y'$:
 \begin{align}
 y' y'' &= y' f(y) \label{stepone} \\
 \left(\frac{1}{2} (y')^2\right)' &= - \left(P(y)\right)'  \label{steptwo}
 \end{align}
 Here $P(z)$ is a function whose derivative is $-f(z)$:
     $$P'(z)=-f(z) \quad \text{ or } \quad P(z) = -\int f(z)\,dz.$$
-(As explained later, the extra minus sign is traditional.)  The above are the key steps.  Notice that going from \eqref{steptwo} back to \eqref{stepone}, i.e.~verifying what we have done, requires the chain rule because $y=y(t)$.
+(As explained later, the extra minus sign is traditional.)  Notice that going from \eqref{steptwo} back to \eqref{stepone}, i.e.~verifying, requires the chain rule because $y=y(t)$.
 
 \begin{exerpart}
-To show that you understand the chain rule and antiderivative aspects of equations \eqref{stepone} and \eqref{steptwo}, \emph{i)} simplify $\left(\frac{1}{7} (y')^7\right)'$, and \emph{ii)} find $P(z)$ if $f(z)=z-e^{-z}$.
+To show that you understand the chain rule and antiderivative aspects of equations \eqref{stepone} and \eqref{steptwo}, do these basically meaningless calculations:
+\renewcommand{\labelenumi}{\roman{enumi})}
+\begin{enumerate}
+\item simplify $\left(\frac{1}{7} (y')^7\right)'$
+\item find $P(z)$ if $f(z)=z-e^{-3 z}$.
+\end{enumerate}
 \end{exerpart}
 
-Now that both sides of \eqref{steptwo} are derivatives, we can integrate both sides and slightly re-arrange, noting there is a constant of integration:
+Now that both sides of \eqref{steptwo} are derivatives, we can integrate both sides.  With slight re-arrangement we get
 \begin{equation}
-  \frac{1}{2} (y')^2 + P(y) = C.  \label{firstint}
+  \frac{1}{2} (y')^2 + P(y) = C  \label{basicfirstint}
 \end{equation}
-The left side of equation \eqref{firstint} is called the \emph{energy} of DE \eqref{basicform},
+where $C$ is a constant of integration.  Equation \eqref{basicfirstint} is called the \emph{first integral} of DE \eqref{basicform}.  Note that it is a first-order nonlinear ODE which is a partial solution of \eqref{basicform}.  The left side of \eqref{basicfirstint} is called the \emph{energy} of DE \eqref{basicform}.  It is a function of $y'$ and $y$:
 \begin{equation}
-  E(y,y') = \frac{1}{2} (y')^2 + P(y),  \label{energydefn}
+  E(y,y') = \frac{1}{2} (y')^2 + P(y).  \label{basicenergydefn}
 \end{equation}
-and equation \eqref{firstint} is called the \emph{first integral} of DE \eqref{basicform}.
 
 \begin{exerpart}
-Compute the energy and first integral if $f(y)=-ky-g$ as in \textbf{Part (a)}.
+Compute the energy and first integral if $f(y)=-ky-g$ as in part \textbf{(a)}.
 \end{exerpart}
+
+The constant in equation \eqref{basicfirstint} can be evaluated from an initial condition.  For instance, for the initial value problem
+    $$y''=f(y), \qquad y(0)=y_0, \quad y'(0)=v_0$$
+we can use \eqref{basicfirstint} to say that
+    $$E(y_0,v_0) = \frac{1}{2} (v_0)^2 + P(y_0) = C$$
+so that for any $t$ we have the equation
+    $$E(y(t),y'(t)) = E(y_0,v_0)$$
+The right side is just a constant independent of $t$.  This is what it means to say that \emph{energy is conserved}.  That is, the energy $E(y,y')$ defined in \eqref{basicenergydefn} is constant for a solution of \eqref{basicform}.
+
+\medskip
+\textbf{Energy in physics, and conservative forces.}  Now return to the Newtonian equation \eqref{Newton2nd}, namely $m x'' = F(x)$.  Here the unknown solution is the position function $x(t)$.  As usual, $m$ is the (constant) \emph{mass} and the function $F$ is the \emph{force}.
+
+The \emph{(total) energy} for equation \eqref{Newton2nd} is
+\begin{equation}
+  E(x,x') = \frac{1}{2} m (x')^2 + P(x)  \label{energydefn}
+\end{equation}
+where $P(x)$ is some antiderivative of $-F$:
+\begin{equation}
+P'(x)=-F(x).  \label{potentialfunction}
+\end{equation}
+The energy is the sum of two parts, the \emph{kinetic energy} $\frac{1}{2} m (x')^2$ and the \emph{potential energy} $P(x)$.  The potential energy function $P(x)$ depends on position only and not velocity $x'$.
+
+Regarding the sign choice in \eqref{potentialfunction}, this is a physics convention.  Namely, the force is chosen to point down-slope (not up-slope) on the potential: $F(x)=-P'(x)$.
+
+The kinds of forces which are the (negative) derivative of some potential energy are called \emph{conservative} forces.  The force of gravity and from springs are conservative forces.
+
+The drag forces from air resistance, as appeared in some problems in sections 1.3, 3.1, and 3.2, are \emph{not} conservative forces because they are proportional to the velocity $x'$ or a power thereof.  They \emph{dissipate} energy as heat; the sum of kinetic energy plus potential energy for the moving particle is, in that case, not conserved.  (However, the energy of the larger system consisting of the moving particle and all the air particles \emph{is} conserved.)
+
+\medskip
+\textbf{A nonlinear spring.}  FIXME
+
+\includegraphics[width=0.75\textwidth]{nlspringcurves}
+
+\begin{exerpart}
+Again assume the ODE is $y''=f(y)$ and that $f(y)=-ky-g$ as in parts \textbf{(a)} and \textbf{(c)}.  If $E(y,y')$ is the energy computed in part \textbf{(c)}, what kinds of curves in the $y,y'$ plane are the equations $E(y,y')=C$.  Assuming $k=1$ and $g=10$, plot the (nonempty) curves in the $y,y'$ plane for three values of $C$.  (\emph{You may use a computer to plot the curves, but it is not necessary.})  For what value of $C$ does the curve consist of a single point?
+\end{exerpart}
+
+\medskip
+\textbf{A pendulum.}  FIXME
+
+$$m \ell \ddot{\theta} = -m g \sin\theta$$
+
+\includegraphics[width=0.3\textwidth]{pendulum}
+
+\includegraphics[width=0.75\textwidth]{pendulumcurves}
+
+
+\medskip
+\textbf{Solving nonlinear 2nd-order ODEs.}  We end by returning to generalities.  Any 2nd-order ODE can be written in the \emph{normal form} mentioned in section 1.1,
+    $$y'' = f(t,y,y').$$
+Such a general ODE is often too difficult to solve.  However, if variables are missing on the right side then one can exploit that to solve the equation.
+
+For example, ODEs of the form
+    $$y'' = f(y')$$
+can be solved, at least partially, by recognizing that they are first-order \emph{for the derivative} $y'$.  That is, one can substitute $u=y'$ and attempt to solve the first-order ODE $u'=f(u)$.  This equation is separable: \, $\frac{du}{dt} = f(u) \, \iff \, \int \frac{du}{f(u)} = \int dt = t + c$.
+
+The table below lists some cases where one can make progress on nonlinear 2nd-order ODEs, supposing one can compute an integral.  The energy fits in this framework.
+
+\medskip
+\begin{tabular}{c|l|l}
+DE & technique & first integral \\ \hline \hline
+$y'' = f(t,y,y')$ & ? \quad \emph{too general!} & ? \\ \hline
+$y'' = f(t)$ & just antidifferentiate & $y' = F(t)+c \large\strut$\, where $F(t) = \int f(t)\,dt$ \\ \hline
+$y'' = f(y)$ & compute energy & $\frac{1}{2} (y')^2 + P(y) = c \large\strut$\, where $P(z) = -\int f(z)\,dz$ \\ \hline
+$y'' = f(y')$ & substitute $u=y'$ & $Q(y') = t + c \large\strut$\, where $Q(u)=\int \frac{du}{f(u)}$
+\end{tabular}
 
 \end{document}
