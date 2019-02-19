@@ -18,6 +18,8 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [simpleeulerplot.m](assets/codes/simpleeulerplot.m): A version of the above that plots the solution for h=0.1 and h=0.05.
 * [plotcensus.m](assets/codes/plotcensus.m): Plot US census data from exercise 4 in section 3.2; see [slides for section 3.2](assets/slides/3-2.pdf)
 * [fitcensus.m](assets/codes/fitcensus.m): Fit the logistic model to the US census data; see [slides for section 3.2](assets/slides/3-2.pdf)
+* [oilslick.m](assets/codes/oilslick.m): Solution to parts (b), (c), and (d) of Mini-Project 2.  Plots rate of change of area versus area.
+* [slicker.m](assets/codes/slicker.m): Solution to parts (f) and (g) of Mini-Project 2.  Plots A(t) solution, with data superimposed.
 
 ### Python Codes
 
