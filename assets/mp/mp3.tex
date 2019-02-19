@@ -17,6 +17,7 @@ innerbottommargin=3pt, splittopskip=\topskip, splitbottomskip=0.3\topskip, %
 skipabove=1.3\topsep]{exerpart}{Part}
 
 \renewcommand*{\theexerpart}{(\alph{exerpart})}
+\newcommand{\eps}{\epsilon}
 
 %% The following commands put defined left and right headers on the top, and a page number
 %% on the bottom of all pages beyond page 1
@@ -53,7 +54,7 @@ skipabove=1.3\topsep]{exerpart}{Part}
 \medskip
 \small
 \begin{quote}
-\textbf{Instructions.}  Please write your solutions neatly on paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts of your solutions following the headings below, i.e.~part \textbf{(a)} etc.  In each part show your work neatly; full credit requires evidence of clear understanding \emph{and} clear writing.  Your final document, which is \emph{not} your first draft, should be at most four pages.  Submit your PDF by uploading using the Google Form link on the ``Week 8'' page at \href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}.  If you wrote on paper, scan or photograph your completed document; make the lighting good, line things up carefully, and use a scanner app if appropriate.  In any case \emph{please generate an easily-readable PDF.}
+\textbf{Instructions.}  Please write your solutions neatly on paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts of your solutions following the headings below, i.e.~parts \textbf{(a)}-- \textbf{(i)}.  In each part show your work neatly; full credit requires evidence of clear understanding \emph{and} clear writing.  Your final document, which is \emph{not} your first draft, should be at most four pages.  Submit your PDF by uploading using the Google Form link on the ``Week 8'' page at \href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}.  If you wrote on paper, scan or photograph your completed document; make the lighting good, line things up carefully, and use a scanner app if appropriate.  In any case \emph{please generate an easily-readable PDF.}
 \end{quote}
 
 \normalsize
@@ -79,19 +80,19 @@ Energy is an incomplete solution of the differential equations (DEs) of motion. 
 \end{equation}
 where $x(t)$ is the position (trajectory) of a particle.  In fact, as shown below, the energy appears when you use a kind of integrating-factor technique for \eqref{Newton2nd}.  Notice that the force $F$ here depends only on the position $x$ and not on the velocity $x'$.
 
-Finding the energy does not fully solve the DE.  However, it clarifies by identifying a \emph{conserved quantity} for solutions.  Though most DE textbooks discuss energy, ours does not.  This Mini-Project introduces energy, makes sense of these technical terms, and fixes the book's omission.
+Finding the energy does not fully solve the DE.  However, it identifies a \emph{conserved quantity} for solutions, increasing understanding of the DE.  Though most DE textbooks discuss energy, ours does not.  This Mini-Project introduces energy, and fixes the book's omission.
 
 \medskip
-\textbf{The energy and the first integral.}  For now, consider a second-order possibly-nonlinear DE of the form
+\textbf{The energy and the first integral.}  For now, consider a second-order and possibly nonlinear DE of the form
 \begin{equation}
 y'' = f(y). \label{basicform}
 \end{equation}
-The solution is an unknown function $y(t)$.  Equation \eqref{basicform} is basically \eqref{Newton2nd}, but written to de-emphasize the connection with physics so that we can just think about solving the DE.  Note that $y'$ does not appear in \eqref{basicform}.  The function $f(y)$ may be linear or nonlinear.
+The solution is an unknown function $y(t)$.  Equation \eqref{basicform} is basically the same as \eqref{Newton2nd}, but written to de-emphasize the connection with physics for now.  Note that $y'$ does not appear in \eqref{basicform}.  The function $f(y)$ may be linear or nonlinear.
 
 \begin{exerpart}
 Find the general solution of \eqref{basicform} if $f(y)$ is the linear function
     $$f(y) = -ky - g$$
-where $k$ and $g$ are positive real constants.  (\emph{Hint.}  Easy \S 4.3 and 4.4 problem.)
+where $k$ and $g$ are positive real constants.  (\emph{Hint.}  An easy \S 4.3 and 4.4 problem.)
 \end{exerpart}
 
 We want to make progress solving DE \eqref{basicform}, that is, we want to \emph{integrate}.  But the right side of \eqref{basicform} is not a derivative of anything.  So we multiply both sides by $y'$:
@@ -101,7 +102,7 @@ y' y'' &= y' f(y) \label{stepone} \\
 \end{align}
 Here $P(z)$ is a function whose derivative is $-f(z)$:
     $$P'(z)=-f(z) \quad \text{ or } \quad P(z) = -\int f(z)\,dz.$$
-(As explained later, the extra minus sign is traditional.)  Notice that going from \eqref{steptwo} back to \eqref{stepone}, i.e.~verifying, requires the chain rule because $y=y(t)$.
+As explained later, the extra minus sign is merely traditional.  Notice that going from \eqref{steptwo} back to \eqref{stepone}, i.e.~verifying, requires the chain rule because $y=y(t)$.
 
 \begin{exerpart}
 To show that you understand the chain rule and antiderivative aspects of equations \eqref{stepone} and \eqref{steptwo}, do these basically meaningless calculations:
@@ -116,7 +117,7 @@ Now that both sides of \eqref{steptwo} are derivatives, we can integrate both si
 \begin{equation}
   \frac{1}{2} (y')^2 + P(y) = C  \label{basicfirstint}
 \end{equation}
-where $C$ is a constant of integration.  Equation \eqref{basicfirstint} is called the \emph{first integral} of DE \eqref{basicform}.  Note that it is a first-order nonlinear ODE which is a partial solution of \eqref{basicform}.  The left side of \eqref{basicfirstint} is called the \emph{energy} of DE \eqref{basicform}.  It is a function of $y'$ and $y$:
+where $C$ is a constant of integration.  Equation \eqref{basicfirstint} is called the \emph{first integral} of DE \eqref{basicform}.  Note that it is a first-order nonlinear ODE which is a partial solution of \eqref{basicform}.  The left side of \eqref{basicfirstint} is called the \emph{energy} of DE \eqref{basicform}, a function of $y'$ and $y$:
 \begin{equation}
   E(y,y') = \frac{1}{2} (y')^2 + P(y).  \label{basicenergydefn}
 \end{equation}
@@ -125,16 +126,16 @@ where $C$ is a constant of integration.  Equation \eqref{basicfirstint} is calle
 Compute the energy and first integral if $f(y)=-ky-g$ as in part \textbf{(a)}.
 \end{exerpart}
 
-The constant in equation \eqref{basicfirstint} can be evaluated from an initial condition.  For instance, for the initial value problem
+The constant $C$ in equation \eqref{basicfirstint} can be evaluated from an initial condition.  For instance, for the initial value problem
     $$y''=f(y), \qquad y(0)=y_0, \quad y'(0)=v_0$$
-we can use \eqref{basicfirstint} to say that
-    $$E(y_0,v_0) = \frac{1}{2} (v_0)^2 + P(y_0) = C$$
-so that for any $t$ we have the equation
-    $$E(y(t),y'(t)) = E(y_0,v_0)$$
-The right side is just a constant independent of $t$.  This is what it means to say that \emph{energy is conserved}.  That is, the energy $E(y,y')$ defined in \eqref{basicenergydefn} is constant for a solution of \eqref{basicform}.
+we can use \eqref{basicfirstint} to find
+    $$C = \frac{1}{2} (v_0)^2 + P(y_0).$$
+Thus $C$ is the value of the energy at any time,
+    $$E(y(t),y'(t)) = C.$$
+The energy is a constant independent of $t$, unchanged from its initial value, if $y(t)$ is a solution of \eqref{basicform}.  This is what it means to say that \emph{energy is conserved}.
 
 \medskip
-\textbf{Energy in physics, and conservative forces.}  Now return to the Newtonian equation \eqref{Newton2nd}, namely $m x'' = F(x)$.  Here the unknown solution is the position function $x(t)$.  As usual, $m$ is the (constant) \emph{mass} and the function $F$ is the \emph{force}.
+\textbf{Energy in physics, and conservative forces.}  Now we return to the Newtonian equation \eqref{Newton2nd}, namely $m x'' = F(x)$.  Here the unknown solution is the position function $x(t)$.  As usual, $m$ is the (constant) \emph{mass} and the function $F$ is the \emph{force}.
 
 The \emph{(total) energy} for equation \eqref{Newton2nd} is
 \begin{equation}
@@ -144,43 +145,84 @@ where $P(x)$ is some antiderivative of $-F$:
 \begin{equation}
 P'(x)=-F(x).  \label{potentialfunction}
 \end{equation}
-The energy is the sum of two parts, the \emph{kinetic energy} $\frac{1}{2} m (x')^2$ and the \emph{potential energy} $P(x)$.  The potential energy function $P(x)$ depends on position only and not velocity $x'$.
+Showing that \eqref{energydefn} follows from \eqref{Newton2nd} is the same calculuation as how we derived \eqref{basicenergydefn} from \eqref{basicform}.
 
-Regarding the sign choice in \eqref{potentialfunction}, this is a physics convention.  Namely, the force is chosen to point down-slope (not up-slope) on the potential: $F(x)=-P'(x)$.
+The energy is the sum of two parts, the \emph{kinetic energy} $\frac{1}{2} m (x')^2$ and the \emph{potential energy} $P(x)$.  The potential energy function $P(x)$ depends on position only and not velocity $x'$.  Regarding the sign choice in \eqref{potentialfunction}, this is simply a physics convention that the force is chosen to point down-slope (not up-slope) on the potential: $F(x)=-P'(x)$.  Such a force, which is the (negative) derivative of some potential energy, is called a \emph{conservative} force.  The forces of gravity and springs are conservative forces.
 
-The kinds of forces which are the (negative) derivative of some potential energy are called \emph{conservative} forces.  The force of gravity and from springs are conservative forces.
-
-The drag forces from air resistance, as appeared in some problems in sections 1.3, 3.1, and 3.2, are \emph{not} conservative forces because they are proportional to the velocity $x'$ or a power thereof.  They \emph{dissipate} energy as heat; the sum of kinetic energy plus potential energy for the moving particle is, in that case, not conserved.  (However, the energy of the larger system consisting of the moving particle and all the air particles \emph{is} conserved.)
+However, drag forces from air resistance, as appeared in some problems in sections 1.3, 3.1, and 3.2, are \emph{not} conservative forces.  They are proportional to the velocity $x'$ or a power thereof, and they \emph{dissipate} energy as heat.  That is, when there is drag then the sum of kinetic plus potential energy for the moving particle is not conserved but rather decreases in time.  (However, the energy of a larger system consisting of the moving particle and all the air particles could be conserved if it were isolated.)
 
 \medskip
-\textbf{A nonlinear spring.}  FIXME
-
-\includegraphics[width=0.75\textwidth]{nlspringcurves}
+\textbf{A nonlinear spring.}  A linear spring, as described in section 5.1, is modeled by Hooke's law.  It applies force $F(x)=-kx$ when $x$ is the displacement from the relaxed position $x=0$.  However, as discussed in section 5.3, one may model more realistic nonlinear spring behavior by adding a term proportional to $x^3$.  For example, the force might be $F(x)=-k(x + \eps x^3)$ so that the equation of motion for a mass $m$ attached to a nonlinear spring might would be
+\begin{equation}
+m x'' = - k (x + \eps x^3) \label{nlspring}
+\end{equation}
+where $k>0$ is constant.  We will assume that $\eps>0$.  (This ``hard'' spring strongly resists compression/expansion too far from the relaxed position.)
 
 \begin{exerpart}
-Again assume the ODE is $y''=f(y)$ and that $f(y)=-ky-g$ as in parts \textbf{(a)} and \textbf{(c)}.  If $E(y,y')$ is the energy computed in part \textbf{(c)}, what kinds of curves in the $y,y'$ plane are the equations $E(y,y')=C$.  Assuming $k=1$ and $g=10$, plot the (nonempty) curves in the $y,y'$ plane for three values of $C$.  (\emph{You may use a computer to plot the curves, but it is not necessary.})  For what value of $C$ does the curve consist of a single point?
+Compute the energy $E(x,x')$ for DE \eqref{nlspring}.
+\end{exerpart}
+
+One can show a contour plot of the energy.  The non-intersecting contours show the possible motions, and the energy is constant along each contour.  Figure 1 shows such a plot.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{nlspringcurves}
+\end{center}
+
+\vspace{-5mm}
+\caption{Contour plot of the energy $E(x,x')$ of a nonlinear spring.}
+\end{figure}
+
+\begin{exerpart}
+I set $m=1$, $k=1$, and $\eps=\frac{1}{2}$ in equation \eqref{nlspring} when creating Figure 1.  Using your result from part \textbf{(d)} you have a particular energy function $E(x,x')$ of which Figure 1 is the contour plot.  Label the three bold contours in Figure 1 with the value of the energy.  Note these labels are \emph{specific numbers}, though some approximation is appropriate.
+\end{exerpart}
+
+\begin{exerpart}
+Now assume the ODE is $y''=f(y)$, namely equation \eqref{basicform}, and that $f(y)=-ky-g$ as in parts \textbf{(a)} and \textbf{(c)}.  If $E(y,y')$ is the energy computed in part \textbf{(c)}, what kinds of curves in the $y,y'$ plane are the equations $E(y,y')=C$?  Assuming $k=1$ and $g=10$, plot the (nonempty) curves in the $y,y'$ plane corresponding to three values of $C$ of your choice.  (\emph{You may use a computer to plot the curves, but it is not necessary.})  For what value of $C$ does the curve consist of a single point?  Interpret this single-point case.
 \end{exerpart}
 
 \medskip
-\textbf{A pendulum.}  FIXME
+\begin{minipage}[t]{0.65\textwidth}
+\textbf{A pendulum.}  The figure at right shows a pendulum of mass $m$ attached to a rod of length $\ell$.  Gravity pulls straight down on the mass with force $-mg$ so that, as explained in section 5.3, the equation of motion is
+\begin{equation}
+m \ell \ddot{\theta} = -m g \sin\theta  \label{pendulum}
+\end{equation}
+where we denote the time derivative with a dot.
 
-$$m \ell \ddot{\theta} = -m g \sin\theta$$
+\end{minipage}
+\begin{minipage}[t]{0.35\textwidth}
+\vspace{0pt}
 
-\includegraphics[width=0.3\textwidth]{pendulum}
+\hfill \includegraphics[width=0.8\textwidth]{pendulum}
+\end{minipage}
 
+\begin{exerpart}
+Compute the energy $E(\theta,\dot\theta)$ for DE \eqref{pendulum}.
+\end{exerpart}
+
+Figure 2 shows a contour plot of the energy $E(\theta,\dot\theta)$ for \eqref{pendulum} in the case where $m=1$ kg, $\ell=1$ m, and $g=10 \, \text{m}\,\text{s}^{-2}$. 
+
+\begin{exerpart}
+Label the bold contours in Figure 2 with the value of the energy; these labels are \emph{specific numbers} but some approximation is needed.  Interpret these bold contours and their energy values in terms of the behavior of the pendulum.  (\emph{Hint}:  There is no ceiling in the model.)  What is happening near the location $(\theta,\dot\theta)=(3.2,0)$?
+\end{exerpart}
+
+\begin{figure}[h]
+\begin{center}
 \includegraphics[width=0.75\textwidth]{pendulumcurves}
+\end{center}
 
+\vspace{-5mm}
+\caption{Contour plot of the energy $E(\theta,\dot\theta)$ of a nonlinear spring.}
+\end{figure}
 
 \medskip
-\textbf{Solving nonlinear 2nd-order ODEs.}  We end by returning to generalities.  Any 2nd-order ODE can be written in the \emph{normal form} mentioned in section 1.1,
+\textbf{Solving certain nonlinear 2nd-order ODEs.}  Finally we return to generalities.  Recall that any 2nd-order ODE can be written in the \emph{normal form} mentioned in section 1.1,
     $$y'' = f(t,y,y').$$
-Such a general ODE is often too difficult to solve.  However, if variables are missing on the right side then one can exploit that to solve the equation.
-
-For example, ODEs of the form
+Such a general ODE is often too difficult to solve.  However, if variables are missing on the right side then one can exploit that to solve the equation.  For example
     $$y'' = f(y')$$
-can be solved, at least partially, by recognizing that they are first-order \emph{for the derivative} $y'$.  That is, one can substitute $u=y'$ and attempt to solve the first-order ODE $u'=f(u)$.  This equation is separable: \, $\frac{du}{dt} = f(u) \, \iff \, \int \frac{du}{f(u)} = \int dt = t + c$.
+can be solved, at least partially, by recognizing that it is first-order \emph{for the derivative} $y'$.  That is, one can substitute $u=y'$ and attempt to solve the first-order ODE $u'=f(u)$.  This equation is separable: \, $\frac{du}{dt} = f(u) \, \iff \, \int \frac{du}{f(u)} = \int dt = t + c$.
 
-The table below lists some cases where one can make progress on nonlinear 2nd-order ODEs, supposing one can compute an integral.  The energy fits in this framework.
+The table below lists some cases where one can make progress on nonlinear 2nd-order ODEs, supposing one can compute an integral.  Energy fits in this framework.
 
 \medskip
 \begin{tabular}{c|l|l}
@@ -190,5 +232,11 @@ $y'' = f(t)$ & just antidifferentiate & $y' = F(t)+c \large\strut$\, where $F(t)
 $y'' = f(y)$ & compute energy & $\frac{1}{2} (y')^2 + P(y) = c \large\strut$\, where $P(z) = -\int f(z)\,dz$ \\ \hline
 $y'' = f(y')$ & substitute $u=y'$ & $Q(y') = t + c \large\strut$\, where $Q(u)=\int \frac{du}{f(u)}$
 \end{tabular}
+
+\medskip
+\begin{exerpart}
+Solve the initial value problem:
+    $$y'' = - (y')^3, \qquad y(1)=5, \quad y'(1)=\frac{1}{2}$$
+\end{exerpart}
 
 \end{document}

@@ -16,7 +16,7 @@ This week we continue solving linear second-order differential equations.  The _
 ### Monday 2/25
 * [blank slides for section 4.2](assets/slides/4-2.pdf)
 * [video: Bueler talks over slides for section 4.2](https://expl.ai/FWYRRZR)
-* blank Mini-Project 3 _BUELER TODO_
+* [blank Mini-Project 3](assets/mp/mp3.pdf)
 * [work on WebAssign 4.3](https://www.webassign.net/)
 
 ### Tuesday 2/26
