@@ -30,7 +30,7 @@ This week we continue solving linear second-order differential equations.  The _
 * [work on WebAssign 4.2](https://www.webassign.net/)
 
 ### Friday 3/1
-* blank slides for section 4.4 _BUELER TODO_
+* [blank slides for section 4.4](assets/slides/4-4.pdf)
 * video: Bueler talks over slides for section 4.4 _BUELER TODO_
 * [WebAssign 4.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
