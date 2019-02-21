@@ -24,10 +24,10 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 * [WebAssign 4.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/6
-* <span style="color:blue">**proctored Quiz 6 covers 4.2 and 4.4**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 6 covers 4.2 and 4.4**</span>
 
 ### Thursday 3/7
-* <span style="color:blue">**proctored Quiz 6 covers 4.2 and 4.4**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 6 covers 4.2 and 4.4**</span>
 * Mini-Project 3, _Energy is just a technique for solving differential equations_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 3](https://goo.gl/forms/fmSrrnCs8blR3Fwn1); you may need to log in to your `alaska.edu` account to use this link
 * [work on WebAssign 5.1](https://www.webassign.net/)
 
@@ -38,7 +38,14 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### found online
 * [Octave online](https://octave-online.net/)
-* _BUELER TODO_
+* [Gil Strang at MIT: Second-order equations](https://www.youtube.com/watch?v=xvTYUnqn2wY)
+* [Gil Strang at MIT: Unforced damped motion](https://www.youtube.com/watch?v=zqks_JcU0cM)
+* [Gil Strang at MIT: Second order equations with damping](https://www.youtube.com/watch?v=SMQPt7t0bHk)
+* [Khan Academy: Intuition about simple harmonic oscillators](https://www.khanacademy.org/science/ap-physics-1/simple-harmonic-motion-ap/introduction-to-simple-harmonic-motion-ap/v/intuition-about-simple-harmonic-oscillators)
+* random video: [Modeling spring motion using differential equations](https://www.youtube.com/watch?v=JbwGlTz0wqk)
+* random video: [Oscillations demo: Mass spring system](https://www.youtube.com/watch?v=FJBPNJR2QJU)
+* [Matlab documentation: Ordinary differential equation initial value problem solvers](https://www.mathworks.com/help/matlab/ordinary-differential-equations.html)
+* random video: [Solving a second order differential equation in Matlab](https://www.youtube.com/watch?v=fx3bl4oA_0U)
 
 <hr>
 <a align="left" href="week7">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week9">next week --\></a>
