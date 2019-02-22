@@ -41,23 +41,41 @@
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{a good reason}
 
 \begin{itemize}
-\item X
+\item in Chapter 4 we've spent time solving 2nd-order linear DEs
+    $$a y'' + b y' + c y \stackrel{\ast}{=} g(t)$$
+\item a good reason is that
+
+\medskip
+\centerline{\alert{anything that smoothly oscillates has DE $\ast$ for a model}}
+
+    \begin{enumerate}
+    \item a mass suspended on a spring oscillates up and down
+    \item the current in a radio-type circuit flows back-and-forth
+    \item a pendulum swings back and forth
+    \item the earth moves up and down in an earthquake
+    \item magnetic field in a radio wave oscillates
+    \item a drum-head vibrates
+    \item a photon is
+    \end{enumerate}
+
+\item my 5.1 and 5.3 slides take \enumnum{1}--\enumnum{3} seriously
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{setting it up carefully}
+\begin{frame}{setting up the mass-spring}
 
+careful set-up so that the equations are clear:
 \begin{columns}
 \begin{column}{0.6\textwidth}
 \begin{itemize}
-\item choose spring with relaxed length $\ell$
+\small
+\item choose spring with relaxed length $\ell$ and spring constant $k$
 \item hang it from rigid support
-\item choose a mass $m$
-\item hook it to the spring
+\item choose mass $m$ and hook to the spring
 \item let it down to its equilibrium position; it has stretched by $s$
 \item set a scale next to the mass-spring with $x=0$ at equilibrium position and positive $x$ downward
 \item thus $x$, the displacement when you move the spring, is the \emph{amount the spring has stretched (downward) from its equilibrium position}
@@ -67,6 +85,78 @@
 \includegraphics[width=\textwidth]{figs/mass-spring-setup}
 \end{column}
 \end{columns}
+\end{frame}
+
+
+\begin{frame}{Newton's law}
+
+\begin{columns}
+\begin{column}{0.65\textwidth}
+\begin{itemize}
+\item Newton's second law is $ma=F$
+\item for our mass-spring system:
+
+\vspace{-3mm}
+    $$m \frac{d^2x}{dt^2} = - k x$$
+
+\vspace{-2mm}
+\item really:
+
+\vspace{-2mm}
+        $$m \frac{d^2x}{dt^2} = mg - k (x+s)$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item \dots but $mg=ks$
+    \item in practice $k$ is \emph{determined} from $k=mg/s$
+    \end{itemize}
+
+\vspace{3mm}
+
+\item ``Hooke's law'' $F_{spring} = -kx$ is a \emph{model} for how springs work
+    \begin{itemize}
+    \item not a bad model
+    \item \dots for smallish displacements
+    \item improved model 5.3
+    \end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.35\textwidth}
+\includegraphics[width=\textwidth]{figs/mass-spring-setup}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
 \end{frame}
 
 
@@ -85,6 +175,30 @@ $\lambda = \beta / (2m)$
 
 undamped solution:
     $$x(t) = c_1 \cos \omega t + c_2 \sin \omega t = A \sin(\omega t + \phi)$$
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
 \end{frame}
 
 
@@ -125,7 +239,6 @@ undamped solution:
      \item \emph{read} section 5.1 in the textbook
          \begin{itemize}
          \item material on ``double spring systems'' (p.~201) can be skipped
-         \item likewise, skip ``systems with variable spring constants'' (p.~201)
          \item while I discussed electrical circuits in these slides, I will not ask about it on quizzes or exams
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 5.1
