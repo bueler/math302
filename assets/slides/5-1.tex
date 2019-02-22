@@ -49,21 +49,34 @@
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{setting it up carefully}
 
+\begin{columns}
+\begin{column}{0.6\textwidth}
 \begin{itemize}
-\item X
+\item choose spring with relaxed length $\ell$
+\item hang it from rigid support
+\item choose a mass $m$
+\item hook it to the spring
+\item let it down to its equilibrium position; it has stretched by $s$
+\item set a scale next to the mass-spring with $x=0$ at equilibrium position and positive $x$ downward
+\item thus $x$, the displacement when you move the spring, is the \emph{amount the spring has stretched (downward) from its equilibrium position}
 \end{itemize}
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{figs/mass-spring-setup}
+\end{column}
+\end{columns}
 \end{frame}
 
 
 \begin{frame}{forms}
 
 \begin{tabular}{r|c|c}
- & Newton's law form & frequency form \\ \hline \hline
+ & Newton's law form & $\omega$ form \\ \hline \hline
 \huge \strut \normalsize          undamped & $m \frac{d^2x}{dt^2} = - k x$ & $\frac{d^2x}{dt^2} + \omega^2 x=0$ \\ \hline
 \huge \strut \normalsize            damped & $m \frac{d^2x}{dt^2} = - k x - \beta \frac{dx}{dt}$ & $\frac{d^2x}{dt^2} + 2 \lambda \frac{dx}{dt} + \omega^2 x=0$ \\ \hline
-\huge \strut \normalsize \begin{tabular}{c} damped \\ and driven \end{tabular} & $m \frac{d^2x}{dt^2} = - k x - \beta \frac{dx}{dt} + f(t)$ & \dots \\
+\huge \strut \normalsize \begin{tabular}{c} damped \\ and driven \end{tabular} & \small $m \frac{d^2x}{dt^2} = - k x - \beta \frac{dx}{dt} + f(t)$ & \small $\frac{d^2x}{dt^2} + 2 \lambda \frac{dx}{dt} + \omega^2 x=F(t)$ \\
 \end{tabular}
 
 $\omega=\sqrt{k/m}$
@@ -75,6 +88,32 @@ undamped solution:
 \end{frame}
 
 
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{circuit analogy}
+
+\begin{itemize}
+\item X
+\end{itemize}
+
+\includegraphics[width=0.4\textwidth]{figs/rlc-circuit}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{expectations}
 
 \begin{itemize}
@@ -83,7 +122,12 @@ undamped solution:
      \item see ``found online'' videos at
 
      \centerline{\href{https://bueler.github.io/math302/week8.html}{\tt \color{cyan} bueler.github.io/math302/week8.html}}
-     \item \emph{read} section 5.5 in the textbook
+     \item \emph{read} section 5.1 in the textbook
+         \begin{itemize}
+         \item material on ``double spring systems'' (p.~201) can be skipped
+         \item likewise, skip ``systems with variable spring constants'' (p.~201)
+         \item while I discussed electrical circuits in these slides, I will not ask about it on quizzes or exams
+         \end{itemize}
      \item \emph{do} the WebAssign exercises for section 5.1
      \end{itemize}
 \end{itemize}
