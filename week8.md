@@ -37,11 +37,13 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 * [WebAssign 5.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
+* [nice mass-spring browser app](https://phet.colorado.edu/en/simulation/mass-spring-lab)
 * [Octave online](https://octave-online.net/)
 * [Gil Strang at MIT: Second-order equations](https://www.youtube.com/watch?v=xvTYUnqn2wY)
 * [Gil Strang at MIT: Unforced damped motion](https://www.youtube.com/watch?v=zqks_JcU0cM)
 * [Gil Strang at MIT: Second order equations with damping](https://www.youtube.com/watch?v=SMQPt7t0bHk)
 * [Khan Academy: Intuition about simple harmonic oscillators](https://www.khanacademy.org/science/ap-physics-1/simple-harmonic-motion-ap/introduction-to-simple-harmonic-motion-ap/v/intuition-about-simple-harmonic-oscillators)
+* [Wikipedia page on harmonic oscillators](https://en.wikipedia.org/wiki/Harmonic_oscillator)
 * random video: [Modeling spring motion using differential equations](https://www.youtube.com/watch?v=JbwGlTz0wqk)
 * random video: [Oscillations demo: Mass spring system](https://www.youtube.com/watch?v=FJBPNJR2QJU)
 * [Matlab documentation: Ordinary differential equation initial value problem solvers](https://www.mathworks.com/help/matlab/ordinary-differential-equations.html)
