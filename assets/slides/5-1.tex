@@ -128,7 +128,25 @@ careful set-up so that the equations are clear:
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{first solution}
+
+\begin{itemize}
+\item from last slide the DE for our mass-spring:
+    $$m \frac{d^2x}{dt^2} + k x = 0$$
+\item it is constant coefficient so substitute $x(t)=e^{rt}$
+\item get auxiliary equation
+    $$m r^2 + k = 0$$
+\item solutions are imaginary: $r = \pm \sqrt{\frac{k}{m}} i$
+    \begin{itemize}
+    \item X
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{exercise \#3 in \S5.1}
 
 \begin{itemize}
 \item X
@@ -178,6 +196,20 @@ undamped solution:
 \end{frame}
 
 
+\begin{frame}{damping cases}
+
+$$\frac{d^2x}{dt^2} + 2 \lambda \frac{dx}{dt} + \omega^2 x=0$$
+
+\begin{itemize}
+\item \emph{undamped} if $\lambda = 0$
+\item \emph{overdamped} if $\lambda^2-\omega^2 > 0$
+\item \emph{critically damped} if $\lambda^2-\omega^2 = 0$
+\item \emph{underdamped} if $\lambda^2-\omega^2 < 0$
+\end{itemize}
+\end{frame}
+
+
+
 \begin{frame}{X}
 
 \begin{itemize}
@@ -186,27 +218,10 @@ undamped solution:
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}[fragile]
+\frametitle{a plotting code: \texttt{massspringplot.m}}
 
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
+\VerbatimInput[fontsize=\scriptsize]{../codes/massspringplot.m}
 \end{frame}
 
 
