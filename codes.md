@@ -5,7 +5,7 @@ title: Codes
 
 ## Codes
 
-This page has some codes I wrote, categorized by language (Matlab/Octave or Python).  For each language they are listed in chronological order.
+This page has some computer codes I wrote, mostly for visualization.  They are categorized by language (Matlab/Octave or Python), and for each language they are ordered chronologically.
 
 ### Matlab/Octave Codes
 

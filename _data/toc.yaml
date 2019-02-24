@@ -12,7 +12,7 @@ docs:
   url: proctoring.pdf  # rebuild by "make proctoring.pdf" in assets/latex/
 
 - title: Codes
-  url: other.html
+  url: codes.html
 
 - title: Week 1
   url: week1.html
