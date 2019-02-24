@@ -1,9 +1,10 @@
-\documentclass{beamer}
+\documentclass[urlcolor=blue]{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage{fancybox,fancyvrb}
 \usepackage{environ}
 \usepackage{tikz}
+\hypersetup{colorlinks,linkcolor=,urlcolor=cyan}
 
 \beamertemplatenavigationsymbolsempty
 \setbeamertemplate{footline}[frame number]
@@ -44,7 +45,7 @@
 \begin{frame}{a good reason}
 
 \begin{itemize}
-\item in Chapter 4 we've spent time solving 2nd-order linear DEs
+\item in Chapter 4 we solved 2nd-order linear DEs
     $$a y'' + b y' + c y \stackrel{\ast}{=} g(t)$$
 \item a good reason is that
 
@@ -53,7 +54,7 @@
 
     \begin{enumerate}
     \item a mass suspended on a spring oscillates up and down
-    \item the current in a radio-type circuit flows back-and-forth
+    \item the current in an electrical circuit flows back-and-forth
     \item a pendulum swings back and forth
     \item the earth moves up and down in an earthquake
     \item magnetic field in a radio wave oscillates
@@ -61,7 +62,7 @@
     \item a photon is
     \end{enumerate}
 
-\item my 5.1 and 5.3 slides take \enumnum{1}--\enumnum{3} seriously
+\item 5.1 and 5.3 slides cover \enumnum{1}--\enumnum{3}
 \end{itemize}
 \end{frame}
 
@@ -69,14 +70,13 @@
 \begin{frame}{1st-order linear: no oscillation}
 
 \begin{itemize}
-\item fundamental laws of nature are autonomous
+\item why is 2nd-order needed for oscillation?
+\item background fact: laws of nature are autonomous
     \begin{itemize}
     \item because the laws of nature don't depend on the time of day
     \item applies to isolated systems, anyway
     \end{itemize}
-\item 1st-order linear autonomous DEs cannot generate oscillation
-    \begin{itemize}
-    \item solution is exponential, but never oscillation: \small
+\item 1st-order linear autonomous DEs cannot generate oscillation \small
 \begin{align*}
 y' &= a y + b \\
 \int \frac{dy}{ay+b} &= \int dt \\
@@ -84,25 +84,30 @@ y' &= a y + b \\
 a y + b &= C e^{at} \\
 y(t) &= \frac{1}{a}\left(C e^{at} - b\right)
 \end{align*}
-    \end{itemize}
 \item so oscillation models are 2nd-order, e.g.~$y'' + y = 0$
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{setting up the mass-spring}
+\begin{frame}{mass-spring model: the setup}
 
 a specific set-up so that the equations are clear:
 \begin{columns}
 \begin{column}{0.6\textwidth}
 \begin{itemize}
 \small
-\item choose spring with relaxed length $\ell$ and spring constant $k$
-\item hang it from rigid support
+\item hang spring from rigid support
+    \begin{itemize}
+    \item length $\ell$ and spring constant $k$
+    \end{itemize}
 \item choose mass $m$ and hook to the spring
-\item let it down to its equilibrium position; it has stretched by $s$
-\item set a scale next to the mass-spring with $x=0$ at equilibrium position and positive $x$ downward
-\item thus $x$, the displacement when you move the spring, is the \emph{amount the spring has stretched (downward) from its equilibrium position}
+\item it stretchs distance $s$ down to equilibrium position
+\item mark length scale:
+    \begin{itemize}
+    \item $x=0$ is equilibrium position
+    \item positive $x$ is downward
+    \end{itemize}
+\item $x$ is the displacement from additional stretch of the spring, i.e.~\emph{downward displacement of the mass from its equilibrium position}
 \end{itemize}
 \end{column}
 \begin{column}{0.4\textwidth}
@@ -133,7 +138,7 @@ a specific set-up so that the equations are clear:
     \end{itemize}
 \item in practice:
 
-\centerline{$k$ is \emph{determined} from $mg=ks$}
+\centerline{$k$ is \underline{determined} from $mg=ks$}
 \end{itemize}
 \end{column}
 \begin{column}{0.35\textwidth}
@@ -147,12 +152,11 @@ a specific set-up so that the equations are clear:
 
 \begin{itemize}
 \item from last slide: $m \frac{d^2x}{dt^2} + k x = 0$
-\item it is constant coefficient so substitute $x(t)=e^{rt}$
-\item get auxiliary equation $m r^2 + k = 0$
-\item solutions are imaginary: $r = \pm \sqrt{\frac{k}{m}} i$
-\item let \alert{$\omega = \sqrt{\frac{k}{m}}$}
-\item thus general solution:
-    $$x(t) = c_1 \cos \omega t + c_2 \sin \omega t \hspace{70mm}$$
+\item constant coefficient: substitute $x(t)=e^{rt}$ and get
+    $$m r^2 + k = 0 \qquad \iff \qquad r = \pm \sqrt{\frac{k}{m}} i = \pm\, \omega i$$
+\item \alert{$\omega = \sqrt{\frac{k}{m}}$}
+\item general solution:
+    $$x(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t) \hspace{70mm}$$
 \end{itemize}
 
 \vspace{-20mm}
@@ -163,7 +167,7 @@ a specific set-up so that the equations are clear:
 \begin{frame}{the meaning of $\omega$}
 
 \begin{itemize}
-\item general solution: $x(t) = c_1 \cos \omega t + c_2 \sin \omega t$
+\item general solution: $x(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
 \item suppose $t$ is measured in seconds
 \item then $\omega = \sqrt{\frac{k}{m}}$ is \emph{frequency of oscillation} in radians per second
     \begin{itemize}
@@ -172,8 +176,8 @@ a specific set-up so that the equations are clear:
 \item time \alert{$T = \frac{2\pi}{\omega}$} is \emph{period of oscillation}
     \begin{itemize}
     \item because $\omega T=2\pi$ gives the smallest $T>0$ so that
-        $$\cos(\omega T) = \cos(0)$$
-        $$\sin(\omega T) = \sin(0)$$
+        $$\cos(\omega T) = \cos(0) \quad \text{and} \quad \sin(\omega T) = \sin(0)$$
+    \item i.e.~general solution has period $T$
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -182,7 +186,7 @@ a specific set-up so that the equations are clear:
 \begin{frame}{exercise \#3 in \S5.1}
 
 \begin{itemize}
-\item we can do an exercise of the ``free undamped motion'' type:
+\item ready for an exercise of the ``free undamped motion'' type:
 
 \begin{quotation}
 \noindent 3. A mass weighing 24 pounds, attached to the end of a spring, stretches it 4 inches.  Initially the mass is released from rest from a point 3 inches above the equilibrium position.  Find the (equation of the) motion.
@@ -214,7 +218,7 @@ a specific set-up so that the equations are clear:
 \end{frame}
 
 
-\begin{frame}{fact about waves}
+\begin{frame}{amplitude and phase of $x(t)$}
 
 \begin{itemize}
 \item for any $c_1,c_2$, this formula is a wave or oscillation:
@@ -223,9 +227,9 @@ a specific set-up so that the equations are clear:
     \begin{itemize}
     \item easy question if either $c_1 =0$ or $c_2=0$
     \end{itemize}
-\item in general: find  \emph{amplitude} $A$ and \emph{phase angle} $\phi$ so that
+\item exercise: find  \emph{amplitude} $A$ and \emph{phase angle} $\phi$ so that
     $$\alert{x(t)} = c_1 \cos \omega t + c_2 \sin \omega t \alert{= A \sin(\omega t + \phi)}$$
-\item method uses $\sin(a+b) = \sin a \cos b + \cos a \sin b$:
+\item solution: use $\sin(a+b) = \sin a \cos b + \cos a \sin b$ so
 \begin{gather*}
 A \sin(\omega t + \phi) = A \sin(\omega t) \cos\phi + A \cos(\omega t) \sin\phi \\
 \implies \qquad c_1 = A \sin\phi, \, c_2 = A \cos \phi \\
@@ -255,11 +259,73 @@ A \sin(\omega t + \phi) = A \sin(\omega t) \cos\phi + A \cos(\omega t) \sin\phi 
 \item another exercise of the ``free undamped motion'' type:
 
 \begin{quotation}
-\noindent 6. A force of 400 newtons stretches a spring 2 meters.  A mass of 50 kilograms is attached to the end of the spring and is initially released from the equilibrium position with an upward velocity of 10 m/s.  Find the motion.
+\noindent 6. A force of 400 newtons stretches a spring 2 meters.  A mass of 50 kilograms is attached to the end of the spring and is initially released from the equilibrium position with an upward velocity of 10 m/s.  Find the motion $x(t)$.
 \end{quotation}
 \end{itemize}
 
 \vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{damped mass-spring model}
+
+\begin{columns}
+\begin{column}{0.7\textwidth}
+\begin{itemize}
+\small
+\item actually mass-springs don't oscillate forever
+\item friction or drag in system: ``damping''
+    \begin{itemize}
+    \item simple case: mass is surrounded by water or other fluid
+    \end{itemize}
+\item model: damping is proportional to velocity
+$$F_{\text{damping}} = - \beta v = - \beta \frac{dx}{dt}$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item $\beta > 0$
+    \item same model as drag force for projectiles in sections 1.3, 3.1
+    \end{itemize}
+\item Newton's 2nd law again:
+    $$\boxed{m \frac{d^2x}{dt^2} = - k x - \beta \frac{dx}{dt}}$$
+\end{itemize}
+\end{column}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=1.1\textwidth]{figs/dampedmassspring}
+
+\scriptsize movie at \href{https://bit.ly/2ThNjEk}{bit.ly/2ThNjEk}
+%http://www.faculty.umassd.edu/adam.hausknecht/temath/TEMATH2/Examples/VideoImageSequences/DampedSpringModel.html
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise \#27 in \S5.1}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{damping cases}
+
+$$\frac{d^2x}{dt^2} + 2 \lambda \frac{dx}{dt} + \omega^2 x=0$$
+
+\begin{itemize}
+\item \emph{undamped} if $\lambda = 0$
+\item \emph{overdamped} if $\lambda^2-\omega^2 > 0$
+\item \emph{critically damped} if $\lambda^2-\omega^2 = 0$
+\item \emph{underdamped} if $\lambda^2-\omega^2 < 0$
+\end{itemize}
 \end{frame}
 
 
@@ -278,27 +344,6 @@ $\lambda = \beta / (2m)$
 
 undamped solution:
     $$x(t) = c_1 \cos \omega t + c_2 \sin \omega t = A \sin(\omega t + \phi)$$
-\end{frame}
-
-
-\begin{frame}{damping cases}
-
-$$\frac{d^2x}{dt^2} + 2 \lambda \frac{dx}{dt} + \omega^2 x=0$$
-
-\begin{itemize}
-\item \emph{undamped} if $\lambda = 0$
-\item \emph{overdamped} if $\lambda^2-\omega^2 > 0$
-\item \emph{critically damped} if $\lambda^2-\omega^2 = 0$
-\item \emph{underdamped} if $\lambda^2-\omega^2 < 0$
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{exercise \#27 in \S5.1}
-
-\begin{itemize}
-\item X
-\end{itemize}
 \end{frame}
 
 
