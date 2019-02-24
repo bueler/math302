@@ -66,9 +66,33 @@
 \end{frame}
 
 
+\begin{frame}{1st-order linear: no oscillation}
+
+\begin{itemize}
+\item fundamental laws of nature are autonomous
+    \begin{itemize}
+    \item because the laws of nature don't depend on the time of day
+    \item applies to isolated systems, anyway
+    \end{itemize}
+\item 1st-order linear autonomous DEs cannot generate oscillation
+    \begin{itemize}
+    \item solution is exponential, but never oscillation: \small
+\begin{align*}
+y' &= a y + b \\
+\int \frac{dy}{ay+b} &= \int dt \\
+\frac{1}{a} \ln|ay+b| &= t+c \\
+a y + b &= C e^{at} \\
+y(t) &= \frac{1}{a}\left(C e^{at} - b\right)
+\end{align*}
+    \end{itemize}
+\item so oscillation models are 2nd-order, e.g.~$y'' + y = 0$
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{setting up the mass-spring}
 
-careful set-up so that the equations are clear:
+a specific set-up so that the equations are clear:
 \begin{columns}
 \begin{column}{0.6\textwidth}
 \begin{itemize}
@@ -94,31 +118,22 @@ careful set-up so that the equations are clear:
 \begin{column}{0.65\textwidth}
 \begin{itemize}
 \item Newton's second law is $ma=F$
-\item for our mass-spring system:
-
-\vspace{-3mm}
-    $$m \frac{d^2x}{dt^2} = - k x$$
-
-\vspace{-2mm}
-\item really:
-
-\vspace{-2mm}
+\item for our first mass-spring model:
         $$m \frac{d^2x}{dt^2} = mg - k (x+s)$$
 
-\vspace{-2mm}
+\vspace{-3mm}
     \begin{itemize}
-    \item \dots but $mg=ks$
-    \item in practice $k$ is \emph{determined} from $k=mg/s$
+    \item but $mg=ks$ so
+    $$\boxed{m \frac{d^2x}{dt^2} = - k x}$$
     \end{itemize}
-
-\vspace{3mm}
-
 \item ``Hooke's law'' $F_{spring} = -kx$ is a \emph{model} for how springs work
     \begin{itemize}
-    \item not a bad model
-    \item \dots for smallish displacements
-    \item improved model 5.3
+    \item not a bad model for small motions
+    \item improved model in 5.3
     \end{itemize}
+\item in practice:
+
+\centerline{$k$ is \emph{determined} from $mg=ks$}
 \end{itemize}
 \end{column}
 \begin{column}{0.35\textwidth}
@@ -128,53 +143,123 @@ careful set-up so that the equations are clear:
 \end{frame}
 
 
-\begin{frame}{first solution}
+\begin{frame}{(undamped) mass-spring solution}
 
 \begin{itemize}
-\item from last slide the DE for our mass-spring:
-    $$m \frac{d^2x}{dt^2} + k x = 0$$
+\item from last slide: $m \frac{d^2x}{dt^2} + k x = 0$
 \item it is constant coefficient so substitute $x(t)=e^{rt}$
-\item get auxiliary equation
-    $$m r^2 + k = 0$$
+\item get auxiliary equation $m r^2 + k = 0$
 \item solutions are imaginary: $r = \pm \sqrt{\frac{k}{m}} i$
+\item let \alert{$\omega = \sqrt{\frac{k}{m}}$}
+\item thus general solution:
+    $$x(t) = c_1 \cos \omega t + c_2 \sin \omega t \hspace{70mm}$$
+\end{itemize}
+
+\vspace{-20mm}
+\hfill \includegraphics[width=0.45\textwidth]{figs/cossin}
+\end{frame}
+
+
+\begin{frame}{the meaning of $\omega$}
+
+\begin{itemize}
+\item general solution: $x(t) = c_1 \cos \omega t + c_2 \sin \omega t$
+\item suppose $t$ is measured in seconds
+\item then $\omega = \sqrt{\frac{k}{m}}$ is \emph{frequency of oscillation} in radians per second
     \begin{itemize}
-    \item X
+    \item units are correct because $\omega t$ must be in radians
+    \end{itemize}
+\item time \alert{$T = \frac{2\pi}{\omega}$} is \emph{period of oscillation}
+    \begin{itemize}
+    \item because $\omega T=2\pi$ gives the smallest $T>0$ so that
+        $$\cos(\omega T) = \cos(0)$$
+        $$\sin(\omega T) = \sin(0)$$
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-
-
 \begin{frame}{exercise \#3 in \S5.1}
 
 \begin{itemize}
-\item X
+\item we can do an exercise of the ``free undamped motion'' type:
+
+\begin{quotation}
+\noindent 3. A mass weighing 24 pounds, attached to the end of a spring, stretches it 4 inches.  Initially the mass is released from rest from a point 3 inches above the equilibrium position.  Find the (equation of the) motion.
+\end{quotation}
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{mass/weight stupidity}
+
+\begin{itemize}
+\item ``kilograms'' is the SI unit for \emph{mass} $m$
+    \begin{itemize}
+    \item $g=9.8 \,\text{m}/\text{s}^2$ is acceleration of gravity
+    \item $mg$ is a force in newtons $N = \text{kg}\,\text{m}/\text{s}^2$
+    \end{itemize}
+\item ``pounds'' is a unit for \emph{force} $mg$
+    \begin{itemize}
+    \item it is a \emph{weight} not a mass
+    \end{itemize}
+\item ``slugs'' are a unit for \emph{mass} $m$
+    \begin{itemize}
+    \item old English system \dots
+    \item and you need: $g=32 \,\text{ft}/\text{s}^2$
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{fact about waves}
 
 \begin{itemize}
-\item X
+\item for any $c_1,c_2$, this formula is a wave or oscillation:
+    $$x(t) = c_1 \cos \omega t + c_2 \sin \omega t$$
+\item what is its amplitude?
+    \begin{itemize}
+    \item easy question if either $c_1 =0$ or $c_2=0$
+    \end{itemize}
+\item in general: find  \emph{amplitude} $A$ and \emph{phase angle} $\phi$ so that
+    $$\alert{x(t)} = c_1 \cos \omega t + c_2 \sin \omega t \alert{= A \sin(\omega t + \phi)}$$
+\item method uses $\sin(a+b) = \sin a \cos b + \cos a \sin b$:
+\begin{gather*}
+A \sin(\omega t + \phi) = A \sin(\omega t) \cos\phi + A \cos(\omega t) \sin\phi \\
+\implies \qquad c_1 = A \sin\phi, \, c_2 = A \cos \phi \\
+\implies \qquad \alert{A^2 = c_1^2 + c_2^2, \, \tan \phi = \frac{c_1}{c_2}}
+\end{gather*}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{illustration}
 
 \begin{itemize}
-\item X
+\item graph $x(t) = A \sin(\omega t + \phi)$ using $\omega=2.7,A=3.3,\phi=0.3 \pi$
+    \begin{itemize}
+    \item period $T=2\pi/\omega = 2.51$
+    \item $c_1 = A \sin \phi = 2.67$, $c_2 = A \cos \phi = 1.94$
+    \end{itemize}
 \end{itemize}
+
+\hfill \includegraphics[width=0.65\textwidth]{figs/altwave}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exercise \#6 in \S5.1}
 
 \begin{itemize}
-\item X
+\item another exercise of the ``free undamped motion'' type:
+
+\begin{quotation}
+\noindent 6. A force of 400 newtons stretches a spring 2 meters.  A mass of 50 kilograms is attached to the end of the spring and is initially released from the equilibrium position with an upward velocity of 10 m/s.  Find the motion.
+\end{quotation}
 \end{itemize}
+
+\vspace{40mm}
 \end{frame}
 
 
@@ -208,6 +293,21 @@ $$\frac{d^2x}{dt^2} + 2 \lambda \frac{dx}{dt} + \omega^2 x=0$$
 \end{itemize}
 \end{frame}
 
+
+\begin{frame}{exercise \#27 in \S5.1}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise \#43 in \S5.1}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
 
 
 \begin{frame}{X}
