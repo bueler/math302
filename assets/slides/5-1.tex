@@ -287,7 +287,7 @@ $$F_{\text{damping}} = - \beta v = - \beta \frac{dx}{dt}$$
     \item same model as drag force for projectiles in sections 1.3, 3.1
     \end{itemize}
 \item Newton's 2nd law again:
-    $$\boxed{m \frac{d^2x}{dt^2} = - k x - \beta \frac{dx}{dt}}$$
+    $$\boxed{m \frac{d^2x}{dt^2} = - k x - \beta \frac{dx}{dt}} \qquad \text{or} \quad m x'' = -kx -\beta x'$$
 \end{itemize}
 \end{column}
 \begin{column}{0.3\textwidth}
@@ -300,10 +300,22 @@ $$F_{\text{damping}} = - \beta v = - \beta \frac{dx}{dt}$$
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{standard forms}
 
 \begin{itemize}
-\item X
+\item recall \emph{undamped} mass-spring model with $\alert{\omega = \sqrt{\frac{k}{m}}}$:
+    $$m x'' = - k x \quad \iff \quad x'' + \omega^2 x = 0$$
+\item new damped mass-spring model:
+    $$m x'' = - k x - \beta x' \quad \iff \quad x'' + 2 \lambda x' + \omega^2 x = 0$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item $\displaystyle \alert{\lambda = \frac{\beta}{2m}}$
+    \item auxiliary equation from $x(t)=e^{rt}$:
+        $$r^2 + 2\lambda r + \omega^2=0$$
+    \item has roots:
+        $$r = \frac{-2\lambda \pm \sqrt{4 \lambda^2 - 4 \omega^2}}{2} = -\lambda \pm \sqrt{\lambda^2 - \omega^2}$$
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
