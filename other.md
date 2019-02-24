@@ -1,13 +1,11 @@
 ---
 layout: course-page
-title: Other Materials
+title: Codes
 ---
 
-## Other Materials
+## Codes
 
-This page has some codes I wrote, categorized by language (Python or Matlab only), but otherwise listed in chronological order.
-
-To generate direction fields without programming, try [desmos](https://www.desmos.com/).  For other languages see the [wikipedia page on slope fields](https://en.wikipedia.org/wiki/Slope_field); it gives easy code in Matlab and Mathematica.
+This page has some codes I wrote, categorized by language (Matlab/Octave or Python).  For each language they are listed in chronological order.
 
 ### Matlab/Octave Codes
 
@@ -20,11 +18,13 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [fitcensus.m](assets/codes/fitcensus.m): Fit the logistic model to the US census data; see [slides for section 3.2](assets/slides/3-2.pdf)
 * [oilslick.m](assets/codes/oilslick.m): Solution to parts (b), (c), and (d) of Mini-Project 2.  Plots rate of change of area versus area.
 * [slicker.m](assets/codes/slicker.m): Solution to parts (f) and (g) of Mini-Project 2.  Plots A(t) solution, with data superimposed.
+* [massspringplot.m](assets/codes/massspringplot.m): Used to generate some figures in [slides for section 5.1](assets/slides/5-1.pdf)
 
 ### Python Codes
 
 You will need to know [Python](https://www.python.org/) to use these.
 
 * [dirfield.py](assets/codes/dirfield.py): Generate a direction field.  I used this for images in some slides.
+    * To generate direction fields without programming, try [desmos](https://www.desmos.com/).  For other languages see the [wikipedia page on slope fields](https://en.wikipedia.org/wiki/Slope_field); it gives easy codes in Matlab and Mathematica.
 * [eulersequence.py](assets/codes/eulersequence.py): Generate sequence of figures used in [slides for section 2.6](assets/slides/2-6.pdf).
 
