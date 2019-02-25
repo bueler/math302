@@ -16,7 +16,7 @@ This week we do modeling with linear second-order differential equations.  Secti
 Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### Monday 3/4
-* blank slides for section 5.1 _BUELER TODO_
+* [blank slides for section 5.1](assets/slides/5-1.pdf)
 * video: Bueler talks over slides for section 5.1 _BUELER TODO_
 * [work on WebAssign 4.4](https://www.webassign.net/)
 
