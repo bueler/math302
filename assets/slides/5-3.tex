@@ -104,38 +104,114 @@ examples of nonlinear 2nd-order differential equations (DEs):
 \end{frame}
 
 
-\begin{frame}{nonlinear versus linear}
+\begin{frame}{nonlinear versus linearized pendulum}
 
 \begin{center}
 \begin{tabular}{c|c}
 nonlinear: any angles & linearized: small angles \\ \hline
-$\Huge \strut$ $\displaystyle {\color{Green} \frac{d^2\theta}{dt^2} + \omega^2 \sin\theta = 0}$ & $\displaystyle \frac{d^2\theta}{dt^2} + \omega^2 \theta = 0$ \\ \hline
+$\Huge \strut$ $\displaystyle {\color{Green} \theta'' + \omega^2 \sin\theta = 0}$ & $\displaystyle \theta'' + \omega^2 \theta = 0$ \\ \hline
 $\huge \strut$ solution? & $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
 \end{tabular}
 \end{center}
 
 \begin{itemize}
-\item note $\omega = \sqrt{g/\ell\,}$ in both DEs
-\item we don't know how to solve a nonlinear DE like {\color{Green} the pendulum}
+\item $\omega = \sqrt{g/\ell\,}$ in both DEs
+\item we don't know how to solve a nonlinear DE like a {\color{Green} pendulum}
     \begin{itemize}
-    \item $\theta=e^{rt}$ is not a solution for any $r$, whether real or complex
-    \item the term ``${\color{Green} \sin\theta}$'' is not linear
-    \item using the concept of \emph{energy} makes progress (Mini-Project 3)
-    \item numerical approximations? $\large \strut$
-       \begin{itemize}
-       \item Euler's method? \dots inefficient but would work
-       \item next: using a ``black box'' solver in \Matlab/\Octave
-       \end{itemize}
+    \item the term ``${\color{Green} \sin\theta}$'' is not linear: $\sin(a+b)\ne \sin(a)+\sin(b)$
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{what to do about a nonlinear DE?}
 
 \begin{itemize}
-\item X
+\item pendulum DE:
+    $$\theta'' + \omega^2 \sin\theta = 0$$
+\item what to do about a nonlinear equation like this?
+    \begin{itemize}
+    \item $\theta=e^{rt}$ is not a solution for any $r$, whether real or complex
+    \item using the concept of \emph{energy} makes progress (Mini-Project 3) \dots but we get a hard-to-solve 1st-order equation
+    \item using infinite series can make progress too (Chapter 6) \dots but basically only gives approximations
+    \end{itemize}
+\item numerical approximations for an IVP? $\large \strut$
+    \begin{itemize}
+    \item Euler's method? \dots inefficient but would work
+    \item \emph{but} the equation is second order \dots how does Euler even work?
+    \item next: using an efficient ``black box'' solver in \footnotesize \Matlab/\Octave
+    \end{itemize}
+\item \alert{read section 4.10!}
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{key idea: a system of 1st-order ODEs}
+
+\medskip
+
+   \centerline{\alert{a 2nd-order ODE is equivalent to a system of 1st-order ODEs}}
+
+\noindent \emph{Example.} convert into a 1st-order system:
+    $$x''+5(x')^2+\sin x \stackrel{\ast}{=} \sqrt{t}$$
+
+\noindent \emph{Solution.}  The solution is $x(t)$, and the second derivative $x''(t)$ is merely the derivative of $x'(t)$.  So give $x'$ a name:
+    $$y = x'.$$
+Now rewrite $\ast$ using $y$:
+    $$y' + 5 y^2 + \sin x = \sqrt{t}.$$
+Now we have a system:
+\begin{align*}
+x' &= y \\
+y' &= - 5 y^2 - \sin x + \sqrt{t}
+\end{align*}
+
+\medskip
+\scriptsize
+\alert{Summary: Ignore the complexity of $\ast$.  Don't solve anything.  Just restate the problem.}
+\end{frame}
+
+
+\begin{frame}{pendulum as a 1st-order system}
+
+\noindent \emph{exercise.}  convert into a 1st-order system with initial conditions:
+    $$\theta''+ \omega^2 \sin\theta = 0, \qquad \theta(0)=A, \quad \theta'(0)=B$$
+
+\noindent \emph{solution.}  
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{using a black-box solver}
+
+\begin{itemize}
+\item before we get to systems, let's solve a single 1st-order IVP
+\item you can use \href{https://octave-online.net/}{Octave Online} to do the following
+\item or use \href{https://www.mathworks.com/products/matlab.html}{\Matlab} or \href{https://www.gnu.org/software/octave/}{\Octave} on your own computer
+\end{itemize}
+
+\noindent \emph{example.}  solve on $0 \le t \le 2$ and estimate $y(2)$:
+    $$y' = - 3 y + e^{-t}, \quad y(0)=1$$
+
+\noindent \emph{solution.}
+
+\begin{Verbatim}
+>> f = @(t,y) -3*y + exp(-t);
+>> [tt,yy] = ode45(f,[0,2],1);
+>> plot(tt,yy)
+>> yy(end)
+ans =  0.068908
+\end{Verbatim}
+
+\vspace{-25mm}
+\hfill \includegraphics[width=0.4\textwidth]{figs/ode45out}
+\end{frame}
+
+
+\begin{frame}{in Octave Online}
+
+\includegraphics[width=1.05\textwidth]{figs/octaveonline}
 \end{frame}
 
 
