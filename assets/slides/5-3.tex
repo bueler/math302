@@ -21,7 +21,7 @@
 \newcommand{\Octave}{\textsc{Octave}\xspace}
 
 
-\title{5.3 Nonlinear models \\ (with some 4.10 material too)}
+\title{5.3 Nonlinear models \\ (with 4.10 material too)}
 
 \subtitle{a lesson for MATH F302 Differential Equations}
 
@@ -212,6 +212,44 @@ ans =  0.068908
 \begin{frame}{in Octave Online}
 
 \includegraphics[width=1.05\textwidth]{figs/octaveonline}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{only 12 steps, but accurate}
+
+\begin{itemize}
+\item the \texttt{ode45} black-box is quite accurate
+\item \emph{exercise.} solve for the exact value $y(2)$:
+    $$y' = - 3 y + e^{-t}, \quad y(0)=1$$
+
+\noindent \emph{solution.}
+
+\vspace{30mm}
+\item compare:
+
+\begin{Verbatim}
+>> 0.5*(exp(-2)+exp(-6))
+ans =  0.068907
+\end{Verbatim}
+\item Euler would need $10^5$ or $10^6$ steps for this accuracy
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
 \end{frame}
 
 
