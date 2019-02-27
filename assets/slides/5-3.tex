@@ -127,39 +127,40 @@ $\huge \strut$ solution? & $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
 \begin{frame}{what to do about a nonlinear DE?}
 
 \begin{itemize}
-\item pendulum DE:
+\item for example, the pendulum DE:
     $$\theta'' + \omega^2 \sin\theta = 0$$
+\item \alert{read section 4.10!}  $\quad \longleftarrow$ \emph{gives advice, not a method}
 \item what to do about a nonlinear equation like this?
     \begin{itemize}
-    \item $\theta=e^{rt}$ is not a solution for any $r$, whether real or complex
+    \item $\theta=e^{rt}$ is not a solution for any $r$ (real or complex)
     \item using the concept of \emph{energy} makes progress (Mini-Project 3) \dots but we get a hard-to-solve 1st-order equation
     \item using infinite series can make progress too (Chapter 6) \dots but basically only gives approximations
     \end{itemize}
-\item numerical approximations for an IVP? $\large \strut$
+\item numerical approximations can be used for an IVP!
     \begin{itemize}
     \item Euler's method? \dots inefficient but would work
     \item \emph{but} the equation is second order \dots how does Euler even work?
     \item next: using an efficient ``black box'' solver in \footnotesize \Matlab/\Octave
     \end{itemize}
-\item \alert{read section 4.10!}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{key idea: a system of 1st-order ODEs}
+\begin{frame}{systems of 1st-order ODEs}
 
 \medskip
 
-   \centerline{\alert{a 2nd-order ODE is equivalent to a system of 1st-order ODEs}}
+   \centerline{idea: \alert{2nd-order ODE is equivalent to a system of 1st-order ODEs}}
 
+\bigskip
 \noindent \emph{Example.} convert into a 1st-order system:
     $$x''+5(x')^2+\sin x \stackrel{\ast}{=} \sqrt{t}$$
 
-\noindent \emph{Solution.}  The solution is $x(t)$, and the second derivative $x''(t)$ is merely the derivative of $x'(t)$.  So give $x'$ a name:
+\noindent \emph{Solution.}  Second derivative $x''(t)$ is merely the derivative of $x'(t)$.  So give $x'$ a name:
     $$y = x'.$$
 Now rewrite $\ast$ using $y$:
     $$y' + 5 y^2 + \sin x = \sqrt{t}.$$
-Now we have a system:
+Rearrange above two equations to a system:
 \begin{align*}
 x' &= y \\
 y' &= - 5 y^2 - \sin x + \sqrt{t}
@@ -167,7 +168,7 @@ y' &= - 5 y^2 - \sin x + \sqrt{t}
 
 \medskip
 \scriptsize
-\alert{Summary: Ignore the complexity of $\ast$.  Don't solve anything.  Just restate the problem.}
+\alert{Summary: Ignore the complexity of $\ast$.  Don't solve anything, just restate the problem.}
 \end{frame}
 
 
@@ -178,23 +179,25 @@ y' &= - 5 y^2 - \sin x + \sqrt{t}
 
 \noindent \emph{solution.}  
 
-\vspace{50mm}
+\vspace{30mm}
+
+\hfill $\displaystyle \boxed{\begin{matrix} z_1' = z_2 \phantom{sdfldfs} \\ z_2' = - \omega^2 \sin(z_1)\end{matrix}\,, \quad \begin{matrix}z_1(0)=A \\ z_2(0)=B\end{matrix}}$
 \end{frame}
 
 
 \begin{frame}[fragile]
-\frametitle{using a black-box solver}
+\frametitle{using black-box solver \texttt{ode45}}
 
 \begin{itemize}
-\item before we get to systems, let's solve a single 1st-order IVP
+\item before we get to numerical solutions of systems, let's do a single 1st-order IVP
 \item you can use \href{https://octave-online.net/}{Octave Online} to do the following
 \item or use \href{https://www.mathworks.com/products/matlab.html}{\Matlab} or \href{https://www.gnu.org/software/octave/}{\Octave} on your own computer
 \end{itemize}
 
-\noindent \emph{example.}  solve on $0 \le t \le 2$ and estimate $y(2)$:
+\noindent \emph{example.}  solve for $y(t)$ on $0 \le t \le 2$, and estimate $y(2)$:
     $$y' = - 3 y + e^{-t}, \quad y(0)=1$$
 
-\noindent \emph{solution.}
+\noindent \emph{solution.} the DE is $y'=f(t,y)$ so
 
 \begin{Verbatim}
 >> f = @(t,y) -3*y + exp(-t);
@@ -220,13 +223,13 @@ ans =  0.068908
 
 \begin{itemize}
 \item the \texttt{ode45} black-box is quite accurate
-\item \emph{exercise.} solve for the exact value $y(2)$:
+\item \emph{exercise.} solve \emph{by hand} for the exact value $y(2)$:
     $$y' = - 3 y + e^{-t}, \quad y(0)=1$$
 
 \noindent \emph{solution.}
 
 \vspace{30mm}
-\item compare:
+\item compare to \texttt{y(end)=y(13)} on previous slides:
 
 \begin{Verbatim}
 >> 0.5*(exp(-2)+exp(-6))
@@ -237,11 +240,35 @@ ans =  0.068907
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}[fragile]
+\frametitle{\texttt{ode45} for pendulum}
 
-\begin{itemize}
-\item X
-\end{itemize}
+\noindent \emph{example}.  let $\omega=\sqrt{7}$.  solve for $\theta(t)$ on the interval $t\in [0,20]$:
+    $$\theta''+ \omega^2 \sin\theta = 0, \qquad \theta(0)=3, \quad \theta'(0)=0$$
+
+\noindent \emph{solution.}  $z_1=\theta$ and $\omega^2=7$ so
+\begin{align*}
+z_1' &= z_2 & z_1(0)&=3, \\
+z_2' &= - 7 \sin(z_1) & z_2(0)&=0
+\end{align*}
+This is $z'=f(t,z)$ so:
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{Verbatim}[fontsize=\small]
+>> f = @(t,z) [z(2); -7*sin(z(1))];
+>> [tt,zz] = ode45(f,[0,20],[3;0]);
+>> plot(tt,zz)
+>> xlabel t
+>> legend('\theta(t)','d\theta/dt')
+\end{Verbatim}
+
+\vspace{10mm}
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{figs/pend-chunky}
+\end{column}
+\end{columns}
 \end{frame}
 
 
@@ -250,6 +277,8 @@ ans =  0.068907
 \begin{itemize}
 \item X
 \end{itemize}
+
+\includegraphics[width=0.5\textwidth]{figs/pend-smooth} \qquad \includegraphics[width=0.35\textwidth]{figs/pend-snap}
 \end{frame}
 
 
