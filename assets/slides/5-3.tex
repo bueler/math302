@@ -273,18 +273,18 @@ This is $z'=f(t,z)$ so:
 
 
 \begin{frame}[fragile]
-\frametitle{\texttt{ode45} for pendulum: better and fancier}
+\frametitle{pendulum: better and movier}
 
 \small
 \begin{itemize}
 \item the solution is more accurate than it looks!
-\item for better look: ask \texttt{ode45} to generate more points (left fig.):
+\item for better look ask black box to generate more points (left fig.):
 \begin{Verbatim}[fontsize=\small]
 >> [tt,zz] = ode45(f,[0:.01:20],[3;0]);
 \end{Verbatim}
 \item one can even make a \href{https://bueler.github.io/math302/assets/codes/pendmovie.gif}{movie}
     \begin{itemize}
-    \item see \href{https://bueler.github.io/math302/assets/codes/pendmovie.m}{\texttt{pendmovie.m}} (\href{https://bueler.github.io/math302/codes.html}{Codes} at \href{https://bueler.github.io/math302/}{\texttt{bueler.github.io/math302}})
+    \item see \href{https://bueler.github.io/math302/assets/codes/pendmovie.m}{\texttt{pendmovie.m}} at \href{https://bueler.github.io/math302/codes.html}{Codes} at \href{https://bueler.github.io/math302/}{\texttt{bueler.github.io/math302}}
     \item right fig.~is a frame
     \end{itemize}
 \end{itemize}
