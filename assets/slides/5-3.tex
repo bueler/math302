@@ -85,17 +85,16 @@ examples of nonlinear 2nd-order differential equations (DEs):
 \end{frame}
 
 
-\begin{frame}{small angle model}
+\begin{frame}{linear small angle model}
 
 \begin{itemize}
-\item the physics says: \quad $\displaystyle m \ell \frac{d^2\theta}{dt^2} = - mg \sin\theta$
 \item divide by $m\ell$ and move term: \quad $\displaystyle \frac{d^2\theta}{dt^2} + \frac{g}{\ell} \sin\theta = 0$
-\item if $\displaystyle \omega = \sqrt{\frac{g}{\ell}}$ then \, $\displaystyle \frac{d^2\theta}{dt^2} + \omega^2 \sin\theta = 0$ \, for any angle
+\item if $\displaystyle \omega = \sqrt{\frac{g}{\ell}}$ then \, $\displaystyle \boxed{\frac{d^2\theta}{dt^2} + \omega^2 \sin\theta = 0}$ \, for any angle
 \item recall $\sin\theta \approx \theta$ for small $\theta$ because $\sin z = z - \frac{z^3}{3!} + \frac{z^5}{5!} - \dots$
 \item a \emph{small angle model}:
     $$\boxed{\frac{d^2\theta}{dt^2} + \omega^2 \theta = 0} \hspace{20mm}$$
     \begin{itemize}
-    \item gen.~soln.: $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
+    \item solution: $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
     \end{itemize}
 \end{itemize}
 
@@ -110,27 +109,25 @@ examples of nonlinear 2nd-order differential equations (DEs):
 \begin{center}
 \begin{tabular}{c|c}
 nonlinear: any angles & linearized: small angles \\ \hline
-$\Huge \strut$ $\displaystyle \frac{d^2\theta}{dt^2} + \omega^2 \sin\theta = 0$ & $\displaystyle \frac{d^2\theta}{dt^2} + \omega^2 \theta = 0$ \\ \hline
-$\huge \strut$ ?? & $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
+$\Huge \strut$ $\displaystyle {\color{Green} \frac{d^2\theta}{dt^2} + \omega^2 \sin\theta = 0}$ & $\displaystyle \frac{d^2\theta}{dt^2} + \omega^2 \theta = 0$ \\ \hline
+$\huge \strut$ solution? & $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
 \end{tabular}
 \end{center}
 
 \begin{itemize}
-\item note $\omega = \sqrt{\frac{g}{\ell}}$
-\item we don't know a way to solve the nonlinear DE for $\theta(t)$
+\item note $\omega = \sqrt{g/\ell\,}$ in both DEs
+\item we don't know how to solve a nonlinear DE like {\color{Green} the pendulum}
     \begin{itemize}
     \item $\theta=e^{rt}$ is not a solution for any $r$, whether real or complex
-    \item using the concept of \emph{energy} gives some progress
-    \item \dots see Mini-Project 3!
-    \end{itemize}
-\item so we will revert to numerical approximations like Euler's method
-    \begin{itemize}
-    \item but much better than Euler's, namely use of a ``black box'' solver called \texttt{ode45}, in \Matlab/\Octave
+    \item the term ``${\color{Green} \sin\theta}$'' is not linear
+    \item using the concept of \emph{energy} makes progress (Mini-Project 3)
+    \item numerical approximations? $\large \strut$
+       \begin{itemize}
+       \item Euler's method? \dots inefficient but would work
+       \item next: using a ``black box'' solver in \Matlab/\Octave
+       \end{itemize}
     \end{itemize}
 \end{itemize}
-
-
-
 \end{frame}
 
 
