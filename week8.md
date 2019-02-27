@@ -11,7 +11,7 @@ This week, **Quiz 6** must be done on Wednesday or Thursday.  It **covers sectio
 
 Mini-Project 3 is due this week on Thursday March 7.
 
-This week we do modeling with linear second-order differential equations.  Section 5.1 is about the most important physical interpretation of a second-order DE, namely a _mass-spring system_.  Section 5.3 extends to _nonlinear models_ including more-realistic nonlinear springs, pendulums, and variable gravity or mass.
+This week we do modeling with linear second-order differential equations.  Section 5.1 is about the most important physical interpretation of a second-order DE, namely a _mass-spring system_.  Section 5.3 extends to _nonlinear models_ including a pendulum (see this [movie](assets/codes/pendmovie.gif)), nonlinear springs, and variable gravity.  What we do in section 5.2 is based on material from section 4.10 regarding _nonlinear differential equations_.
 
 Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
