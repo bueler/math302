@@ -28,7 +28,7 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### Thursday 3/7
 * <span style="color:blue">**proctored Quiz 6 covers 4.2 and 4.4**</span>
-* Mini-Project 3, _Energy is just a technique for solving differential equations_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 3](https://goo.gl/forms/fmSrrnCs8blR3Fwn1); you may need to log in to your `alaska.edu` account to use this link
+* _Mini-Project 3 is NOT due today ... due date moved to Monday 3/18 in [Week 9](week9)_
 * [work on WebAssign 5.1](https://www.webassign.net/)
 
 ### Friday 3/8
