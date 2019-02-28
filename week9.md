@@ -9,7 +9,7 @@ Welcome to Week 9 of [MATH F302 UX1 in Spring 2019](index.html).  As always, rem
 
 This week, **Quiz 7** must be done on Wednesday or Thursday.  It **covers sections 5.1 and 5.3/4.10**.  Look at the WebAssign questions to see what kinds of problems I will ask about on the Quiz.
 
-Mini-Project 4 is assigned this week.
+Mini-Project 3 is due this week on Monday March 18 (_a change from the original schedule_).  Mini-Project 4 is also assigned this week.
 
 This week start using series methods on differential equations.
 
