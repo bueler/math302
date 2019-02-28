@@ -5,7 +5,7 @@ title: Week 8
 
 ## Week 8 Module: March 4 -- March 8
 
-Welcome to Week 8 of [MATH F302 UX1 in Spring 2019](index.html)!  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 8 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
 
 This week, **Quiz 6** must be done on Wednesday or Thursday.  It **covers sections 4.2 and 4.4**
 

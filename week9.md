@@ -5,7 +5,7 @@ title: Week 9
 
 ## Week 9 Module: March 18 -- March 22
 
-Welcome to Week 9 of [MATH F302 UX1 in Spring 2019](index.html)!  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 9 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
 
 This week, **Quiz 7** must be done on Wednesday or Thursday.  It **covers sections 5.1 and 5.3/4.10**.  Look at the WebAssign questions to see what kinds of problems I will ask about on the Quiz.
 
