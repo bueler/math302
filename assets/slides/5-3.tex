@@ -363,26 +363,46 @@ ans = -2.6492
 \begin{column}{0.65\textwidth}
 \begin{itemize}
 \item springs are usually well-modeled by Hooke's law $F=-kx$ for small displacements $x$ from the equilibrium position
+\item \dots \emph{but} when they are over-extended, or closed coil, etc.~then they need different models
 \end{itemize}
 \end{column}
 \begin{column}{0.35\textwidth}
-\includegraphics[width=\textwidth]{figs/spring-failure}
+\includegraphics[width=0.9\textwidth]{figs/spring-failure}
 
-\vspace{10mm}
+\vspace{3mm}
 
-\includegraphics[width=0.8\textwidth]{figs/open-closed-spring}
+\includegraphics[width=0.7\textwidth]{figs/open-closed-spring}
 \end{column}
 \end{columns}
 
+\bigskip
 
+\mbox{\includegraphics[width=0.22\textwidth]{figs/spring-linear} \quad
+\includegraphics[width=0.22\textwidth]{figs/spring-hard} \quad
+\includegraphics[width=0.22\textwidth]{figs/spring-soft} \quad
+\includegraphics[width=0.22\textwidth]{figs/spring-closed}}
+
+\mbox{\qquad linear \qquad\qquad\quad hard \qquad\qquad\quad\,\, soft \qquad\qquad\quad closed}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exerise \#9: numerical nonlinear spring}
 
 \begin{itemize}
-\item X
+\item book claims $F(x)=-x-x^3$ is hard spring model
+\item suppose we also have damping (expect $x(t)\to 0$ as $t\to \infty$)
 \end{itemize}
+
+\noindent \emph{exercise \#9 in \S5.3}:  numerically solve
+    $$\frac{d^2 x}{dt^2} + \frac{dx}{dt} + x + x^3 = 0, \quad x(0)=-3, x'(0)=4$$
+
+\noindent \emph{solution}:  write as system
+\begin{align*}
+z_1' &= z_2  & z_1(0)&=-3 \\
+z_2' &= -z_2 - z_1 - z_1^3 & z_1(0)&=-3
+\end{align*}
+and use \texttt{ode45}:
+
 \end{frame}
 
 
@@ -405,17 +425,17 @@ ans = -2.6492
 \begin{frame}{how the black box works}
 
 \begin{itemize}
-\item how does the black box \texttt{ode45} work?
+\item how does the black box \alert{\texttt{ode45}} work?
     \begin{itemize}
     \item good question!
     \end{itemize}
 \item \emph{basically}:  it is just a fancier form of Euler's method
 \item \emph{more thoroughly}:
     \begin{itemize}
-    \item almost covered in Chapter 9 ($=$ \href{https://bueler.github.io/math302/week10.html}{Week 10})
-    \item see the \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\Matlab reference page for \texttt{ode45}}
     \item it uses a pair of \href{https://en.wikipedia.org/wiki/Runge_Kutta_methods}{Runge-Kutta} methods
-    \item can adaptively choose its step size
+    \item \dots so it can adaptively choose its step size
+    \item see the \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\Matlab reference page for \texttt{ode45}}
+    \item covered in Chapter 9 ($=$ \href{https://bueler.github.io/math302/week10.html}{Week 10})
     \end{itemize}
 \end{itemize}
 \end{frame}
