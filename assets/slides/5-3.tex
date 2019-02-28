@@ -241,6 +241,30 @@ ans =  0.068907
 
 
 \begin{frame}[fragile]
+\frametitle{calling \texttt{ode45}}
+
+\begin{itemize}
+\item from the \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\Matlab documentation page on \texttt{ode45}}:
+
+\medskip
+\begin{quote}\normalfont
+\texttt{[t,y] = ode45(odefun,tspan,y0)},
+
+\medskip
+where \texttt{tspan = [t0 tf]}, integrates the system of differential equations $y'=f(t,y)$ from \texttt{t0} to \texttt{tf} with initial conditions \texttt{y0}. Each row in the solution array \texttt{y} corresponds to a value returned in column vector \texttt{t}.
+\end{quote}
+\item see the \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\Matlab page} for examples of functions $f(t,y)$ for the \texttt{odefun} argument
+\item note further fine print about the \texttt{tspan} argument:
+   \begin{itemize}
+   \footnotesize
+   \item If tspan has two elements \texttt{[t0 tf]} then the solver returns the solution evaluated at internal integration steps in the interval.
+   \item If tspan has more than two elements \texttt{[t0,t1,t2,...,tf]} then the solver returns the solution evaluated at the given points.
+   \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
 \frametitle{\texttt{ode45} for pendulum}
 
 \noindent \emph{example}.  let $\omega=\sqrt{7}$.  solve for $\theta(t)$ on the interval $t\in [0,20]$:
@@ -362,8 +386,8 @@ ans = -2.6492
 \begin{columns}
 \begin{column}{0.65\textwidth}
 \begin{itemize}
-\item springs are usually well-modeled by Hooke's law $F=-kx$ for small displacements $x$ from the equilibrium position
-\item \dots \emph{but} when they are over-extended, or closed coil, etc.~then they need different models
+\item springs are usually well-modeled by Hooke's law $F(x)=-kx$ for small displacements $x$ from the equilibrium position
+\item \dots \emph{but} when they are over-extended, or closed coil, etc.~then they need different models $mx''=F(x)$
 \end{itemize}
 \end{column}
 \begin{column}{0.35\textwidth}
@@ -386,23 +410,33 @@ ans = -2.6492
 \end{frame}
 
 
-\begin{frame}{exerise \#9: numerical nonlinear spring}
+\begin{frame}[fragile]
+\frametitle{exercise \#9: (numerical) nonlinear spring}
 
 \begin{itemize}
-\item book claims $F(x)=-x-x^3$ is hard spring model
-\item suppose we also have damping (expect $x(t)\to 0$ as $t\to \infty$)
+\item so $F(x)=-x-x^3$ is a hard spring model
+\item suppose we also have damping (thus $x(t)\to 0$ as $t\to \infty$)
 \end{itemize}
 
 \noindent \emph{exercise \#9 in \S5.3}:  numerically solve
-    $$\frac{d^2 x}{dt^2} + \frac{dx}{dt} + x + x^3 = 0, \quad x(0)=-3, x'(0)=4$$
+    $$\frac{d^2 x}{dt^2} + \frac{dx}{dt} + x + x^3 = 0, \quad x(0)=-3, x'(0)=8$$
 
-\noindent \emph{solution}:  write as system
+\noindent \emph{solution}:  write as system using $x=z_1$, $x'=z_2$:
 \begin{align*}
-z_1' &= z_2  & z_1(0)&=-3 \\
-z_2' &= -z_2 - z_1 - z_1^3 & z_1(0)&=-3
+z_1' &= z_2  & z_1(0)&=-3  &&&&&&&&\\
+z_2' &= -z_2 - z_1 - z_1^3 & z_2(0)&=8 &&&&&&&&
 \end{align*}
 and use \texttt{ode45}:
+\begin{Verbatim}[fontsize=\footnotesize]
+>> f = @(t,z) [z(2); -z(2)-z(1)-z(1)^3];
+>> [tt,zz] = ode45(f,[0:.01:5],[-3;8]);
+>> plot(tt,zz),  xlabel t,  grid on
+>> legend('x(t)','dx/dt')
+\end{Verbatim}
 
+\vspace{-25mm}
+
+\hfill \includegraphics[width=0.36\textwidth]{figs/hardspringsoln}
 \end{frame}
 
 
