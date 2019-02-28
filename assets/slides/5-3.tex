@@ -440,19 +440,92 @@ and use \texttt{ode45}:
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{bullet to geosynchronous orbit}
 
-\begin{itemize}
-\item X
-\end{itemize}
+\small
+
+\noindent \emph{example}.  We want to use a bullet weighting 100 grams to destroy a satellite in geosynchronous (geostationary) orbit, approximately $36,000$ km.  What velocity is needed if we ignore air drag?
+
+\medskip
+\noindent \emph{solution}.  Constant gravity $g$ will \emph{not} do.
+
+\noindent The gravity decreases as the bullet rises.
+
+\noindent From \S5.3 we read Newton's law of gravitation:
+    $$m y'' = -k \frac{Mm}{y^2} \text{ where $m=$(bullet mass), $M=$(earth mass)}$$
+
+\vspace{-30mm}
+
+\hfill \includegraphics[width=0.06\textwidth]{figs/earthbullet}
+
+\vspace{5mm}
+
+After simplification (see text), and with initial conditions, this is
+    $$y'' = -g \frac{R^2}{y^2}, \qquad y(0)=R, \quad y'(0)=V$$
+We take $R=6.4\times 10^6$ m $=$(radius of earth) and $g=9.8$.  (\emph{Note bullet mass does not matter.  Earth's mass is built into $g$.})
+
+\medskip
+Question: Find $V$ so that the maximum of $y(t)$ is $3.6\times 10^7$ m.
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}[fragile]
+\frametitle{bullet to geosynchronous orbit 2}
+
+\small
+
+\emph{question:} Find $V$ so $\max y(t) = 3.6\times 10^7$, given
+    $$y'' = -g \frac{R^2}{y^2}, \qquad y(0)=R, \quad y'(0)=V$$
+and $R=6.4\times 10^6$ m $=$(radius of earth) and $g=9.8$
+
+\emph{solution?:} as system with $y=z_1$, $y'=z_2$ and $C=gR^2$:
+\begin{align*}
+z_1' &= z_2  & z_1(0)&=R \\
+z_2' &= - C z_1^{-2} & z_2(0) &= V
+\end{align*}
+
+\begin{Verbatim}[fontsize=\footnotesize]
+>> g = 9.8;  R = 6.4e6;  C = g*R^2;
+>> f = @(t,z) [z(2); -C/z(1)^2];
+>> V = 5000;
+>> [tt,zz] = ode45(f,[0,1000],[R;V]);
+>> plot(tt,zz(:,1))
+>> xlabel t,  ylabel y
+>> max(zz(:,1))
+ans =    7.9924e+06
+\end{Verbatim}
+
+\vspace{-30mm}
+
+\hfill \includegraphics[width=0.4\textwidth]{figs/firstbullet}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{bullet to geosynchronous orbit 3}
 
 \begin{itemize}
-\item X
+\item trial and error needed!
+\item I finished with:
+\begin{Verbatim}[fontsize=\footnotesize]
+>> V = 10157; [tt,zz] = ode45(f,[0,20000],[R;V]);
+>> [max(zz(:,1)) zz(end,1)]
+ans =
+  3.60120e+07  2.36604e+07
+\end{Verbatim}
 \end{itemize}
+
+\bigskip
+\small
+a bit of hard-earned \alert{extra credit} for any of these:
+\begin{enumerate}
+\item energy methods allow you to solve the above problem \emph{by hand}; see Mini-Project 3 and do so
+\item one can add air drag by a reasonable model and use same numerical methods; do so
+\item given air drag from \enumnum{2}, will the bullet survive the heating? (ceramic bullet?)
+    \begin{itemize}
+    \item this will need another DE coupled to the first
+    \end{itemize}
+\end{enumerate}
 \end{frame}
 
 
@@ -475,6 +548,45 @@ and use \texttt{ode45}:
 \end{frame}
 
 
+\begin{frame}{dependent variable missing}
+
+\begin{itemize}
+\item there are by-hand solvable nonlinear 2nd-order DEs:
+
+\bigskip
+\small
+\begin{tabular}{c|l|l}
+DE & technique & first integral \\ \hline \hline
+$y'' = f(t,y,y')$ & \emph{too general} &  \\ \hline
+$y'' = f(t)$ & just antidifferentiate & $y' = F(t)+c \large\strut$ \\
+& & where $F(t) = \int f(t)\,dt$ \\ \hline
+$y'' = f(y)$ & compute energy & $\frac{1}{2} (y')^2 + P(y) = c \large\strut$\\
+& \emph{[Mini-Project 3]} & where $P(z) = -\int f(z)\,dz$ \\ \hline
+$y'' = f(y')$ & substitute $u=y'$ & $Q(y') = t + c \large\strut$\\
+& \emph{[\S4.10]} & where $Q(u)=\int \frac{du}{f(u)}$
+\end{tabular}
+
+\normalsize
+
+\bigskip
+\item last category called ``dependent variable $y$ is missing'' (\S4.10)
+\item you can often solve by the substitution $u=y'$
+    \begin{itemize}
+    \item this can sometimes work for $y'' = f(t,y')$ too
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise \#6 in \S 4.10}
+
+\noindent \emph{exercise.}  find the general solution:
+    $$e^{-t} y'' = (y')^2$$
+
+\vspace{60mm}
+\end{frame}
+
+
 \begin{frame}{expectations}
 
 \begin{itemize}
@@ -492,6 +604,7 @@ and use \texttt{ode45}:
          \item you can safely skip the material on ``Telephone wires'' (a boundary value problem \dots not in Math 302)
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 5.3, which include some problems from 4.10
+     \item compare Mini-Project 3 to these slides \dots different but some overlap of ideas
      \end{itemize}
 \end{itemize}
 \end{frame}
