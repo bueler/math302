@@ -31,7 +31,7 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### Friday 3/8
 * [blank slides for section 5.3](assets/slides/5-3.pdf)
-* video: Bueler talks over slides for section 5.3 _BUELER TODO_
+* [video: Bueler talks over slides for section 5.3](https://expl.ai/VSJTFRC)
 * [WebAssign 5.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
