@@ -9,7 +9,7 @@ Welcome to Week 8 of [MATH F302 UX1 in Spring 2019](index.html).  As always, rem
 
 This week, **Quiz 6** must be done on Wednesday or Thursday.  It **covers sections 4.2 and 4.4**
 
-This week we do modeling with linear and nonlinear second-order differential equations.  Section 5.1 is about the most important physical interpretation of a linear second-order DE, namely a _mass-spring system_.  Section 5.3 extends to _nonlinear models_ including a pendulum (see this [movie](assets/codes/pendmovie.gif)), nonlinear springs, and variable gravity.  What we actually do in section 5.3 is, mostly, numerical solutions using a black box.  Section 4.10 regarding _nonlinear differential equations_ is included in how I cover section 5.3.
+This week we do modeling with linear and nonlinear second-order differential equations.  Section 5.1 is about the most important physical interpretation of a linear second-order DE, namely a _mass-spring system_.  In section 5.3 we show _nonlinear models_ including a pendulum (see this [movie](assets/codes/pendmovie.gif)), nonlinear springs, and variable gravity.  What we actually do in section 5.3 is, mostly, numerical solutions using a black box ODE solver from Matlab and/or Octave.  Section 4.10, titled _nonlinear differential equations_, is integrated into how I cover section 5.3.
 
 Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
