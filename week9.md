@@ -11,7 +11,7 @@ This week, **Quiz 7** must be done on Wednesday or Thursday.  It **covers sectio
 
 Mini-Project 3 is due this week on Monday March 18 (_which is a change from the original schedule_).  Mini-Project 4 is also assigned this week.
 
-This week start using power series methods on differential equations.  The method in section 6.2 allows the construction of the exact solution to a modest class of differential equations which we have, until now, not been able to solver.  Section 6.1 is a review of series and introduction to the idea of using series.  Series methods are important but limited so we skip sections 6.3 and 6.4 in favor of bigger ideas.
+This week we start using power series methods on differential equations.  The method in section 6.2 allows the construction of the exact solution to some differential equations which we have not, until now, been able to solve.  Section 6.1 is a review of series and introduction to the idea of using series.  Series methods are important but limited so we skip sections 6.3 and 6.4 in favor of bigger ideas.
 
 ### Monday 3/18
 * blank slides for section 6.1 _BUELER TODO_
@@ -28,12 +28,12 @@ This week start using power series methods on differential equations.  The metho
 
 ### Thursday 3/21
 * <span style="color:blue">**proctored Quiz 7 covers 5.1 and 5.3/4.10**</span> _BUELER TODO_
-* [work on WebAssign 6.1](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 6.1](https://www.webassign.net/)
 
 ### Friday 3/22
 * blank slides for section 6.2 _BUELER TODO_
 * video: Bueler talks over slides for section 6.2 _BUELER TODO_
-* [WebAssign 6.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 6.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Octave online](https://octave-online.net/)
