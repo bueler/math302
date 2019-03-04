@@ -24,10 +24,10 @@ This week we start using power series methods on differential equations.  The me
 * [WebAssign 5.3/4.10](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/20
-* <span style="color:blue">**proctored Quiz 7 covers 5.1 and 5.3/4.10**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 7 covers 5.1 and 5.3/4.10**</span>
 
 ### Thursday 3/21
-* <span style="color:blue">**proctored Quiz 7 covers 5.1 and 5.3/4.10**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 7 covers 5.1 and 5.3/4.10**</span>
 * [work on WebAssign 6.1](https://www.webassign.net/)
 
 ### Friday 3/22
