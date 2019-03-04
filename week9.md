@@ -37,7 +37,12 @@ This week we start using power series methods on differential equations.  The me
 
 ### found online
 * [Octave online](https://octave-online.net/)
-* _BUELER TODO_
+* [Khan Academy: Radius and interval of convergence of power series](https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-13/v/power-series-radius-interval-convergence)
+* [Desmos: visualize power series for sin(x) etc.](https://www.desmos.com/calculator/pyv84pzacp)
+* [Desmos: visualize power series for 1/(1+x)](https://www.desmos.com/calculator/ysgwtgtjqt)
+* random video: [Power series solutions of DEs](https://www.youtube.com/watch?v=6csP7dw0XTY)
+* random video: [Solving DEs by Taylor's series](https://www.youtube.com/watch?v=Ky5fWB0OHa4)
+* random video: [Solving DEs with power series](https://www.youtube.com/watch?v=RJJKq7Uc-9I)
 
 <hr>
 <a align="left" href="week8">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week10">next week --\></a>
