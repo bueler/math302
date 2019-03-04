@@ -49,7 +49,8 @@
 \item the exponential function is \emph{defined} by an infinite series:
     $$e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{3!} + \dots$$
     \begin{itemize}
-    \item there are other ways to define the exponential but the above is the default definition; see \href{https://en.wikipedia.org/wiki/Characterizations_of_the_exponential_function}{``characterizations of the exponential function''} at wikipedia
+    \item there are other ways to define it but series is the default def.
+    \item see \href{https://en.wikipedia.org/wiki/Characterizations_of_the_exponential_function}{``characterizations of the exponential function''} at wikipedia
     \end{itemize}
 \item a \emph{power series} is an infinite sum of coefficients times powers of $x$; the above is a power series
 \item \emph{exercise.} from the above series for $y(x)=e^x$, show
@@ -60,19 +61,35 @@
 \end{frame}
 
 
-\begin{frame}{try a series with unknown coefficients}
+\begin{frame}{a series with unknown coefficients}
 
 \noindent \emph{exercise.}  find the coefficients in the power series
     $$y(x) = c_0 + c_1 x + c_2 x^2 + c_3 x^3 + c_4 x^4 + \dots$$
-so that $y(x)$ solves the IVP: \quad $y'+3y=0, \, y(0) = 7$
+so that $y(x)$ solves the IVP: \hfill $y'+3y=0, \, y(0) = 7$
 
 \vspace{60mm}
 \end{frame}
 
 
+\begin{frame}{series solutions of DEs: the basic idea}
+
+\begin{itemize}
+\item the last slide, and the next slide, show the basic idea:
+
+\medskip
+\begin{quotation}
+\noindent \alert{substitute a series with unknown coefficients into the DE, and thereby find the coefficients}
+\end{quotation}
+
+\item with appropriate initial conditions one can get \emph{one} series solution
+\item without initial conditions one gets a family of series solutions, i.e.~the general solution
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{exercise \#37 in \S 6.1}
 
-\noindent \emph{exercise.}  find the general solution by using a series:
+\noindent \emph{exercise.}  find the general solution by using a power series with unknown coefficients:
     $$y'=xy$$
 
 \vspace{70mm}
@@ -82,46 +99,108 @@ so that $y(x)$ solves the IVP: \quad $y'+3y=0, \, y(0) = 7$
 \begin{frame}{review of series}
 
 \begin{itemize}
-\item reviewing series includes recalling at least these three things from calculus II:
+\item you already have the main idea
+\item reviewing only needed to be faster/clearer/smarter
+\item must recall knowledge from calculus II:
+
     \begin{enumerate}
     \item some familiar series
         \begin{itemize}
-        \item including little tricks to get to a few other familiar series
+        \item including little tricks for fiddling with familiar series to get other series
         \end{itemize}
     \item how summation notation works
+        \begin{itemize}
+        \item including shifting the index of summation
+        \end{itemize}
     \item what are the \emph{radius of convergence} and the \emph{interval of convergence}, and how to find them
     \end{enumerate}
 
 \bigskip
+\item I'll do some reviewing in these slides, but \dots
 \item to do \emph{your} review, start by \alert{reading the text in section 6.1}!!
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{exponential and related series}
 
 \begin{itemize}
-\item X
+\item we know that for any $x$,
+
+\vspace{-2mm}
+    $$e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots = \sum_{k=0}^\infty \frac{x^k}{k!}$$
+
+\vspace{-3mm}
+    \begin{itemize}
+    \item $0!=1$ and $1!=1$ by definition
+    \item factorial $n!$ grows faster than $b^n$ for any $b$ \dots why? so what?
+    \end{itemize}
+\item split even and odd terms:
+\begin{align*}
+\cosh x &= \hspace{80mm} \\
+\sinh x &=
+\end{align*}
+
+\vspace{-3mm}
+    \begin{itemize}
+    \item $\displaystyle \cosh x = \frac{e^x+e^{-x}}{2}$, \, $\displaystyle \sinh x = \frac{e^x-e^{-x}}{2}$
+    \end{itemize}
+\item use $e^{i\theta} = \cos\theta + i \sin\theta$:
+\begin{align*}
+\cos x &= \hspace{80mm} \\
+\sin x &=
+\end{align*}
+    
 \end{itemize}
 \end{frame}
 
-\begin{frame}{X}
+
+\begin{frame}{geometric series}
 
 \begin{itemize}
-\item X
+\item recall:
+    $$\frac{1}{1-x} = 1 + x + x^2 + x^3 + x^4 + \dots = \sum_{n=0}^\infty x^n$$
+
+\vspace{-3mm}
+    \begin{itemize}
+    \item why?
+
+\vspace{20mm}
+    \item for which $x$?
+    \end{itemize}
+
+\vspace{20mm}
 \end{itemize}
 \end{frame}
 
 
-
-
-\begin{frame}{familiar series}
+\begin{frame}{related to geometric series}
 
 \begin{itemize}
-\item X
+\item geometric series for $x\in(-1,1)$:
+    $$\frac{1}{1-x} = 1 + x + x^2 + x^3 + x^4 + \dots = \sum_{n=0}^\infty x^n$$
+\item substitution gives other series:
+   $$\frac{1}{1+x^2} = \hspace{80mm}$$
+
+\bigskip
+\item integration gives other series:
+   $$\ln(1+x) = \hspace{80mm}$$
+
+   $$\arctan(x) = \hspace{80mm}$$
+
+\bigskip
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{familiar series worth knowing}
+
+\begin{itemize}
+\item somewhat by accident I've explained all of these 8 series:
 \end{itemize}
 
-\hfill \includegraphics[width=0.6\textwidth]{figs/familiarseries}
+\bigskip
+\hfill \includegraphics[width=0.7\textwidth]{figs/familiarseries}
 \end{frame}
 
 
@@ -129,19 +208,61 @@ so that $y(x)$ solves the IVP: \quad $y'+3y=0, \, y(0) = 7$
 
 \noindent \emph{exercise.}  Use a familiar series to find the Maclaurin series of the given function.  Write your answer in summation notation.
 
-$$\frac{x}{1+x^2} \hspace{60mm}$$
+$$f(x)=\frac{x}{1+x^2}$$
 
-\vspace{60mm}
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{base point}
+
+\begin{itemize}
+\item a general power series is
+    $$\sum_{n=0}^\infty c_n (x-a)^n = c_0 + c_1 (x-a) + c_2 (x-a)^2 + \dots$$
+    \begin{itemize}
+    \item $a$ is the \emph{base point}; the series is \emph{centered at $a$}
+    \item note that $f(a)=c_0$
+    \end{itemize}
+\item \emph{exercise.}  find a power series centered at $a=5$:
+    $$f(x) = \sin(2x) \hspace{80mm}$$
+
+\vspace{30mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{convergence of power series}
+
+\begin{itemize}
+\item \emph{fact.} for the series
+there is a value $0 \le R \le \infty$ where the series converges if $a-R < x < a+R$ and it diverges if $x<a-R$ or $x>a+R$
+    \begin{itemize}
+    \item equivalently ``$|x-a|<R$''
+    
+     and ``$|x-a|>R$'' resp.
+    \end{itemize}
+
+\vspace{-10mm}
+
+\hfill \includegraphics[width=0.4\textwidth]{figs/convergediverge}
+
+\vspace{-10mm}
+\item \emph{exercise.} substitute $x=\pm1$ into
+   $$\ln(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} x^n \hspace{50mm}$$
+do the resulting series converge?
+
+\vspace{25mm}
+\end{itemize}
 \end{frame}
 
 
 \begin{frame}{exercise \#31 in \S 6.1}
 
-\noindent \emph{exercise.}  Verify by direct substitution that the given power series is a soltuion of the DE.  (Use manipulations of summation notation to do your calculation.)  What is the radius of convergence of the series solution?
+\noindent \emph{exercise.}  Verify by substitution that the given power series is a solution; use summation notation.  Radius of convergence?
 
 $$y=\sum_{n=0}^\infty \frac{(-1)^n}{n!} x^{2n}, \qquad\quad y'+2xy=0$$
 
-\vspace{60mm}
+\vspace{50mm}
 \end{frame}
 
 
@@ -150,37 +271,18 @@ $$y=\sum_{n=0}^\infty \frac{(-1)^n}{n!} x^{2n}, \qquad\quad y'+2xy=0$$
 \end{frame}
 
 
-\begin{frame}{convergence and divergence of power series}
-
-\begin{itemize}
-\item X
-\end{itemize}
-
-\hfill \includegraphics[width=0.45\textwidth]{figs/convergediverge}
-\end{frame}
-
-
 \begin{frame}{exercise \#5 in \S 6.1}
 
-\noindent \emph{exercise.}  Find the interval and radius of convergence for the given power series.
+\noindent \emph{exercise.}  Find the interval and radius of convergence:
     $$\sum_{k=1}^\infty \frac{(-1)^k}{10^k} (x-5)^k$$
 
-\vspace{60mm}
-\end{frame}
-
-
-\begin{frame}{exercise \#33 in \S 6.1}
-
-\noindent \emph{exercise.}  
-
-\vspace{60mm}
-\end{frame}
-
-
-\begin{frame}{X}
-
 \begin{itemize}
-\item X
+\item using ratio test:
+
+\vspace{20mm}
+\item using geometric series:
+
+\vspace{20mm}
 \end{itemize}
 \end{frame}
 

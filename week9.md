@@ -14,7 +14,7 @@ Mini-Project 3 is due this week on Monday March 18 (_which is a change from the 
 This week we start using power series methods on differential equations.  The method in section 6.2 allows the construction of the exact solution to some differential equations which we have not, until now, been able to solve.  Section 6.1 is a review of series and introduction to the idea of using series.  Series methods are important but limited so we skip sections 6.3 and 6.4 in favor of bigger ideas.
 
 ### Monday 3/18
-* blank slides for section 6.1 _BUELER TODO_
+* [blank slides for section 6.1](assets/slides/6-1.pdf)
 * video: Bueler talks over slides for section 6.1 _BUELER TODO_
 * Mini-Project 3, _Energy is just a technique for solving differential equations_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 3](https://goo.gl/forms/fmSrrnCs8blR3Fwn1); you may need to log in to your `alaska.edu` account to use this link
 * [work on WebAssign 5.3/4.10](https://www.webassign.net/)
