@@ -51,7 +51,7 @@
 \end{frame}
 
 
-\begin{frame}{Airy's equation}
+\begin{frame}{Airy equation}
 
 \begin{itemize}
 \item $y''+xy=0$
@@ -59,14 +59,50 @@
 \end{frame}
 
 
-\begin{frame}{will see problem like this on quiz}
+\begin{frame}{Airy equation 2}
 
-$$y''-3y'-4y=0$$
+\begin{itemize}
+\item X
+\end{itemize}
+
+\includegraphics[width=0.5\textwidth]{figs/airyplots}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Airy equation 3}
+
+\begin{itemize}
+\item X
+\end{itemize}
+
+\begin{Verbatim}[fontsize=\scriptsize]
+% PLOTAIRY  Plot approximations to two linearly-independent solutions to
+% Airy's equation
+%    y'' + x y = 0
+
+x = -2:.01:2;
+y1n12 = 1 - (1/(3*2))*x.^3 + (1/(6*5*3*2))*x.^6 - (1/(9*8*6*5*3*2))*x.^9 ...
+        + (1/(12*11*9*8*6*5*3*2))*x.^12;
+y2n13 = x - (1/(4*3))*x.^4 + (1/(7*6*4*3))*x.^7 - (1/(10*9*7*6*4*3))*x.^10 ...
+        + (1/(13*12*10*9*7*6*4*3))*x.^13;
+
+plot(x,y1n12,x,y2n13)
+grid on,  xlabel x,  legend('y_1(x)','y_2(x)')
+\end{Verbatim}
+\end{frame}
+
+
+\begin{frame}{you will see problem like this on quiz!}
+
+\noindent \emph{exercise.}  for $y''-3y'-4y=0$,
 
 \begin{itemize}
 \item[(a)] solve by any means you want
 \item[(b)] solve by series
 \end{itemize}
+
+\vspace{50mm}
 \end{frame}
 
 
