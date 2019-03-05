@@ -2,7 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{fancybox,fancyvrb}
-\usepackage{environ,xspace}
+\usepackage{environ,xspace,empheq}
 \usepackage{tikz}
 \hypersetup{colorlinks,linkcolor=,urlcolor=cyan}
 
@@ -43,70 +43,124 @@
 \end{frame}
 
 
-\begin{frame}{Xs}
+\begin{frame}{series solutions of DEs}
 
 \begin{itemize}
-\item X
+\item these slides are four exercises solving \emph{linear, homogeneous 2nd-order DEs} by power series methods
+    \begin{itemize}
+    \item \alert{three are DEs we could not previously solve}
+    \end{itemize}
+\item recall the main idea of using series to solve DEs:
+
+\medskip
+\begin{enumerate}
+\item substitute a series with unknown coefficients into the DE
+\item find coefficients by matching on either side
+\end{enumerate}
+
+\medskip
+\item these slides will make more sense if you see/do \S6.1 first
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Airy equation}
+\begin{frame}{ordinary points}
 
 \begin{itemize}
-\item $y''+xy=0$
+\item in \S6.2 we expand in series at \emph{ordinary} base points:
+
+\medskip
+\begin{quote}\normalfont
+\emph{definition.}  Assume $a_2(x),a_1(x),a_0(x)$ are continuous, smooth, and well-behaved functions.\footnote{Precisely: \emph{analytic} functions.}  If $a_2(x_0)\ne 0$ then the point $x=x_0$ is an \emph{ordinary point} of the DE
+    $$a_2(x) y'' + a_1(x) y' + a_0(x) y = 0$$
+\end{quote}
+
+\item we often write the same DE as
+    $$y'' + P(x) y'' + Q(x) y = 0$$
+where $P(x)=a_1(x)/a_2(x)$ and $Q(x)=a_0(x)/a_2(x)$
+    \begin{itemize}
+    \item $x=x_0$ is ordinary point if $P(x)$ and $Q(x)$ are analytic there
+    \item \dots which requires we don't divide by zero
+    \end{itemize}
+\item a point which is not ordinary is \emph{singular} \dots see \S 6.3 \& 6.4
+
+\bigskip
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Airy equation 2}
+\begin{frame}{an Airy equation}
 
-\begin{itemize}
-\item X
-\end{itemize}
+\noindent \emph{exercise 1.}  find the general solution by series:
+    $$y''+xy=0 \hspace{60mm}$$
 
-\includegraphics[width=0.5\textwidth]{figs/airyplots}
+\vspace{20mm}
+
+\hfill \footnotesize $\displaystyle \boxed{\begin{matrix} 2\cdot 1\cdot c_2 = 0 \\
+                                     3\cdot 2\cdot c_3 = -c_0 \\
+                                     4\cdot 3\cdot c_4 = -c_1 \\
+                                     5\cdot 4\cdot c_5 = -c_2 \\
+                                     6\cdot 5\cdot c_6 = -c_3 \\
+                                     7\cdot 6\cdot c_7 = -c_4 \\
+                                      \vdots \\
+                      \end{matrix}}$
 \end{frame}
 
 
-\begin{frame}[fragile]
-\frametitle{Airy equation 3}
+\begin{frame}{exercise 1, cont.}
 
-\begin{itemize}
-\item X
-\end{itemize}
+\vspace{50mm}
 
-\begin{Verbatim}[fontsize=\scriptsize]
-% PLOTAIRY  Plot approximations to two linearly-independent solutions to
-% Airy's equation
-%    y'' + x y = 0
+\small
+\begin{empheq}[box=\fbox]{align*}
+  y_1(x) &= 1 - \frac{1}{3 \cdot 2} x^3 + \frac{1}{6 \cdot 5 \cdot 3 \cdot 2} x^6 - \frac{1}{9 \cdot 8 \cdot 6 \cdot 5 \cdot 3 \cdot 2} x^9 + \dots \\
+  y_2(x) &= x - \frac{1}{4 \cdot 3} x^4 + \frac{1}{7 \cdot 6 \cdot 4 \cdot 3} x^7 - \frac{1}{10 \cdot 9 \cdot 7 \cdot 6 \cdot 4 \cdot 3} x^{10} + \dots
+\end{empheq}
 
-x = -2:.01:2;
-y1n12 = 1 - (1/(3*2))*x.^3 + (1/(6*5*3*2))*x.^6 - (1/(9*8*6*5*3*2))*x.^9 ...
-        + (1/(12*11*9*8*6*5*3*2))*x.^12;
-y2n13 = x - (1/(4*3))*x.^4 + (1/(7*6*4*3))*x.^7 - (1/(10*9*7*6*4*3))*x.^10 ...
-        + (1/(13*12*10*9*7*6*4*3))*x.^13;
-
-plot(x,y1n12,x,y2n13)
-grid on,  xlabel x,  legend('y_1(x)','y_2(x)')
-\end{Verbatim}
+    $$y(x) = c_1 y_1(x) + c_2 y_2(x)$$
 \end{frame}
 
 
-\begin{frame}{you will see problem like this on quiz!}
-
-\noindent \emph{exercise.}  for $y''-3y'-4y=0$,
+\begin{frame}{exercise 1, cont.$^2$}
 
 \begin{itemize}
-\item[(a)] solve by any means you want
-\item[(b)] solve by series
+\item what do these Airy\footnote{George Airy was an astronomer: \href{https://en.wikipedia.org/wiki/Airy_function}{\scriptsize \texttt{en.wikipedia.org/wiki/Airy\_function}}.} functions look like?
+    \begin{itemize}
+    \item I wrote a code to plot approximations to $y_1(x),y_2(x)$
+    \item approximation is by summing first twenty terms of the series
+    \end{itemize}
+\item Airy functions smoothly connect exponential growth (left side of figure) to sinusoids (right side)
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{figs/airyplots}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{problem easier than this will be on the quiz}
+
+\noindent \emph{exercise 2.}  \qquad $y''-3y'-4y=0$,
+
+\begin{itemize}
+\item[(a)] find general solution $y(t)$ by any means you want
 \end{itemize}
 
 \vspace{50mm}
 \end{frame}
 
 
-\begin{frame}{ordinary versus singular}
+\begin{frame}{exercise 2, cont.}
+
+\begin{itemize}
+\item[(b)] find general solution $y(t)$ by series
+\end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{get radius of convergence \emph{in advance!}}
 
 \begin{itemize}
 \item X
@@ -114,36 +168,58 @@ grid on,  xlabel x,  legend('y_1(x)','y_2(x)')
 \end{frame}
 
 
-\begin{frame}{like exercise \#2 in \S 6.2}
+\begin{frame}{like \#2 in \S 6.2}
 
-\noindent \emph{exercise.}  without actually solving the DE, find the minimum radius of convergence of the power series solutions \emph{(a)} about the ordinary point $x=0$, and \emph{(b)} about the ordinary point $x=2$:
+\noindent \emph{exercise 3.}  {\color{Blue} (a)} without actually solving the DE, find the minimum radius of convergence of the power series solutions about the ordinary point $x=0$:  \qquad $(x^2+1) y'' - 6 y = 0$
+
+\vspace{20mm}
+\begin{itemize}
+\item[(b)] same, but about the ordinary point $x=2$
+\end{itemize}
+
+\vspace{20mm}
+\end{frame}
+
+
+\begin{frame}{exercise 3, cont.}
+
+\begin{itemize}
+\item[(c)] find two power series solutions about $x=0$:
     $$(x^2+1) y'' - 6 y = 0$$
+\end{itemize}
 
-\vspace{50mm}
+\vspace{60mm}
 \end{frame}
 
 
-\begin{frame}{exercise \#16 in \S 6.2}
+\begin{frame}{\#21 in \S 6.2}
 
-\noindent \emph{exercise.}  find two power series solutions about $x=0$:
-    $$(x^2+1) y'' - 6 y = 0$$
-
-\vspace{50mm}
-\end{frame}
-
-
-\begin{frame}{exercise \#21 in \S 6.2}
-
-\noindent \emph{exercise.}  use power series to solve the IVP:
+\noindent \emph{exercise 4.}  use power series to solve the IVP:
     $$y'' - 2 x y' + 8 y = 0, \quad y(0)=3, \, y'(0)=0$$
 
 \vspace{50mm}
 \end{frame}
 
 
-\begin{frame}{expectations}
+\begin{frame}{exercise 4, cont.}
+
+\end{frame}
+
+
+\begin{frame}{historical comment, and expectations}
 
 \begin{itemize}
+\item from about 1800 to 1950, finding new series solutions to DEs was the kind of thing that mathematicians and physicists did for a living
+    \begin{itemize}
+    \item you could get your name on some new special functions!
+    \item e.g.~Bessel, Legendre, Hermite, Chebyshev, Airy, \dots \S 6.4
+    \end{itemize}
+\item since the invention of decent computers and software (1980?) one may automate the creation of series solutions
+    \begin{itemize}
+    \item naming special functions is no longer a thing
+    \end{itemize}
+
+\bigskip
 \item just watching this video is \emph{not} enough!
      \begin{itemize}
      \item see ``found online'' videos at
