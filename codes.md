@@ -21,6 +21,7 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [massspringplot.m](assets/codes/massspringplot.m): Used to generate some figures in [slides for section 5.1](assets/slides/5-1.pdf).
 * [pendmovie.m](assets/codes/pendmovie.m): Generates this [movie](assets/codes/pendmovie.gif) mentioned in [slides for section 5.3](assets/slides/5-3.pdf).  This code uses the numerical differential equation solver [ode45 from Matlab](https://www.mathworks.com/help/matlab/ref/ode45.html).  (Actually I used [ode45 from Octave](https://octave.sourceforge.io/octave/function/ode45.html).)
 * [springs.m](assets/codes/springs.m): Generates this figures in [slides for section 5.3](assets/slides/5-3.pdf).
+* [plotairy.m](assets/codes/plotairy.m): Generates an Airy function figure in [slides for section 6.2](assets/slides/6-2.pdf).
 
 ### Python Codes
 
