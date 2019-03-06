@@ -43,8 +43,9 @@ This week we start using power series methods on differential equations.  The me
 * random video: [Power series solutions of DEs](https://www.youtube.com/watch?v=6csP7dw0XTY)
 * random video: [Solving DEs by Taylor's series](https://www.youtube.com/watch?v=Ky5fWB0OHa4)
 * random video: [Solving DEs with power series](https://www.youtube.com/watch?v=RJJKq7Uc-9I)
-* wiki pages on [special functions](https://en.wikipedia.org/wiki/Special_functions) and a [list of special functions](https://en.wikipedia.org/wiki/List_of_special_functions_and_eponyms)
+* wikipedia pages on [special functions](https://en.wikipedia.org/wiki/Special_functions) and a [list of special functions](https://en.wikipedia.org/wiki/List_of_special_functions_and_eponyms)
 * see [some of what Wolfram Alpha knows about special functions](https://www.wolframalpha.com/input/?i=special+functions)
+* [Wolfram Alpha plots of Airy functions](https://www.wolframalpha.com/input/?i=Ai(x)+and+Bi(x))
 
 <hr>
 <a align="left" href="week8">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week10">next week --\></a>
