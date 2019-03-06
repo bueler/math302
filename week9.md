@@ -11,7 +11,7 @@ This week, **Quiz 7** must be done on Wednesday or Thursday.  It **covers sectio
 
 Mini-Project 3 is due this week on Monday March 18 (_which is a change from the original schedule_).  Mini-Project 4 is also assigned this week.
 
-This week we start using power series methods on differential equations.  The method in section 6.2 allows the construction of the exact solution to some differential equations which we have not, until now, been able to solve.  Section 6.1 is a review of series and introduction to the idea of using series.  Series methods are important but limited so we skip sections 6.3 and 6.4 in favor of bigger ideas.
+This week we start using power series methods on differential equations.  Section 6.1 is a review of series and introduction to the idea of using series on DEs.  The method in section 6.2 allows the construction of the exact solution to some differential equations which we have not, until now, been able to solve.  Series methods are important but limited in power, and so we skip sections 6.3 and 6.4 in favor of bigger ideas.
 
 ### Monday 3/18
 * [blank slides for section 6.1](assets/slides/6-1.pdf)
