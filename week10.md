@@ -19,7 +19,6 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 * [work on WebAssign 6.2](https://www.webassign.net/)
 
 ### Tuesday 3/26
-* blank Mini-Project 4 _BUELER TODO_
 * [WebAssign 6.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/27
