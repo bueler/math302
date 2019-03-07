@@ -26,7 +26,7 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 * <span style="color:blue">**proctored Quiz 8 covers 6.1 and 6.2**</span> _BUELER TODO_
 
 ### Thursday 3/28
-* <span style="color:blue">**proctored Quiz 7 covers 6.1 and 6.2**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 8 covers 6.1 and 6.2**</span> _BUELER TODO_
 * Mini-Project 4 is due _BUELER TODO_
 * [work on WebAssign 9.1](https://www.webassign.net/)
 
