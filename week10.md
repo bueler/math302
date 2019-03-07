@@ -28,12 +28,12 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 ### Thursday 3/28
 * <span style="color:blue">**proctored Quiz 7 covers 6.1 and 6.2**</span> _BUELER TODO_
 * Mini-Project 4 is due _BUELER TODO_
-* [work on WebAssign 9.1](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 9.1](https://www.webassign.net/)
 
 ### Friday 3/29
 * blank slides for section 9.2 _BUELER TODO_
 * video: Bueler talks over slides for section 9.2 _BUELER TODO_
-* [WebAssign 9.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 9.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Octave online](https://octave-online.net/)
