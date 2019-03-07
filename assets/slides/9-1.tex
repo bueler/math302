@@ -90,6 +90,18 @@
 \end{itemize}
 \end{frame}
 
+% for problem:
+% >> f = @(t,y) t - y^2;
+% >> optt = odeset('RelTol',RTOL,'AbsTol',1.0e-14);
+% >> [tt,yy] = ode45(f,[0,4],1,optt); yy(end)
+%ans =  1.93122683184240
+%       -----------       <- 10 digits which agree for
+%                            RTOL=1.0e-9,1.0e-10,1.0e-11,1.0e-12
+
+% will use:  yexact = 1.9312268318427   based on above and RK4 with h=0.0001
+
+% on same problem, for considering refinement:
+% h=0.4, 0.2, 0.1, 0.05, 0.025
 
 \begin{frame}{expectations}
 

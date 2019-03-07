@@ -23,6 +23,9 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [springs.m](assets/codes/springs.m): Generates this figures in [slides for section 5.3](assets/slides/5-3.pdf).
 * [plotairy.m](assets/codes/plotairy.m): Generates an Airy function figure in [slides for section 6.2](assets/slides/6-2.pdf).
 * [minradius.m](assets/codes/minradius.m): Generates a radius-of-convergence figure in [slides for section 6.2](assets/slides/6-2.pdf).
+* [euler1.m](assets/codes/euler1.m): First-order Euler's method implemented with standard calling signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
+* [improved2.m](assets/codes/improved2.m): Second-order improved Euler's method implemented with standard calling signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
+* [rk4.m](assets/codes/rk4.m):  Fourth-order classical Runge-Kutta method implemented with standard calling signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
 
 ### Python Codes
 
