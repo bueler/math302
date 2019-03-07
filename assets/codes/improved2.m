@@ -9,8 +9,8 @@ function [t, y] = improved2(f,tspan,y0,h)
 %   >> plot(tt,yy)
 % Compare EULER1, RK4, and ODE45.
 
-M = round(tspan(2)/h);   % get number of steps
-t = tspan(1):h:tspan(2);
+M = round((tspan(2)-tspan(1))/h);   % get number of steps
+t = linspace(tspan(1),tspan(2),M+1);
 y = zeros(size(t));
 y(1) = y0;
 for n = 1:M

@@ -43,10 +43,49 @@
 \end{frame}
 
 
-\begin{frame}{x}
+\begin{frame}{the situation}
+
+these three facts make solving differential equations interesting:
+\begin{enumerate}
+\item DEs from science and engineering are usually \alert{not linear}
+\item the by-hand methods which dominate Math 302\footnote{Chapters 2,4,6,7,8} are \alert{all weak}
+    \begin{itemize}
+    \item mostly they apply to linear DEs
+    \item often they need the linear DE to have special coefficients
+        \begin{itemize}
+        \item ``special'' = constant, analytic, \dots
+        \end{itemize}
+    \end{itemize}
+\item on the other hand, Euler's method is \alert{too inaccurate}
+\begin{equation}
+    y_{n+1} = y_n + h\, f(t_n,y_n)
+\end{equation}
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item ``\emph{But whatever advantage {\normalfont (1)} has in its simplicity is lost in the crudeness of its approximations.}'' \hfill Zill, p.~369
+    \item at least it does not care if your DE is linear or not
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{but we can do better than Euler}
 
 \begin{itemize}
-\item X
+\item here is the basic DE:
+    $$\frac{dy}{dt} = f(t,y)$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item it could be a single equation or a system (\S4.10,5.3)
+    \end{itemize}
+\item at least numerical methods do not care if this DE is linear!
+\item so we start again with Euler's method
+    $$y_{n+1} = y_n + h\, f(t_n,y_n)$$
+or equivalently
+    $$\frac{y_{n+1} - y_n}{h} = f(t_n,y_n)$$
+and \alert{try to do better}
 \end{itemize}
 \end{frame}
 
@@ -77,8 +116,59 @@
 }
 
     \begin{itemize}
-    \item such a visualization must make sense!
+    \item this visualization needs make sense! review Euler's method!
     \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Euler's method is a short code}
+
+\bigskip
+\VerbatimInput[fontsize=\footnotesize]{../codes/euler1.m}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{example with \texttt{euler1.m}}
+
+\begin{columns}
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+\item see comments:
+\begin{Verbatim}[fontsize=\footnotesize]
+>> help euler1
+\end{Verbatim}
+\item run the example:
+\begin{Verbatim}[fontsize=\footnotesize]
+>> f = @(t,y) t - y^2;
+>> [tt,yy] = euler1(f,[0,4],1,0.5);
+>> plot(tt,yy)
+\end{Verbatim}
+\item reduce step size and overlay:
+\begin{Verbatim}[fontsize=\footnotesize]
+>> [tt,yy] = euler1(f,[0,4],1,0.25);
+>> hold on
+>> plot(tt,yy,'r')
+\end{Verbatim}
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+
+\mbox{\quad \includegraphics[width=\textwidth]{figs/euler1basic}}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{from Euler to \texttt{ode45} in three steps}
+
+\begin{itemize}
+\item use of \texttt{euler1} should look familiar
+\item it is just like how we used \texttt{ode45} in \S5.3 and \S4.10
+\item notice the first line of the code:
 \end{itemize}
 \end{frame}
 
