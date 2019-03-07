@@ -32,7 +32,7 @@ This week we start using power series methods on differential equations.  Sectio
 
 ### Friday 3/22
 * [blank slides for section 6.2](assets/slides/6-2.pdf)
-* video: Bueler talks over slides for section 6.2 _BUELER TODO_
+* [video: Bueler talks over slides for section 6.2](https://expl.ai/KFAVWFY)
 * [WebAssign 6.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
