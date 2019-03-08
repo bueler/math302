@@ -33,7 +33,7 @@ This week we look at Laplace transform methods.
 * [WebAssign 7.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
 
 ### found online
-* [Octave online](https://octave-online.net/)
+* [Octave Online](https://octave-online.net/)
 * _BUELER TODO_
 
 <hr>

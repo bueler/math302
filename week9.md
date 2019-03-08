@@ -36,7 +36,7 @@ This week we start using power series methods on differential equations.  Sectio
 * [WebAssign 6.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
-* [Octave online](https://octave-online.net/)
+* [Octave Online](https://octave-online.net/)
 * [Khan Academy: Radius and interval of convergence of power series](https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-13/v/power-series-radius-interval-convergence)
 * [Desmos: visualize power series for sin(x) etc.](https://www.desmos.com/calculator/pyv84pzacp)
 * [Desmos: visualize power series for 1/(1+x)](https://www.desmos.com/calculator/ysgwtgtjqt)

@@ -36,7 +36,7 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### found online
 * [nice mass-spring browser app](https://phet.colorado.edu/en/simulation/mass-spring-lab)
-* [Octave online](https://octave-online.net/)
+* [Octave Online](https://octave-online.net/)
 * [Gil Strang at MIT: Second-order equations](https://www.youtube.com/watch?v=xvTYUnqn2wY)
 * [Gil Strang at MIT: Unforced damped motion](https://www.youtube.com/watch?v=zqks_JcU0cM)
 * [Gil Strang at MIT: Second order equations with damping](https://www.youtube.com/watch?v=SMQPt7t0bHk)

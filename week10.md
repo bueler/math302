@@ -35,7 +35,7 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 * [WebAssign 9.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
-* [Octave online](https://octave-online.net/)
+* [Octave Online](https://octave-online.net/)
 * _BUELER TODO_
 
 <hr>
