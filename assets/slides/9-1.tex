@@ -130,6 +130,14 @@ and \alert{try to do better}
 \VerbatimInput[fontsize=\footnotesize]{../codes/euler1.m}
 \end{frame}
 
+% for problem:
+% >> f = @(t,y) t - y^2;
+% >> optt = odeset('RelTol',RTOL,'AbsTol',1.0e-14);
+% >> [tt,yy] = ode45(f,[0,4],1,optt); yy(end)
+%ans =  1.93122683184240
+%       -----------       <- 10 digits which agree for
+%                            RTOL=1.0e-9,1.0e-10,1.0e-11,1.0e-12
+% will use:  yexact = 1.9312268318427   based on above and RK4 with h=0.0001
 
 \begin{frame}[fragile]
 \frametitle{example with \texttt{euler1.m}}
@@ -365,6 +373,49 @@ ans =  1.5574
 \end{frame}
 
 
+\begin{frame}{the \S9.1 WebAssign homework is easy}
+
+\begin{itemize}
+\item get on \href{https://octave-online.net/}{Octave Online} or \Matlab/\Octave
+\item yes, \emph{use} the codes I have posted at the \href{https://bueler.github.io/math302/codes.html}{Codes tab of the course website}
+\item if you have technical difficulties then \emph{post to Piazza}!
+    \begin{itemize}
+    \item anonymous is fine, but make it a public post for efficiency
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{exercise \#9 in \S9.1}
+
+\begin{itemize}
+\item \emph{exercise \#9.}  Use the improved Euler's method to obtain a four-decimal approximation of the indicated value.  First use $h=0.1$ and then use $h=0.05$.
+    $$y'=xy^2-\frac{y}{x}, \quad y(1)=1; \quad y(1.5)$$
+
+\noindent \emph{solution.}
+\begin{Verbatim}[fontsize=\small]
+>> f = @(x,y) x*y^2-y/x;
+>> [xx,yy] = improved2(f,[1,1.5],1,0.1);
+>> [xxx,yyy] = improved2(f,[1,1.5],1,0.05);
+>> yy(end), yyy(end)
+ans =  1.3260
+ans =  1.3315
+\end{Verbatim}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{regarding exercise \#11}
+
+\begin{itemize}
+\item only one part of the WebAssign is not that easy \dots
+\item how do you find the ``actual value $y(0.5)$'' for this ODE IVP?
+    $$y'=(x+y-1)^2, \, y(0)=2$$
+\item \alert{answer.}  we have not solved this kind of ODE before.  but if you substitute $u=x+y-1$ you can work it out
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{x}
 
 \begin{itemize}
@@ -372,18 +423,6 @@ ans =  1.5574
 \end{itemize}
 \end{frame}
 
-% for problem:
-% >> f = @(t,y) t - y^2;
-% >> optt = odeset('RelTol',RTOL,'AbsTol',1.0e-14);
-% >> [tt,yy] = ode45(f,[0,4],1,optt); yy(end)
-%ans =  1.93122683184240
-%       -----------       <- 10 digits which agree for
-%                            RTOL=1.0e-9,1.0e-10,1.0e-11,1.0e-12
-
-% will use:  yexact = 1.9312268318427   based on above and RK4 with h=0.0001
-
-% on same problem, for considering refinement:
-% h=0.4, 0.2, 0.1, 0.05, 0.025
 
 \begin{frame}{expectations}
 
