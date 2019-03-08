@@ -5,15 +5,14 @@ title: Codes
 
 ## Codes
 
-This page has some computer codes I wrote, mostly for visualization.  They are categorized by language (Matlab/Octave or Python), and for each language they are ordered chronologically.
+This page has some computer codes I wrote, either for visualization or as examples of numerical methods.  They are categorized by language (Matlab/Octave or Python), and for each language/purpose they are ordered chronologically.
 
-### Matlab/Octave Codes
+### Matlab/Octave: Visualization
 
-You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://www.gnu.org/software/octave/) with these.  I use Octave.
+You can use [Octave Online](https://octave-online.net/) or [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://www.gnu.org/software/octave/) with these.  I use Octave.
 
 * [streamcyl.m](assets/codes/streamcyl.m): Generate a contour figure, showing streamlines around a cylinder, for Example 5 in the [slides for section 2.4](assets/slides/2-4.pdf).
-* [simpleeuler.m](assets/codes/simpleeuler.m): Solve the simplest ODE IVP (y'=y,y(0)=1) by the Euler method.
-* [simpleeulerplot.m](assets/codes/simpleeulerplot.m): A version of the above that plots the solution for h=0.1 and h=0.05.
+* [simpleeulerplot.m](assets/codes/simpleeulerplot.m): A version of [simpleeuler.m](assets/codes/simpleeuler.m) below that plots the solution for h=0.1 and h=0.05.
 * [plotcensus.m](assets/codes/plotcensus.m): Plot US census data from exercise 4 in section 3.2; see [slides for section 3.2](assets/slides/3-2.pdf).
 * [fitcensus.m](assets/codes/fitcensus.m): Fit the logistic model to the US census data; see [slides for section 3.2](assets/slides/3-2.pdf).
 * [oilslick.m](assets/codes/oilslick.m): Solution to parts (b), (c), and (d) of Mini-Project 2.  Plots rate of change of area versus area.
@@ -23,11 +22,15 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [springs.m](assets/codes/springs.m): Generates this figures in [slides for section 5.3](assets/slides/5-3.pdf).
 * [plotairy.m](assets/codes/plotairy.m): Generates an Airy function figure in [slides for section 6.2](assets/slides/6-2.pdf).
 * [minradius.m](assets/codes/minradius.m): Generates a radius-of-convergence figure in [slides for section 6.2](assets/slides/6-2.pdf).
-* [euler1.m](assets/codes/euler1.m): First-order Euler's method implemented with standard calling signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
-* [improved2.m](assets/codes/improved2.m): Second-order improved Euler's method implemented with standard calling signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
-* [rk4.m](assets/codes/rk4.m):  Fourth-order classical Runge-Kutta method implemented with standard calling signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
 
-### Python Codes
+### Matlab/Octave: Numerical methods
+
+* [simpleeuler.m](assets/codes/simpleeuler.m): Solve the simplest ODE IVP (y'=y,y(0)=1) by the Euler method.  See the [slides for section 2.6](assets/slides/2-6.pdf).
+* [euler1.m](assets/codes/euler1.m): First-order Euler's method implemented with standard signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
+* [improved2.m](assets/codes/improved2.m): Second-order improved Euler's method implemented with standard signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
+* [rk4.m](assets/codes/rk4.m):  Fourth-order classical Runge-Kutta method implemented with standard signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
+
+### Python
 
 You will need to know [Python](https://www.python.org/) to use these.
 
