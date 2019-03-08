@@ -21,7 +21,7 @@
 \newcommand{\Octave}{\textsc{Octave}\xspace}
 
 
-\title{9.1 Finding better numerical solutions \\ (than Euler's method)}
+\title{9.1 Finding better numerical solutions \\ than Euler's method}
 
 \subtitle{a lesson for MATH F302 Differential Equations}
 
@@ -47,8 +47,8 @@
 
 these three facts make solving differential equations interesting:
 \begin{enumerate}
-\item DEs from science and engineering are usually \alert{not linear}
-\item the by-hand methods which dominate Math 302\footnote{Chapters 2,4,6,7,8} are \alert{all weak}
+\item \alert{DEs} from science and engineering are usually \alert{nonlinear}
+\item the \alert{by-hand methods} which dominate Math 302\footnote{Chapters 2,4,6,7,8} are all \alert{weak}
     \begin{itemize}
     \item mostly they apply to linear DEs
     \item often they need the linear DE to have special coefficients
@@ -56,15 +56,15 @@ these three facts make solving differential equations interesting:
         \item ``special'' = constant, analytic, \dots
         \end{itemize}
     \end{itemize}
-\item on the other hand, Euler's method is \alert{too inaccurate}
+\item on the other hand, \alert{Euler's method} is too \alert{inaccurate}
 \begin{equation}
     y_{n+1} = y_n + h\, f(t_n,y_n)
 \end{equation}
 
 \vspace{-2mm}
     \begin{itemize}
-    \item ``\emph{But whatever advantage {\normalfont (1)} has in its simplicity is lost in the crudeness of its approximations.}'' \hfill Zill, p.~369
-    \item at least it does not care if your DE is linear or not
+    \item ``\emph{whatever advantage {\normalfont (1)} has in its simplicity is lost in the crudeness of its approximations.}'' \hfill Zill, p.~369
+    \item \emph{but}, at least Euler's method does not care if your DE is linear
     \end{itemize}
 \end{enumerate}
 \end{frame}
@@ -79,8 +79,9 @@ these three facts make solving differential equations interesting:
 \vspace{-2mm}
     \begin{itemize}
     \item it could be a single equation or a system (\S4.10,5.3)
+    \item in \S9.1 and 9.2 we stick to single first-order DEs
     \end{itemize}
-\item at least numerical methods do not care if this DE is linear!
+\item good thing: numerical methods do not care if a DE is linear!
 \item so we start again with Euler's method
     $$y_{n+1} = y_n + h\, f(t_n,y_n)$$
 or equivalently
@@ -136,6 +137,7 @@ and \alert{try to do better}
 \begin{columns}
 \begin{column}{0.55\textwidth}
 \begin{itemize}
+\item you can run this with \href{https://octave-online.net/}{Octave Online} or \Matlab or \Octave
 \item see comments:
 \begin{Verbatim}[fontsize=\footnotesize]
 >> help euler1
@@ -163,13 +165,203 @@ and \alert{try to do better}
 
 
 \begin{frame}[fragile]
+\frametitle{\texttt{euler1.m}: explaining the lines}
+
+\begin{itemize}
+\item the top line declares what are inputs and outputs:
+
+{\color{Green}
+\begin{Verbatim}[fontsize=\small]
+function [t, y] = euler1(f,tspan,y0,h)
+\end{Verbatim}
+}
+    \begin{itemize}
+    \item \texttt{tspan} is vector of two numbers: \footnotesize $[t_0,t_f]=$\texttt{[tspan(1),tspan(2)]}
+    \end{itemize}
+\item then there is a block of comments
+\item the first line computes the number of steps wanted by user, based on $h$ and $[t_0,t_f]$:  \quad $M=(t_f-t_0)/h$
+
+{\color{Green}
+\begin{Verbatim}[fontsize=\small]
+M = round((tspan(2)-tspan(1))/h);
+\end{Verbatim}
+}
+\item once you know the number of steps, every point $t_n$ can be computed in one line:
+
+{\color{Green}
+\begin{Verbatim}[fontsize=\small]
+t = linspace(tspan(1),tspan(2),M+1);
+\end{Verbatim}
+}
+    \begin{itemize}
+    \item for example, \texttt{linspace(0,4,5)} is the list $[0,1,2,3,4]$
+    \end{itemize}
+
+\item allocate empty space for solution: {\color{Green}\texttt{y = zeros(size(t));}}
+\item \begin{minipage}[t]{0.3\textwidth}
+remainder is Euler's method itself:
+\end{minipage}
+\quad
+\begin{minipage}[t]{0.55\textwidth}
+\vspace{-3mm}
+{\color{Green}
+\begin{Verbatim}[fontsize=\small]
+y(1) = y0;
+for n = 1:M
+    y(n+1) = y(n) + h * f(t(n),y(n));
+end
+\end{Verbatim}
+}
+\end{minipage}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
 \frametitle{from Euler to \texttt{ode45} in three steps}
 
 \begin{itemize}
 \item use of \texttt{euler1} should look familiar
-\item it is just like how we used \texttt{ode45} in \S5.3 and \S4.10
-\item notice the first line of the code:
+
+\begin{Verbatim}[fontsize=\small]
+>> f = @(t,y) t - y^2;
+>> [tt,yy] = euler1(f,[0,4],1,0.5);
+>> plot(tt,yy)
+\end{Verbatim}
+     \begin{itemize}
+     \item just like how we used \texttt{ode45} in \S5.3 and \S4.10
+     \end{itemize}
+\item in the slides for \S9.1 and \S9.2 I will show three {\color{Green} new codes}:
+\color{Green}{
+\begin{Verbatim}
+function [t,y] = euler1(f,tspan,y0,h)
+function [t,y] = improved2(f,tspan,y0,h)
+function [t,y] = rk4(f,tspan,y0,h)
+\end{Verbatim}
+}
+
+\vspace{-2mm}
+\color{Black}{
+\begin{Verbatim}
+function [t,y] = ode45(f,tspan,y0)
+\end{Verbatim}
+}
+    \begin{itemize}
+     \item all have the same inputs and outputs:
+     \item they approach the black box \texttt{ode45} in quality
+     \item only difference: \texttt{ode45} does not require choice of $h$
+     \end{itemize}
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{better than Euler}
+
+\begin{itemize}
+\item start again with direction field for $y'=f(t,y)=t-y^2$
+\item \emph{improved Euler} takes an Euler step of length $h$ to a temporary value $y^\ast$, then averages slopes, then uses the average slope for a step of length $h$
+\item visual version:
+\end{itemize}
+
+\vspace{-3mm}
+\hfill \includegraphics[width=0.7\textwidth]{figs/sequence-1}
+\end{frame}
+
+
+\begin{frame}{\textsl{improved Euler} as formula}
+
+\small
+\begin{itemize}
+\item it takes an Euler step of length $h$ to a temporary value $y^\ast$
+    $$y^\ast = y_n + h f(t_n,y_n)$$
+\item \dots then averages slopes
+    $$m_{\text{av}} = \frac{1}{2} \left(f(t_n,y_n) + f(t_{n+1},y^\ast)\right)$$
+\item \dots then uses the average slope for a step of length $h$
+    $$y_{n+1} = y_n + h\, m_{\text{av}}$$
+\item thus:
+\begin{empheq}[box=\fbox]{align*}
+    y^\ast  &= y_n + h f(t_n,y_n) \\
+    y_{n+1} &= y_n + \frac{h}{2}\, \left[f(t_n,y_n)+f(t_{n+1},y^\ast)\right]
+\end{empheq}
+\item or
+$$\boxed{y_{n+1} = y_n + \frac{h}{2}\, \left[f(t_n,y_n)+f\left(t_{n+1},y_n+hf(t_n,y_n)\right)\right]}$$
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{new code just like the old code}
+
+\begin{itemize}
+\item the new code \texttt{improved2.m} is just like \texttt{euler1.m}
+\item \emph{except} inside the \texttt{for} loop:
+
+\bigskip
+{\color{Green}
+\begin{Verbatim}[fontsize=\footnotesize]
+function [t, y] = improved2(f,tspan,y0,h)
+...
+for n = 1:M
+    ystar = y(n) + h * f(t(n),y(n));
+    y(n+1) = y(n) + h * ( f(t(n),y(n)) + f(t(n+1),ystar) ) / 2;
+end
+\end{Verbatim}
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{accuracy}
+
+\begin{itemize}
+\item let's use a problem where we know the exact solution
+\item \emph{example.}  $y' = 1+y^2$, \, $y(0)=0$
+\item \emph{exact solution.} it's separable
+\footnotesize
+\begin{align*}
+\int \frac{dy}{1+y^2} &= \int dt \\
+\arctan(y) &= t+c \\
+y(t) &= \tan t
+\end{align*}
+\normalsize
+\item Euler and improved Euler solutions for $y(1)$ with step $h=0.1$:
+\begin{Verbatim}[fontsize=\small]
+>> f = @(t,y) 1+y^2;
+>> [te,ye] = euler1(f,[0,1],0,0.1);
+>> [tie,yie] = improved2(f,[0,1],0,0.1);
+>> ye(end), yie(end), tan(1)
+ans =  1.3964
+ans =  1.5538
+ans =  1.5574
+\end{Verbatim}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{plotting style for truth and justice}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{figs/badstyle}
+
+\begin{Verbatim}[fontsize=\scriptsize]
+>> plot(t,yexact,'k',...
+        te,ye,'b',tie,yie,'r')
+\end{Verbatim}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{figs/goodstyle}
+
+\begin{Verbatim}[fontsize=\scriptsize]
+>> plot(t,yexact,'k',...
+        te,ye,'bo',tie,yie,'ro')
+\end{Verbatim}
+\end{column}
+\end{columns}
 \end{frame}
 
 
