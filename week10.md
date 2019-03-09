@@ -14,7 +14,7 @@ Mini-Project 4 is due this week on Thursday March 28.
 This week we return to numerical methods.  Section 9.1 is a deeper examination of Euler's method.  Section 9.2 discusses a better method, _Runge-Kutta order 4_, which is an example of the kind of methods which are in "black boxes" like the one used earlier in section 5.3.
 
 ### Monday 3/25
-* blank slides for section 9.1 _BUELER TODO_
+* [blank slides for section 9.1](assets/slides/9-1.pdf)
 * video: Bueler talks over slides for section 9.1 _BUELER TODO_
 * [work on WebAssign 6.2](https://www.webassign.net/)
 

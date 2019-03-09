@@ -21,7 +21,7 @@
 \newcommand{\Octave}{\textsc{Octave}\xspace}
 
 
-\title{9.1 Finding better numerical solutions \\ than Euler's method}
+\title{9.1 Better numerical solutions than Euler's}
 
 \subtitle{a lesson for MATH F302 Differential Equations}
 
@@ -70,7 +70,7 @@ these three facts make solving differential equations interesting:
 \end{frame}
 
 
-\begin{frame}{but we can do better than Euler}
+\begin{frame}{can we do better than Euler?}
 
 \begin{itemize}
 \item here is the basic DE:
@@ -117,7 +117,7 @@ and \alert{try to do better}
 }
 
     \begin{itemize}
-    \item this visualization needs make sense! review Euler's method!
+    \item this visualization needs to make sense! review Euler's method!
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -187,14 +187,14 @@ function [t, y] = euler1(f,tspan,y0,h)
     \item \texttt{tspan} is vector of two numbers: \footnotesize $[t_0,t_f]=$\texttt{[tspan(1),tspan(2)]}
     \end{itemize}
 \item then there is a block of comments
-\item the first line computes the number of steps wanted by user, based on $h$ and $[t_0,t_f]$:  \quad $M=(t_f-t_0)/h$
+\item the first ``real'' line computes the number of steps wanted by user, based on $h$ and $[t_0,t_f]$:  \quad $M=(t_f-t_0)/h$
 
 {\color{Green}
 \begin{Verbatim}[fontsize=\small]
 M = round((tspan(2)-tspan(1))/h);
 \end{Verbatim}
 }
-\item once you know the number of steps, every point $t_n$ can be computed in one line:
+\item given the number of steps, values $t_n$ can be pre-computed:
 
 {\color{Green}
 \begin{Verbatim}[fontsize=\small]
@@ -203,6 +203,7 @@ t = linspace(tspan(1),tspan(2),M+1);
 }
     \begin{itemize}
     \item for example, \texttt{linspace(0,4,5)} is the list $[0,1,2,3,4]$
+    \item same as \,\,\texttt{t = tspan(1):h:tspan(2);} \,\, if user is careful
     \end{itemize}
 
 \item allocate empty space for solution: {\color{Green}\texttt{y = zeros(size(t));}}
@@ -230,7 +231,7 @@ end
 \frametitle{from Euler to \texttt{ode45} in three steps}
 
 \begin{itemize}
-\item use of \texttt{euler1} should look familiar
+\item our use of \texttt{euler1} should look familiar
 
 \begin{Verbatim}[fontsize=\small]
 >> f = @(t,y) t - y^2;
@@ -240,12 +241,12 @@ end
      \begin{itemize}
      \item just like how we used \texttt{ode45} in \S5.3 and \S4.10
      \end{itemize}
-\item in the slides for \S9.1 and \S9.2 I will show three {\color{Green} new codes}:
+\item I will show three {\color{Green} new codes}:
 \color{Green}{
 \begin{Verbatim}
 function [t,y] = euler1(f,tspan,y0,h)
 function [t,y] = improved2(f,tspan,y0,h)
-function [t,y] = rk4(f,tspan,y0,h)
+function [t,y] = rk4(f,tspan,y0,h)     % section 9.2
 \end{Verbatim}
 }
 
@@ -256,9 +257,9 @@ function [t,y] = ode45(f,tspan,y0)
 \end{Verbatim}
 }
     \begin{itemize}
-     \item all have the same inputs and outputs:
+     \item all have the same inputs and same size outputs:
      \item they approach the black box \texttt{ode45} in quality
-     \item only difference: \texttt{ode45} does not require choice of $h$
+     \item only difference versus \texttt{ode45}: it does not require choice of $h$
      \end{itemize}
 \end{itemize}
 \end{frame}
@@ -268,7 +269,7 @@ function [t,y] = ode45(f,tspan,y0)
 
 \begin{itemize}
 \item start again with direction field for $y'=f(t,y)=t-y^2$
-\item \emph{improved Euler} takes an Euler step of length $h$ to a temporary value $y^\ast$, then averages slopes, then uses the average slope for a step of length $h$
+\item \emph{improved Euler} takes an Euler step of length $h$ to a temporary value $y^\ast$, then averages slopes at the two known points, then uses the average slope for a step of length $h$
 \item visual version:
 \end{itemize}
 
@@ -283,7 +284,7 @@ function [t,y] = ode45(f,tspan,y0)
 \begin{itemize}
 \item it takes an Euler step of length $h$ to a temporary value $y^\ast$
     $$y^\ast = y_n + h f(t_n,y_n)$$
-\item \dots then averages slopes
+\item \dots then averages slopes at known points
     $$m_{\text{av}} = \frac{1}{2} \left(f(t_n,y_n) + f(t_{n+1},y^\ast)\right)$$
 \item \dots then uses the average slope for a step of length $h$
     $$y_{n+1} = y_n + h\, m_{\text{av}}$$
@@ -292,8 +293,8 @@ function [t,y] = ode45(f,tspan,y0)
     y^\ast  &= y_n + h f(t_n,y_n) \\
     y_{n+1} &= y_n + \frac{h}{2}\, \left[f(t_n,y_n)+f(t_{n+1},y^\ast)\right]
 \end{empheq}
-\item or
-$$\boxed{y_{n+1} = y_n + \frac{h}{2}\, \left[f(t_n,y_n)+f\left(t_{n+1},y_n+hf(t_n,y_n)\right)\right]}$$
+\item or (ugly):
+$$y_{n+1} = y_n + \frac{h}{2}\, \left[f(t_n,y_n)+f\left(t_{n+1},y_n+hf(t_n,y_n)\right)\right]$$
 \end{itemize}
 \end{frame}
 
@@ -303,7 +304,7 @@ $$\boxed{y_{n+1} = y_n + \frac{h}{2}\, \left[f(t_n,y_n)+f\left(t_{n+1},y_n+hf(t_
 \frametitle{new code just like the old code}
 
 \begin{itemize}
-\item the new code \texttt{improved2.m} is just like \texttt{euler1.m}
+\item my new code \texttt{improved2.m} is just like \texttt{euler1.m}
 \item \emph{except} inside the \texttt{for} loop:
 
 \bigskip
@@ -338,8 +339,8 @@ y(t) &= \tan t
 \item Euler and improved Euler solutions for $y(1)$ with step $h=0.1$:
 \begin{Verbatim}[fontsize=\small]
 >> f = @(t,y) 1+y^2;
->> [te,ye] = euler1(f,[0,1],0,0.1);
->> [tie,yie] = improved2(f,[0,1],0,0.1);
+>> [tt,ye] = euler1(f,[0,1],0,0.1);
+>> [tt,yie] = improved2(f,[0,1],0,0.1);
 >> ye(end), yie(end), tan(1)
 ans =  1.3964
 ans =  1.5538
@@ -358,7 +359,7 @@ ans =  1.5574
 
 \begin{Verbatim}[fontsize=\scriptsize]
 >> plot(t,yexact,'k',...
-        te,ye,'b',tie,yie,'r')
+        tt,ye,'b',tt,yie,'r')
 \end{Verbatim}
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -366,7 +367,7 @@ ans =  1.5574
 
 \begin{Verbatim}[fontsize=\scriptsize]
 >> plot(t,yexact,'k',...
-        te,ye,'bo',tie,yie,'ro')
+        tt,ye,'bo',tt,yie,'ro')
 \end{Verbatim}
 \end{column}
 \end{columns}
@@ -377,7 +378,8 @@ ans =  1.5574
 
 \begin{itemize}
 \item get on \href{https://octave-online.net/}{Octave Online} or \Matlab/\Octave
-\item yes, \emph{use} the codes I have posted at the \href{https://bueler.github.io/math302/codes.html}{Codes tab of the course website}
+\item yes, you may and should \emph{use} the codes I have posted at the \href{https://bueler.github.io/math302/codes.html}{Codes tab of the course website}
+\item use \texttt{improved2} exactly the way I did two slides back
 \item if you have technical difficulties then \emph{post to Piazza}!
     \begin{itemize}
     \item anonymous is fine, but make it a public post for efficiency
@@ -393,11 +395,13 @@ ans =  1.5574
 \item \emph{exercise \#9.}  Use the improved Euler's method to obtain a four-decimal approximation of the indicated value.  First use $h=0.1$ and then use $h=0.05$.
     $$y'=xy^2-\frac{y}{x}, \quad y(1)=1; \quad y(1.5)$$
 
-\noindent \emph{solution.}
+\noindent \emph{solution.} [fill in \Matlab/Octave code]
+
+\vspace{30mm}
+%>> f = @(x,y) x*y^2-y/x;
+%>> [xx,yy] = improved2(f,[1,1.5],1,0.1);
+%>> [xxx,yyy] = improved2(f,[1,1.5],1,0.05);
 \begin{Verbatim}[fontsize=\small]
->> f = @(x,y) x*y^2-y/x;
->> [xx,yy] = improved2(f,[1,1.5],1,0.1);
->> [xxx,yyy] = improved2(f,[1,1.5],1,0.05);
 >> yy(end), yyy(end)
 ans =  1.3260
 ans =  1.3315
@@ -416,17 +420,101 @@ ans =  1.3315
 \end{frame}
 
 
-\begin{frame}{x}
+\begin{frame}{notation}
 
 \begin{itemize}
-\item X
+\item one way to derive Euler method is using Taylor series
+
+      \dots but we need clarity about notation first
+\item consider $y'=f(t,y)$, as usual, with solution $y(t)$
+\item notation:
+
+\vspace{-6mm}
+\begin{align*}
+y(t) &= \text{(the exact solution)} \\
+y(t_n) &= \text{(the exact solution evaluated at $t_n$)} \\
+y_n &= \text{(the number computed by numerical method)}
+\end{align*}
+\item key point about notation:
+
+\medskip
+\centerline{\alert{$y(t_n)$ is not the same as $y_n$} \hspace{40mm}}
+
+\medskip
+\item absolute error $=|y_n-y(t_n)|$
+\end{itemize}
+
+\vspace{-20mm}
+\hfill \includegraphics[width=0.4\textwidth]{figs/goodstyle}
+\end{frame}
+
+
+\begin{frame}{order}
+
+\begin{itemize}
+\item one may derive Euler method using Taylor series:
+   $$y(t+h) = y(t) + y'(t) h + \frac{y''(c)}{2} h^2$$
+\item or equivalently, because $t_{n+1} = t_n+h$ and $y'=f(t,y)$:
+   $$y(t_{n+1}) = y(t_n) + h\, f(t,y(t_n)) + \frac{y''(c)}{2} h^2$$
+\item drop the remainder term; use result to \emph{define} the next value:
+   $$y_{n+1} = y_n + h\, f(t,y_n)$$
+\item Euler's method is \emph{order 1} because we dropped the ``$h^2$'' term
+\item improved Euler method is \emph{order 2} because one may derive it by dropping a ``$h^3$'' term from the Taylor series
+    \begin{itemize}
+    \item not shown
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{expectations}
+\begin{frame}{\emph{improved} versus \emph{modified} Euler}
+
+\small
+\begin{itemize}
+\item in \S2.6 slides I mentioned the \emph{modified} Euler method:
+
+\vspace{-3mm}
+\begin{minipage}{0.5\textwidth}
+\begin{align*}
+    y^\ast  &= y_n + \frac{h}{2} f(t_n,y_n) \\
+    y_{n+1} &= y_n + h\, f(t_n+\frac{h}{2},y^\ast)
+\end{align*}
+\end{minipage}
+\hspace{50mm}
+\item compare \emph{improved} Euler method (\S9.1):
+
+\vspace{-3mm}
+\begin{minipage}{0.5\textwidth}
+\begin{align*}
+    y^\ast  &= y_n + h f(t_n,y_n) \\
+    y_{n+1} &= y_n + \frac{h}{2}\, \left[f(t_n,y_n)+f(t_{n+1},y^\ast)\right]
+\end{align*}
+\end{minipage}
+\hspace{50mm}
+\item \alert{\emph{exercise.} sketch each method to the right}
+\item alternate (better) naming scheme:
+
+\begin{center}
+\begin{tabular}{c|c|c}
+\emph{name} & \emph{order} & \emph{alternate name} \\ \hline
+Euler & 1 & explicit first-order \\
+improved Euler & 2 & explicit trapezoid \\
+modified Euler & 2 & explicit midpoint
+\end{tabular}
+\end{center}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{comment, and expectations}
 
 \begin{itemize}
+\item it turns out that both improved Euler and modified Euler are order 2 methods from the big \emph{Runge-Kutta} family of methods
+     \begin{itemize}
+     \item \S9.2 introduces an order 4 Runge-Kutta method
+     \end{itemize}
+
+\bigskip
 \item just watching this video is \emph{not} enough!
      \begin{itemize}
      \item see ``found online'' videos and stuff at
