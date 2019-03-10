@@ -46,7 +46,7 @@ This week we start using power series methods on differential equations.  Sectio
 * wikipedia pages on [special functions](https://en.wikipedia.org/wiki/Special_functions) and a [list of special functions](https://en.wikipedia.org/wiki/List_of_special_functions_and_eponyms)
 * see [some of what Wolfram Alpha knows about special functions](https://www.wolframalpha.com/input/?i=special+functions)
 * [Wolfram Alpha plots of Airy functions](https://www.wolframalpha.com/input/?i=Ai(x)+and+Bi(x))
-* for Mini-Project 4: [the good video](https://youtu.be/BE827gwnnk4)
+* for Mini-Project 4: [the really good slow mo video of wine glass failure](https://youtu.be/BE827gwnnk4)
 * for Mini-Project 4: [the most famous movie in engineering](https://www.youtube.com/watch?v=nFzu6CNtqec) shows wind-driving resonance of a structure
 
 <hr>
