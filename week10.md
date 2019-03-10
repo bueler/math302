@@ -36,7 +36,15 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 
 ### found online
 * [Octave Online](https://octave-online.net/)
-* _BUELER TODO_
+* [Matlab technical doc page on the black box ode45](https://www.mathworks.com/help/matlab/ref/ode45.html)
+* my section 2.6 [slides](assets/slides/2-6.pdf) and [video voiceover](https://drive.explaineverything.com/thecode/LKSLJBU)
+* [Khan Academy: Euler's method](https://www.khanacademy.org/math/ap-calculus-bc/bc-differential-equations-new/bc-7-5/v/eulers-method)
+* random (and good) video: [Improved Euler Method](https://www.youtube.com/watch?v=A5ObpYPADPQ)
+* random video: [Improved Euler's method](https://www.youtube.com/watch?v=BdzV83JTOyA)
+* random video: [Runge-Kutta & The Improved Euler Method](https://vimeo.com/181401615)  ... note improved Euler is an _order 2_ Runge-Kutta method, but it is not _the_ order 4 Runge-Kutta method
+* [Cleve Moler, the Matlab inventor, on explicit midpoint rule (what I call "modified Euler")](https://www.mathworks.com/videos/solving-odes-in-matlab-2-midpoint-method-ode2-117527.html); see [the "Functions" tab here](https://www.mathworks.com/matlabcentral/fileexchange/54611-solving-odes-in-matlab) for the code "ODE2" which he uses
+* random video: [Runge Kutta 4th Order Method: Example](https://www.youtube.com/watch?v=AT7Olelic8U)
+* random video: [Math for Game Developers--Runge Kutta Order 4](https://www.youtube.com/watch?v=hGCP6I2WisM) ... part of [his series on Math for Game Developers](https://www.youtube.com/user/BSVino)
 
 <hr>
 <a align="left" href="week9">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week11">next week --\></a>
