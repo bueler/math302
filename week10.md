@@ -15,7 +15,7 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 
 ### Monday 3/25
 * [blank slides for section 9.1](assets/slides/9-1.pdf)
-* video: Bueler talks over slides for section 9.1 _BUELER TODO_
+* [video: Bueler talks over slides for section 9.1](https://expl.ai/FNKXREH)
 * [work on WebAssign 6.2](https://www.webassign.net/)
 
 ### Tuesday 3/26
