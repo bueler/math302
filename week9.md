@@ -20,7 +20,7 @@ This week we start using power series methods on differential equations.  Sectio
 * [work on WebAssign 5.3/4.10](https://www.webassign.net/)
 
 ### Tuesday 3/19
-* [blank Mini-Project 4](assets/mp/mp4-merged.pdf)
+* [blank Mini-Project 4](assets/mp/mp4-merged.pdf) ... [see this video on Wine glass resonance in slow motion](https://youtu.be/BE827gwnnk4)
 * [WebAssign 5.3/4.10](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/20
@@ -46,6 +46,7 @@ This week we start using power series methods on differential equations.  Sectio
 * wikipedia pages on [special functions](https://en.wikipedia.org/wiki/Special_functions) and a [list of special functions](https://en.wikipedia.org/wiki/List_of_special_functions_and_eponyms)
 * see [some of what Wolfram Alpha knows about special functions](https://www.wolframalpha.com/input/?i=special+functions)
 * [Wolfram Alpha plots of Airy functions](https://www.wolframalpha.com/input/?i=Ai(x)+and+Bi(x))
+* for Mini-Project 4: [the good video](https://youtu.be/BE827gwnnk4)
 
 <hr>
 <a align="left" href="week8">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week10">next week --\></a>
