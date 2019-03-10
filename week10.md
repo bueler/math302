@@ -26,7 +26,7 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 
 ### Thursday 3/28
 * <span style="color:blue">**proctored Quiz 8 covers 6.1 and 6.2**</span>
-* Mini-Project 4 is due _BUELER TODO_
+* Mini-Project 4, _Resonance: Shattering wine glasses and destroying bridges_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 4](https://goo.gl/forms/au848CmfdK94QC2t2); you may need to log in to your `alaska.edu` account to use this link
 * [work on WebAssign 9.1](https://www.webassign.net/)
 
 ### Friday 3/29

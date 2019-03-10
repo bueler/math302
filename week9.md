@@ -20,7 +20,7 @@ This week we start using power series methods on differential equations.  Sectio
 * [work on WebAssign 5.3/4.10](https://www.webassign.net/)
 
 ### Tuesday 3/19
-* blank Mini-Project 4 _BUELER TODO_
+* [blank Mini-Project 4](assets/mp/mp4-merged.pdf)
 * [WebAssign 5.3/4.10](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/20

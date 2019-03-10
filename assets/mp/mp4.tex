@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
+
+\usepackage{graphicx,color,enumitem}
+\usepackage{amsmath,amsthm,amsbsy}
+\usepackage{palatino}
+\usepackage{mdframed}
+
+\usepackage{tikz}
+\usepackage[colorlinks=true,urlcolor={blue}]{hyperref}
+
+\mdfdefinestyle{exerpartSty}{}
+\theoremstyle{definition}
+\newmdtheoremenv[style=exerpartSty,linewidth=0.5pt, topline=false, bottomline=false, rightline=false,%
+leftmargin=0pt, innerleftmargin=0.4em, rightmargin=0pt, innerrightmargin=0pt, innertopmargin=-5pt ,%
+innerbottommargin=3pt, splittopskip=\topskip, splitbottomskip=0.3\topskip, %
+skipabove=1.3\topsep]{exerpart}{Part}
+
+\renewcommand*{\theexerpart}{(\alph{exerpart})}
+\newcommand{\eps}{\epsilon}
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\makeatletter
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyfoot[C]{\thepage}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+\newcommand{\epart}[1]{\noindent \textbf{(#1)} \,}
+
+\doclabel{Math F302 UX1: Mini-Project 4}
+\docdate{due \emph{at 11pm} on Thursday 28 March 2019}
+
+\begin{document}
+\setcounter{page}{0}
+\renewcommand{\d}{\displaystyle}
+
+\strut
+\centerline{{\Large \textsc{Resonance: Shattering wine glasses}}}
+
+\medskip
+\centerline{{\Large \textsc{and destroying bridges}}}
+
+\bigskip
+
+\noindent \textbf{Instructions.}  Please write your solutions neatly on paper, or start a new document on a computer.  Include your name in the upper right on each sheet.
+
+\medskip
+The next five pages of this document mostly contain context (stories?) and references.  Please read them, and follow the citations to videos etc.  In particular, make sure to see this one video, reference [8] at the end, if it is the only one you watch:
+
+\medskip
+\centerline{\url{https://youtu.be/BE827gwnnk4}}
+
+\medskip
+The actual questions that you will need to answer are at the bottom of page 3 and the top of page 4.  They are labeled \textbf{1}-- \textbf{7}.  You should also label the parts of your solutions as \textbf{1}-- \textbf{7}.
+
+\medskip
+In each part show your work neatly!  Full credit requires evidence of clear understanding \emph{and} clear writing.  Note that you will produce figures using the computer; for those, please include \emph{how} you used the computer \emph{and} the figure it produced.
+
+\medskip
+Your final document, which is \emph{not} your first draft, should be at most four pages.  Submit your PDF by uploading using the Google Form link on the ``Week 10'' page at
+
+\smallskip
+     \centerline{\href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}}
+ 
+\noindent If you wrote on paper then please scan or photograph your completed document.  Make the lighting good, line things up carefully, and use a scanner app that cleans things up.  In any case \emph{please generate an easily-readable PDF.}
+
+\end{document}
