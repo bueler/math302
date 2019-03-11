@@ -11,7 +11,7 @@ This week, **Quiz 8** must be done on Wednesday or Thursday.  It **covers sectio
 
 Mini-Project 4 is due this week on Thursday March 28.
 
-This week we return to numerical methods.  Section 9.1 is a deeper examination of Euler's method and a construction of _improved Euler method_.  Section 9.2 discusses an even better method, _Runge-Kutta order 4_ (RK4).  In fact [Runge-Kutta methods are a large family](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods), and the improved Euler method is a Runge-Kutta method of order 2.  RK4 is an example of the kind of methods which are in "black boxes" like [ode45](https://www.mathworks.com/help/matlab/ref/ode45.html) used earlier in section 5.3.
+This week we return to numerical methods.  Section 9.1 is a deeper examination of Euler's method and a construction of the _improved Euler method_.  Section 9.2 discusses an even better method, the classical _Runge-Kutta order 4_ (RK4) method.  In fact [Runge-Kutta methods are a large family](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods), and the improved Euler method is a Runge-Kutta method of order 2.  RK4 is an example of the kind of methods which are in "black boxes" like [ode45](https://www.mathworks.com/help/matlab/ref/ode45.html) used earlier in section 5.3.
 
 ### Monday 3/25
 * [blank slides for section 9.1](assets/slides/9-1.pdf)
