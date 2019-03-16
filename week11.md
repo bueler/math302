@@ -14,11 +14,11 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 ### Monday 4/1
 * blank slides for section 7.1 _BUELER TODO_
 * video: Bueler talks over slides for section 7.1 _BUELER TODO_
-* [work on WebAssign 9.2](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 9.2](https://www.webassign.net/)
 
 ### Tuesday 4/2
 * <span style="color:blue">**proctored Midterm 2**</span> _BUELER TODO_
-* [WebAssign 9.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 9.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/3
 * <span style="color:blue">**proctored Midterm 2**</span> _BUELER TODO_
