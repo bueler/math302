@@ -131,7 +131,7 @@ k_2 &= f(t_n+h,y_n+h k_1)
 
 $$\implies y_{n+1} = y_n + h\, \frac{k_1 + k_2}{2}$$
 \end{minipage}
-\item here is Euler itself, written the same way:
+\item Euler written the same way:
 $$k_1 = f(t_n,y_n) \qquad \implies y_{n+1} = y_n + h\, k_1$$
 \end{itemize}
 \end{frame}
@@ -153,19 +153,62 @@ $$k_1 = f(t_n,y_n) \qquad \implies y_{n+1} = y_n + h\, k_1$$
 \end{frame}
 
 
-\begin{frame}{exercise \#7 in \S9.2}
+\begin{frame}[fragile]
+\frametitle{code \texttt{rk4.m}}
 
 \begin{itemize}
-\item FIXME
+\item code posted at the \href{https://bueler.github.io/math302/codes.html}{Codes tab at the course website}
 \end{itemize}
+
+\medskip
+\VerbatimInput[fontsize=\scriptsize]{../codes/rk4.m}
 \end{frame}
 
 
-\begin{frame}{exercise \#7 in \S9.2, cont.}
+\begin{frame}[fragile]
+\frametitle{exercise \#7 in \S9.2}
 
 \begin{itemize}
-\item x
+\item \emph{exercise.}  Use the RK4 method with $h=0.1$ to obtain a four-decimal approximation of the indicated value:
+    $$y' = e^{-y}, \quad y(0)=0; \qquad y(0.5)$$
 \end{itemize}
+
+\noindent \emph{solution.}
+\begin{Verbatim}[fontsize=\footnotesize]
+>> f = @(t,y) exp(-y);
+>> [tt,yy] = rk4(f,[0,0.5],0,0.1);
+>> yy(end)
+ans =    0.40547
+\end{Verbatim}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{better version of same exercise}
+
+\begin{itemize}
+\item \emph{exercise.}  Use the RK4 method with $h=0.1$ to obtain a four-decimal approximation of the indicated value:
+    $$y' = e^{-y}, \quad y(0)=0; \qquad y(0.5)$$
+Compute the exact value.  Plot both solutions in good style.
+\end{itemize}
+
+\hfill \includegraphics[width=0.45\textwidth]{figs/exer7s9p2}
+
+\vspace{-40mm}
+\noindent \emph{solution, cont.}
+
+\vspace{20mm}
+\begin{Verbatim}[fontsize=\footnotesize]
+>> log(1+0.5)
+ans =    0.40547
+>> t = 0:.001:0.5;
+>> plot(t,log(1+t),'k')
+>> hold on,  plot(tt,yy,'ro','markersize',12)
+>> xlabel t,  ylabel y,  grid on
+>> legend('exact solution','RK4 values')
+\end{Verbatim}
+
 \end{frame}
 
 
@@ -173,8 +216,7 @@ $$k_1 = f(t_n,y_n) \qquad \implies y_{n+1} = y_n + h\, k_1$$
 \frametitle{there are \emph{bad} ODE IVPs out there!}
 
 \begin{itemize}
-\item inspired by exercise \#15 in \S9.2
-\item \emph{exercise.}  for this ODE IVP, find $y(1.4)$:
+\item \emph{exercise \#15 in \S9.2.}  for this ODE IVP, find $y(1.4)$:
     $$y' = x^2 + y^3, \quad y(1)=1,$$
 \end{itemize}
 
@@ -184,7 +226,7 @@ $$k_1 = f(t_n,y_n) \qquad \implies y_{n+1} = y_n + h\, k_1$$
 \noindent \emph{solution.}
 \begin{Verbatim}[fontsize=\footnotesize]
 >> f = @(x,y) x^2 + y^3;
->> [xx,yy] = rk4(f,[1,1.4],0.1);
+>> [xx,yy] = rk4(f,[1,1.4],1,0.1);
 >> plot(xx,yy)
 >> yy
 yy =
@@ -222,11 +264,12 @@ warning: called from ...
 
 \begin{itemize}
 \item the last example shows one reason nonlinear ODEs are interesting \dots the \emph{problems} can be badly behaved
-\item but RK4 is the first of powerful tools to handle the problems via highly-accurate numerical approximations
-\item the black-box \texttt{ode45} is a combination of an ``RK4'' and an ``RK5'' that allows adaptive step size computations
+\item but RK4 is the first of powerful tools to handle nonlinear ODE problems via highly-accurate numerical approximations
+\item the black-box \texttt{ode45} is a combination of certain ``RK4'' and ``RK5'' formulas
    \begin{itemize}
-   \item the RK4 and RK5 formulas use the same intermediate locations to get slopes from the direction field
-   \item if you really want to know, see FIXME
+   \item the two formulas use the same intermediate locations to get slopes from the direction field
+   \item \dots which allows adaptive step size computations
+   \item if you really want to know, see the \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{Matlab technical doc page on \texttt{ode45}} and the \href{https://en.wikipedia.org/wiki/Dormand-Prince_method}{wikipedia page on the Dormand-Prince method}
    \end{itemize}
 \end{itemize}
 \end{frame}
