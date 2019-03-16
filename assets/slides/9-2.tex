@@ -156,7 +156,7 @@ $$k_1 = f(t_n,y_n) \qquad \implies y_{n+1} = y_n + h\, k_1$$
 \begin{frame}{exercise \#7 in \S9.2}
 
 \begin{itemize}
-\item x
+\item FIXME
 \end{itemize}
 \end{frame}
 
@@ -169,10 +169,65 @@ $$k_1 = f(t_n,y_n) \qquad \implies y_{n+1} = y_n + h\, k_1$$
 \end{frame}
 
 
-\begin{frame}{when does it blow up?}
+\begin{frame}[fragile]
+\frametitle{there are \emph{bad} ODE IVPs out there!}
 
 \begin{itemize}
 \item inspired by exercise \#15 in \S9.2
+\item \emph{exercise.}  for this ODE IVP, find $y(1.4)$:
+    $$y' = x^2 + y^3, \quad y(1)=1,$$
+\end{itemize}
+
+\hfill \includegraphics[width=0.3\textwidth]{figs/blowuprk4}
+
+\vspace{-20mm}
+\noindent \emph{solution.}
+\begin{Verbatim}[fontsize=\footnotesize]
+>> f = @(x,y) x^2 + y^3;
+>> [xx,yy] = rk4(f,[1,1.4],0.1);
+>> plot(xx,yy)
+>> yy
+yy =
+      1      1.2511      1.6934      2.9425      903.03
+>> [xxx,yyy] = ode45(f,[1,1.4],1);
+warning:  Solving was not successful.  The iterative integration
+loop exited at time t = 1.355695 before the endpoint at
+tend = 1.400000 was reached.  This may happen if the stepsize
+becomes too small.  Try to reduce the value of 'InitialStep'
+and/or 'MaxStep' with the command 'odeset'.
+warning: called from ...
+\end{Verbatim}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{when does it blow up?}
+
+\begin{itemize}
+\item for this ODE IVP, find $y(1.4)$:\footnote{``find $y(1.4)$'' \emph{is} a trick question \dots never gets that far!} \quad $y' = x^2 + y^3, \quad y(1)=1$
+\end{itemize}
+
+\begin{Verbatim}[fontsize=\footnotesize]
+>> [xxx,yyy] = ode45(f,1:0.00001:1.35569,1);
+>> plot(xxx,yyy)                               <-- PLOT BELOW
+>> [xxx,yyy] = ode45(f,1:0.00001:1.35570,1);   <-- GENERATES WARNING
+\end{Verbatim}
+
+\hfill \includegraphics[width=0.55\textwidth]{figs/blowupode45}
+\end{frame}
+
+
+\begin{frame}{RK4 and \texttt{ode45} summary}
+
+\begin{itemize}
+\item the last example shows one reason nonlinear ODEs are interesting \dots the \emph{problems} can be badly behaved
+\item but RK4 is the first of powerful tools to handle the problems via highly-accurate numerical approximations
+\item the black-box \texttt{ode45} is a combination of an ``RK4'' and an ``RK5'' that allows adaptive step size computations
+   \begin{itemize}
+   \item the RK4 and RK5 formulas use the same intermediate locations to get slopes from the direction field
+   \item if you really want to know, see FIXME
+   \end{itemize}
 \end{itemize}
 \end{frame}
 
