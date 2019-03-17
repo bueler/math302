@@ -37,5 +37,5 @@ You will need to know [Python](https://www.python.org/) to use these.
 * [dirfield.py](assets/codes/dirfield.py): Generate a direction field.  I used this for images in some slides.
     * To generate direction fields without programming, try [desmos](https://www.desmos.com/).  For other languages see the [wikipedia page on slope fields](https://en.wikipedia.org/wiki/Slope_field); it gives easy codes in Matlab and Mathematica.
 * [eulersequence.py](assets/codes/eulersequence.py): Generate sequence of figures used in [slides for section 2.6](assets/slides/2-6.pdf).
-* [eulerblowup.py](assets/codes/eulerblowup.py): Generate a figure in [slides for section 9.2](assets/slides/9-2.pdf).
+* [eulerrk4blowup.py](assets/codes/eulerrk4blowup.py): Generate a figure in [slides for section 9.2](assets/slides/9-2.pdf).
 
