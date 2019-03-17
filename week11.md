@@ -33,7 +33,6 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 * [WebAssign 7.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
 
 ### found online
-* [Octave Online](https://octave-online.net/)
 * [Khan Academy: Laplace Transform](https://www.khanacademy.org/math/differential-equations/laplace-transform/laplace-transform-tutorial/v/laplace-transform-1)
 * random video: [Calculating a Laplace transform](https://www.youtube.com/watch?v=wI6ki-_79nc)
 * random video: [Introduction to Laplace transforms](https://www.youtube.com/watch?v=TmDPbofx2Nk)
