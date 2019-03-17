@@ -28,7 +28,7 @@ You can use [Octave Online](https://octave-online.net/) or [Matlab](https://www.
 * [simpleeuler.m](assets/codes/simpleeuler.m): Solve the simplest ODE IVP (y'=y,y(0)=1) by the Euler method.  See the [slides for section 2.6](assets/slides/2-6.pdf).
 * [euler1.m](assets/codes/euler1.m): First-order Euler's method implemented with standard signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
 * [improved2.m](assets/codes/improved2.m): Second-order improved Euler's method implemented with standard signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
-* [rk4.m](assets/codes/rk4.m):  Fourth-order classical Runge-Kutta method implemented with standard signature.  See [slides for section 9.1](assets/slides/9-1.pdf).
+* [rk4.m](assets/codes/rk4.m):  Fourth-order classical Runge-Kutta method implemented with standard signature.  See [slides for section 9.2](assets/slides/9-2.pdf).
 
 ### Python
 
