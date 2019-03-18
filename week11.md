@@ -25,12 +25,12 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 
 ### Thursday 4/4
 * <span style="color:blue">**proctored Midterm 2**</span> _BUELER TODO_
-* [work on WebAssign 7.1](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 7.1](https://www.webassign.net/)
 
 ### Friday 4/5
 * blank slides for section 7.2 _BUELER TODO_
 * video: Bueler talks over slides for section 7.2 _BUELER TODO_
-* [WebAssign 7.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 7.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Khan Academy: Laplace Transform](https://www.khanacademy.org/math/differential-equations/laplace-transform/laplace-transform-tutorial/v/laplace-transform-1)
