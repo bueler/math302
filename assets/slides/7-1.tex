@@ -3,7 +3,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancybox,fancyvrb}
 \usepackage{environ,xspace,empheq}
+
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,decorations.pathreplacing,fadings,positioning}
+
 \hypersetup{colorlinks,linkcolor=,urlcolor=cyan}
 
 \beamertemplatenavigationsymbolsempty
@@ -21,7 +24,7 @@
 \newcommand{\Octave}{\textsc{Octave}\xspace}
 
 
-\title{7.1 Laplace Transforms \\ (from the definition)}
+\title{7.1 Laplace Transforms \\ (starting from the definition)}
 
 \subtitle{a lesson for MATH F302 Differential Equations}
 
@@ -62,14 +65,15 @@
 \end{frame}
 
 
-\begin{frame}{why do it in a differential equations class?}
+\begin{frame}{why do $\mathcal{L}$ in a differential equations class?}
 
 \begin{itemize}
 \item why do
-    $$\LL{f(t)} = \int_0^\infty e^{-st} f(t)\,dt \,?$$
+    $$\LL{f(t)} = \int_0^\infty e^{-st} f(t)\,dt \quad?$$
 \item because the Laplace transform \alert{converts a linear DE} (in $t$) \alert{into an algebra problem} (in $s$)
     \begin{itemize}
-    \item this is especially useful for solving (and thinking about) nonhomogeneous linear DEs
+    \item this is especially useful for solving \emph{nonhomogeneous} DEs
+    \item it is how many engineers think about nonhomogeneous DEs!
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -111,13 +115,120 @@
 \begin{frame}{Laplace transforms from the definition}
 
 \begin{itemize}
-\item the way it works is to pre-compute the Laplace transforms of a bunch of familiar functions, and then use these to solve DEs
+\item the way it works is to pre-compute the Laplace transforms of some familiar functions, and then use these to solve DEs
 \item \emph{example 1}.  compute $\LL{e^{kt}}$
 
 \vspace{30mm}
 \item \emph{example 2}.  compute $\LL{1}$
 
 \vspace{25mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{from the definition, cont.}
+
+\begin{itemize}
+\item \emph{example 3}.  compute $\LL{t}$
+
+\vspace{30mm}
+\item \emph{example 4}.  compute $\LL{cos t}$
+
+\vspace{35mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{from the definition, cont.$^2$}
+
+\begin{itemize}
+\item \emph{example 5}.  compute $\LL{t^n}$
+
+\vspace{50mm}
+\hfill $\begin{matrix}
+        \LL{t^n} = \frac{n}{s} \LL{t^{n-1}} \\ \\
+        \implies \LL{t^n} = \frac{n!}{s^{n+1}}
+        \end{matrix}$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{first table}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figs/laplacetable.pdf}
+\end{center}
+
+\vspace{-4mm}
+\begin{itemize}
+\item you will have a table like this on quizzes and exams
+\item \emph{and} it is a fair question to ask you to show any one of them from the definition
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{another from the definition}
+
+\begin{itemize}
+\item \emph{example 6}.  compute $\LL{f}$ if
+    $$f(t) = \begin{cases} 0, & 0 \le t < a \\
+                           1, & t > a \end{cases} \hspace{50mm}$$
+
+\vspace{35mm}
+\hfill $\LL{f} = \frac{e^{-as}}{s}$
+\item several WebAssign problems are like this
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{the Laplace transform strategy}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0,>={Latex[length=2mm]},
+  component/.style={rectangle,draw,fill=white,align=center,line width=1pt}]
+
+\draw (-3,3) node[component] (ode) {ODE IVP for $y(t)$};
+\draw (-3,0) node[component] (Leqn) {algebraic equation \\ for $Y(s)$};
+\draw (3,0) node[component] (Lsoln)   {$Y(s)=\dots$};
+\draw (3,3) node[component] (odesoln)   {$y(t)=\dots$};
+\path
+   (ode) edge[->] node[xshift=-3mm] {$\mathcal{L}$} (Leqn)
+   (Leqn) edge[->] node[yshift=2mm] {solve for $Y$} (Lsoln)
+   (Lsoln) edge[->] node[xshift=+5mm] {$\mathcal{L}^{-1}$} (odesoln);
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
 \end{itemize}
 \end{frame}
 
