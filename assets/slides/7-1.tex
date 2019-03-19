@@ -42,6 +42,85 @@
 %\color{green!40!blue}
 \end{frame}
 
+\newcommand{\LL}[1]{\mathcal{L}\left\{#1\right\}}
+
+\begin{frame}{the definition}
+
+\begin{itemize}
+\item the \alert{Laplace transform} of a function $f(t)$ defined on $(0,\infty)$ is
+    $$\alert{\boxed{\LL{f(t)} = \int_0^\infty e^{-st} f(t)\,dt}}$$
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item this is the book's notation
+    \end{itemize}
+\item the \alert{result} of applying the Laplace transform \alert{is a function of s}, so slightly better notation would be
+    $$\LL{f}(s) = \int_0^\infty e^{-st} f(t)\,dt$$
+\item a common (and good) way to write it is
+    $$F(s) = \int_0^\infty e^{-st} f(t)\,dt$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{why do it in a differential equations class?}
+
+\begin{itemize}
+\item why do
+    $$\LL{f(t)} = \int_0^\infty e^{-st} f(t)\,dt \,?$$
+\item because the Laplace transform \alert{converts a linear DE} (in $t$) \alert{into an algebra problem} (in $s$)
+    \begin{itemize}
+    \item this is especially useful for solving (and thinking about) nonhomogeneous linear DEs
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{practice integrals out to $\infty$}
+
+\begin{itemize}
+\item in any case, a Laplace transform is an integral $\int_0^\infty \dots$
+\item we need practice!
+\item \emph{practice 1}.  compute
+    $$\int_2^\infty e^{-3t}\,dt = \hspace{60mm}$$
+
+\vspace{10mm}
+\hfill $=\frac{1}{3} e^{-6}$
+\item \emph{practice 2}.  compute and sketch
+    $$\int_1^\infty \frac{1}{t}\,dt = \hspace{60mm}$$
+
+\vspace{10mm}
+\hfill $=+\infty$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{practice integrals, cont.}
+
+\begin{itemize}
+\item \emph{practice 3}.  compute and sketch
+    $$\int_0^\infty t e^{-t}\,dt = \hspace{60mm}$$
+
+\vspace{20mm}
+\hfill $=+1$
+
+\vspace{10mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Laplace transforms from the definition}
+
+\begin{itemize}
+\item the way it works is to pre-compute the Laplace transforms of a bunch of familiar functions, and then use these to solve DEs
+\item \emph{example 1}.  compute $\LL{e^{kt}}$
+
+\vspace{30mm}
+\item \emph{example 2}.  compute $\LL{1}$
+
+\vspace{25mm}
+\end{itemize}
+\end{frame}
+
 
 \begin{frame}{X}
 
