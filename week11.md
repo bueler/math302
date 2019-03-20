@@ -13,7 +13,7 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 
 ### Monday 4/1
 * [blank slides for section 7.1](assets/slides/7-1.pdf)
-* video: Bueler talks over slides for section 7.1 _BUELER TODO_
+* [video: Bueler talks over slides for section 7.1](https://expl.ai/XRCNTSX)
 * [work on WebAssign 9.2](https://www.webassign.net/)
 
 ### Tuesday 4/2
