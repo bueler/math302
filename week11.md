@@ -12,7 +12,7 @@ This week, **Midterm Exam 2** must be done on Tuesday, Wednesday or Thursday.  I
 This week and in [Week 12](week12) we use _Laplace transform_ methods to solve linear ODEs.  Section 7.1 is about the definition of the Laplace transform, which is an integral which expresses the solution as many exponential rates.  In section 7.2 we actually start to use it to solve ODEs, but we also start to see that the Laplace tranform is a way to _understand_ nonhomogeneous ODEs.  Most engineers understand the relationship between the driving force (nonhomogeneity) and the response (solution) by using the Laplace transform to turn the ODE into an algebraic equation.  The new equation is just multiplication by the _transfer function_.
 
 ### Monday 4/1
-* blank slides for section 7.1 _BUELER TODO_
+* [blank slides for section 7.1](assets/slides/7-1.pdf)
 * video: Bueler talks over slides for section 7.1 _BUELER TODO_
 * [work on WebAssign 9.2](https://www.webassign.net/)
 
