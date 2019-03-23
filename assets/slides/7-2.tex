@@ -136,13 +136,14 @@
 \end{frame}
 
 
-\begin{frame}{not a better table}
+\begin{frame}{not actually a better table}
 
 \begin{itemize}
-\item FIXME compare thm 7.2.1 and 7.1.1
+\item compare Theorems 7.1.1 and 7.2.1
+\item they say the same thing!
 \end{itemize}
 
-\mbox{\includegraphics[height=40mm]{figs/laplacetable.pdf} \qquad \includegraphics[height=40mm]{figs/inverselaplacetable.pdf}}
+\mbox{\includegraphics[height=40mm]{figs/laplacetable.pdf} \qquad \includegraphics[height=42mm]{figs/inverselaplacetable.pdf}}
 
 \end{frame}
 
@@ -151,7 +152,7 @@
 
 \small
 \begin{itemize}
-\item something like this will be printed on your quiz/exam
+\item this \emph{substantial} table will be printed on your quiz/exam
 \end{itemize}
 
 \vspace{-3mm}
@@ -209,11 +210,97 @@
 \end{frame}
 
 
-\begin{frame}{Z}
+\begin{frame}{$\mathcal{L}^{-1}$ example like \S7.2 \#23}
 
 \begin{itemize}
-\item X
+\item \emph{exercise 4.}  use algebra and a table of Laplace transforms:
+    $$\LLi{\frac{s}{(s-3)(s-4)(s-6)}} = \hspace{80mm}$$
 \end{itemize}
+
+\vspace{45mm}
+
+\footnotesize
+\hfill $\frac{s}{(s-3)(s-4)(s-6)} = \frac{1}{s-3} - \frac{2}{s-4} + \frac{1}{s-6}$
+\end{frame}
+
+
+\begin{frame}{$\mathcal{L}^{-1}$ example like \S7.2 \#25}
+
+\begin{itemize}
+\item \emph{exercise 5.}  use algebra and a table of Laplace transforms:
+    $$\LLi{\frac{1}{s^3+7s}} = \hspace{80mm}$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{transform of first derivatives}
+
+\begin{itemize}
+\item \emph{exercise 6.}  suppose $F(s) = \LL{f(t)}$.  use the definition of the Laplace transform to show: \qquad $\LL{f'(t)} = s\, F(s) - f(0)$
+
+\vspace{40mm}
+\footnotesize
+\item actually we showed this on \S7.1 slides
+\item what assumptions did we make about $f(t)$?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{transform of second derivatives}
+
+\begin{itemize}
+\item \emph{exercise 7.}  suppose $F(s) = \LL{f(t)}$.  show:
+
+$$\LL{f''(t)} = s^2 F(s) - s\, f(0) - f'(0)$$
+
+\vspace{40mm}
+\footnotesize
+\item in the table you'll have in hand during quizzes/exams:
+   $$\LL{f^{(n)}(t)} = s^n F(s) - s^{n-1} f(0) - \dots - f^{(n-1)}(0)$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \S7.2 \#39}
+
+\begin{itemize}
+\item \emph{exercise 8.}  use Laplace transform to solve the ODE IVP:
+    $$y''-5y'+4y=0, \qquad y(0)=1, \, y'(0)=0$$
+
+\vspace{55mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{the old way}
+
+\begin{itemize}
+\item \emph{exercise 9.}  solve without Laplace transform:
+    $$y''-5y'+4y=0, \qquad y(0)=1, \, y'(0)=0$$
+
+\vspace{55mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \S7.2 \#41}
+
+\begin{itemize}
+\item \emph{exercise 10.}  use Laplace transform to solve the ODE IVP:
+    $$y''+y=\sqrt{2} \cos(\sqrt{2} t), \qquad y(0)=0, \, y'(0)=3$$
+
+\vspace{50mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \S7.2 \#41, cont.}
+
+
+\vspace{60mm}
+\hfill $y(t) = 3 \sin(t) + \sqrt{2} \cos(t) - \sqrt{2}\cos(\sqrt{2} t)$
 \end{frame}
 
 

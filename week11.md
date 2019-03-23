@@ -28,7 +28,7 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 * [work on WebAssign 7.1](https://www.webassign.net/)
 
 ### Friday 4/5
-* blank slides for section 7.2 _BUELER TODO_
+* [blank slides for section 7.2](assets/slides/7-2.pdf)
 * video: Bueler talks over slides for section 7.2 _BUELER TODO_
 * [WebAssign 7.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
