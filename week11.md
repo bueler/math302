@@ -17,14 +17,14 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 * [work on WebAssign 9.2](https://www.webassign.net/)
 
 ### Tuesday 4/2
-* <span style="color:blue">**proctored Midterm 2**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Midterm 2**</span>
 * [WebAssign 9.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/3
-* <span style="color:blue">**proctored Midterm 2**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Midterm 2**</span>
 
 ### Thursday 4/4
-* <span style="color:blue">**proctored Midterm 2**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Midterm 2**</span>
 * [work on WebAssign 7.1](https://www.webassign.net/)
 
 ### Friday 4/5
