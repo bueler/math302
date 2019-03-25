@@ -19,6 +19,7 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 * [work on WebAssign 6.2](https://www.webassign.net/)
 
 ### Tuesday 3/26
+* [Summary of Midterm Exam 2](assets/sample/mid2-summary.pdf), an explicit guide to what will be on the midterm.  (This replaces a Sample exam.)
 * [WebAssign 6.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/27

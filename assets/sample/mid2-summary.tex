@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+%\usepackage[scaled=0.86]{helvet}
+%\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{MATH F302 UX1 (Spring 2019)}
+\rhead{April 2019}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+
+\begin{document}
+
+\phantom{k}
+\vspace{3mm}
+\Large\centerline{\textbf{Summary of Midterm Exam 2}} \normalsize
+
+\bigskip
+Midterm Exam 2 must be taken
+
+\medskip
+\centerline{\textbf{Tuesday April 2} or \textbf{Wednesday April 3} or \textbf{Thursday April 4}}
+
+The format is the same as on Midterm 1: 90 minutes, 100 points, no book, no notes, no calculator.  There is a cover sheet and eight pages following that.  The sections covered are 4.1, 4.2, 4.3, 4.10, 5.1, 5.3, 6.1, 6.3, 9.1, and 9.2, but see below for more detail.
+
+I have not prepared a Sample Midterm Exam 2.
+
+Instead, here is a detailed summary of what is on the actual Exam.
+
+\medskip
+
+\begin{itemize}
+\item[page 1:]  This page has an easy and standard 2nd-order ODE IVP.  First you are asked to solve it by \S4.3 methods, and then by power series (\S6.2).  The solution is the same; you can check your work.
+\item[page 2:]  First is a standard 4th-order ODE from \S4.3, in a case where you can factor the auxiliary equation by hand; you are asked for the general solution.  The second problem is an easy and standard general solution problem from \S4.4.
+\item[page 3:]  This three-part problem is from \S5.1.  You are first asked to sketch solutions for the different cases of damping for a 2nd-order, free, damped mass-spring ODE.  Then you are asked to convert the same mass-spring equation into a first-order system (see \S4.10).  Last is a question which is easy to answer if you understand the basic idea of resonance when there is a sinusoidal driving force (\S5.1 and Mini-Project 4).
+\item[page 4:]  The first question asks you to do one step of the improved Euler method (\S9.1); the values are chosen to make by-hand arithmetic easy.  The second question is easy if you understand the idea in \S6.2 about advance knowledge of the minimum radius of convergence of a power series solution of a linear ODE around an ordinary point.
+\item[page 5:]  The question on this page asks you to solve a 2nd-order, linear, \emph{non}-constant-coefficient ODE by power series, at least as far as writing down the recurrence relation for the coefficients.  This is a main-stream \S6.2 calculation.
+\item[page 6:]  The Extra Credit problems on this page include the sketch-of-RK4 problem promised in the slides for \S9.2, and a question testing whether you are able to use the energy method to solve a nonlinear, 2nd-order ODE (Mini-Project 3).
+\item[page 7:]  This page merely has three tables you have seen before:
+    \begin{enumerate}
+    \item \emph{Table 4.4.1 Trial Particular Solutions} from \S4.4 of the textbook and the \S4.4 slides.
+    \item The table of \emph{Maclaurin Series} from page 239 (\S6.1) of the textbook and the \S6.1 slides.
+    \item The \emph{Brief Table of Integrals} which appeared on Quiz \#7.
+    \end{enumerate}
+\item[page 8:]  This is blank space for your work if needed.
+\end{itemize}
+\end{document}
