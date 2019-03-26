@@ -31,7 +31,7 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 
 ### Friday 4/5
 * [blank slides for section 7.2](assets/slides/7-2.pdf)
-* video: Bueler talks over slides for section 7.2 _BUELER TODO_
+* [video: Bueler talks over slides for section 7.2](https://expl.ai/AGMLMME)
 * [WebAssign 7.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
