@@ -39,7 +39,7 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 * [Khan Academy: "Shifting" transform by multiplying function by exponential](https://www.khanacademy.org/math/differential-equations/laplace-transform/properties-of-laplace-transform/v/more-laplace-transform-tools)
 * random video: [Solve differential equation with Laplace Transform involving unit step function](https://www.youtube.com/watch?v=LyUDZ-GYa8U)
 * [Khan Academy: Introduction to the convolution](https://www.khanacademy.org/math/differential-equations/laplace-transform/convolution-integral/v/introduction-to-the-convolution)
-* a page on [The convolution integral](https://lpsa.swarthmore.edu/Convolution/Convolution.html#Visualizing_the_Convolution_Integral_), including visualization
+* a page on [The convolution integral](https://lpsa.swarthmore.edu/Convolution/Convolution.html#Visualizing_the_Convolution_Integral_), including [visualization](https://lpsa.swarthmore.edu/Convolution/CI.html)
 
 <hr>
 <a align="left" href="week11">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week13">next week --\></a>
