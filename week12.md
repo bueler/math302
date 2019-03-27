@@ -9,11 +9,11 @@ Welcome to Week 12 of [MATH F302 UX1 in Spring 2019](index.html).  As always, re
 
 This week, **Quiz 9** must be done on Wednesday or Thursday.  It **covers sections 7.1 and 7.2**.
 
-This week we continue to use _Laplace transform_ methods to solve linear ODEs.  FIXME
+This week we continue to use _Laplace transform_ methods to solve linear ODEs.  From [Week 11](week11) we already know what the Laplace transform is, know how to calculate many forward and inverse transforms, and know how to solve some linear, constant-coefficient ODE IVPs using it.  This week we focus on "operational" properties of the Laplace transform which allow us to solve harder ODE IVPs, and which also illuminate what the Laplace transform of a solution means.  We cover all of section 7.3, including translation properties and the unit step function.  Only one topic from 7.4 will be covered, namely the convolution.
 
 ### Monday 4/8
 * blank slides for section 7.3 _BUELER TODO_
-* video: Bueler talks over slides for section 7.3 _BUELER TODO_
+* video: Bueler talks-over slides for section 7.3 _BUELER TODO_
 * blank Mini-Project 5 _BUELER TODO_
 * [work on WebAssign 7.2](https://www.webassign.net/)
 
@@ -28,6 +28,8 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 * [work on WebAssign 7.3](https://www.webassign.net/) _BUELER TODO_
 
 ### Friday 4/12
+* blank slides for convolution (from 7.4) _BUELER TODO_
+* video: Bueler talks-over slides for convolution (from 7.4) _BUELER TODO_
 * [WebAssign 7.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
 
 ### found online
@@ -37,6 +39,7 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 * [Khan Academy: "Shifting" transform by multiplying function by exponential](https://www.khanacademy.org/math/differential-equations/laplace-transform/properties-of-laplace-transform/v/more-laplace-transform-tools)
 * random video: [Solve differential equation with Laplace Transform involving unit step function](https://www.youtube.com/watch?v=LyUDZ-GYa8U)
 * [Khan Academy: Introduction to the convolution](https://www.khanacademy.org/math/differential-equations/laplace-transform/convolution-integral/v/introduction-to-the-convolution)
+* a page on [The convolution integral](https://lpsa.swarthmore.edu/Convolution/Convolution.html#Visualizing_the_Convolution_Integral_), including visualization
 
 <hr>
 <a align="left" href="week11">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week13">next week --\></a>
