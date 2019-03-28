@@ -21,10 +21,10 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 * [WebAssign 7.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/10
-* <span style="color:blue">**proctored Quiz 9**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 9**</span>
 
 ### Thursday 4/11
-* <span style="color:blue">**proctored Quiz 9**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 9**</span>
 * [work on WebAssign 7.3](https://www.webassign.net/) _BUELER TODO_
 
 ### Friday 4/12
