@@ -25,12 +25,12 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 
 ### Thursday 4/11
 * <span style="color:blue">**proctored Quiz 9**</span>
-* [work on WebAssign 7.3](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 7.3](https://www.webassign.net/)
 
 ### Friday 4/12
 * blank slides for convolution (from 7.4) _BUELER TODO_
 * video: Bueler talks-over slides for convolution (from 7.4) _BUELER TODO_
-* [WebAssign 7.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 7.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * see [_found online_ links for Week 11](week11)
