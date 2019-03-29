@@ -14,7 +14,6 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 ### Monday 4/8
 * blank slides for section 7.3 _BUELER TODO_
 * video: Bueler talks-over slides for section 7.3 _BUELER TODO_
-* blank Mini-Project 5 _BUELER TODO_
 * [work on WebAssign 7.2](https://www.webassign.net/)
 
 ### Tuesday 4/9
@@ -25,6 +24,7 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 
 ### Thursday 4/11
 * <span style="color:blue">**proctored Quiz 9 covers 7.1 and 7.2**</span>
+* blank Mini-Project 5 _BUELER TODO_
 * [work on WebAssign 7.3](https://www.webassign.net/)
 
 ### Friday 4/12
