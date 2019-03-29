@@ -13,6 +13,10 @@
 \setbeamertemplate{footline}[frame number]
 \usetheme{Pittsburgh}
 
+%\makeatletter
+%\newcommand{\tinytiny}{\@setfontsize{\tinytiny}{4pt}{4pt}}
+%\makeatother
+
 \newcommand\enumnum[1]{{\renewcommand{\insertenumlabel}{#1}%
       \usebeamertemplate{enumerate item} \,}}
 
@@ -82,14 +86,14 @@
 \end{frame}
 
 
-\begin{frame}{Laplace's Transform and its inverse}
+\begin{frame}{recall Laplace's Transform}
 
 \begin{columns}
 \begin{column}{0.77\textwidth}
 \begin{itemize}
-\item recall the definition:
+\item the definition:
     $$\LL{f(t)} = \int_0^\infty e^{-st} f(t)\,dt$$
-\item first step is to apply $\mathcal{L}$ to ODE using:
+\item first step is to apply $\mathcal{L}$ to ODE using
 \begin{align*}
 \LL{y'(t)} &= s Y(s) - y(0) \\
 \LL{y''(t)} &= s^2 Y(s) - s y(0) - y'(0)
@@ -113,6 +117,57 @@ Pierre-Simon Laplace (1749--1827)
 \end{columns}
 \end{frame}
 
+
+\begin{frame}{recall the better table}
+
+\vspace{-2mm}
+\begin{center}
+\includegraphics[height=80mm]{figs/fulllaplacetable}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{noticable in the table}
+
+\begin{itemize}
+\item compare the left and right columns in this part of the table:
+\small
+\begin{align*}
+\LL{t} &= \frac{1}{s^2}            &&& \LL{te^{at}} &= \frac{1}{(s-a)^2} \\
+\LL{t^n} &= \frac{n!}{s^{n+1}}     &&& \LL{t^n e^{at}} &= \frac{n!}{(s-a)^{n+1}} \\
+\LL{\sin(kt)} &= \frac{k}{s^2+k^2} &&& \LL{e^{at}\sin(kt)} &= \frac{k}{(s-a)^2+k^2} \\
+\LL{\cos(kt)} &= \frac{s}{s^2+k^2} &&& \LL{e^{at}\cos(kt)} &= \frac{s-a}{(s-a)^2+k^2}
+\end{align*}
+\item multiplying by $e^{at}$ causes: \, $s\to s-a$
+\item this is indeed a rule!
+\item multiplying by an exponential \emph{translates} the Laplace transform:
+   $$\LL{e^{at} f(t)} = F(s-a)$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{why?}
+
+    $$\LL{e^{at} f(t)} = F(s-a)$$
+\begin{itemize}
+\item \alert{an exponential multiplier in $t$ is the same as a shift in $s$}
+\item because, by definition,
+\begin{align*}
+\LL{e^{at} f(t)} &= \int_0^\infty e^{-st} e^{at} f(t)\,dt = \int_0^\infty e^{-(s-a)t} f(t)\,dt
+\end{align*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{examples}
+
+\begin{itemize}
+\item examples like in WebAssign 7.3
+\item X
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{X}
 
 \begin{itemize}
@@ -124,17 +179,9 @@ Pierre-Simon Laplace (1749--1827)
 \begin{frame}{X}
 
 \begin{itemize}
-\item because of the definition $\LL{f(t)} = \int_0^\infty e^{-st} f(t)\,dt$,
-
-\begin{quote}
-\alert{an extra exponential in the function is the same as a shift in the result}
-\end{quote}
-
-\item as a formal thing, if $F(s)$ is our name for $\LL{f(t)}$ then
-    $$\LL{e^{at} f(t)} = F(s-a)$$
+\item X
 \end{itemize}
 \end{frame}
-
 
 
 \begin{frame}{X}
