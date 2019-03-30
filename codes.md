@@ -22,6 +22,7 @@ You can use [Octave Online](https://octave-online.net/) or [Matlab](https://www.
 * [springs.m](assets/codes/springs.m): Generates this figures in [slides for section 5.3](assets/slides/5-3.pdf).
 * [plotairy.m](assets/codes/plotairy.m): Generates an Airy function figure in [slides for section 6.2](assets/slides/6-2.pdf).
 * [minradius.m](assets/codes/minradius.m): Generates a radius-of-convergence figure in [slides for section 6.2](assets/slides/6-2.pdf).
+* [unitpictures.m](assets/codes/unitpictures.m): Generates unit step function figures in [slides for section 7.3](assets/slides/7-3.pdf).
 
 ### Matlab/Octave: Numerical methods
 
