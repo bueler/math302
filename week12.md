@@ -33,7 +33,7 @@ This week we continue to use _Laplace transform_ methods to solve linear ODEs.  
 * [WebAssign 7.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
-* see [_found online_ links for Week 11](week11)
+* see [_found online_ links for Week 11](week11#found-online)
 * [Khan Academy: lessons and videos on Laplace Transform](https://www.khanacademy.org/math/differential-equations/laplace-transform)
 * random video: [Example of solving a differential equation using Laplace transforms](https://www.youtube.com/watch?v=CnB97dUhnuc)
 * [Khan Academy: "Shifting" transform by multiplying function by exponential](https://www.khanacademy.org/math/differential-equations/laplace-transform/properties-of-laplace-transform/v/more-laplace-transform-tools)
