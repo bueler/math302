@@ -9,7 +9,9 @@ Welcome to Week 12 of [MATH F302 UX1 in Spring 2019](index.html).  As always, re
 
 This week, **Quiz 9** must be done on Wednesday or Thursday.  It **covers sections 7.1 and 7.2**.
 
-This week we continue to use _Laplace transform_ methods to solve linear ODEs.  From [Week 11](week11) we already know what the Laplace transform is, know how to calculate many forward and inverse transforms, and know how to solve some linear, constant-coefficient ODE IVPs using it.  This week we focus on "operational" properties of the Laplace transform which allow us to solve harder ODE IVPs, and which also illuminate what the Laplace transform of a solution means.  We cover all of section 7.3, including translation properties and the unit step function.  Only one topic from 7.4 will be covered, namely the convolution.
+We continue to use _Laplace transform_ methods to solve linear ODEs.  From [Week 11](week11) we already know what it is, how to calculate it for many functions, how to calculate the inverse transform of many functions, and how to use it to solve some linear, constant-coefficient ODE IVPs.
+
+This week we focus on "operational" properties of the Laplace transform which allow us to solve harder ODE IVPs, and which also illuminate what the Laplace transform of a solution means.  We cover essentially all of section 7.3, including translation properties and the unit step function.  Only one topic from 7.4 will be covered, namely the convolution.
 
 ### Monday 4/8
 * [blank slides for section 7.3](assets/slides/7-3.pdf)
