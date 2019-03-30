@@ -12,7 +12,7 @@ This week, **Quiz 9** must be done on Wednesday or Thursday.  It **covers sectio
 This week we continue to use _Laplace transform_ methods to solve linear ODEs.  From [Week 11](week11) we already know what the Laplace transform is, know how to calculate many forward and inverse transforms, and know how to solve some linear, constant-coefficient ODE IVPs using it.  This week we focus on "operational" properties of the Laplace transform which allow us to solve harder ODE IVPs, and which also illuminate what the Laplace transform of a solution means.  We cover all of section 7.3, including translation properties and the unit step function.  Only one topic from 7.4 will be covered, namely the convolution.
 
 ### Monday 4/8
-* blank slides for section 7.3 _BUELER TODO_
+* [blank slides for section 7.3](assets/slides/7-3.pdf)
 * video: Bueler talks-over slides for section 7.3 _BUELER TODO_
 * [work on WebAssign 7.2](https://www.webassign.net/)
 

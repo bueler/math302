@@ -76,12 +76,8 @@
 \item \S 7.3: ``operational properties'' regarding translations (shifts)
     \begin{itemize}
     \item including the \emph{unit step function} $\mathcal{U}(t)$
-    \item a.k.a.~\emph{Heaviside function}
     \end{itemize}
-\item \S 7.4: ``operational property'' regarding \emph{convolution}
-    \begin{itemize}
-    \item in next slides
-    \end{itemize}
+\item \S 7.4 (next): ``operational property'' re \emph{convolution}
 \end{itemize}
 \end{frame}
 
@@ -93,7 +89,7 @@
 \begin{itemize}
 \item the definition:
     $$\LL{f(t)} = \int_0^\infty e^{-st} f(t)\,dt$$
-\item first step is to apply $\mathcal{L}$ to ODE using
+\item when applying $\mathcal{L}$ to an ODE use:
 \begin{align*}
 \LL{y'(t)} &= s Y(s) - y(0) \\
 \LL{y''(t)} &= s^2 Y(s) - s y(0) - y'(0)
@@ -118,7 +114,7 @@ Pierre-Simon Laplace (1749--1827)
 \end{frame}
 
 
-\begin{frame}{recall the better table}
+\begin{frame}{we have a decent table}
 
 \vspace{-2mm}
 \begin{center}
@@ -139,8 +135,7 @@ Pierre-Simon Laplace (1749--1827)
 \LL{\cos(kt)} &= \frac{s}{s^2+k^2} &&& \LL{e^{at}\cos(kt)} &= \frac{s-a}{(s-a)^2+k^2}
 \end{align*}
 \item multiplying by $e^{at}$ causes: \, $s\to s-a$
-\item this is indeed a rule!
-\item multiplying by an exponential \emph{translates} the Laplace transform:
+\item this is a rule!: multiplying by an exponential in $t$ is \emph{translation} in $s$:
    $$\LL{e^{at} f(t)} = F(s-a)$$
 \end{itemize}
 \end{frame}
@@ -148,69 +143,186 @@ Pierre-Simon Laplace (1749--1827)
 
 \begin{frame}{why?}
 
-    $$\LL{e^{at} f(t)} = F(s-a)$$
 \begin{itemize}
-\item \alert{an exponential multiplier in $t$ is the same as a shift in $s$}
-\item because, by definition,
+\item \emph{why} does multiplying by $e^{at}$ cause \, $s\to s-a$ \,?
+\item recall definition:
+   $$\LL{f(t)} = F(s) = \int_0^\infty e^{-st} f(t)\,dt$$
+\item so:
 \begin{align*}
-\LL{e^{at} f(t)} &= \int_0^\infty e^{-st} e^{at} f(t)\,dt = \int_0^\infty e^{-(s-a)t} f(t)\,dt
+\LL{e^{at} f(t)} &= \int_0^\infty e^{-st} e^{at} f(t)\,dt = \int_0^\infty e^{-(s-a)t} f(t)\,dt \\
+   &= F(s-a)
 \end{align*}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{examples}
+\begin{frame}{examples from \S7.3}
 
 \begin{itemize}
-\item examples like in WebAssign 7.3
-\item X
+\item start by just going back and forth using the new rule
+\item \emph{exercise 1.} % like #7
+   $$\LL{e^{2t} \sin(3t)} = \hspace{100mm}$$
+
+\vspace{20mm}
+\item \emph{exercise 2.} % like #13
+   $$\LLi{\frac{1}{s^2-6s+10}} = \hspace{100mm}$$
+
+\vspace{20mm}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{example like \S7.3 \#23}
 
 \begin{itemize}
-\item X
+\item \emph{exercise 3.} use $\mathcal{L}$ to solve the ODE IVP:
+    $$y''+4y'+4y=0, \quad y(0)=1, \, y'(0)=1 \hspace{40mm}$$
+
+\vspace{60mm}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{example like \S7.3 \#30}
 
 \begin{itemize}
-\item X
+\item \emph{exercise 4.} use $\mathcal{L}$ to solve the ODE IVP:
+    $$y''-2y'+5y=t, \quad y(0)=0, \, y'(0)=7 \hspace{40mm}$$
+
+\vspace{60mm}
 \end{itemize}
 \end{frame}
 
+\newcommand{\UU}{\mathcal{U}}
 
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
+\begin{frame}{unit step function}
 
 \begin{columns}
-\begin{column}{0.77\textwidth}
+\begin{column}{0.65\textwidth}
 \begin{itemize}
-\item X
+\item \emph{definition.}  the \emph{unit step function} is
+    $$\UU(t) = \begin{cases} 0, & t < 0 \\
+                             1, & t \ge 0 \end{cases}$$
+\item the book defines it with a translation, and only on $[0,\infty)$
+    $$\UU(t-a) = \begin{cases} 0, & 0\le t < a \\
+                               1, & t \ge a \end{cases}$$
+\item why? because we want to model ``switching on'' at time $t=a$
 \end{itemize}
 \end{column}
-\begin{column}{0.23\textwidth}
+\begin{column}{0.35\textwidth}
+\includegraphics[width=\textwidth]{figs/unitstep}
+
+\vspace{4mm}
+\includegraphics[width=\textwidth]{figs/unitsteptrans}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{$\UU(t-a)$ helps with switching on/off}
+
+\small
+write each function in terms of unit step function(s):
+\begin{itemize}
+\item \emph{example A.} % 7.3 #57
+
+\vspace{-3mm}
+    $$f(t) = \begin{cases} 0, & 0 \le t < 1 \\ t^2, & t\ge 1 \end{cases} \hspace{70mm}$$
+
+\vspace{6mm}
+\item \emph{example B.} % 7.3 #74
+
+\includegraphics[width=25mm]{figs/Egoesoff}
+
+\vspace{6mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Laplace transform with $\UU(t-a)$}
+
+\begin{columns}
+\begin{column}{0.8\textwidth}
+\begin{itemize}
+\item $\UU(t)$ is also called the \emph{Heaviside} function
+\item easy-to-show: if $F(s)=\LL{f(t)}$ then
+    $$\LL{f(t-a)\UU(t-a)} = e^{-at} F(s)$$
+
+\item \emph{show it:}
+
+\vspace{40mm}
+\end{itemize}
+\end{column}
+\begin{column}{0.2\textwidth}
 \vspace{3mm}
 
-\includegraphics[width=\textwidth]{figs/Heaviside}
+\includegraphics[width=0.7\textwidth]{figs/Heaviside}
 
 \tiny
 Oliver Heaviside
 
 (1850--1925)
+
+\vspace{5mm}
+\hspace{-5mm} \includegraphics[width=1.2\textwidth]{figs/fanditstrans}
 \end{column}
 \end{columns}
+\end{frame}
+
+
+\begin{frame}{\#57 in \S7.3}
+
+\begin{itemize}
+\item \emph{exercise 5.}  write the function in terms of $\UU$ and then find the Laplace transform:
+
+\vspace{-3mm}
+    $$f(t) = \begin{cases} 0, & 0 \le t < 1 \\ t^2, & t\ge 1 \end{cases} \hspace{70mm}$$
+
+\vspace{55mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{second version}
+
+\begin{itemize}
+\item the book then says:
+
+\small
+\begin{quote}
+We are frequently confronted with the problem of finding the Laplace transform of a product of a function $g$ and a unit step function $\UU(t-a)$ where the function $g$ lacks the precise shifted form $f(t-a)$ in Theorem 7.3.2.
+\end{quote}
+\normalsize
+\item yup, that's our problem
+\item 2nd form of the same rule:
+    $$\LL{g(t)\UU(t-a)} = e^{-at} \LL{g(t+a)}$$
+\item it will be in the table also, when it is printed on quizzes/exams
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{once again}
+
+\begin{itemize}
+\item \emph{exercise 5.}  write the function in terms of $\UU$ and then find the Laplace transform:
+
+\vspace{-3mm}
+    $$f(t) = \begin{cases} 0, & 0 \le t < 1 \\ t^2, & t\ge 1 \end{cases} \hspace{70mm}$$
+
+\vspace{55mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \#66 in \S7.3}
+
+\begin{itemize}
+\item \emph{exercise 6.}  use Laplace transforms to solve the ODE IVP:
+    $$y''+9y=f(t), \quad y(0)=0, \, y'(0)=0$$
+where \,\, $\displaystyle f(t) = \begin{cases} 1, & 0 \le t < 1 \\ 0, & t\ge 1 \end{cases}$
+
+\vspace{55mm}
+\end{itemize}
 \end{frame}
 
 
@@ -219,15 +331,21 @@ Oliver Heaviside
 \begin{itemize}
 \item assume $\LL{f(t)}=F(s)$
 \item \emph{1st translation theorem}.
-    $$\LL{e^{at} f(t)} = F(s-a)$$
+    $$\boxed{\LL{e^{at} f(t)} = F(s-a)}$$
 \item \emph{2nd translation theorem}.  if $a>0$ then
-    $$\LL{f(t-a) \mathcal{U}(t-a)} = e^{-as} F(s)$$
+    $$\boxed{\LL{f(t-a) \mathcal{U}(t-a)} = e^{-as} F(s)}$$
 
 \vspace{-2mm}
     \begin{itemize}
-    \item includes easy-to-check case
-    $$\LL{\mathcal{U}(t-a)} = \frac{e^{-as}}{s}$$
+    \item includes easy case: \, $\LL{\mathcal{U}(t-a)} = \frac{e^{-as}}{s}$
+    \item second form
+        $$\boxed{\LL{g(t) \mathcal{U}(t-a)} = e^{-as} \LL{g(t+a)}}$$
     \end{itemize}
+
+\medskip
+\item these are all in the table you will get on quizzes and exams, so:
+
+\centerline{\alert{goal is understanding not memorizing}}
 \end{itemize}
 \end{frame}
 
@@ -242,8 +360,8 @@ Oliver Heaviside
      \centerline{\href{https://bueler.github.io/math302/week11.html}{\tt \color{cyan} bueler.github.io/math302/week11.html}}
      \item \emph{read} sections 7.3 and 7.4 in the textbook
          \begin{itemize}
-         \item but you can ignore ``beams'' in \S7.3, and
-         \item you should focus on 7.4.2 Transforms of Integrals in \S7.4
+         \item you can ignore ``beams'' and example 10 in \S7.3
+         \item only 7.4.2 Transforms of Integrals in \S7.4
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 7.3
          \begin{itemize}
