@@ -15,7 +15,7 @@ This week we focus on "operational" properties of the Laplace transform which al
 
 ### Monday 4/8
 * [blank slides for section 7.3](assets/slides/7-3.pdf)
-* video: Bueler talks-over slides for section 7.3 _BUELER TODO_
+* [video: Bueler talks-over slides for section 7.3](https://expl.ai/UCADYFB)
 * [work on WebAssign 7.2](https://www.webassign.net/)
 
 ### Tuesday 4/9
