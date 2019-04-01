@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
 
-\usepackage{graphicx,color,enumitem}
+\usepackage{graphicx,color,enumitem,fancyvrb,xspace}
 \usepackage{amsmath,amsthm,amsbsy}
 \usepackage{palatino}
 \usepackage{mdframed}
@@ -18,6 +18,8 @@ skipabove=1.3\topsep]{exerpart}{Part}
 
 \renewcommand*{\theexerpart}{(\alph{exerpart})}
 \newcommand{\eps}{\epsilon}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
 
 %% The following commands put defined left and right headers on the top, and a page number
 %% on the bottom of all pages beyond page 1
@@ -52,28 +54,29 @@ skipabove=1.3\topsep]{exerpart}{Part}
 
 \medskip
 \small
-\renewcommand{\baselinestretch}{1.0}
+\renewcommand{\baselinestretch}{0.95}
 \begin{quote}
 \textbf{Instructions.}  Please write your solutions neatly on paper, or start a new document on a computer.  Include your name in the upper right on each sheet.  Clearly label the parts of your solutions following the headings below.    Your final document, which should \emph{not} be your first draft, should be at most five pages.  Submit your PDF by uploading using the Google Form link on the ``Week 14'' page at
 
      \centerline{\href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302}}}  
 
-If you wrote on paper, please scan or photograph your completed document and make the lighting good.  Also line things up carefully, and/or use a scanner app.  In any case \emph{please generate an easily-readable PDF.}
+If you wrote on paper, please scan or photograph your completed document and make the lighting good.  Also line things up carefully, and/or use a scanner app.  In any case \emph{please generate a single easily-readable PDF file.}
 
-Because of how this Mini-Project is structured, the final answer in each part, i.e.~the value of $y(2)$, is not worth many points!  What you need to do is show understanding and correct application of each method.  Please show your work neatly.  Full credit requires evidence of clear understanding \emph{and} clear writing.
+Because of how this Mini-Project is structured, the final answer in each part, i.e.~the value of $x(2)$, is not worth many points!  What you need to do is show understanding and correct application of each method.  Please show your work neatly.  Full credit requires evidence of clear understanding \emph{and} clear writing.
 \end{quote}
 
 \normalsize
 \bigskip
 \renewcommand{\baselinestretch}{1.1}
 
-\textbf{One problem}.  Though many real-world ODEs are nonlinear, a large fraction of this course is about linear ODEs of second order.  The same is true of the problems on the Final Exam.  This Mini-Project is a review of the methods we know for such problems.  There is no new content.
+Though many real-world ODEs are nonlinear, a large fraction of the problems this course, and on the Final Exam, are linear ODEs of second order.  This Mini-Project reviews our methods for such problems.  There is no new content.
 
-Consider this ODE IVP for an unknown function $x(t)$:
+\medskip
+\textbf{One problem}.  Consider this ODE IVP for an unknown function $x(t)$:
 \begin{equation}
 x''+4x'+5x=0, \quad x(0)=0, \, x'(0)=10 \label{homo}
 \end{equation}
-We have many methods for solving this problem.  In parts A--E of this Mini-Project you are asked to use five different methods to compute, or approximate, $x(2)$.  Because this answer is the same in each case, you can check your work.
+Parts A--E below ask you to use five different methods to compute, or approximate, $x(2)$.  Because this answer is the same in each case, you can check your work.
 
 Also consider this closely-related non-homogeneous variation of the same problem:
 \begin{equation}
@@ -82,20 +85,39 @@ x''+4x'+5x=5\sin t, \quad x(0)=0, \, x'(0)=10 \label{nonhomo}
 Parts G--I ask you to compute $x(2)$ for this problem using three different methods.
 
 \medskip
-\textbf{Many solution methods}.  The emphasis of your solutions, and of my grading, must be on whether you show clear understanding of the steps of the method, and whether those steps are correct.  Please consistently write ``$x(t)$'' for the solution, that is, with independent variable $t$ and dependent variable $x$.
+\textbf{Many solution methods}.  The emphasis of your solutions must be on showing clear understanding of the steps of the method, and correctness also.  Please consistently write ``$x(t)$'' for the solution, that is, with independent variable $t$ and dependent variable $x$.
 
 \renewcommand{\labelenumi}{\Alph{enumi}.}
 \begin{enumerate}
-\item Use methods from \S4.3, \emph{auxiliary equation} methods, to solve \eqref{homo}.  Compute $x(2)$.
-\item Use methods from Chapter 7, \emph{Laplace transform} methods, to solve \eqref{homo}.  Compute $x(2)$.
-\item Use methods from Chapter 6, \emph{power series} methods, to solve \eqref{homo}.  In particular, start your solution with
+\item Use methods from \S4.3, \emph{auxiliary equation} methods, to solve problem \eqref{homo}.  Compute $x(2)$.
+\item Use methods from Chapter 7, \emph{Laplace transform} methods, to solve problem \eqref{homo}.  Compute $x(2)$.
+\item In the \href{https://bueler.github.io/math302/assets/slides/5-3.pdf}{slides} and \href{https://expl.ai/VSJTFRC}{video} for \S5.3/4.10 I show how to use the \Matlab/\Octave black-box solver \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\texttt{ode45}} to solve second-order ODE IVPs like this one.  Use the substitution $z_1(t)=x(t)$ and $z_2(t)=x'(t)$ to write equation \eqref{homo} as a first-order system.  Then use \Matlab/\Octave/\href{https://octave-online.net/}{OctaveOnline} to solve the problem \emph{numerically}:
+\begin{Verbatim}[fontsize=\small]
+>> f = @(t,z) [_____; _____];
+>> [tt,zz] = ode45(f,[0,2],[_____;_____]);
+>> plot(tt,zz),  xlabel t,  legend('x(t)','dx/dt')
+\end{Verbatim}
+%> f = @(t,z) [z(2); -5*z(1)-4*z(2)];
+%> [tt,zz]=ode45(f,[0,2],[0;10]);
+%> plot(tt,zz),  xlabel t,  legend('x(t)','dx/dt')
+%> zz(end,1)
+%ans =  0.16654
+%> abs(zz(end,1)-10*sin(2)/exp(4))
+%ans =    5.6262e-06
+You will need to fill in the blanks.  Thereby approximate $x(2)$.  How accurate is the approximation of $x(2)$?  (\emph{Compute the absolute error; it is \emph{not} zero; \emph{\texttt{ode45}} is \emph{not} magic.})
+\item Use the \emph{power series} methods from \S6.2 to solve problem \eqref{homo}.  In particular, start your solution with a power series around the basepoint $t_0=0$, namely
     $$x(t) = \sum_{n=0}^\infty c_n t^n.$$
-Note that you can use $x(0)$ and $x'(0)$ to immediately find $c_0$ and $c_1$.  Then determine the recurrence relation which (potentially) generates all of the coefficients $c_k$.  Use it to determine the values of $c_2,\dots,c_6$.  Your solution is now approximated by a polynomial of degree 6, i.e.~$x(t)\approx p(t)$.  What is your approximation of $x(2)$?  (\emph{It will not be close to the result from the other parts.})  Backing-up, what is your approximation of $x(1)$?  (\emph{This should be reasonably close to $x(1)$ computed from the solutions in A and B.})
-\item FIXME system
-\item FIXME numerical improved Euler
-\item FIXME classify using 5.1.2 methods into under/over/critically
-\item FIXME \eqref{nonhomo} \S4.4
-\item FIXME \eqref{nonhomo} Chapter 7
-\item FIXME \eqref{nonhomo} numerical \texttt{ode45}
+Use known values $x(0)$ and $x'(0)$ to find $c_0$ and $c_1$.  Find the recurrence relation which generates all of the coefficients $c_k$.  Determine the values of $c_2,\dots,c_6$.  Your solution is now approximated by a polynomial of degree 6, i.e.~$x(t)\approx p(t)$.  What is your approximation of $x(2)$?  (\emph{It will not be close to the result from the other parts.})  Closer to the basepoint, what is your approximation of $x(1)$?  (\emph{This should be much better; compare the solution from parts A and/or B.})  On the same axes, plot both the exact solution $x(t)$---from parts A and/or B---and the polynomial $p(t)$.
+\item Write equation \eqref{homo} as a first order system as in \S8.1.  That is, use the substitution $y(t)=x'(t)$, and find a $2\times 2$ matrix $\mathbf{A}$ and an initial vector $\mathbf{X}_0$, so that the problem is
+    $$\mathbf{X}' = \mathbf{A} \mathbf{X}, \quad \mathbf{X}(0)=\mathbf{X}_0$$
+for a vector solution $\mathbf{X}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix}$.  The eigenvalues and eigenvectors of this system will be complex.  Use the technique of section 8.2.3 to write out the general solution as a linear combination of real solutions, and then use the initial values.  Confirm that $x(t)$ is the same as from parts A and/or B, and thereby compute $x(2)$.
+\item Problem \eqref{homo} is the kind of undriven  \emph{damped mass-spring} studied in \S5.1: $m=1$, $\beta=4$, and $k=5$.  Is it overdamped, critically damped, or underdamped?
+\item Use the \S4.4 \emph{undetermined coefficients} method to solve problem \eqref{nonhomo}.  Compute $x(2)$.
+\item Use Chapter 7 \emph{Laplace transform} methods to solve problem \eqref{nonhomo}.  Compute $x(2)$.
+\item Use the black-box numerical solver \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\texttt{ode45}} to solve problem \eqref{nonhomo}.  Approximate $x(2)$.  How accurate is the approximation?
+% >> f = @(t,z) [z(2); -5*z(1)-4*z(2)+5*sin(t)];
+% >> [tt,zz] = ode45(f,[0,2],[0;10]);
+% >> zz(end,1)
+% ans =  1.0006
 \end{enumerate}
 \end{document}
