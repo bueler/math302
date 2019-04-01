@@ -26,7 +26,7 @@ This week we focus on "operational" properties of the Laplace transform which al
 
 ### Thursday 4/11
 * <span style="color:blue">**proctored Quiz 9 covers 7.1 and 7.2**</span>
-* blank Mini-Project 5 _BUELER TODO_
+* [blank Mini-Project 5](assets/mp/mp5.pdf)
 * [work on WebAssign 7.3](https://www.webassign.net/)
 
 ### Friday 4/12
