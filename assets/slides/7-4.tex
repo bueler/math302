@@ -53,10 +53,27 @@
 \newcommand{\LLi}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
 
 
-\begin{frame}{X}
+
+\begin{frame}{remember we have a decent table}
+
+\vspace{-5mm}
+\begin{center}
+\includegraphics[height=80mm]{figs/fulllaplacetable}
+\end{center}
+
+\vspace{-13mm}
+\alert{\emph{note last two entries $\to$}}
+\end{frame}
+
+
+\begin{frame}{convolution}
 
 \begin{itemize}
-\item X
+\item the last two entries say:
+\begin{align*}
+(f \ast g)(t) &= \int_0^t f(\tau) g(t-\tau)\,d\tau \\
+\LL{f \ast g} &= F(s) G(s)
+\end{align*}
 \end{itemize}
 \end{frame}
 
@@ -77,10 +94,34 @@
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{like \S7.4 \#19}
 
 \begin{itemize}
-\item X
+\item \emph{exercise 1.}  
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \S7.4 \#26 and \#28}
+
+\begin{itemize}
+\item \emph{exercise 2.}  
+\item \emph{exercise 3.}  
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \S7.4 \#35}
+
+\begin{itemize}
+\item the convolution of $f(t)$ with the constant 1 is just an integral:
+    $$f(t) \ast 1 = \int_0^t f(\tau) 1\,d\tau = \int_0^t f(\tau)\,d\tau$$
+\item so
+    $$\frac{F(s)}{s} = \LL{f(t)\ast 1}=\LL{\int_0^t f(\tau)\,d\tau}$$
+\item \emph{exercise 4.}  use this to find the inverse Laplace transform:
+    $$\LLi{\frac{1}{s(s-1)}} = \hspace{80mm}$$
+
+\vspace{20mm}
 \end{itemize}
 \end{frame}
 
