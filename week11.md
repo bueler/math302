@@ -7,11 +7,9 @@ title: Week 11
 
 Welcome to Week 11 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
 
-This week, **Midterm Exam 2** must be done on Tuesday, Wednesday or Thursday.  It **covers sections 4.1, 4.2, 4.3, 4.4, 4.10, 5.1, 5.3, 6.1, 6.2, 9.1, and 9.2**.
+This week, **Midterm Exam 2** must be done on Tuesday, Wednesday or Thursday.  It **covers sections 4.1, 4.2, 4.3, 4.4, 4.10, 5.1, 5.3, 6.1, 6.2, 9.1, and 9.2**.  See the [summary of Midterm Exam 2](assets/sample/mid2-summary.pdf), an explicit guide to what will be on the midterm.  (It replaces a Sample exam, which I have not produced.)
 
-See the [summary of Midterm Exam 2](assets/sample/mid2-summary.pdf), which is a very explicit guide to what will be on the midterm.  (This replaces a Sample exam, which I have not produced.)
-
-This week and in [Week 12](week12) we use _Laplace transform_ methods to solve linear ODEs.  Section 7.1 is about the definition of the Laplace transform, which is an integral which expresses the solution as many exponential rates.  In section 7.2 we actually start to use it to solve ODEs, but we also start to see that the Laplace tranform is a way to _understand_ nonhomogeneous ODEs.  Most engineers understand the relationship between the driving force (nonhomogeneity) and the response (solution) by using the Laplace transform to turn the ODE into an algebraic equation.  The new equation is just multiplication by the _transfer function_.
+This week and in [Week 12](week12) we use _Laplace transform_ methods to solve linear ODEs.  Section 7.1 is about the definition of the Laplace transform, which is an integral which expresses the solution as a combination of many exponential rates.  In section 7.2 we actually start to use it to solve ODEs.  We also start to see that the Laplace transform is a way engineers understand the relationship between the driving force (nonhomogeneity) and the response (solution) by using the Laplace transform to turn the ODE into an algebraic equation.  The new equation is just multiplication by the _transfer function_.
 
 ### Monday 4/1
 * [blank slides for section 7.1](assets/slides/7-1.pdf)
