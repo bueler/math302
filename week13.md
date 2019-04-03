@@ -24,12 +24,12 @@ This week we start to consider systems of ODEs.  This involves vectors and matri
 
 ### Thursday 4/18
 * <span style="color:blue">**proctored Quiz 10 covers 7.3 and convolution**</span> _BUELER TODO_
-* [work on WebAssign 3.3](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 3.3](https://www.webassign.net/)
 
 ### Friday 4/19
 * blank slides for section 8.1 _BUELER TODO_
 * video: Bueler talks-over slides for section 8.1 _BUELER TODO_
-* [WebAssign 3.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 3.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Gil Strang at MIT: Solving linear systems](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-63-solving-linear-systems-117472.html)
