@@ -31,7 +31,7 @@ This week we focus on "operational" properties of the Laplace transform which al
 
 ### Friday 4/12
 * [blank slides for convolution (from 7.4)](assets/slides/7-4.pdf)
-* video: Bueler talks-over slides for convolution (from 7.4) _BUELER TODO_
+* [video: Bueler talks-over slides for convolution (from 7.4)](https://expl.ai/TPXATGF)
 * [WebAssign 7.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
