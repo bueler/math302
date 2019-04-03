@@ -15,10 +15,10 @@ This week we continue with systems of ODEs.  This involves vectors and matrices.
 * blank slides for section 8.2 _BUELER TODO_
 * video: Bueler talks-over slides for section 8.2 _BUELER TODO_
 * Mini-Project 5, _One problem, many methods_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 5](https://forms.gle/RJUD9cQyBKt4Uyi27); you may need to log in to your `alaska.edu` account to use this link
-* [work on WebAssign 8.1](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 8.1](https://www.webassign.net/)
 
 ### Tuesday 4/23
-* [WebAssign 8.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 8.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/24
 * <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span> _BUELER TODO_
