@@ -53,13 +53,30 @@
 \newcommand{\LLi}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
 
 
-\begin{frame}{the transfer function}
+\begin{frame}{Laplace transform a mass-spring system}
 
 \begin{itemize}
 \item consider a damped mass-spring system with driving force $g(t)$:
+\begin{equation*}
+m x'' + \beta x' + k x = g(t), \qquad x(0)=0, \, x'(0)=0
+\end{equation*}
+\item consider Laplace transform of the solution: $X(s)=\LL{x(t)}$
+\item \emph{exercise.}  compute $X(s)$
+\vspace{35mm}
+
+    $$\hfill X(s) = \boxed{\Huge \strut \hspace{50mm}}$$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{the transfer function}
+
 \begin{equation}
 m x'' + \beta x' + k x = g(t), \qquad x(0)=0, \, x'(0)=0  \tag{$\ast$} \label{drivenmassspring}
 \end{equation}
+
+\begin{itemize}
 \item applying $\mathcal{L}$ we get, after simplifying,
     $$X(s) = \frac{1}{ms^2+\beta s+k}\,G(s)$$
 \item the function
@@ -142,7 +159,7 @@ m x'' + \beta x' + k x = g(t), \qquad x(0)=0, \, x'(0)=0 \label{dms} \tag{$\ast$
 \end{frame}
 
 
-\begin{frame}{computing convolution: example 1}
+\begin{frame}{computing a convolution: example 1}
 
 \begin{itemize}
 \item definition: \qquad $(f \ast g)(t) = \int_0^t f(\tau) g(t-\tau)\,d\tau$
@@ -154,7 +171,7 @@ m x'' + \beta x' + k x = g(t), \qquad x(0)=0, \, x'(0)=0 \label{dms} \tag{$\ast$
 \end{frame}
 
 
-\begin{frame}{computing convolution: example 2}
+\begin{frame}{computing a convolution: example 2}
 
 \begin{itemize}
 \item \emph{example 2.} compute $f\ast g$:
@@ -267,16 +284,66 @@ is multiplied by the transformed driving force to give the Laplace transform of 
 \end{frame}
 
 
-\begin{frame}{why ``impulse response''?}
+\begin{frame}{a definition from \S7.5}
 \begin{itemize}
-\item X
+\item \emph{definition.}  the \emph{Dirac delta} $\delta(t)$ is a ``function'' which equals zero when $t\ne 0$ and yet has area one:
+    $$\int_{-\infty}^\infty \delta(t)\,dt = 1$$
+    \vspace{-3mm}
+    \begin{itemize}
+    \item this is impossible for a real function, but it is a useful concept
+    \item ultimately made into honest math by generalizing ``function''
+    \item the next slide relates to this definition \dots
+    \item but you are not responsible for it (\emph{no WebAssign/quiz/exam})
+    \end{itemize}
+\item because of the above property,
+    $$\LL{\delta(t)} = 1$$
+\item $\delta(t)$ is an ``impulse'' at $t=0$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{$\Gamma$ function}
+
+\begin{frame}{why ``impulse response''?}
+
+\begin{equation}
+m x'' + \beta x' + k x = g(t), \qquad x(0)=0, \, x'(0)=0 \tag{$\ast$}
+\end{equation}
+
 \begin{itemize}
-\item X
+\item we call $F(s) = \frac{1}{ms^2+\beta s+k}$ the \emph{transfer function}
+\item \dots and $f(t) = \LLi{F(s)}$ the \emph{impulse response} \alert{\dots why?}
+\item because if $g(t)=\delta(t)$ then for ($\ast$) we have
+    $$X(s) = F(s) \, G(s) = \frac{1}{ms^2+\beta s+k} \, 1 = \frac{1}{ms^2+\beta s+k}$$
+    \begin{itemize}
+    \item i.e.~\alert{$g(t)=\delta(t)$, a sharp impulse at $t=0$, generates $X(s)$}
+    \item a standard whack
+    \item the response of the system is $x(t)=\LLi{X(s)}$
+    \end{itemize}
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{the $\Gamma$ function (and $n!$)}
+
+\begin{itemize}
+\item you are not responsible (\emph{no WebAssign/quiz/exam}) for this  \dots but I want to explain one remaining item in the table
+\item compare
+    $$\LL{t^n} = \frac{n!}{s^{n+1}} \qquad \text{ versus } \qquad \LL{t^\alpha} = \frac{\Gamma(\alpha+1)}{s^{\alpha+1}}$$
+\item what is $\LL{t^{1.7}}$?  or any other non-integer power?
+\item \emph{definition.}
+    $$\alert{\Gamma(z) = \int_0^\infty t^{z-1} e^{-t}\,dt}$$
+\item \emph{facts.}
+    $$\alert{\Gamma(n+1) = n!}$$
+    $$\Gamma(\tfrac{1}{2}) = \sqrt{\pi}$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{the table: is it all clear?}
+
+\vspace{-3mm}
+\begin{center}
+\includegraphics[height=80mm]{figs/fulllaplacetable}
+\end{center}
 \end{frame}
 
 
@@ -289,6 +356,9 @@ is multiplied by the transformed driving force to give the Laplace transform of 
 
      \centerline{\href{https://bueler.github.io/math302/week11.html}{\tt \color{cyan} bueler.github.io/math302/week11.html}}
      \item \emph{read} ``7.4.2 Transforms of Integrals'' in \S7.4
+         \begin{itemize}
+         \item and read nearby stuff if you are interested
+         \end{itemize}
      \item \emph{do} the WebAssign exercises for section 7.4
      \end{itemize}
 \end{itemize}
