@@ -20,10 +20,10 @@ This week we start to consider systems of ODEs.  This involves vectors and matri
 * [WebAssign 7.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/17
-* <span style="color:blue">**proctored Quiz 10 covers 7.3 and convolution**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 10 covers 7.3 and convolution**</span>
 
 ### Thursday 4/18
-* <span style="color:blue">**proctored Quiz 10 covers 7.3 and convolution**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 10 covers 7.3 and convolution**</span>
 * [work on WebAssign 3.3](https://www.webassign.net/)
 
 ### Friday 4/19
