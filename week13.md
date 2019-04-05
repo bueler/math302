@@ -9,7 +9,7 @@ Welcome to Week 13 of [MATH F302 UX1 in Spring 2019](index.html).  As always, re
 
 This week, **Quiz 10** must be done on Wednesday or Thursday.  It **covers sections 7.3 and convolution (from 7.4)**.
 
-This week we start to consider systems of ODEs.  This involves vectors and matrices.  FIXME
+This week and in [Week 14](week14) we consider systems of first-order ODEs.  _Any_ ODE or system of ODEs can be written as a system of first-order ODEs.  These systems are the usual form of models in science and engineering.  Section 3.3 gives examples of models like this.  We will solve them numerically, and visualize them that way.  Then we go to Chapter 8 where we add an assumption, namely that the systems are also _linear_.  Section 8.1 is about writing-down these systems using matrices and vectors, but we also learn general ideas including linear independence and the Wronskian.  Much of the material in Chapter 8 is a new systems view of our existing understanding of individual second-order linear equations.
 
 ### Monday 4/15
 * blank slides for section 3.3 _BUELER TODO_
