@@ -106,7 +106,7 @@
 \end{frame}
 
 
-\begin{frame}{PDEs and pattern generation}
+\begin{frame}{beyond: PDEs and pattern generation}
 
 \small
 \begin{itemize}
@@ -117,21 +117,20 @@
 \frac{dv}{dt} &= uv^2-(\phi+\kappa)v
 \end{align*}
 \small
-\item a model for chemical reactions\footnote{\tiny J.~E.~Pearson (1993). \emph{Complex patterns in a simple system}, Science, 261, 189--192} with two chemicals $u$ and $v$
-\item similar to a predator-prey system
+\item a model for chemical reactions\footnote{\tiny J.~E.~Pearson (1993). \emph{Complex patterns in a simple system}, Science, 261, 189--192} with two chemicals $u$ and $v$, similar to a predator-prey system
 \item add diffusion:
 
 \vspace{-10mm}
 \scriptsize
 \begin{align*}
 \frac{\partial u}{\partial t} &= D_u \left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right) -uv^2+\phi(1-u) \\
-\frac{\partial v}{\partial t} &= D_v \left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right) + uv^2-(\phi+\kappa)v
+\frac{\partial v}{\partial t} &= D_v \left(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2}\right) + uv^2-(\phi+\kappa)v
 \end{align*}
 \small
 % in biology the way you get many patterns (e.g.~spots on a cheetah) is to have a competition between two chemicals at every location; each location has a first-order ODE system going, and they are linked together by diffusion
 \end{itemize}
 
-\includegraphics[width=0.2\textwidth]{figs/foo000}
+\mbox{\includegraphics[width=0.23\textwidth]{figs/pattern0}\quad\includegraphics[width=0.23\textwidth]{figs/pattern2}\quad\includegraphics[width=0.23\textwidth]{figs/pattern4}\quad\includegraphics[width=0.23\textwidth]{figs/pattern6}}
 
 \bigskip
 \end{frame}
