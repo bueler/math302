@@ -56,7 +56,7 @@
 \begin{frame}{first-order systems}
 
 \begin{itemize}
-\item a \emph{system} of two first-order equations is
+\item a \emph{system of two first-order equations}:
 \begin{align*}
 \frac{dx}{dt} &= f(t,x,y) \\
 \frac{dy}{dt} &= g(t,x,y)
@@ -67,11 +67,11 @@
     \item the solution is the pair of functions $x(t),y(t)$
     \item we say system is \emph{coupled} if $f$ depends on $y$ or $g$ depends on $x$
     \end{itemize}
-\item we have already seen such systems
+\item we have already started to see such systems
     \begin{itemize}
     \item see \href{https://bueler.github.io/math302/assets/slides/5-3.pdf}{slides for \S5.3/4.10} (and \href{https://expl.ai/VSJTFRC}{video})
     \end{itemize}
-\item $f$ and $g$ can be any formulas \dots silly made-up example:
+\item $f$ and $g$ can be any formulas; here's a silly example:
 
 \vspace{-3mm}
 \scriptsize
@@ -84,7 +84,7 @@
 \end{frame}
 
 
-\begin{frame}{example we can solve}
+\begin{frame}{easily-solvable example}
 
 \begin{itemize}
 \item \emph{example 1.}  find the general solution to
@@ -104,7 +104,7 @@
 \begin{frame}{system can be any size}
 
 \begin{itemize}
-\item more systematic notation for a system of two equations:
+\item systematic notation for two equations:
 \footnotesize
 \begin{align*}
 \frac{dx_1}{dt} &= g_1(t,x_1,x_2) \\
@@ -124,7 +124,7 @@
     \begin{itemize}
     \item solution is set of $n$ functions $x_1(t),x_2(t),\dots,x_n(t)$
     \item in \href{http://fluidityproject.github.io/}{practical, modern fluids simulations $n\ge 10^6$}
-    \item such systems are \href{https://pybullet.org/wordpress/}{the physics in video games}
+    \item such systems are also \href{https://pybullet.org/wordpress/}{the physics in video games}
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -138,11 +138,27 @@
 
     \begin{itemize}
     \item \alert{many parts} \hfill $x_1,\dots,x_n$
+
+\medskip
     \item \alert{changing in time} \hfill $\frac{dx_i}{dt}=g_i(\dots)$
+
+\medskip
     \item \alert{interacting with each other} \hfill $g_i$ depends on $x_j$
     \end{itemize}
-\item everything from the galaxy to your body \dots
+
+\bigskip
+\item everything is modeled this way:
+    \begin{enumerate}
+    \item the galaxy
+    \item your body
+    \item this double-pendulum fidget spinner
+
+which can be yours for only \$98
+    \end{enumerate}
 \end{itemize}
+
+\vspace{-15mm}
+\hfill \includegraphics[width=0.35\textwidth]{figs/double-pendulum-fidget}
 \end{frame}
 
 
@@ -152,9 +168,15 @@
 \item read about it in \S3.3
 
     \begin{itemize}
-    \item can be as easy/solvable as example 1
+    \item often one-way coupled
+    \item simple cases can be as easy/solvable as example 1
     \end{itemize}
 \end{itemize}
+
+\bigskip
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figs/thorium232-decay}
+\end{center}
 \end{frame}
 
 
@@ -190,10 +212,43 @@
 \end{frame}
 
 
+\begin{frame}{higher order equations become systems}
+
+\begin{itemize}
+\item \alert{any} individual (a.k.a.~\emph{scalar}) ODE can be turned into a first-order system
+\item for example, a damped nonlinear pendulum for $\theta(t)$:
+    $$m \ell \theta'' + \beta \theta' + mg \sin\theta = 0$$
+becomes this system:
+\begin{align*}
+x_1' &= x_2 \\
+x_2' &= -\left(\frac{\beta}{m\ell}\right) x_2 - \left(\frac{g}{\ell}\right) \sin(x_1)
+\end{align*}
+    \begin{itemize}
+    \item \alert{I did almost nothing here!}
+    \item just name $\theta$ as $x_1$ and name $\theta'$ as $x_2$
+    \item \small solve for the derivative because that is the standard form
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{a 4th order ODE as a system}
+
+\begin{itemize}
+\item \emph{example 3.}  write the following fourth-order ODE as a first-order system:
+    $$y^{(4)} - 4 y''' + 7 y'' + 10 y' - y = \sin(3t)$$
+\end{itemize}
+
+\noindent \emph{solution.}
+
+\vspace{45mm}
+\end{frame}
+
+
 \begin{frame}{hares and lynx}
 
 \begin{itemize}
-\item consider a Lotka-Volterra model
+\item consider this ``Lotka-Volterra'' model
 \begin{align*}
 \frac{dx}{dt} &= 0.7 x - 1.3 xy \\
 \frac{dy}{dt} &= xy - y
@@ -216,7 +271,7 @@
 \frametitle{like \S3.3 \#11}
 
 \begin{itemize}
-\item \emph{example 3.}  solve numerically:
+\item \emph{example 4.}  solve numerically for $0\le t\le 60$:
 \begin{align*}
 \frac{dx}{dt} &= 0.7 x - 1.3 xy & x(0)=1\\
 \frac{dy}{dt} &= xy - y  & y(0)=1
@@ -233,11 +288,11 @@
 \end{Verbatim}
 
 \bigskip
-above uses:
+using:
 
-$z_1(t)=x(t)$
+$z_1=x$
 
-$z_2(t)=y(t)$
+$z_2=y$
 
 \vspace{-22mm}
 \hfill \includegraphics[width=0.45\textwidth]{figs/lotka-time}
@@ -245,11 +300,10 @@ $z_2(t)=y(t)$
 
 
 \begin{frame}[fragile]
-\frametitle{like \S3.3 \#11, cont.}
+\frametitle{\emph{phase plane}: a different view}
 
 \begin{itemize}
 \item a different view is to plot $x=z_1$ versus $y=z_2$
-\end{itemize}
 
 \begin{Verbatim}[fontsize=\small]
 >> figure(2)
@@ -258,7 +312,9 @@ $z_2(t)=y(t)$
 \end{Verbatim}
 
 \bigskip
-\includegraphics[width=0.44\textwidth]{figs/lotka-time}\quad \includegraphics[width=0.46\textwidth]{figs/lotka-phase}
+\mbox{\includegraphics[width=0.44\textwidth]{figs/lotka-time}\quad \includegraphics[width=0.46\textwidth]{figs/lotka-phase}}
+\item we will get back to this view in Chapter 8
+\end{itemize}
 \end{frame}
 
 
@@ -273,7 +329,7 @@ $z_2(t)=y(t)$
 \frac{dv}{dt} &= uv^2-(\phi+\kappa)v
 \end{align*}
 \small
-\item it is a model\footnote{\tiny J.~E.~Pearson (1993). \emph{Complex patterns in a simple system}, Science, 261, 189--192} a reaction between two chemicals $u$ and $v$, similar to Lotka-Volterra (predator-prey) system
+\item it is a model\footnote{\tiny J.~E.~Pearson (1993). \emph{Complex patterns in a simple system}, Science, 261, 189--192} of a reaction between two chemicals $u$ and $v$, similar to Lotka-Volterra (predator-prey) system
 \item add diffusion:
 
 \vspace{-10mm}
@@ -293,19 +349,36 @@ $z_2(t)=y(t)$
 
 
 
-\begin{frame}{linear ODE systems from circuits}
+\begin{frame}{ODE systems from circuits}
 
 \begin{itemize}
-\item \emph{example 4.} FIXME
+\item the voltage $v(t)$ and current $i(t)$ in an electrical circuits changes in time
+\item each element in a circuit (network) has a little model:
+
+\begin{tabular}{lcc}
+resistor & $v = iR$ & \includegraphics[height=10mm,trim=0 3mm 0 -3mm]{figs/circuit-element-R} \\
+inductor & $v = L \frac{di}{dt}$ & \includegraphics[height=13mm,trim=0 5mm 0 -5mm]{figs/circuit-element-L} \\
+resistor & $v = \frac{q}{C}$ & \includegraphics[height=12mm,trim=0 5mm 0 -5mm]{figs/circuit-element-C}
+\end{tabular}
+
+\bigskip \bigskip
+\item \emph{Kirchoff's laws} allow you to assemble systems of ODEs from these elements
+\item building such models is the heart of electical engineering
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{a linear ODE system for an RLC circuit}
 
 \begin{itemize}
-\item X
+\item I'll do an example, but you are \emph{not} responsible for doing this!
+\item \emph{example 5.} construct a system of first-order ODEs for the currents $i_1,i_2,i_3$ in this electical circuit
+
+\bigskip
+\includegraphics[width=0.3\textwidth]{figs/new-rlc-circuit}
 \end{itemize}
+
+\vspace{30mm}
 \end{frame}
 
 
@@ -320,8 +393,11 @@ $z_2(t)=y(t)$
      \item \emph{read} \S3.3
      \item \emph{do} the WebAssign exercises for section 3.3
          \begin{itemize}
-         \item what are you actually responsible for?  be able to do computations like in examples 1, 2, and 3
-         \item you are \emph{not} responsible for any circuit knowledge like in example 4
+         \item what are you actually responsible for?  \alert{be able to do computations like in examples 1--4}
+         \item \dots \emph{and} be able to do radioactive decay series examples
+
+             \hspace{4mm} ${\color{blue} \circ}$ read the section!
+         \item you are \emph{not} responsible for electrical circuits as in example 5
          \end{itemize}
      \end{itemize}
 \end{itemize}
