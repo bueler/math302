@@ -13,7 +13,7 @@ This week and in [Week 14](week14) we consider systems of first-order ODEs.  _An
 
 ### Monday 4/15
 * [blank slides for section 3.3](assets/slides/3-3.pdf)
-* video: Bueler talks-over slides for section 3.3 _BUELER TODO_
+* [video: Bueler talks-over slides for section 3.3](https://expl.ai/XAAUNGS)
 * [work on WebAssign 7.4](https://www.webassign.net/)
 
 ### Tuesday 4/16
