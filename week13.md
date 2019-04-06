@@ -38,6 +38,10 @@ This week and in [Week 14](week14) we consider systems of first-order ODEs.  _An
 * [Gil Strang at MIT: The matrix exponential](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-64-the-matrix-exponential-expat-117473.html)
 * [Gil Strang at MIT: Two First Order Equations: Stability](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-32c-two-first-order-equations-stability-117453.html)
 * [online notes about "Systems of first-order linear differential equations"](https://www.math.psu.edu/tseng/class/Math251/Notes-LinearSystems.pdf)
+* random video: [Predator-prey systems](https://www.youtube.com/watch?v=Ww4SOwqfJgI)
+* random video: [Lotka-Volterra solution visualizations](https://www.youtube.com/watch?v=qp4i_Br8-dE)
+* mature content: [open source fluid dynamics library/code](http://fluidityproject.github.io/)
+* mature content: [open source python library for game physics](https://pybullet.org/wordpress/)
 
 <hr>
 <a align="left" href="week12">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week14">next week --\></a>
