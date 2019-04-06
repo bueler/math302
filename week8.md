@@ -46,6 +46,7 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 * random video: [Oscillations demo: Mass spring system](https://www.youtube.com/watch?v=FJBPNJR2QJU)
 * [Matlab documentation: Ordinary differential equation initial value problem solvers](https://www.mathworks.com/help/matlab/ordinary-differential-equations.html)
 * random video: [Solving a second order differential equation in Matlab](https://www.youtube.com/watch?v=fx3bl4oA_0U)
+* Steve Mould: [A better description of resonance](https://www.youtube.com/watch?v=N9Gg889TeKI)
 
 <hr>
 <a align="left" href="week7">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week9">next week --\></a>
