@@ -1,0 +1,114 @@
+\documentclass[urlcolor=blue,dvipsnames]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox,fancyvrb}
+\usepackage{environ,xspace,empheq}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,decorations.pathreplacing,fadings,positioning}
+
+\hypersetup{colorlinks,linkcolor=,urlcolor=cyan}
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\usetheme{Pittsburgh}
+
+%\makeatletter
+%\newcommand{\tinytiny}{\@setfontsize{\tinytiny}{4pt}{4pt}}
+%\makeatother
+
+\newcommand\enumnum[1]{{\renewcommand{\insertenumlabel}{#1}%
+      \usebeamertemplate{enumerate item} \,}}
+
+\newcommand{\grad}{\nabla}
+\newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+
+
+\title{8.1 Linear systems of first-order ODEs: \\ the basics}
+
+\subtitle{a lesson for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{\tiny \today}
+
+
+\begin{document}
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+\renewcommand{\thefootnote}{{\color{green} \arabic{footnote}}}
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+%\color{green!40!blue}
+\end{frame}
+
+\newcommand{\LL}[1]{\mathcal{L}\left\{#1\right\}}
+\newcommand{\LLi}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
+
+
+\begin{frame}{first-order systems}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{easily-solvable example}
+
+\begin{itemize}
+\item \emph{example 1.}  find the general solution to
+\begin{align*}
+\frac{dx}{dt} &= - 2 x\\
+\frac{dy}{dt} &= x - y
+\end{align*}
+\end{itemize}
+
+\noindent \emph{solution.}
+
+\vspace{45mm}
+\hfill \tiny \emph{special properties: (1) one-way coupled and (2) linear and (3) homogeneous}
+\end{frame}
+
+
+\begin{frame}{system can be any size}
+
+\begin{itemize}
+\item system of $n$ equations:
+\begin{align*}
+\frac{dx_1}{dt} &= g_1(t,x_1,x_2,\dots,x_n) \\
+\frac{dx_2}{dt} &= g_2(t,x_1,x_2,\dots,x_n) \\
+                &\qquad \vdots \\
+\frac{dx_n}{dt} &= g_n(t,x_1,x_2,\dots,x_n)
+\end{align*}
+    \vspace{-2mm}
+    \begin{itemize}
+    \item solution is set of $n$ functions $x_1(t),x_2(t),\dots,x_n(t)$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{expectations}
+
+\begin{itemize}
+\item just watching this video is \emph{not} enough!
+     \begin{itemize}
+     \item see ``found online'' videos and stuff at
+
+     \centerline{\href{https://bueler.github.io/math302/week13.html}{\tt \color{cyan} bueler.github.io/math302/week13.html}}
+     \item \emph{read} \S8.1
+     \item \emph{do} the WebAssign exercises for section 8.1
+     \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
+
