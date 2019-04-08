@@ -5,7 +5,7 @@ title: Codes
 
 ## Codes
 
-This page has some computer codes I wrote, either for visualization or as examples of numerical methods.  They are categorized by language (Matlab/Octave or Python), and for each language/purpose they are ordered chronologically.
+This page has some computer codes I wrote, either for visualization or as examples of numerical methods.  They are categorized by language (Matlab/Octave or Python), and ordered chronologically.
 
 ### Matlab/Octave: Visualization
 
