@@ -25,6 +25,7 @@ You can use [Octave Online](https://octave-online.net/) or [Matlab](https://www.
 * [unitpictures.m](assets/codes/unitpictures.m): Generates unit step function figures in [slides for section 7.3](assets/slides/7-3.pdf).
 * [resonator.m](assets/codes/resonator.m): Solve and plot part 4 of [Mini-Project 4](assets/mp/mp4-merged.pdf).
 * [convolutions.m](assets/codes/convolutions.m): Generate convolution example figures for [slides for section 7.4](assets/slides/7-4.pdf).
+* [brines.m](assets/codes/brines.m): Generate 3-tanks figures for [slides for section 8.1](assets/slides/8-1.pdf).
 
 ### Matlab/Octave: Numerical methods
 
