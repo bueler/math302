@@ -20,6 +20,10 @@
 \newcommand\enumnum[1]{{\renewcommand{\insertenumlabel}{#1}%
       \usebeamertemplate{enumerate item} \,}}
 
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bX}{\mathbf{X}}
+
 \newcommand{\grad}{\nabla}
 \newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
 \newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
@@ -101,11 +105,14 @@
 
 \small
 \begin{itemize}
-\item these 3 examples are from the \href{https://bueler.github.io/math302/assets/slides/3-3.pdf}{\S3.3 slides} and \href{https://drive.explaineverything.com/thecode/XAAUNGS}{video}
+\item three example systems from the \href{https://bueler.github.io/math302/assets/slides/3-3.pdf}{\S3.3 slides} and \href{https://drive.explaineverything.com/thecode/XAAUNGS}{video}
+\end{itemize}
 
-\hrulefill
+%\hrulefill
 
 \noindent \emph{instructions:} write in normal form using $x_i(t)$ and identify the coefficients $a_{ij}(t)$ and source functions $f_i(t)$
+
+\begin{itemize}
 \item \emph{example 1.}
 \begin{align*}
 \frac{dx}{dt} &= - 2 x \hspace{70mm} \\
@@ -141,23 +148,100 @@ w' &= 4w-7v-10u+y+\sin(3t)
 \begin{frame}{matrix form}
 
 \begin{itemize}
-\item X
+\item a first-order linear system
+\small
+\begin{align*}
+\frac{dx_1}{dt} &= a_{11}(t) x_1 + a_{12}(t) x_2 + \dots + a_{1n}(t) x_n + f_1(t) \\
+                &\qquad \vdots \\
+\frac{dx_n}{dt} &= a_{n1}(t) x_1 + a_{n2}(t) x_2 + \dots + a_{nn}(t) x_n + f_n(t)
+\end{align*}
+\normalsize
+\item is usually written
+    $$\frac{d}{dt} \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} &       & a_{2n} \\
+ \vdots&        & \ddots& \vdots \\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{pmatrix}     \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} +  \begin{pmatrix} f_1 \\ f_2 \\ \vdots \\ f_n \end{pmatrix}$$
+\item<2> or
+    $$\bX' = \bA \bX + \bF$$
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{matrix form}
+\begin{frame}{matrix-vector multiplication}
 
 \begin{itemize}
-\item X
+\item remember matrix-vector multiplication
+\item \emph{example 4.}  compute the product
+    $$\begin{pmatrix} 2 & -3 & -2 \\ 1 & 0 & 5 \\ 4 & 1 & -1\end{pmatrix} \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix} = \hspace{70mm}$$
+
+\vspace{15mm}
+\item \emph{example 5.}  compute
+    $$\begin{pmatrix} 3 & -2 \\ 1 & 4 \end{pmatrix} \begin{pmatrix} -1 \\ 0 \end{pmatrix} +  \begin{pmatrix} 4 \\ 2 \end{pmatrix} = \hspace{70mm}$$
 \end{itemize}
+
+\vspace{15mm}
+\end{frame}
+
+
+\begin{frame}{example matrix forms}
+
+\small
+\noindent \emph{instructions:} write the linear systems in matrix form (what is $\bX$? $\bA$? $\bF?$)
+\begin{itemize}
+\item \emph{example 6.}
+\begin{align*}
+\frac{dx}{dt} &= - 2 x \hspace{70mm} \\
+\frac{dy}{dt} &= x - y
+\end{align*}
+\item \emph{example 7.}
+\begin{align*}
+\frac{dx_1}{dt} &= -0.04 x_1 + 0.02 x_2 \hspace{60mm} \\
+\frac{dx_2}{dt} &= 0.04 x_1 - 0.07 x_2 + 0.03 x_3 \\
+\frac{dx_3}{dt} &= 0.05 x_2 - 0.05 x_3
+\end{align*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example matrix forms, cont.}
+
+\small
+\begin{itemize}
+\item \emph{example 8.}
+\begin{align*}
+y' &= u \hspace{75mm} \\
+u' &= v \\
+v' &= w \\
+w' &= 4w-7v-10u+y+\sin(3t)
+\end{align*}
+\end{itemize}
+
+\vspace{30mm}
+\scriptsize note: \emph{(i) examples 1,2,3 are constant coefficient, (ii) examples 1,2 are homogeneous}
+\end{frame}
+
+
+\begin{frame}{matrix form is never essential}
+
+\begin{itemize}
+\item \emph{example 9.}  (a) identify $\bA$ and $\bF$
+
+(b) write the linear system \emph{without} the use of matrices
+    $$\frac{d}{dt} \begin{pmatrix} x \\ y \end{pmatrix} =  \begin{pmatrix} 3 & -7 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} + \begin{pmatrix} 4 \\ 8 \end{pmatrix} \sin t + \begin{pmatrix} t-4 \\ 2t+1 \end{pmatrix} e^{4t}$$
+\end{itemize}
+
+\noindent \emph{solution.}
+
+\vspace{50mm}
 \end{frame}
 
 
 \begin{frame}{yes, but what does it \emph{look} like?}
 
 \begin{itemize}
-\item recall \emph{example 2} came from 3 connected tanks of brine:
+\item examples 2 \& 7 came from ``connected tanks'' in \S3.3:
 \small
 \begin{align*}
 \frac{dx_1}{dt} &= -0.04 x_1 + 0.02 x_2 \hspace{60mm} \\
@@ -182,12 +266,13 @@ $x_3(0)=5$
 \begin{frame}{what does it \emph{look} like?, cont.}
 
 \begin{itemize}
-\item variables $t,x_1,x_2,x_3$ is 4D
+\item variables $t,x_1,x_2,x_3$ is 4D \dots unvisualizable?
 \item alternate view is to suppress $t$
 
 and plot in 3D $=x_1,x_2,x_3$
 \item see code \href{https://bueler.github.io/math302/assets/codes/brines.m}{\texttt{brines.m}}
     \begin{itemize}
+    \item<2> uses \texttt{ode45}
     \item<2> \emph{rotatable} figure
     \end{itemize}
 \end{itemize}
@@ -196,14 +281,6 @@ and plot in 3D $=x_1,x_2,x_3$
 \hfill \includegraphics[width=0.42\textwidth]{figs/three-tanks}
 
 \mbox{\includegraphics[width=0.5\textwidth]{figs/brines-xvt}\quad \includegraphics<1>[width=0.5\textwidth]{figs/brines-3d}\includegraphics<2>[width=0.5\textwidth]{figs/brines-3d-again}}
-\end{frame}
-
-
-\begin{frame}{matrix multiplication}
-
-\begin{itemize}
-\item X
-\end{itemize}
 \end{frame}
 
 
