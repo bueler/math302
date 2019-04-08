@@ -66,7 +66,9 @@
      \begin{itemize}
      \item my claim in \S3.3: everything is modeled this way
      \end{itemize}
-\item Chapter 8 is a special case: the dependent variables $x_i$ only appear with first powers
+\item Chapter 8 is about a special case:
+
+\centerline{\alert{suppose variables $x_i$ only appear with first powers}}
 \end{itemize}
 \end{frame}
 
@@ -82,9 +84,14 @@
 \end{align*}
      \begin{itemize}
      \item above is the \emph{general} or \emph{normal form} of the system
-     \item the $a_{ij}(t)$ functions are the \emph{coefficients}
-     \item if functions $a_{ij}(t)$ are independent of time then we say it is a \emph{constant-coefficient} system
-     \item if all $f_i=0$ then the system is \emph{homogeneous}
+     \item $a_{ij}(t)$ functions are the \emph{coefficients}
+         \begin{itemize}
+         \item if $a_{ij}(t)$ are independent of time then we say it is a \emph{constant-coefficient} system
+         \end{itemize}
+     \item $f_i(t)$ are the \emph{source functions} or \emph{nonhomogeneities}
+         \begin{itemize}
+         \item if all $f_i=0$ then the system is \emph{homogeneous}
+         \end{itemize}
      \end{itemize}
 \end{itemize}
 \end{frame}
@@ -110,6 +117,7 @@
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}{examples, cont.}
 
 \small
@@ -133,6 +141,59 @@ w' &= 4w-7v-10u+y+\sin(3t)
 \begin{itemize}
 \item X
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{matrix form}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{yes, but what does it \emph{look} like?}
+
+\begin{itemize}
+\item recall \emph{example 2} came from 3 connected tanks of brine:
+\small
+\begin{align*}
+\frac{dx_1}{dt} &= -0.04 x_1 + 0.02 x_2 \hspace{60mm} \\
+\frac{dx_2}{dt} &= 0.04 x_1 - 0.07 x_2 + 0.03 x_3 \\
+\frac{dx_3}{dt} &= 0.05 x_2 - 0.05 x_3
+\end{align*}
+\normalsize
+\item suppose initial conditions
+
+\small $x_1(0)=30$ 
+
+$x_2(0)=10$
+
+$x_3(0)=5$
+\end{itemize}
+
+\vspace{-15mm}
+\mbox{\includegraphics[width=0.5\textwidth]{figs/three-tanks}\quad \includegraphics[width=0.5\textwidth]{figs/brines-xvt}}
+\end{frame}
+
+
+\begin{frame}{what does it \emph{look} like?, cont.}
+
+\begin{itemize}
+\item variables $t,x_1,x_2,x_3$ is 4D
+\item alternate view is to suppress $t$
+
+and plot in 3D $=x_1,x_2,x_3$
+\item see code \href{https://bueler.github.io/math302/assets/codes/brines.m}{\texttt{brines.m}}
+    \begin{itemize}
+    \item<2> \emph{rotatable} figure
+    \end{itemize}
+\end{itemize}
+
+\vspace{-21mm}
+\hfill \includegraphics[width=0.42\textwidth]{figs/three-tanks}
+
+\mbox{\includegraphics[width=0.5\textwidth]{figs/brines-xvt}\quad \includegraphics<1>[width=0.5\textwidth]{figs/brines-3d}\includegraphics<2>[width=0.5\textwidth]{figs/brines-3d-again}}
 \end{frame}
 
 
