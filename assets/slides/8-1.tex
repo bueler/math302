@@ -56,42 +56,106 @@
 \begin{frame}{first-order systems}
 
 \begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{easily-solvable example}
-
-\begin{itemize}
-\item \emph{example 1.}  find the general solution to
-\begin{align*}
-\frac{dx}{dt} &= - 2 x\\
-\frac{dy}{dt} &= x - y
-\end{align*}
-\end{itemize}
-
-\noindent \emph{solution.}
-
-\vspace{45mm}
-\hfill \tiny \emph{special properties: (1) one-way coupled and (2) linear and (3) homogeneous}
-\end{frame}
-
-
-\begin{frame}{system can be any size}
-
-\begin{itemize}
-\item system of $n$ equations:
+\item we have already seen the most general form of a system of ODEs (\S3.3):
 \begin{align*}
 \frac{dx_1}{dt} &= g_1(t,x_1,x_2,\dots,x_n) \\
 \frac{dx_2}{dt} &= g_2(t,x_1,x_2,\dots,x_n) \\
                 &\qquad \vdots \\
 \frac{dx_n}{dt} &= g_n(t,x_1,x_2,\dots,x_n)
 \end{align*}
-    \vspace{-2mm}
-    \begin{itemize}
-    \item solution is set of $n$ functions $x_1(t),x_2(t),\dots,x_n(t)$
-    \end{itemize}
+     \begin{itemize}
+     \item my claim in \S3.3: everything is modeled this way
+     \end{itemize}
+\item Chapter 8 is a special case: the dependent variables $x_i$ only appear with first powers
+\end{itemize}
+\end{frame}
+
+\begin{frame}{first-order \emph{linear} systems}
+
+\begin{itemize}
+\item a \alert{first-order system of linear ODEs} is
+\begin{align*}
+\frac{dx_1}{dt} &= a_{11}(t) x_1 + a_{12}(t) x_2 + \dots + a_{1n}(t) x_n + f_1(t) \\
+\frac{dx_2}{dt} &= a_{21}(t) x_1 + a_{22}(t) x_2 + \dots + a_{2n}(t) x_n + f_2(t) \\
+                &\qquad \vdots \\
+\frac{dx_n}{dt} &= a_{n1}(t) x_1 + a_{n2}(t) x_2 + \dots + a_{nn}(t) x_n + f_n(t)
+\end{align*}
+     \begin{itemize}
+     \item above is the \emph{general} or \emph{normal form} of the system
+     \item the $a_{ij}(t)$ functions are the \emph{coefficients}
+     \item if functions $a_{ij}(t)$ are independent of time then we say it is a \emph{constant-coefficient} system
+     \item if all $f_i=0$ then the system is \emph{homogeneous}
+     \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{examples}
+
+\small
+\begin{itemize}
+\item these examples are from the \href{https://bueler.github.io/math302/assets/slides/3-3.pdf}{\S3.3 slides} and \href{https://drive.explaineverything.com/thecode/XAAUNGS}{video}
+\item \emph{instructions:} write in normal form using $x_i(t)$ and identify the coefficients $a_{ij}(t)$ and non-homogeneous functions $f_i(t)$, if any
+\item \emph{example 1.}
+\begin{align*}
+\frac{dx}{dt} &= - 2 x \hspace{70mm} \\
+\frac{dy}{dt} &= x - y
+\end{align*}
+\item \emph{example 2.}
+\begin{align*}
+\frac{dx_1}{dt} &= -0.04 x_1 + 0.02 x_2 \hspace{60mm} \\
+\frac{dx_2}{dt} &= 0.04 x_1 - 0.07 x_2 + 0.03 x_3 \\
+\frac{dx_3}{dt} &= 0.05 x_2 - 0.05 x_3
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{examples, cont.}
+
+\small
+\begin{itemize}
+\item \emph{instructions:} write in normal form using $x_i(t)$ and identify the coefficients $a_{ij}(t)$ and non-homogeneous functions $f_i(t)$, if any
+\item \emph{example 3.}
+\begin{align*}
+y' &= u \hspace{75mm} \\
+u' &= v \\
+v' &= w \\
+w' &= 4w-7v-10u+y+\sin(3t)
+\end{align*}
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{matrix form}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{matrix multiplication}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{verify}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{linear independent solutions}
+
+\begin{itemize}
+\item X
 \end{itemize}
 \end{frame}
 
