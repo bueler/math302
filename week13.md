@@ -32,11 +32,6 @@ This week and in [Week 14](week14) we consider systems of first-order ODEs.  _An
 * [WebAssign 3.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
-* [Gil Strang at MIT: Solving linear systems](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-63-solving-linear-systems-117472.html)
-* random video: [Coupled systems of differential equations](https://www.youtube.com/watch?v=z3Ag8WF5M_c)
-* random video: [Find eigenvalues and eigenvectors of a 2x2 matrix](https://www.youtube.com/watch?v=tXlMbAxbUI4)
-* [Gil Strang at MIT: The matrix exponential](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-64-the-matrix-exponential-expat-117473.html)
-* [Gil Strang at MIT: Two First Order Equations: Stability](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-32c-two-first-order-equations-stability-117453.html)
 * [online notes about "Systems of first-order linear differential equations"](https://www.math.psu.edu/tseng/class/Math251/Notes-LinearSystems.pdf)
 * random video: [Predator-prey systems](https://www.youtube.com/watch?v=Ww4SOwqfJgI)
 * random video: [Lotka-Volterra solution visualizations](https://www.youtube.com/watch?v=qp4i_Br8-dE)

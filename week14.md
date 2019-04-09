@@ -33,7 +33,11 @@ This week we continue with systems of ODEs.  This involves vectors and matrices.
 * [WebAssign 8.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
 
 ### found online
-* _BUELER TODO_
+* [Gil Strang at MIT: Solving linear systems](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-63-solving-linear-systems-117472.html)
+* random video: [Coupled systems of differential equations](https://www.youtube.com/watch?v=z3Ag8WF5M_c)
+* random video: [Find eigenvalues and eigenvectors of a 2x2 matrix](https://www.youtube.com/watch?v=tXlMbAxbUI4)
+* [Gil Strang at MIT: The matrix exponential](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-64-the-matrix-exponential-expat-117473.html)
+* [Gil Strang at MIT: Two First Order Equations: Stability](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-32c-two-first-order-equations-stability-117453.html)
 
 <hr>
 <a align="left" href="week13">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week15">next week --\></a>
