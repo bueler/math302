@@ -28,7 +28,7 @@ This week and in [Week 14](week14) we consider systems of first-order ODEs.  _An
 
 ### Friday 4/19
 * [blank slides for section 8.1](assets/slides/8-1.pdf)
-* video: Bueler talks-over slides for section 8.1 _BUELER TODO_
+* [video: Bueler talks-over slides for section 8.1](https://expl.ai/ARRYSHT)
 * [WebAssign 3.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
