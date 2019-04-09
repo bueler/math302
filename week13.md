@@ -35,7 +35,7 @@ This week and in [Week 14](week14) we consider systems of first-order ODEs.  _An
 * [online notes about "Systems of first-order linear differential equations"](https://www.math.psu.edu/tseng/class/Math251/Notes-LinearSystems.pdf)
 * random video: [Predator-prey systems](https://www.youtube.com/watch?v=Ww4SOwqfJgI)
 * random video: [Lotka-Volterra solution visualizations](https://www.youtube.com/watch?v=qp4i_Br8-dE)
-* a simulation: [Predator-prey reaction-diffusion simulation](https://www.youtube.com/watch?v=N9Gg889TeKI)
+* mature content: [predator-prey reaction-diffusion simulation](https://www.youtube.com/watch?v=N9Gg889TeKI)
 * mature content: [open source fluid dynamics library/code](http://fluidityproject.github.io/)
 * mature content: [open source python library for game physics](https://pybullet.org/wordpress/)
 
