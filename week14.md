@@ -25,18 +25,20 @@ This week we continue with systems of ODEs.  This involves vectors and matrices.
 
 ### Thursday 4/25
 * <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span>
-* [work on WebAssign 8.2](https://www.webassign.net/) _BUELER TODO_
+* [work on WebAssign 8.2](https://www.webassign.net/)
 
 ### Friday 4/26
 * blank slides for section 8.4 _BUELER TODO_
 * video: Bueler talks-over slides for section 8.4 _BUELER TODO_
-* [WebAssign 8.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span> _BUELER TODO_
+* [WebAssign 8.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Gil Strang at MIT: Solving linear systems](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-63-solving-linear-systems-117472.html)
 * random video: [Coupled systems of differential equations](https://www.youtube.com/watch?v=z3Ag8WF5M_c)
 * random video: [Find eigenvalues and eigenvectors of a 2x2 matrix](https://www.youtube.com/watch?v=tXlMbAxbUI4)
+* [Matlab documentation page for "eig" command](https://www.mathworks.com/help/matlab/ref/eig.html)
 * [Gil Strang at MIT: The matrix exponential](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-64-the-matrix-exponential-expat-117473.html)
+* [Matlab documentation page for "expm" command](https://www.mathworks.com/help/matlab/ref/expm.html)
 * [Gil Strang at MIT: Two First Order Equations: Stability](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-32c-two-first-order-equations-stability-117453.html)
 
 <hr>
