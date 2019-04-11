@@ -36,9 +36,9 @@ This week we continue with systems of ODEs.  This involves vectors and matrices.
 * [Gil Strang at MIT: Solving linear systems](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-63-solving-linear-systems-117472.html)
 * random video: [Coupled systems of differential equations](https://www.youtube.com/watch?v=z3Ag8WF5M_c)
 * random video: [Find eigenvalues and eigenvectors of a 2x2 matrix](https://www.youtube.com/watch?v=tXlMbAxbUI4)
-* [Matlab documentation page for "eig" command](https://www.mathworks.com/help/matlab/ref/eig.html)
+* [Matlab documentation for "eig" command](https://www.mathworks.com/help/matlab/ref/eig.html)
 * [Gil Strang at MIT: The matrix exponential](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-64-the-matrix-exponential-expat-117473.html)
-* [Matlab documentation page for "expm" command](https://www.mathworks.com/help/matlab/ref/expm.html)
+* [Matlab documentation for "expm" command](https://www.mathworks.com/help/matlab/ref/expm.html)
 * [Gil Strang at MIT: Two First Order Equations: Stability](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-32c-two-first-order-equations-stability-117453.html)
 
 <hr>
