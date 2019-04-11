@@ -21,10 +21,10 @@ This week we continue with systems of ODEs.  This involves vectors and matrices.
 * [WebAssign 8.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/24
-* <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span>
 
 ### Thursday 4/25
-* <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span>
 * [work on WebAssign 8.2](https://www.webassign.net/) _BUELER TODO_
 
 ### Friday 4/26
