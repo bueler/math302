@@ -1,0 +1,180 @@
+\documentclass[urlcolor=blue,dvipsnames]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox,fancyvrb}
+\usepackage{environ,xspace,empheq}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,decorations.pathreplacing,fadings,positioning}
+
+\hypersetup{colorlinks,linkcolor=,urlcolor=cyan}
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\usetheme{Pittsburgh}
+
+%\makeatletter
+%\newcommand{\tinytiny}{\@setfontsize{\tinytiny}{4pt}{4pt}}
+%\makeatother
+
+\newcommand\enumnum[1]{{\renewcommand{\insertenumlabel}{#1}%
+      \usebeamertemplate{enumerate item} \,}}
+
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bX}{\mathbf{X}}
+
+\newcommand{\grad}{\nabla}
+\newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+
+
+\title{8.2 Homogeneous linear systems \\ of first-order ODEs}
+
+\subtitle{a lesson for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{\tiny \today}
+
+
+\begin{document}
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+\renewcommand{\thefootnote}{{\color{green} \arabic{footnote}}}
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+%\color{green!40!blue}
+\end{frame}
+
+
+\begin{frame}{homogeneous linear systems of ODEs}
+
+\begin{itemize}
+\item consider
+    $$\bX' = \bA \bX$$
+\item which means
+    $$\frac{d}{dt} \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} &       & a_{2n} \\
+ \vdots&        & \ddots& \vdots \\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{pmatrix}     \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$$
+    \begin{itemize}
+    \item the solution is a list of functions $x_1(t),\dots,x_n(t)$ which we combine into a vector $\bX(t)$
+    \end{itemize}
+\item in sections 8.2 and 8.4 we assume $\bA$ is a matrix of constants
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{how do you solve the simplest ODEs?}
+
+\begin{itemize}
+\item \emph{ODE 1}.  how do you solve for $y(t)$?:
+    $$y'=my$$
+    \begin{quote}
+    \textbf{answer:}  the solution is an exponential $y(x) = c e^{mt}$
+    \end{quote}
+\item \emph{ODE 2}.  how do you solve for $y(t)$ if $a_i$ are constant?:
+    $$a_2 y'' + a_1 y' + a_0 y = 0$$
+    \begin{quote}
+    \textbf{answer:}  try an exponential
+        $$y(x) = e^{mt}$$
+    and get an auxiliary equation which will determine $m$,
+        $$a_2 m^2 + a_1 m + a_0=0$$
+    \end{quote}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{how do you solve the simplest ODEs?}
+
+\begin{itemize}
+\item \emph{ODE 3}.  how do you solve for $\bX(t)$ if $\bA$ is a constant matrix?:
+    $$\bX' = \bA \bX$$
+    \begin{quote}
+    \textbf{answer:}  try an exponential times a vector
+        $$\bX(t) = \bK e^{\lambda t}$$
+    and get an auxiliary eqn which will determine $\lambda$,
+        $$\text{\textbf{[what goes here?]}}$$
+    \end{quote}
+\item $\lambda$ is just an unknown scalar like $m$ in ODE 2
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{X}
+
+\begin{itemize}
+\item X
+\end{itemize}
+\end{frame}
+
+\begin{frame}{expectations}
+
+\begin{itemize}
+\item just watching this video is \emph{not} enough!
+     \begin{itemize}
+     \item see ``found online'' videos and stuff at
+
+     \centerline{\href{https://bueler.github.io/math302/week14.html}{\tt \color{cyan} bueler.github.io/math302/week14.html}}
+     \item \emph{read} \S8.2
+         \begin{itemize}
+         \item you \alert{are responsible} for the ``distinct real eigenvalues'' and the ``complex eigenvalues'' cases
+         \item you are not responsible for the ``repeated eigenvalues'' case
+         \end{itemize}
+     \item \emph{do} the WebAssign exercises for section 8.2
+     \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
+
