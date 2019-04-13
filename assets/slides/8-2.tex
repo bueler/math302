@@ -22,6 +22,7 @@
 
 \newcommand{\bA}{\mathbf{A}}
 \newcommand{\bF}{\mathbf{F}}
+\newcommand{\bI}{\mathbf{I}}
 \newcommand{\bK}{\mathbf{K}}
 \newcommand{\bX}{\mathbf{X}}
 
@@ -111,10 +112,33 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{the eigenvalue equation for a system}
 
 \begin{itemize}
-\item X
+\item system:
+    $$\bX' = \bA \bX$$
+\item try \quad $\bX(t) = \bK e^{\lambda t}$:
+    \begin{align*}
+         \text{left side}&  & \bX' &= \bK \lambda e^{\lambda t} \\
+        \text{right side}&  & \bA\bX &= \bA \bK e^{\lambda t}
+    \end{align*}
+\item so system becomes
+\begin{align*}
+    \bK \lambda e^{\lambda t} &= \bA \bK e^{\lambda t} \\
+    \bK \lambda &= \bA \bK \\
+    \left(\bA - \lambda \bI\right)\bK &= 0
+\end{align*}
+\item we want this linear system to have interesting ($\ne 0$) solutions:
+    $$\det(\bA - \lambda \bI) = 0$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{the last slide}
+
+\begin{itemize}
+\item \alert{the last slide is the main idea}
+\item write it out yourself and understand it!
 \end{itemize}
 \end{frame}
 
@@ -151,12 +175,26 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}[fragile]
+\frametitle{the main idea}
 
 \begin{itemize}
-\item X
+\item the ODE system
+    $$\alert{\bX' = \bA \bX}$$
+has solutions
+    $$\alert{\bX(t) = \bK e^{\lambda t}}$$
+where $\lambda$ is an eigenvalue of $\bA$ and $\bK$ is an eigenvector of $\bA$,
+    $$\alert{(\bA-\lambda \bI) \bK = 0}$$
+and you can start by getting $\lambda$ via
+    $$\det(\bA - \lambda \bI) = 0$$
+\item in the modern world you don't find eigenvalues by hand:
+\begin{Verbatim}[fontsize=\small]
+>> [V,D] = eig(A)    % diagonal of D has eigenvalues
+                     % columns of V are eigenvectors
+\end{Verbatim}
 \end{itemize}
 \end{frame}
+
 
 \begin{frame}{expectations}
 
