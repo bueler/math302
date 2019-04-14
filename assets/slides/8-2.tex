@@ -24,7 +24,10 @@
 \newcommand{\bF}{\mathbf{F}}
 \newcommand{\bI}{\mathbf{I}}
 \newcommand{\bK}{\mathbf{K}}
+\newcommand{\bM}{\mathbf{M}}
 \newcommand{\bX}{\mathbf{X}}
+\newcommand{\bZ}{\mathbf{Z}}
+
 
 \newcommand{\grad}{\nabla}
 \newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
@@ -69,9 +72,9 @@ a_{21} & a_{22} &       & a_{2n} \\
 a_{n1} & a_{n2} & \dots & a_{nn}
 \end{pmatrix}     \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$$
     \begin{itemize}
+    \item in sections 8.2 and 8.4 we assume $\bA$ is a matrix of constants
     \item the solution is a list of functions $x_1(t),\dots,x_n(t)$ which we combine into a vector $\bX(t)$
     \end{itemize}
-\item in sections 8.2 and 8.4 we assume $\bA$ is a matrix of constants
 \end{itemize}
 \end{frame}
 
@@ -80,17 +83,20 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 
 \begin{itemize}
 \item \emph{ODE 1}.  how do you solve for $y(t)$?:
-    $$y'=my$$
+    $$y'=3y$$
     \begin{quote}
-    \textbf{answer:}  the solution is an exponential $y(x) = c e^{mt}$
+    \textbf{answer:}  the solution is an exponential $y(x) = c\, e^{3t}$
     \end{quote}
-\item \emph{ODE 2}.  how do you solve for $y(t)$ if $a_i$ are constant?:
-    $$a_2 y'' + a_1 y' + a_0 y = 0$$
+\item \emph{ODE 2}.  how do you solve for $y(t)$ if $p$ and $q$ are constant?:
+    $$y'' + p y' + q y = 0$$
     \begin{quote}
     \textbf{answer:}  try an exponential
         $$y(x) = e^{mt}$$
-    and get an auxiliary equation which will determine $m$,
-        $$a_2 m^2 + a_1 m + a_0=0$$
+    and get an auxiliary equation to determine $m$:
+\begin{align*}
+m^2 e^{mt} + p m e^{mt} + q e^{mt} &= 0 \\
+m^2 + p m + q &= 0
+\end{align*}
     \end{quote}
 \end{itemize}
 \end{frame}
@@ -104,19 +110,21 @@ a_{n1} & a_{n2} & \dots & a_{nn}
     \begin{quote}
     \textbf{answer:}  try an exponential times a vector
         $$\bX(t) = \bK e^{\lambda t}$$
-    and get an auxiliary eqn which will determine $\lambda$,
-        $$\text{\textbf{[what goes here?]}}$$
+    and get an auxiliary equation to determine $\lambda$:
+        $$\text{\textbf{[what equation goes here?]}}$$
     \end{quote}
-\item $\lambda$ is just an unknown scalar like $m$ in ODE 2
+\item $\lambda$ is an unknown \emph{scalar}, like $m$ before
+\item $\bK$ is an unknown \emph{vector}
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}{the eigenvalue equation for a system}
 
-\begin{itemize}
-\item system:
     $$\bX' = \bA \bX$$
+
+\bigskip
+\begin{itemize}
 \item try \quad $\bX(t) = \bK e^{\lambda t}$:
     \begin{align*}
          \text{left side}&  & \bX' &= \bK \lambda e^{\lambda t} \\
@@ -125,11 +133,10 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \item so system becomes
 \begin{align*}
     \bK \lambda e^{\lambda t} &= \bA \bK e^{\lambda t} \\
-    \bK \lambda &= \bA \bK \\
-    \left(\bA - \lambda \bI\right)\bK &= 0
+    \bK \lambda &= \bA \bK
 \end{align*}
-\item we want this linear system to have interesting ($\ne 0$) solutions:
-    $$\det(\bA - \lambda \bI) = 0$$
+\item the \emph{eigenvalue equation}:
+    $$\boxed{\bA \bK = \lambda \bK}$$
 \end{itemize}
 \end{frame}
 
@@ -143,34 +150,144 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{meaning of the eigenvalue equation}
 
 \begin{itemize}
-\item X
+\item eigenvalue equation is analogous to auxiliary equation:
+
+\bigskip
+\begin{tabular}{l|c|c}
+               & scalar & system \\\hline
+ODE            & \quad $y''+py'+qy=0$ \quad & $\bX' = \bA\bX \LARGE\strut$ \\ \hline
+trial solution & $y(t) = e^{mt}$            & \quad $\bX(t) = \bK e^{\lambda t} \LARGE\strut$ \\ \hline
+equation       & $m^2+pm+q=0$               & $\boxed{\bA \bK = \lambda \bK} \LARGE\strut$
+\end{tabular}
+
+\bigskip
+\item in the eigenvalue equation we are seeking \emph{both}
+    \begin{itemize}
+    \item \emph{eigenvalues}: the exponential rates $\lambda$
+    \item \emph{eigenvectors}: the ``constants'' $\bK$
+    \end{itemize}
+
+\medskip
+\item ``eigen'' means ``characteristic of'' or ``property of''
+    \begin{itemize}
+    \item the eigenvalues of a matrix $\bA$ are the most characteristic numbers to associate to $\bA$
+    \end{itemize}
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{forms of the eigenvalue equation}
+
+\begin{itemize}
+\medskip
+\item don't forget the ODE problem we started with: \quad $\bX' = \bA \bX$
+
+\bigskip
+\item different forms of the eigenvalue equation:
+\begin{align*}
+\lambda \bK e^{\lambda t} &= \bA \bK e^{\lambda t} & &\text{substitute $\bX=\bK e^{\lambda t}$} \\
+\bA \bK &= \lambda \bK\hspace{10mm} & &\text{eigenvalue equation} \\
+(\bA - \lambda \bI)\bK &= 0 & &\text{because $\bI\bK = \bK$} \\
+\det(\bA - \lambda \bI) &= 0 & &\text{because we want \emph{nonzero} solutions $\bK$}
+\end{align*}
+
+    \begin{itemize}
+    \item $\bI$ is the identity matrix
+    \item \emph{fact:} a linear equation $\bM \bZ = 0$ has a nonzero solution only if the determinant of $\bM$ is zero: \qquad $\det \bM=0$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \#1 in \S8.2}
+
+\begin{itemize}
+\item \emph{example 1.}  find the general solution of the system:
+\begin{align*}
+\frac{dx}{dt} &= 4x + 3y \hspace{70mm} \\
+\frac{dy}{dt} &= x + 2y
+\end{align*}
+\end{itemize}
+
+\vspace{45mm}
+\end{frame}
+
+
+\begin{frame}{like \#9 in \S8.2}
+
+\begin{itemize}
+\item \emph{example 2.}  find the general solution of the system:
+$$\bX' = \begin{pmatrix} 1 & 7 & 0 \\ 0 & -2 & 0 \\ 1 & 6 & 4 \end{pmatrix} \bX \hspace{70mm}$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{scalar 2nd-order $\iff$ system of 2 eqns}
+
+\noindent \emph{example 3.}
+\begin{itemize}
+\item find the general solution of the 2nd-order scalar ODE:
+$$y''+3y'+2y=0 \hspace{80mm}$$
+
+\vspace{7mm}
+\item convert above to a system:
+
+\vspace{10mm}
+\item find the general solution of the system:
+$$\bX' = \begin{pmatrix} 0 & 1 \\ -2 & -3 \end{pmatrix} \bX \hspace{70mm}$$
+
+\vspace{12mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{help from a machine}
+
+\begin{itemize}
+\item \alert{once you know what you want you can get it fast by machine!}
+\item find eigenvalues and eigenvectors in \Matlab/\Octave:
+\begin{Verbatim}[fontsize=\small]
+>> [V,D] = eig(A)    % diagonal of D has eigenvalues
+                     % columns of V are eigenvectors
+\end{Verbatim}
+\item FIXME  need to show how to get "nice" eigenvalues
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like \#13 in \S8.2}
+
+\begin{itemize}
+\item \emph{example 4.}  solve the initial value problem:
+$$\bX' = \begin{pmatrix} 4 & 3 \\ 1 & 2 \end{pmatrix} \bX, \qquad \bX(0) = \begin{pmatrix} 5 \\ -1 \end{pmatrix} \hspace{40mm}$$
+\end{itemize}
+
+\vspace{70mm}
+\end{frame}
+
+
+\begin{frame}{like \#35 in \S8.2}
+
+\begin{itemize}
+\item \emph{example 5.}  find the general solution of the system:
+$$\bX' = \begin{pmatrix} 5 & -1 \\ 5 & 1 \end{pmatrix} \bX \hspace{70mm}$$
+\end{itemize}
+
+\vspace{70mm}
 \end{frame}
 
 
 \begin{frame}{X}
 
 \begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{X}
-
-\begin{itemize}
-\item X
+\item FIXME  on quizzes/exams I can supply eigenstuff
+\item FIXME on quizzes/exams I will stick to distinct real case
 \end{itemize}
 \end{frame}
 
@@ -184,8 +301,8 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 has solutions
     $$\alert{\bX(t) = \bK e^{\lambda t}}$$
 where $\lambda$ is an eigenvalue of $\bA$ and $\bK$ is an eigenvector of $\bA$,
-    $$\alert{(\bA-\lambda \bI) \bK = 0}$$
-and you can start by getting $\lambda$ via
+    $$\alert{\bA\bK=\lambda \bK}$$
+and you can get $\lambda$ by-hand via
     $$\det(\bA - \lambda \bI) = 0$$
 \item in the modern world you don't find eigenvalues by hand:
 \begin{Verbatim}[fontsize=\small]
