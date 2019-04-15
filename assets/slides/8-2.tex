@@ -62,8 +62,11 @@
 \begin{frame}{homogeneous linear systems of ODEs}
 
 \begin{itemize}
-\item consider
+\item system of ODEs:
     $$\bX' = \bA \bX$$
+    \begin{itemize}
+    \item in sections 8.2 and 8.4 we assume $\bA$ is a matrix of constants
+    \end{itemize}
 \item which means
     $$\frac{d}{dt} \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix}
 a_{11} & a_{12} & \dots & a_{1n} \\
@@ -72,8 +75,8 @@ a_{21} & a_{22} &       & a_{2n} \\
 a_{n1} & a_{n2} & \dots & a_{nn}
 \end{pmatrix}     \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$$
     \begin{itemize}
-    \item in sections 8.2 and 8.4 we assume $\bA$ is a matrix of constants
-    \item the solution is a list of functions $x_1(t),\dots,x_n(t)$ which we combine into a vector $\bX(t)$
+    \item the solutions $x_1(t),\dots,x_n(t)$ are combined into a vector $\bX(t)$
+    \item the coefficients $a_{ij}$ are combined into a matrix $\bA$
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -125,12 +128,12 @@ m^2 + p m + q &= 0
 
 \bigskip
 \begin{itemize}
-\item try \quad $\bX(t) = \bK e^{\lambda t}$:
+\item try \quad $\bX(t) = \bK e^{\lambda t}$ \quad so
     \begin{align*}
-         \text{left side}&  & \bX' &= \bK \lambda e^{\lambda t} \\
-        \text{right side}&  & \bA\bX &= \bA \bK e^{\lambda t}
+         \text{left side:}&  & \bX' &= \bK \lambda e^{\lambda t} \\
+        \text{right side:}&  & \bA\bX &= \bA \bK e^{\lambda t}
     \end{align*}
-\item so system becomes
+\item so system $\bX' = \bA \bX$ becomes
 \begin{align*}
     \bK \lambda e^{\lambda t} &= \bA \bK e^{\lambda t} \\
     \bK \lambda &= \bA \bK
@@ -173,7 +176,7 @@ equation       & $m^2+pm+q=0$               & $\boxed{\bA \bK = \lambda \bK} \LA
 \medskip
 \item ``eigen'' means ``characteristic of'' or ``property of''
     \begin{itemize}
-    \item the eigenvalues of a matrix $\bA$ are the most characteristic numbers to associate to $\bA$
+    \item the eigenvalues of a matrix $\bA$ are the characteristic numbers to associate to $\bA$
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -188,7 +191,7 @@ equation       & $m^2+pm+q=0$               & $\boxed{\bA \bK = \lambda \bK} \LA
 \bigskip
 \item different forms of the eigenvalue equation:
 \begin{align*}
-\lambda \bK e^{\lambda t} &= \bA \bK e^{\lambda t} & &\text{substitute $\bX=\bK e^{\lambda t}$} \\
+\lambda \bK e^{\lambda t} &= \bA \bK e^{\lambda t} & &\text{substitute $\bX=\bK e^{\lambda t}$ \dots but $e^z\ne 0$} \\
 \bA \bK &= \lambda \bK\hspace{10mm} & &\text{eigenvalue equation} \\
 (\bA - \lambda \bI)\bK &= 0 & &\text{because $\bI\bK = \bK$} \\
 \det(\bA - \lambda \bI) &= 0 & &\text{because we want \emph{nonzero} solutions $\bK$}
@@ -205,6 +208,7 @@ equation       & $m^2+pm+q=0$               & $\boxed{\bA \bK = \lambda \bK} \LA
 \begin{frame}{like \#1 in \S8.2}
 
 \begin{itemize}
+\item assuming eigenvalues/vectors of $\bA$ appear when needed \dots
 \item \emph{example 1.}  find the general solution of the system:
 \begin{align*}
 \frac{dx}{dt} &= 4x + 3y \hspace{70mm} \\
@@ -219,6 +223,7 @@ equation       & $m^2+pm+q=0$               & $\boxed{\bA \bK = \lambda \bK} \LA
 \begin{frame}{like \#9 in \S8.2}
 
 \begin{itemize}
+\item assuming eigenvalues/vectors of $\bA$ appear when needed \dots
 \item \emph{example 2.}  find the general solution of the system:
 $$\bX' = \begin{pmatrix} 1 & 7 & 0 \\ 0 & -2 & 0 \\ 1 & 6 & 4 \end{pmatrix} \bX \hspace{70mm}$$
 \end{itemize}
@@ -246,6 +251,22 @@ $$\bX' = \begin{pmatrix} 0 & 1 \\ -2 & -3 \end{pmatrix} \bX \hspace{70mm}$$
 \end{frame}
 
 
+\begin{frame}{important ideas about eigenvectors}
+
+\begin{itemize}
+\medskip
+\item remember the eigenvalue equation:
+   $$\bA \bK = \lambda \bK$$
+\item important ideas:
+    \begin{itemize}
+    \item by definition, \alert{an eigenvector $\bK$ must be nonzero}
+    \item \alert{any nonzero multiple of an eigenvector is also an eigenvector}
+    \item in other words, only the \emph{direction} of an eigenvector is important, not its magnitude
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}[fragile]
 \frametitle{help from a machine}
 
@@ -256,7 +277,45 @@ $$\bX' = \begin{pmatrix} 0 & 1 \\ -2 & -3 \end{pmatrix} \bX \hspace{70mm}$$
 >> [V,D] = eig(A)    % diagonal of D has eigenvalues
                      % columns of V are eigenvectors
 \end{Verbatim}
-\item FIXME  need to show how to get "nice" eigenvalues
+
+\bigskip
+\item \emph{example 1, cont.}  get eigenvalues and eigenvectors:
+\begin{Verbatim}[fontsize=\small]
+>> A = [4, 3; 1, 2];
+>> [V,D] = eig(A)
+V =
+  0.94868  -0.70711
+  0.31623  0.70711
+D =
+        5        0
+        0        1
+\end{Verbatim}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{help from a machine, cont.}
+
+\begin{itemize}
+\item \emph{example 1, cont.}  here's how I got cleaner vectors $\bK_1,\bK_2$:
+\begin{Verbatim}[fontsize=\footnotesize]
+>> K1 = V(:,1)
+K1 =
+  0.94868
+  0.31623
+>> K1 = K1/K1(1)
+K1 =
+  1.00000
+  0.33333
+>> K2 = V(:,2);  K2 = K2/K2(1)
+K2 =
+        1
+       -1
+\end{Verbatim}
+
+\bigskip
+\item use this technique on the WebAssign problems
 \end{itemize}
 \end{frame}
 
@@ -265,7 +324,7 @@ $$\bX' = \begin{pmatrix} 0 & 1 \\ -2 & -3 \end{pmatrix} \bX \hspace{70mm}$$
 
 \begin{itemize}
 \item \emph{example 4.}  solve the initial value problem:
-$$\bX' = \begin{pmatrix} 4 & 3 \\ 1 & 2 \end{pmatrix} \bX, \qquad \bX(0) = \begin{pmatrix} 5 \\ -1 \end{pmatrix} \hspace{40mm}$$
+$$\bX' = \begin{pmatrix} 4 & 3 \\ 1 & 2 \end{pmatrix} \bX, \qquad \bX(0) = \begin{pmatrix} 2 \\ 2 \end{pmatrix} \hspace{40mm}$$
 \end{itemize}
 
 \vspace{70mm}
@@ -275,6 +334,7 @@ $$\bX' = \begin{pmatrix} 4 & 3 \\ 1 & 2 \end{pmatrix} \bX, \qquad \bX(0) = \begi
 \begin{frame}{like \#35 in \S8.2}
 
 \begin{itemize}
+\item eigenvalues could be complex \dots see example 6, page 351
 \item \emph{example 5.}  find the general solution of the system:
 $$\bX' = \begin{pmatrix} 5 & -1 \\ 5 & 1 \end{pmatrix} \bX \hspace{70mm}$$
 \end{itemize}
@@ -283,11 +343,17 @@ $$\bX' = \begin{pmatrix} 5 & -1 \\ 5 & 1 \end{pmatrix} \bX \hspace{70mm}$$
 \end{frame}
 
 
-\begin{frame}{X}
+\begin{frame}{on quizzes and exams}
 
 \begin{itemize}
-\item FIXME  on quizzes/exams I can supply eigenstuff
-\item FIXME on quizzes/exams I will stick to distinct real case
+\item on quizzes and exams:
+    \begin{itemize}
+    \item \alert{I will supply the eigenvalues and eigenvectors}
+    \item \alert{I will only ask about the distinct real eigenvalues case}
+    \item so: examples 1--4 above could appear on quizzes/exams
+    \item problems like example 5 appear on WebAssign
+    \item actually, only the Final Exam remains \dots
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -302,13 +368,21 @@ has solutions
     $$\alert{\bX(t) = \bK e^{\lambda t}}$$
 where $\lambda$ is an eigenvalue of $\bA$ and $\bK$ is an eigenvector of $\bA$,
     $$\alert{\bA\bK=\lambda \bK}$$
-and you can get $\lambda$ by-hand via
-    $$\det(\bA - \lambda \bI) = 0$$
-\item in the modern world you don't find eigenvalues by hand:
+
+\medskip
+\item in the modern world a machine provides:
 \begin{Verbatim}[fontsize=\small]
 >> [V,D] = eig(A)    % diagonal of D has eigenvalues
                      % columns of V are eigenvectors
 \end{Verbatim}
+
+\bigskip
+\item by hand:
+    \begin{itemize}
+    \item solve \quad $\det(\bA - \lambda \bI) = 0$ \quad for all the $\lambda$
+    \item for each $\lambda$, solve $\bA\bK=\lambda \bK$ for a nonzero $\bK$
+    \item the book shows this
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -323,7 +397,9 @@ and you can get $\lambda$ by-hand via
      \centerline{\href{https://bueler.github.io/math302/week14.html}{\tt \color{cyan} bueler.github.io/math302/week14.html}}
      \item \emph{read} \S8.2
          \begin{itemize}
-         \item you \alert{are responsible} for the ``distinct real eigenvalues'' and the ``complex eigenvalues'' cases
+         \item you \alert{are responsible} for the ``distinct real eigenvalues'' and the ``complex eigenvalues'' cases for WebAssign
+         \item you \alert{are only responsible} for ``distinct real eigenvalues'' on the Final Exam
+         \item I will give you the eigenvalues and eigenvectors on the Final
          \item you are not responsible for the ``repeated eigenvalues'' case
          \end{itemize}
      \item \emph{do} the WebAssign exercises for section 8.2
