@@ -46,6 +46,7 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 * [Cleve Moler, the Matlab inventor, on explicit midpoint rule (what I call "modified Euler")](https://www.mathworks.com/videos/solving-odes-in-matlab-2-midpoint-method-ode2-117527.html); see [the "Functions" tab here](https://www.mathworks.com/matlabcentral/fileexchange/54611-solving-odes-in-matlab) for the code "ODE2" which he uses
 * random video: [Runge Kutta 4th Order Method: Example](https://www.youtube.com/watch?v=AT7Olelic8U)
 * random video: [Math for Game Developers--Runge Kutta Order 4](https://www.youtube.com/watch?v=hGCP6I2WisM) ... part of [his series on Math for Game Developers](https://www.youtube.com/user/BSVino)
+* [this CNN story about a meteor impact from outside the solar system](https://www.cnn.com/2019/04/17/us/interstellar-meteor-object-harvard-study-scn-trnd/index.html) tracks back to [this 2019 paper](https://arxiv.org/pdf/1904.07224.pdf) which uses [this ODE numerical method which is better than RK4](https://academic.oup.com/mnras/article/446/2/1424/2892331)
 
 <hr>
 <a align="left" href="week9">\<-- previous week</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a align="right" href="week11">next week --\></a>
