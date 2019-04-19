@@ -33,7 +33,7 @@ Actually, in 8.4 we get an even more clean description.  The solution of a homog
 
 ### Friday 4/26
 * [blank slides for section 8.4](assets/slides/8-4.pdf)
-* [video: Bueler talks-over slides for section 8.4](https://expl.ai/JLBTZGB)
+* [video: Bueler talks-over slides for section 8.4](https://expl.ai/ZAECXJR)
 * Mini-Project 5, _One problem, many methods_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 5](https://forms.gle/RJUD9cQyBKt4Uyi27); you may need to log in to your `alaska.edu` account to use this link
 * [WebAssign 8.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
