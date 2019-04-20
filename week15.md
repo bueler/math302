@@ -1,6 +1,6 @@
 ---
 layout: course-page
-title: Week 14
+title: Week 15
 ---
 
 ## Week 15 Module: Finals Week (April 29 -- May 3)
