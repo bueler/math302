@@ -22,6 +22,7 @@ Actually, in 8.4 we get an even more clean description.  The solution of a homog
 * [work on WebAssign 8.1](https://www.webassign.net/)
 
 ### Tuesday 4/23
+* [Summary of the Final Exam](assets/sample/final-summary.pdf), an explicit guide to what will be on the Final.
 * [WebAssign 8.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/24

@@ -13,14 +13,14 @@ As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](
 * [work on WebAssign 8.4](https://www.webassign.net/)
 
 ### Tuesday 4/30
-* <span style="color:blue">**proctored Final Exam**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Final Exam**</span>
 * [WebAssign 8.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 5/1
-* <span style="color:blue">**proctored Final Exam**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Final Exam**</span>
 
 ### Thursday 5/2
-* <span style="color:blue">**proctored Final Exam**</span> _BUELER TODO_
+* <span style="color:blue">**proctored Final Exam**</span>
 
 <hr>
 <a align="left" href="week14">\<-- previous week</a>
