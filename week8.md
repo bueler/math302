@@ -15,7 +15,7 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### Monday 3/4
 * [blank slides for section 5.1](assets/slides/5-1.pdf)
-* [video: Bueler talks over slides for section 5.1](https://expl.ai/KBLSXFX)
+* [video: Bueler talks over slides for section 5.1](https://github.com/bueler/diff-eq-videos/blob/master/video-5-1-math302.mp4?raw=true)
 * [work on WebAssign 4.4](https://www.webassign.net/)
 
 ### Tuesday 3/5
@@ -31,7 +31,7 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### Friday 3/8
 * [blank slides for section 5.3 (and 4.10)](assets/slides/5-3.pdf)
-* [video: Bueler talks over slides for section 5.3 (and 4.10)](https://expl.ai/VSJTFRC)
+* [video: Bueler talks over slides for section 5.3 (and 4.10)](https://github.com/bueler/diff-eq-videos/blob/master/video-5-3-math302.mp4?raw=true)
 * [WebAssign 5.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online

@@ -17,7 +17,7 @@ Regarding new content, we start into second-order differential equations.  (We a
 
 ### Monday 2/18
 * [blank slides for section 4.1](assets/slides/4-1.pdf)
-* [video: Bueler talks over slides for section 4.1](https://drive.explaineverything.com/thecode/QVRDLMJ)
+* [video: Bueler talks over slides for section 4.1](https://github.com/bueler/diff-eq-videos/blob/master/video-4-1-math302.mp4?raw=true)
 * [work on WebAssign 3.2](https://www.webassign.net/)
 
 ### Tuesday 2/19
@@ -33,7 +33,7 @@ Regarding new content, we start into second-order differential equations.  (We a
 
 ### Friday 2/22
 * [blank slides for section 4.3](assets/slides/4-3.pdf)
-* [video: Bueler talks over slides for section 4.3](https://expl.ai/XVRHBER)
+* [video: Bueler talks over slides for section 4.3](https://github.com/bueler/diff-eq-videos/blob/master/video-4-3-math302.mp4?raw=true)
 * [WebAssign 4.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online

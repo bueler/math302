@@ -17,7 +17,7 @@ Actually, in 8.4 we get an even more clean description.  The solution of a homog
 
 ### Monday 4/22
 * [blank slides for section 8.2](assets/slides/8-2.pdf)
-* [video: Bueler talks-over slides for section 8.2](https://expl.ai/JMKDQYK)
+* [video: Bueler talks-over slides for section 8.2](https://github.com/bueler/diff-eq-videos/blob/master/video-8-2-math302.mp4?raw=true)
 * _Mini-Project 5 is NOT due today ... due date moved to Friday (below)_
 * [work on WebAssign 8.1](https://www.webassign.net/)
 
@@ -34,7 +34,7 @@ Actually, in 8.4 we get an even more clean description.  The solution of a homog
 
 ### Friday 4/26
 * [blank slides for section 8.4](assets/slides/8-4.pdf)
-* [video: Bueler talks-over slides for section 8.4](https://expl.ai/ZAECXJR)
+* [video: Bueler talks-over slides for section 8.4](https://github.com/bueler/diff-eq-videos/blob/master/video-8-4-math302.mp4?raw=true)
 * Mini-Project 5, _One problem, many methods_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 5](https://forms.gle/RJUD9cQyBKt4Uyi27); you may need to log in to your `alaska.edu` account to use this link
 * [WebAssign 8.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 

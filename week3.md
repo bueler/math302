@@ -13,7 +13,7 @@ Proctored Quiz 2 should be done on Wednesday or Thursday.
 
 Mini-Project 2 is assigned this week but it is due on Thursday 2/7 (during Week 4).
 
-The videos are different this week because I used [Learning Glass](https://iteachu.uaf.edu/deliver-engaging-lectures/).  I don't particularly like either the creation process or the result, so in future weeks we will be back to [Explain Everything](https://explaineverything.com/) videos.
+The videos are different this week because I used [Learning Glass](https://iteachu.uaf.edu/deliver-engaging-lectures/).  I don't particularly like either the creation process or the result.
 
 This week we get a serious start on actually _solving_ first-order differential equations.  The two types we solve are called "separable" (section 2.2) and linear (section 2.3).
 

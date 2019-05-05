@@ -15,7 +15,7 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 
 ### Monday 3/25
 * [blank slides for section 9.1](assets/slides/9-1.pdf)
-* [video: Bueler talks over slides for section 9.1](https://expl.ai/FNKXREH)
+* [video: Bueler talks over slides for section 9.1](https://github.com/bueler/diff-eq-videos/blob/master/video-9-1-math302.mp4?raw=true)
 * [work on WebAssign 6.2](https://www.webassign.net/)
 
 ### Tuesday 3/26
@@ -32,13 +32,13 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 
 ### Friday 3/29
 * [blank slides for section 9.2](assets/slides/9-2.pdf)
-* [video: Bueler talks over slides for section 9.2](https://expl.ai/VJGZCUA)
+* [video: Bueler talks over slides for section 9.2](https://github.com/bueler/diff-eq-videos/blob/master/video-9-2-math302.mp4?raw=true)
 * [WebAssign 9.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Octave Online](https://octave-online.net/)
 * [Matlab technical doc page on the black box ode45](https://www.mathworks.com/help/matlab/ref/ode45.html)
-* my section 2.6 [slides](assets/slides/2-6.pdf) and [video voiceover](https://drive.explaineverything.com/thecode/LKSLJBU)
+* my section 2.6 [slides](assets/slides/2-6.pdf) and [video voiceover](https://github.com/bueler/diff-eq-videos/blob/master/video-2-6-math302.mp4?raw=true)
 * [Khan Academy: Euler's method](https://www.khanacademy.org/math/ap-calculus-bc/bc-differential-equations-new/bc-7-5/v/eulers-method)
 * random (and good) video: [Improved Euler Method](https://www.youtube.com/watch?v=A5ObpYPADPQ)
 * random video: [Improved Euler's method](https://www.youtube.com/watch?v=BdzV83JTOyA)

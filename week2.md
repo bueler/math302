@@ -23,7 +23,7 @@ This week is about differential equations as models.  It is also about ways to p
 ### Wednesday 1/23
 * <span style="color:blue">**proctored Quiz 1 covers 1.1 and 1.2**</span>
 * [blank slides for section 1.3](assets/slides/1-3.pdf)
-* [video: Bueler talks over slides for section 1.3](https://drive.explaineverything.com/thecode/XJLMBWB)
+* [video: Bueler talks over slides for section 1.3](https://github.com/bueler/diff-eq-videos/blob/master/video-1-3-math302.mp4?raw=true)
 
 ### Thursday 1/24
 * <span style="color:blue">**proctored Quiz 1 covers 1.1 and 1.2**</span>
@@ -31,7 +31,7 @@ This week is about differential equations as models.  It is also about ways to p
 
 ### Friday 1/25
 * [blank slides for section 2.1](assets/slides/2-1.pdf)
-* [video: Bueler talks over slides for section 2.1](https://drive.explaineverything.com/thecode/BECRMSX)
+* [video: Bueler talks over slides for section 2.1](https://github.com/bueler/diff-eq-videos/blob/master/video-2-1-math302.mp4?raw=true)
 * [WebAssign 1.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 * last day to drop/add
 
