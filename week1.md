@@ -13,7 +13,7 @@ This week is about an introduction to differential equations (DEs), of course.  
 
 ### Monday 1/14
 * [blank slides for section 1.1](assets/slides/1-1.pdf)
-* [video: Bueler talks over slides for section 1.1](https://rawcdn.githack.com/bueler/diff-eq-videos/f8a85c8c35a4f64b785a0519194d98c894b340f0/video-1-1-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 1.1](https://github.com/bueler/diff-eq-videos/blob/master/video-1-1-math302.mp4?raw=true)
 * [blank Mini-Project 1](assets/mp/mp1.pdf)
 
 ### Tuesday 1/15
@@ -29,7 +29,7 @@ This week is about an introduction to differential equations (DEs), of course.  
 
 ### Friday 1/18
 * [blank slides for section 1.2](assets/slides/1-2.pdf)
-* [video: Bueler talks over slides for section 1.2](https://rawcdn.githack.com/bueler/diff-eq-videos/f8a85c8c35a4f64b785a0519194d98c894b340f0/video-1-2-math302.mp4)
+* [video: Bueler talks over slides for section 1.2](https://github.com/bueler/diff-eq-videos/blob/master/video-1-2-math302.mp4?raw=true)
 * [WebAssign 1.1 part B](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 
