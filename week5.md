@@ -19,7 +19,7 @@ It happens _next week_, namely [Week 6](week6).  Below is a link to a sample Mid
 
 ### Monday 2/11
 * [blank slides for section 3.1](assets/slides/3-1.pdf)
-* [video: Bueler talks over slides for section 3.1](https://github.com/bueler/diff-eq-videos/blob/master/video-3-1-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 3.1](https://github.com/bueler/diff-eq-videos/blob/master/video-3-1-math302.mp4)
 * [work on WebAssign 2.6](https://www.webassign.net/)
 
 ### Tuesday 2/12
@@ -36,7 +36,7 @@ It happens _next week_, namely [Week 6](week6).  Below is a link to a sample Mid
 
 ### Friday 2/15
 * [blank slides for section 3.2](assets/slides/3-2.pdf)
-* [video: Bueler talks over slides for section 3.2](https://github.com/bueler/diff-eq-videos/blob/master/video-3-2-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 3.2](https://github.com/bueler/diff-eq-videos/blob/master/video-3-2-math302.mp4)
 * [WebAssign 3.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online

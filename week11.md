@@ -13,7 +13,7 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 
 ### Monday 4/1
 * [blank slides for section 7.1](assets/slides/7-1.pdf)
-* [video: Bueler talks over slides for section 7.1](https://github.com/bueler/diff-eq-videos/blob/master/video-7-1-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 7.1](https://github.com/bueler/diff-eq-videos/blob/master/video-7-1-math302.mp4)
 * [work on WebAssign 9.2](https://www.webassign.net/)
 
 ### Tuesday 4/2
@@ -29,7 +29,7 @@ This week and in [Week 12](week12) we use _Laplace transform_ methods to solve l
 
 ### Friday 4/5
 * [blank slides for section 7.2](assets/slides/7-2.pdf)
-* [video: Bueler talks over slides for section 7.2](https://github.com/bueler/diff-eq-videos/blob/master/video-7-2-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 7.2](https://github.com/bueler/diff-eq-videos/blob/master/video-7-2-math302.mp4)
 * [WebAssign 7.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online

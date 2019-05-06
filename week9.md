@@ -15,7 +15,7 @@ This week we start using power series methods on differential equations.  Sectio
 
 ### Monday 3/18
 * [blank slides for section 6.1](assets/slides/6-1.pdf)
-* [video: Bueler talks over slides for section 6.1](https://github.com/bueler/diff-eq-videos/blob/master/video-6-1-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 6.1](https://github.com/bueler/diff-eq-videos/blob/master/video-6-1-math302.mp4)
 * Mini-Project 3, _Energy is just a technique for solving differential equations_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 3](https://goo.gl/forms/fmSrrnCs8blR3Fwn1); you may need to log in to your `alaska.edu` account to use this link
 * [work on WebAssign 5.3/4.10](https://www.webassign.net/)
 
@@ -32,7 +32,7 @@ This week we start using power series methods on differential equations.  Sectio
 
 ### Friday 3/22
 * [blank slides for section 6.2](assets/slides/6-2.pdf)
-* [video: Bueler talks over slides for section 6.2](https://github.com/bueler/diff-eq-videos/blob/master/video-6-2-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 6.2](https://github.com/bueler/diff-eq-videos/blob/master/video-6-2-math302.mp4)
 * [WebAssign 6.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online

@@ -17,7 +17,7 @@ This week we continue solving linear second-order differential equations.  The _
 
 ### Monday 2/25
 * [blank slides for section 4.2](assets/slides/4-2.pdf)
-* [video: Bueler talks over slides for section 4.2](https://github.com/bueler/diff-eq-videos/blob/master/video-4-2-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 4.2](https://github.com/bueler/diff-eq-videos/blob/master/video-4-2-math302.mp4)
 * [blank Mini-Project 3](assets/mp/mp3.pdf)
 * [work on WebAssign 4.3](https://www.webassign.net/)
 
@@ -33,7 +33,7 @@ This week we continue solving linear second-order differential equations.  The _
 
 ### Friday 3/1
 * [blank slides for section 4.4](assets/slides/4-4.pdf)
-* [video: Bueler talks over slides for section 4.4](https://github.com/bueler/diff-eq-videos/blob/master/video-4-4-math302.mp4?raw=true)
+* [video: Bueler talks over slides for section 4.4](https://github.com/bueler/diff-eq-videos/blob/master/video-4-4-math302.mp4)
 * [WebAssign 4.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online

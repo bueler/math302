@@ -15,7 +15,7 @@ This week we focus on "operational" properties of the Laplace transform which al
 
 ### Monday 4/8
 * [blank slides for section 7.3](assets/slides/7-3.pdf)
-* [video: Bueler talks-over slides for section 7.3](https://github.com/bueler/diff-eq-videos/blob/master/video-7-3-math302.mp4?raw=true)
+* [video: Bueler talks-over slides for section 7.3](https://github.com/bueler/diff-eq-videos/blob/master/video-7-3-math302.mp4)
 * [work on WebAssign 7.2](https://www.webassign.net/)
 
 ### Tuesday 4/9
@@ -31,7 +31,7 @@ This week we focus on "operational" properties of the Laplace transform which al
 
 ### Friday 4/12
 * [blank slides for convolution (from 7.4)](assets/slides/7-4.pdf)
-* [video: Bueler talks-over slides for convolution (from 7.4)](https://github.com/bueler/diff-eq-videos/blob/master/video-7-4-math302.mp4?raw=true)
+* [video: Bueler talks-over slides for convolution (from 7.4)](https://github.com/bueler/diff-eq-videos/blob/master/video-7-4-math302.mp4)
 * [WebAssign 7.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
