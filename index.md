@@ -28,8 +28,7 @@ Welcome to the homepage of **Math F302 UX1 Differential Equations in Spring 2019
 * [BlackBoard](https://classes.alaska.edu) &nbsp; &nbsp; (grades and solutions)
 * [Bueler's office hours](http://bueler.github.io/OffHrs.htm)
 
-<br>
-[<img src="GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math302 "This page is a github repo.")
-
 ---
-_Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/).
+_Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
+
+[<img src="GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math302 "This page is a github repo.")
