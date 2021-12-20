@@ -31,3 +31,5 @@ Welcome to the homepage of **Math F302 UX1 Differential Equations in Spring 2019
 <br>
 [<img src="GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math302 "This page is a github repo.")
 
+---
+_Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/).
