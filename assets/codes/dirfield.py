@@ -5,18 +5,18 @@ Generate direction fields (slope fields).  See
     https://en.wikipedia.org/wiki/Slope_field
 for general documentation of slope fields.
 
-Example 1:
+Example 0:
     import dirfield as df
     def f(x,y) : return -y
     df.dirfield(f,[0,2,-3,4])  # first argument is function
                                # second argument is box:  [x0,x1,y0,y1]
     df.genfig('example.png')
 
-Example 2, showing only field:
+Example 1, showing only field:
     import dirfield as df
     df.runexample1()
 
-Example 3, showing field and solution:
+Example 2, showing field and solution:
     import dirfield as df
     df.runexample2()
 """
@@ -87,3 +87,15 @@ def runexample2():
     plt.plot(0.0,2.0,'k.',markersize=12)
     genfig('example-field-solution.png',trim=True)
 
+def runexample3():
+    def f(x,y):
+        return 1.0 + y*y
+    xy = [-np.pi,np.pi]
+    xybox = [xy[0],xy[1],xy[0],xy[1]]
+    dirfield(f,xybox,mx=20,my=20,slopeslinewidth=1.5)
+    xx = np.linspace(-np.pi/2+0.001,np.pi/2-0.001,101)
+    plt.plot(xx,np.tan(xx),'r')
+    plt.plot(0.0,0.0,'k.',markersize=12)
+    plt.axis('equal')
+    plt.axis(xybox)
+    genfig('probBfield.png',trim=True)
