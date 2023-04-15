@@ -3,9 +3,9 @@ layout: course-page
 title: Week 8
 ---
 
-## Week 8 Module: March 4 -- March 8
+## Week 8 Module: FIXME
 
-Welcome to Week 8 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 8 of [MATH F302](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf).
 
 This week, **Quiz 6** must be done on Wednesday or Thursday.  It **covers sections 4.2 and 4.4**
 
@@ -15,24 +15,13 @@ Note that next week is Spring Break.  We resume [Week 9](week9) on Monday 3/18.
 
 ### Monday 3/4
 * [blank slides for section 5.1](assets/slides/5-1.pdf)
-* [video: Bueler talks over slides for section 5.1](https://github.com/bueler/diff-eq-videos/blob/master/video-5-1-math302.mp4)
-* [work on WebAssign 4.4](https://www.webassign.net/)
-
-### Tuesday 3/5
-* [WebAssign 4.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/6
-* <span style="color:blue">**proctored Quiz 6 covers 4.2 and 4.4**</span>
+* FIXME
 
-### Thursday 3/7
-* <span style="color:blue">**proctored Quiz 6 covers 4.2 and 4.4**</span>
-* _Mini-Project 3 is NOT due today ... due date moved to Monday 3/18 in [Week 9](week9)_
-* [work on WebAssign 5.1](https://www.webassign.net/)
 
 ### Friday 3/8
 * [blank slides for section 5.3 (and 4.10)](assets/slides/5-3.pdf)
-* [video: Bueler talks over slides for section 5.3 (and 4.10)](https://github.com/bueler/diff-eq-videos/blob/master/video-5-3-math302.mp4)
-* [WebAssign 5.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [nice mass-spring browser app](https://phet.colorado.edu/en/simulation/mass-spring-lab)

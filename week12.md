@@ -3,9 +3,9 @@ layout: course-page
 title: Week 12
 ---
 
-## Week 12 Module: April 8 -- April 12
+## Week 12 Module: FIXME
 
-Welcome to Week 12 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 12 of [MATH F302](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf).
 
 This week, **Quiz 9** must be done on Wednesday or Thursday.  It **covers sections 7.1 and 7.2**.
 
@@ -15,24 +15,13 @@ This week we focus on "operational" properties of the Laplace transform which al
 
 ### Monday 4/8
 * [blank slides for section 7.3](assets/slides/7-3.pdf)
-* [video: Bueler talks-over slides for section 7.3](https://github.com/bueler/diff-eq-videos/blob/master/video-7-3-math302.mp4)
-* [work on WebAssign 7.2](https://www.webassign.net/)
-
-### Tuesday 4/9
-* [WebAssign 7.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/10
-* <span style="color:blue">**proctored Quiz 9 covers 7.1 and 7.2**</span>
-
-### Thursday 4/11
-* <span style="color:blue">**proctored Quiz 9 covers 7.1 and 7.2**</span>
+* FIXME
 * [blank Mini-Project 5](assets/mp/mp5.pdf)
-* [work on WebAssign 7.3](https://www.webassign.net/)
 
 ### Friday 4/12
 * [blank slides for convolution (from 7.4)](assets/slides/7-4.pdf)
-* [video: Bueler talks-over slides for convolution (from 7.4)](https://github.com/bueler/diff-eq-videos/blob/master/video-7-4-math302.mp4)
-* [WebAssign 7.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * see [_found online_ links for Week 11](week11#found-online)

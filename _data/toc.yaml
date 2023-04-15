@@ -3,13 +3,10 @@ sidenav_title: 'Math 302'
 docs:
 
 - title: Syllabus
-  url: syllabus.pdf  # rebuild by "make syllabus.pdf" in assets/latex/
+  url: assets/general/F23/syllabus.pdf
 
-- title: Schedule
-  url: schedule.pdf  # rebuild by "make schedule.pdf" in assets/latex/
-
-- title: Proctoring
-  url: proctoring.pdf  # rebuild by "make proctoring.pdf" in assets/latex/
+- title: BROKEN Schedule
+  url: assets/general/F23/schedule.pdf
 
 - title: Codes
   url: codes.html
@@ -58,4 +55,3 @@ docs:
 
 - title: Week 15
   url: week15.html
-

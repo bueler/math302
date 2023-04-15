@@ -3,9 +3,9 @@ layout: course-page
 title: Week 14
 ---
 
-## Week 14 Module: April 22 -- April 26
+## Week 14 Module: FIXME
 
-Welcome to Week 14 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 14 of [MATH F302](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf).
 
 This week, **Quiz 11** must be done on Wednesday or Thursday.  It **covers sections 3.3 and 8.1**.
 
@@ -17,26 +17,13 @@ Actually, in 8.4 we get an even more clean description.  The solution of a homog
 
 ### Monday 4/22
 * [blank slides for section 8.2](assets/slides/8-2.pdf)
-* [video: Bueler talks-over slides for section 8.2](https://github.com/bueler/diff-eq-videos/blob/master/video-8-2-math302.mp4)
-* _Mini-Project 5 is NOT due today ... due date moved to Friday (below)_
-* [work on WebAssign 8.1](https://www.webassign.net/)
-
-### Tuesday 4/23
 * [Summary of the Final Exam](assets/sample/final-summary.pdf), an explicit guide to what will be on the Final.
-* [WebAssign 8.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/24
-* <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span>
-
-### Thursday 4/25
-* <span style="color:blue">**proctored Quiz 11 covers 3.3 and 8.1**</span>
-* [work on WebAssign 8.2](https://www.webassign.net/)
+* FIXME
 
 ### Friday 4/26
 * [blank slides for section 8.4](assets/slides/8-4.pdf)
-* [video: Bueler talks-over slides for section 8.4](https://github.com/bueler/diff-eq-videos/blob/master/video-8-4-math302.mp4)
-* Mini-Project 5, _One problem, many methods_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 5](https://forms.gle/RJUD9cQyBKt4Uyi27); you may need to log in to your `alaska.edu` account to use this link
-* [WebAssign 8.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Gil Strang at MIT: Solving linear systems](https://www.mathworks.com/videos/differential-equations-and-linear-algebra-63-solving-linear-systems-117472.html)

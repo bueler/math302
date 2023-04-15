@@ -3,9 +3,9 @@ layout: course-page
 title: Week 7
 ---
 
-## Week 7 Module: February 25 -- March 1
+## Week 7 Module: FIXME
 
-Welcome to Week 7 of [MATH F302 UX1 in Spring 2019](index.html)!  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 7 of [MATH F302](index.html)!  As always, remember to keep an eye on the [schedule](schedule.pdf).
 
 This week, **Quiz 5** must be done on Wednesday or Thursday.  It **covers sections 4.1 and 4.3**
 
@@ -17,24 +17,13 @@ This week we continue solving linear second-order differential equations.  The _
 
 ### Monday 2/25
 * [blank slides for section 4.2](assets/slides/4-2.pdf)
-* [video: Bueler talks over slides for section 4.2](https://github.com/bueler/diff-eq-videos/blob/master/video-4-2-math302.mp4)
 * [blank Mini-Project 3](assets/mp/mp3.pdf)
-* [work on WebAssign 4.3](https://www.webassign.net/)
-
-### Tuesday 2/26
-* [WebAssign 4.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 2/27
-* <span style="color:blue">**proctored Quiz 5 covers 4.1 and 4.3**</span>
-
-### Thursday 2/28
-* <span style="color:blue">**proctored Quiz 5 covers 4.1 and 4.3**</span>
-* [work on WebAssign 4.2](https://www.webassign.net/)
+* FIXME
 
 ### Friday 3/1
 * [blank slides for section 4.4](assets/slides/4-4.pdf)
-* [video: Bueler talks over slides for section 4.4](https://github.com/bueler/diff-eq-videos/blob/master/video-4-4-math302.mp4)
-* [WebAssign 4.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Khan Academy: Repeated roots of the characteristic equation](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/modal/v/repeated-roots-of-the-characteristic-equation)

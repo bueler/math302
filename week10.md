@@ -3,11 +3,11 @@ layout: course-page
 title: Week 10
 ---
 
-## Week 10 Module: March 25 -- March 29
+## Week 10 Module: FIXME
 
-Welcome to Week 10 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 10 of [MATH F302](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf).
 
-This week, **Quiz 8** must be done on Wednesday or Thursday.  It **covers sections 6.1 and 6.2**.  Look at the WebAssign questions to see what kinds of problems I will ask about on the Quiz.
+This week, **Quiz 8** must be done on Wednesday or Thursday.  It **covers sections 6.1 and 6.2**.
 
 Mini-Project 4 is due this week on Thursday March 28.
 
@@ -15,30 +15,18 @@ This week we return to numerical methods.  Section 9.1 is a deeper examination o
 
 ### Monday 3/25
 * [blank slides for section 9.1](assets/slides/9-1.pdf)
-* [video: Bueler talks over slides for section 9.1](https://github.com/bueler/diff-eq-videos/blob/master/video-9-1-math302.mp4)
-* [work on WebAssign 6.2](https://www.webassign.net/)
-
-### Tuesday 3/26
 * [Summary of Midterm Exam 2](assets/sample/mid2-summary.pdf), an explicit guide to what will be on the midterm.  (This replaces a Sample exam.)
-* [WebAssign 6.2](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 3/27
-* <span style="color:blue">**proctored Quiz 8 covers 6.1 and 6.2**</span>
-
-### Thursday 3/28
-* <span style="color:blue">**proctored Quiz 8 covers 6.1 and 6.2**</span>
-* Mini-Project 4, _Resonance: Shattering wine glasses and destroying bridges_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 4](https://goo.gl/forms/au848CmfdK94QC2t2); you may need to log in to your `alaska.edu` account to use this link
-* [work on WebAssign 9.1](https://www.webassign.net/)
+* FIXME
 
 ### Friday 3/29
 * [blank slides for section 9.2](assets/slides/9-2.pdf)
-* [video: Bueler talks over slides for section 9.2](https://github.com/bueler/diff-eq-videos/blob/master/video-9-2-math302.mp4)
-* [WebAssign 9.1](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [Octave Online](https://octave-online.net/)
 * [Matlab technical doc page on the black box ode45](https://www.mathworks.com/help/matlab/ref/ode45.html)
-* my section 2.6 [slides](assets/slides/2-6.pdf) and [video voiceover](https://github.com/bueler/diff-eq-videos/blob/master/video-2-6-math302.mp4)
+* my section 2.6 [slides](assets/slides/2-6.pdf)
 * [Khan Academy: Euler's method](https://www.khanacademy.org/math/ap-calculus-bc/bc-differential-equations-new/bc-7-5/v/eulers-method)
 * random (and good) video: [Improved Euler Method](https://www.youtube.com/watch?v=A5ObpYPADPQ)
 * random video: [Improved Euler's method](https://www.youtube.com/watch?v=BdzV83JTOyA)

@@ -3,36 +3,22 @@ layout: course-page
 title: Week 4
 ---
 
-## Week 4 Module: February 4 -- February 8
+## Week 4 Module: FFIXME
 
-Welcome to Week 4 of [MATH F302 UX1 in Spring 2019](index.html)!
+Welcome to Week 4 of [MATH F302](index.html)!
 
-Remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
-
-Proctored Quiz 3 should be done on Wednesday or Thursday.  Note Mini-Project 2 is due _this week_ on Thursday 2/7.
+Remember to keep an eye on the [schedule](schedule.pdf).
 
 This week have one more type of first-order DE for which a solution formula may be found, namely the _exact equations_ in section 2.4.  Then we skip section 2.5; it collects a few more solvable DEs which are not very memorable and can be looked-up as needed.  Then we do something really important and general in section 2.6: use a straightforward computer loop (iteration) called _Euler's method_ to approximately solve an ODE IVP.
 
 ### Monday 2/4
 * [blank slides for section 2.4](assets/slides/2-4.pdf)
-* [video: Bueler talks over slides for section 2.4](https://github.com/bueler/diff-eq-videos/blob/master/video-2-4-math302.mp4)
-* [work on WebAssign 2.3](https://www.webassign.net/)
-
-### Tuesday 2/5
-* [WebAssign 2.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 2/6
-* <span style="color:blue">**proctored Quiz 3 covers 2.2 and 2.3**</span>
-
-### Thursday 2/7
-* <span style="color:blue">**proctored Quiz 3 covers 2.2 and 2.3**</span>
-* Mini-Project 2, _Timing the Spread of an Oil Slick_, is <span style="color:orange">**due at 11pm**</span> via [this link for submitting Mini-Project 2](https://goo.gl/forms/wnQQsKxObqHMtrIp1); you may need to log in to your `alaska.edu` account to use this link
-* [work on WebAssign 2.4](https://www.webassign.net/)
+* FIXME
 
 ### Friday 2/8
 * [blank slides for section 2.6](assets/slides/2-6.pdf)
-* [video: Bueler talks over slides for section 2.6](https://github.com/bueler/diff-eq-videos/blob/master/video-2-6-math302.mp4)
-* [WebAssign 2.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * see my codes at the [Other](other) tab

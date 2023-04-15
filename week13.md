@@ -3,9 +3,9 @@ layout: course-page
 title: Week 13
 ---
 
-## Week 13 Module: April 15 -- April 19
+## Week 13 Module: FIXME
 
-Welcome to Week 13 of [MATH F302 UX1 in Spring 2019](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf) and [Piazza](https://piazza.com/uaf/spring2019/math302ux1/home).
+Welcome to Week 13 of [MATH F302](index.html).  As always, remember to keep an eye on the [schedule](schedule.pdf).
 
 This week, **Quiz 10** must be done on Wednesday or Thursday.  It **covers sections 7.3 and convolution (from 7.4)**.
 
@@ -13,23 +13,12 @@ This week and in [Week 14](week14) we consider systems of first-order ODEs.  _An
 
 ### Monday 4/15
 * [blank slides for section 3.3](assets/slides/3-3.pdf)
-* [video: Bueler talks-over slides for section 3.3](https://github.com/bueler/diff-eq-videos/blob/master/video-3-3-math302.mp4)
-* [work on WebAssign 7.4](https://www.webassign.net/)
-
-### Tuesday 4/16
-* [WebAssign 7.4](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### Wednesday 4/17
-* <span style="color:blue">**proctored Quiz 10 covers 7.3 and convolution**</span>
-
-### Thursday 4/18
-* <span style="color:blue">**proctored Quiz 10 covers 7.3 and convolution**</span>
-* [work on WebAssign 3.3](https://www.webassign.net/)
+* FIXME
 
 ### Friday 4/19
 * [blank slides for section 8.1](assets/slides/8-1.pdf)
-* [video: Bueler talks-over slides for section 8.1](https://github.com/bueler/diff-eq-videos/blob/master/video-8-1-math302.mp4)
-* [WebAssign 3.3](https://www.webassign.net/) <span style="color:red">**due at 11pm**</span>
 
 ### found online
 * [online notes about "Systems of first-order linear differential equations"](https://www.math.psu.edu/tseng/class/Math251/Notes-LinearSystems.pdf)
