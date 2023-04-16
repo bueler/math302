@@ -5,6 +5,8 @@ title: Week 1
 
 ## Week 1 Module: FIXME
 
+**UNDER CONSTRUCTION**
+
 Welcome to Week 1 of [MATH F302](index.html)!
 
 Make sure to read the [syllabus](syllabus.pdf) and the [schedule](schedule.pdf).

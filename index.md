@@ -9,6 +9,8 @@ Welcome to the homepage of in-person **Math F302 Differential Equations**.
 
 [Ed Bueler](http://bueler.github.io/), the instructor, is in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
+**UNDER CONSTRUCTION**
+
 ### Getting Started
 
 * Read the [syllabus](syllabus.pdf).
@@ -16,6 +18,8 @@ Welcome to the homepage of in-person **Math F302 Differential Equations**.
 * See the [schedule](schedule.pdf).  Go there often to find out what happens next.
 
 * See the [Week 1 module](week1), then the [Week 2 module](week2), and so on.
+
+**UNDER CONSTRUCTION**
 
 ### Important Links
 
