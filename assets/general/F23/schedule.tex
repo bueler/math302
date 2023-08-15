@@ -1,23 +1,21 @@
 \documentclass[12pt]{article}
-\usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
+\usepackage[top=1.0in, bottom=0.5in, left=0.9in, right=1.0in]{geometry}
 
-\usepackage{graphicx,enumitem,tabularx}
+\usepackage{tabularx,enumitem}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath,amsthm,amsbsy}
 \usepackage{palatino}
-
-\usepackage{tikz}
-
-
-%% The following commands put defined left and right headers on the top, and a page number
-%% on the bottom of all pages beyond page 1
 \usepackage{fancyhdr}
+\usepackage[colorlinks=true,urlcolor=black]{hyperref}
+
+% commands to put defined left and right headers on the top
+% and a page number on the bottom of all pages after 1
 \pagestyle{fancy}
 \makeatletter
 \fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
 \fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
 \fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
 \headheight 15pt
+\headsep 5pt
 \def\doclabel#1{\gdef\@doclabel{#1}}
 \def\docdate#1{\gdef\@docdate{#1}}
 \makeatother
@@ -26,48 +24,76 @@
 \parindent 0pt
 \parskip 6pt plus 1pt
 
+% header content
+\doclabel{Math 302 Differential Equations}
+\docdate{Fall 2023 (Bueler)}
 
-\doclabel{Math F302 UX1}
-\docdate{Spring 2019 (Bueler)}
+% macros
+\renewcommand{\d}{\displaystyle}
+\newcommand{\wkday}[3]{\textbf{\large #1\strut}\quad #2\,--\,#3}
+\newcommand{\vacinline}[1]{{\color{OliveGreen} \textsl{#1}}}
+\newcommand{\vac}[1]{\strut \small{\vacinline{#1}}}
+\newcommand{\due}[1]{\strut {\color{BrickRed} \textsl{#1}}}
+\newcommand{\hdue}[1]{\due{#1 due}}
+\newcommand{\proj}[1]{\strut {\color{RedOrange} #1}}
+\newcommand{\ee}[1]{\strut {\color{Blue} \textbf{#1}}}
+\newcommand{\dlinline}[1]{{\color{Purple} \textbf{#1}}}
+\newcommand{\dl}[1]{{\small \dlinline{#1}}}
 
 
 \begin{document}
-\renewcommand{\d}{\displaystyle}
+\hfill \small \emph{version 1: \today} \normalsize
 
-\newcommand{\wkday}[3]{\textbf{\large #1\strut}\quad #2\,--\,#3}
-\newcommand{\vacation}[1]{\strut \footnotesize{\color{OliveGreen} \textsl{#1}}}
-\newcommand{\due}[1]{\strut {\color{Maroon} \textsl{#1}}}
-\newcommand{\mpdue}[1]{\strut {\color{BurntOrange} \textsl{#1}}}
-\newcommand{\prc}[1]{\strut {\color{Blue} \textbf{#1}}}
-\newcommand{\pprc}[1]{\phantom{x} \par {\color{Blue} \textbf{#1}}}
+\bigskip\bigskip
+\centerline{\Large \textbf{Weekly Schedule}}
 
-\centerline{\textbf{Weekly Schedule}}
-
-\centerline{with sections, and due dates for \due{WebAssignments}, \mpdue{Mini-Projects}, and \prc{proctored assessments}}
+\bigskip
+UNDER CONSTRUCTION The schedule below is subject to changes!  See the public course webpage
 
 \medskip
 
-\begin{tabularx}{\textwidth}{l|>{\raggedright\arraybackslash}X|X|X|X|X|}
-\textbf{Week} \quad Dates & M & T & W & Th & F \\ \hline
-\wkday{1}{1/14}{1/18}  & 1.1 \par MP 1 &  & cont. \par \due{WA 1.1 A} & \mpdue{MP 1} & 1.2 \par \due{WA 1.1 B} \\ \hline
-\wkday{2}{1/21}{1/25}  & \vacation{Alaska Civil Rights Day} & \due{WA 1.2} & 1.3 \par \prc{Q1} & \phantom{x} \par \prc{Q1} & 2.1 \par \due{WA 1.3} \par {\tiny \textsl{last day: drop}} \\ \hline
-\wkday{3}{1/28}{2/1}   & 2.2 \par MP 2 & \due{WA 2.1} & cont. \par \prc{Q2} & \pprc{Q2} & 2.3 \par \due{WA 2.2} \\ \hline
-\wkday{4}{2/4}{2/8}    & 2.4 & \due{WA 2.3} & cont. \par \prc{Q3} &  \mpdue{MP 2} \pprc{Q3} & 2.6 \par \due{WA 2.4} \\ \hline
-\wkday{5}{2/11}{2/15}  & 3.1 & \due{WA 2.6} & cont. \par \prc{Q4} & \pprc{Q4} & 3.2 \par \due{WA 3.1} \\ \hline
-\wkday{6}{2/18}{2/22}  & 4.1 & \prc{Midterm 1} \par \due{WA 3.2} & \prc{Midterm 1} & \prc{Midterm 1} & 4.3 \par \due{WA 4.1} \\ \hline
-\wkday{7}{2/25}{3/1}   & 4.2 \par MP 3 & \due{WA 4.3} & cont. \par \prc{Q5} & \pprc{Q5} & 4.4 \par \due{WA 4.2} \\ \hline
-\wkday{8}{3/4}{3/8}    & 5.1 & \due{WA 4.4} & cont. \par \prc{Q6} & \pprc{Q6} & 5.3/4.10 \par \due{WA 5.1} \\ \hline
-\quad\,\, 3/11--3/15             &  \multicolumn{4}{c}{\vacation{Spring Break}} & \\ \hline
-\wkday{9}{3/18}{3/22}  & 6.1 \par \mpdue{MP 3} & \due{WA 5.3} \par MP 4 & cont. \par \prc{Q7} & \pprc{Q7} & 6.2 \par \due{WA 6.1} \\ \hline
-\wkday{10}{3/25}{3/29} & 9.1 & \due{WA 6.2} & cont. \par \prc{Q8} & \mpdue{MP 4} \pprc{Q8} & 9.2 \par \due{WA 9.1} \par {\tiny \textsl{last day: withdraw}} \\ \hline
-\wkday{11}{4/1}{4/5}   & 7.1 & \prc{Midterm 2} \par \due{WA 9.2} & \prc{Midterm 2} & \prc{Midterm 2} & 7.2 \par \due{WA 7.1} \\ \hline
-\wkday{12}{4/8}{4/12}  & 7.3 & \due{WA 7.2} & cont. \par \prc{Q9} & MP 5 \pprc{Q9} & convolution \par \due{WA 7.3} \\ \hline
-\wkday{13}{4/15}{4/19} & 3.3 & \due{WA 7.4} & cont. \par \prc{Q10} & \pprc{Q10} & 8.1 \par \due{WA 3.3} \\ \hline
-\wkday{14}{4/22}{4/26} & 8.2 & \due{WA 8.1} & cont. \par \prc{Q11} & \pprc{Q11} & 8.4 \par  \mpdue{MP 5} \par \due{WA 8.2} \\ \hline
-\wkday{15}{4/29}{5/3}  &     & \prc{Final Exam} \par \due{WA 8.4} & \prc{Final Exam} & \prc{Final Exam} & \\ \hline
+\centerline{\href{https://bueler.github.io/math302/index.html}{\texttt{bueler.github.io/math302/}}}
+
+\noindent for \due{Homework}, \ee{Exams}, and \proj{Project} details.  Material covered in lecture is in black.  Note some \dl{deadlines}.  Classes are MWF 10:30 -- 11:30 am, Gruening 408.
+
+\bigskip
+
+\begin{tabularx}{1.03\textwidth}{l|>{\raggedright\arraybackslash}X|X|X|}
+\textbf{Week} \quad Dates & M & W & F \\ \hline
+
+\wkday{1}{8/28}{9/1}     &  &  &  \\ \hline
+
+\wkday{2}{9/4}{9/8}      & \vac{Labor Day} &  &  \\ \hline
+
+\wkday{3}{9/11}{9/15}    &  &  &  \\ \hline
+
+\wkday{4}{9/18}{9/22}    &  &  &  \\ \hline
+
+\wkday{5}{9/25}{9/29}    &  &  &  \\ \hline
+
+\wkday{6}{10/2}{10/6}    &  &  &  \\ \hline
+
+\wkday{7}{10/9}{10/13}   &  &  &  \\ \hline
+
+\wkday{8}{10/16}{10/20}  &  &  &  \\ \hline
+
+\wkday{9}{10/23}{10/27}  &  &  &  \\ \hline
+
+\wkday{10}{10/30}{11/3}  &  &  &  \\ \hline
+
+\wkday{11}{11/6}{11/10}  &  &  &  \\ \hline
+
+\wkday{12}{11/13}{11/17} &  &  &  \\ \hline
+
+\wkday{13}{11/20}{11/24} &  & \vac{Thanksgiving Break} & \vac{Thanksgiving Break} \\ \hline
+
+\wkday{14}{11/27}{12/1}  &  &  &  \\ \hline
+
+\wkday{15}{12/4}{12/8}   &  &  &  \\ \hline
+
+\wkday{16}{12/11}{12/15} &  & \ee{Final Exam} \par 10:15--12:15am &   \\ \hline
+
 \end{tabularx}
 
-\vfill
-\hfill \scriptsize schedule version: \today \normalsize
 
 \end{document}
