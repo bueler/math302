@@ -9,7 +9,7 @@ This page will grow over the course of the semester.  It has some computer codes
 
 ### Matlab/Octave: Visualization
 
-You can use [Octave Online](https://octave-online.net/) or [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://www.gnu.org/software/octave/) with these.  I use Octave.
+You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://www.gnu.org/software/octave/) with these.  (I use Octave, which is free and open source.)  The are online versions of both, including [Octave Online](https://octave-online.net/).
 
 * [streamcyl.m](assets/codes/F23/streamcyl.m): Generate a contour figure, showing streamlines around a cylinder, for Example 5 in the slides for section 2.4.
 

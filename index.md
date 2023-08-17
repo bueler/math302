@@ -23,7 +23,7 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 
 * See the [schedule](schedule.pdf).  Go there often to find out what happens next.
 
-* See the [Homework](homework), [Quizzes](quizzes), and [Exams](exams) tabs.
+* See the [Homework](homework.html), [Quizzes](quizzes.html), and [Exams](exams.html) tabs.
 
 **UNDER CONSTRUCTION**
 
