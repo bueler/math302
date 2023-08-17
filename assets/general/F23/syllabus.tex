@@ -24,8 +24,8 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{\large\sf\textbf{MATH F302 (Fall 2023)}}
-\rhead{\large\sf\textbf{Syllabus: UNDER CONSTRUCTION}}
+\lhead{\large\sf\textbf{MATH F302 Differential Equations (Fall 2023)}}
+\rhead{\sf version \today}
 
 \newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
 \def\heading#1{\localhead{\large\emph{#1}}}
@@ -39,13 +39,16 @@
 \begin{document}
 
 \phantom{foo}
+\begin{center}
+{\LARGE\sf \textbf{Syllabus}}
+\end{center}
 %\bigskip
 \cfoot{}
 
 \heading{Instructor: Ed Bueler}
 
 \quad \begin{tabularx}{\textwidth}{lX}
-email        & \texttt{elbueler@alaska.edu} \\
+email        & \href{mailto:elbueler@alaska.edu}{\texttt{elbueler@alaska.edu}} \\
 office       & Chapman 306C \\
 office hours \phantom{jfxdsd} & \href{http://bueler.github.io/OffHrs.htm}{\tt bueler.github.io/OffHrs.htm}
 \end{tabularx}
@@ -55,26 +58,23 @@ office hours \phantom{jfxdsd} & \href{http://bueler.github.io/OffHrs.htm}{\tt bu
 \heading{Essentials}
 
 \quad \begin{tabularx}{\textwidth}{lX}
-\emph{Course Information} & \hspace{-3mm} \begin{tabular}[t]{ll}
-                  number:  & MATH F302 \\
-                  title:   & Differential Equations \\
-                  section: & FIXME \\
-                  credits: & $3.0$ \\
-                  CRN:     & FIXME \\
+\emph{Course Information} & \hspace{-3mm} \begin{tabular}[t]{l}
+                  MATH F302 Differential Equations (3.0 credits) \\
+                  CRN:\, 72953 (section 901) \\
+                  time:\, 10:30--11:30am \\
+                  room:\, Gruening 408 \\
                   \end{tabular} \\
  & \\
 \emph{Prerequisite}      & Grade of at least C- in MATH 253 Calculus III or equivalent. \\
  & \\
-\emph{Detailed Schedule} & \href{https://bueler.github.io/math302/assets/general/F23/schedule.pdf}{\tt bueler.github.io/math302/assets/general/F23/schedule.pdf} \\
- & \\
 \emph{Websites} & \hspace{-3mm} \begin{tabular}[t]{ll}
                   \href{https://bueler.github.io/math302/}{\tt bueler.github.io/math302} \phantom{sdfjaldsj adslfj} & main course page \\
-                  \href{FIXME}{\tt FIXME} \, (Canvas) & for grades \textsl{and solutions}
+                  \href{https://canvas.alaska.edu/courses/16214}{\tt canvas.alaska.edu/courses/16214} \, (Canvas) & for grades \textsl{and solutions}
                   \end{tabular} \\
  & \\
 \emph{Required Text}     & \textsl{A First Course in Differential Equations with Modeling Applications}, 11th ed., Dennis G. Zill, 2018 (ISBN-13:\, \texttt{978-1337604994}) \\
  & \\
-\emph{Optional Text}     & \textit{Student Solutions Manual for Zill's A First Course in Differential Equations with Modeling Applications}, 11th ed.~(ISBN-13:\, \texttt{978-1305965737}) \\
+\emph{\underline{Optional} Text}     & \textit{Student Solutions Manual for Zill's A First Course in Differential Equations with Modeling Applications}, 11th ed.~(ISBN-13:\, \texttt{978-1305965737}) \\
     & (Solutions to selected odd-numbered exercises; available on Amazon) \\
  & \\
 \emph{Course Materials}  & $\bullet$\, A scanner/tablet/smartphone with software/app for scanning documents \\
@@ -90,13 +90,15 @@ office hours \phantom{jfxdsd} & \href{http://bueler.github.io/OffHrs.htm}{\tt bu
 \cfoot{\thepage}
 %\strut
 
-\heading{Description and Course Goals}
-Most laws of nature used in science take the form of differential equations.  So do many of the models used in engineering, finance, and the social sciences.  In fact, differential equations are the single most-important reason why students in technical majors are expected to learn calculus.
+\heading{Description}
+Most physical laws of nature take the form of differential equations.  So do many of the models used in engineering, finance, and the social sciences.  Differential equations describe smoothly-changing functions (solutions) using either ordinary or partial derivatives.  This course is about \textsl{ordinary differential equations}.  Partial differential equations are covered in MATH 421 Applied Analysis, which is a sequel to this course.
 
-Differential equations describe smoothly-changing functions (solutions) using either ordinary or partial derivatives.  This course is about \textsl{ordinary differential equations}.  Partial differential equations are covered in MATH 421 Applied Analysis, which is a sequel to this course.
+Differential equations are the single most-important reason why students in technical majors are expected to learn calculus.  We will mostly use the derivatives, integrals, and series from calculus I (MATH 251) and II (MATH 252).  Some content from calculus III (MATH 253), especially multivariable visualization, is also used.
 
-We will mostly use the derivatives, integrals, and series from calculus I (MATH 251) and II (MATH 252).  Some content from calculus III (MATH 253), e.g.~multivariable visualization, is also used.
+\bigskip\bigskip
 
+\clearpage\newpage
+\heading{Course Goals and Outcomes}
 Here is the catalog description:
 \begin{quote}
 \textsl{Nature and origin of differential equations, first order equations and solutions, linear differential equations with constant coefficients, systems of equations, power series solutions, operational methods, and applications.}
@@ -110,8 +112,8 @@ A passing grade from this course indicates that you are able to:
 \item use and construct basic models based on differential equations,
 \item use well-known methods for generating solutions to common first-order ODEs,
 \item use series and Laplace transform methods to solve certain linear ODEs,
-\item understand and apply well-known numerical methods to solve initial value problems,
-\item describe and understand linear systems of ODEs and their matrix exponential solution.
+\item understand linear systems of ODEs and their matrix-exponential solutions, and
+\item understand and apply well-known numerical methods to solve initial value problems.
 \end{clist}
 
 
@@ -121,15 +123,10 @@ The schedule of topics and due dates will be kept up-to-date at
 \smallskip
 \centerline{\href{https://bueler.github.io/math302/assets/general/F23/schedule.pdf}{\tt bueler.github.io/math302/assets/general/F23/schedule.pdf}}
 
-You should consult this schedule frequently and routinely.  It is tentative; warning of significant changes will be given well in advance.
+You should consult this schedule frequently and routinely.  It is tentative and subject to change.
 
-In order to allow you flexibility in your own schedule, all homework assignments will be available well in advance, with due dates each week.  Quizzes and exams will, however, only be available on the dates indicated on the schedule.
-
-%\newpage
-%\strut
 
 \heading{Assignments and assessments}
-
 FIXME
 
 Weekly assignments consist of online WebAssign homework and written mini-project homework.  Student performance is assessed by proctored weekly quizzes and proctored exams.

@@ -1,0 +1,57 @@
+sidenav_title: 'MATH 302'
+
+docs:
+
+- title: Syllabus
+  url: assets/general/F23/syllabus.pdf
+
+- title: Schedule
+  url: assets/general/F23/schedule.pdf
+
+- title: Codes
+  url: codes.html
+
+- title: Week 1
+  url: week1.html
+
+- title: Week 2
+  url: week2.html
+
+- title: Week 3
+  url: week3.html
+
+- title: Week 4
+  url: week4.html
+
+- title: Week 5
+  url: week5.html
+
+- title: Week 6
+  url: week6.html
+
+- title: Week 7
+  url: week7.html
+
+- title: Week 8
+  url: week8.html
+
+- title: Week 9
+  url: week9.html
+
+- title: Week 10
+  url: week10.html
+
+- title: Week 11
+  url: week11.html
+
+- title: Week 12
+  url: week12.html
+
+- title: Week 13
+  url: week13.html
+
+- title: Week 14
+  url: week14.html
+
+- title: Week 15
+  url: week15.html
