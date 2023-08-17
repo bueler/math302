@@ -3,7 +3,7 @@ layout: course-page
 title: Math F302 Differential Equations in Fall 2023 at UAF
 ---
 
-**UNDER CONSTRUCTION**
+**UNDER CONSTRUCTION MANY BROKEN LINKS!!**
 
 Welcome to the homepage of in-person **Math F302 Differential Equations**.
 
@@ -11,13 +11,19 @@ Welcome to the homepage of in-person **Math F302 Differential Equations**.
 
 **UNDER CONSTRUCTION**
 
+### Canvas course page
+
+Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16214) for the lecture Zoom link, Homework and Exam solutions, and to see your grades.
+
 ### Getting Started
+
+* Attend lectures: MWF 10:30-11:30am, Gruening 408.
 
 * Read the [syllabus](syllabus.pdf).
 
 * See the [schedule](schedule.pdf).  Go there often to find out what happens next.
 
-* See the [Week 1 module](week1), then the [Week 2 module](week2), and so on.
+* See the [Homework](homework), [Quizzes](quizzes), and [Exams](exams) tabs.
 
 **UNDER CONSTRUCTION**
 
