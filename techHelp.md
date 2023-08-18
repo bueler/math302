@@ -1,9 +1,9 @@
 ---
 layout: course-page
-title: Technical Help
+title: Uploading Help
 ---
 
-# Technical Help
+# Uploading Help
 
 This page might help you turn in your written homework via Gradescope.
 
