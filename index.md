@@ -19,9 +19,9 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 
 * Attend lectures: MWF 10:30-11:30am, Gruening 408.
 
-* Read the [syllabus](syllabus.pdf).
+* Read the [syllabus](assets/general/F23/syllabus.pdf).
 
-* See the [schedule](schedule.pdf).  Go there often to find out what happens next.
+* See the [schedule](assets/general/F23/schedule.pdf).  Go there often to find out what happens next.
 
 * See the [Homework](homework.html), [Quizzes](quizzes.html), and [Exams](exams.html) tabs.
 
