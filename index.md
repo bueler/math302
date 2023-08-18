@@ -3,8 +3,6 @@ layout: course-page
 title: Math F302 Differential Equations in Fall 2023 at UAF
 ---
 
-**UNDER CONSTRUCTION MANY BROKEN LINKS!!**
-
 Welcome to the homepage of in-person **Math F302 Differential Equations**.
 
 [Ed Bueler](http://bueler.github.io/), the instructor, is in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
