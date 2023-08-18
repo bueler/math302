@@ -9,7 +9,7 @@ Welcome to the homepage of in-person **Math F302 Differential Equations** for Fa
 
 [Ed Bueler](http://bueler.github.io/) is in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
-### Canvas course page
+### Canvas Website
 
 Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16214) for the lecture Zoom link, Homework and Exam solutions, and to see your grades.
 
