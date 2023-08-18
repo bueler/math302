@@ -2,10 +2,10 @@ semester: Fall 2023
 home: assets/exams/F23
 exams:
 - name: Midterm Exam
-  date: 11 October
+  date: Wednesday 18 October
   info: <b>in class</b>
 - name: Final Exam
-  date: 13 December, 10:15--12:15
+  date: Wednesday 13 December, 10:15--12:15
   info: <b>in class</b>
   #reviewguide: midreview.pdf
   #blank: mid.pdf
