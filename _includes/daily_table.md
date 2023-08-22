@@ -47,7 +47,6 @@
 			</tr>
 			{% endif %}
 		</table>
-		<div style="padding-bottom: 10px"></div>
 	</td>
 </tr>
 {% endfor %}
