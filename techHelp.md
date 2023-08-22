@@ -3,9 +3,9 @@ layout: course-page
 title: Uploading Help
 ---
 
-# Uploading Help
+# Help
 
-This page might help you turn in your written homework via Gradescope.
+This page might help you upload and turn in your written homework via Gradescope.
 
 * [Homework](#homework)
 * [Scanning](#scanning)
@@ -14,7 +14,7 @@ This page might help you turn in your written homework via Gradescope.
 - - -
 
 ## Homework
-* Homework will be uploaded through Gradescope which you will access from inside Canvas.
+* Homework will be uploaded through Gradescope.  Access Gradescope from the [Canvas course site](https://canvas.alaska.edu/courses/16214).
 
 	- If your file takes a long time to upload, make sure your scan is not too big.  I recommend using black-and-white scans (unless you are using color in your work, in which case please use color scans) made through a dedicated smartphone scanning app (see below) rather than just trying to upload a photo.
 	- Don't just print to pdf; usually computers or applications have export to pdf options that produce more optimized files.
