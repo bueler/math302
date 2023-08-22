@@ -5,8 +5,8 @@ exams:
   date: Wednesday 18 October
   info: <b>in class</b>
 - name: Final Exam
-  date: Wednesday 13 December, 10:15--12:15
-  info: <b>in class</b>
+  date: Wednesday 13 December
+  info: <b>in class</b>, 10:15--12:15
   #reviewguide: midreview.pdf
   #blank: mid.pdf
   #solutions: midsolns.pdf
