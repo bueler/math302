@@ -1,0 +1,13 @@
+semester: Fall 2023
+daily:
+- name: Monday 28 August
+  description: slides for Section 1.1
+  slides: assets/slides/F23/1-1.pdf
+#  more: x
+#  solutions: x
+#  mfile: x
+#  image: x
+- name: Wednesday 30 August
+  description: worksheet on calculus review
+  worksheet: assets/worksheets/F23/30aug.pdf
+

@@ -1,0 +1,226 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+\usepackage{environ}
+
+\beamertemplatenavigationsymbolsempty
+
+\title{1.1 Definitions and Terminology}
+
+\subtitle{a lecture for MATH F302 Differential Equations}
+
+\date{Fall 2023}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\usetheme{Pittsburgh}
+
+
+\begin{document}
+
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+%\color{green!40!blue}
+\end{frame}
+
+\begin{frame}{basic}
+
+\begin{itemize}
+\item a \emph{differential equation} is an equation with a derivative somewhere in it
+\end{itemize}
+\end{frame}
+
+\begin{frame}{definitions}
+
+\begin{itemize}
+\item idea: a differential equation contains an \emph{unknown function} which we want to find
+
+\bigskip
+\item an \alert{\emph{ordinary differential equation} (ODE)} uses ordinary derivatives (as in calculus I and II)
+    \begin{itemize}
+    \item primes ($y' = dy/dx$) or dots ($\dot y = dy/dt$) are often used to denote ordinary derivatives
+    \item examples of ODEs:
+\begin{align*}
+\frac{dy}{dx} &= x + y^2 && y(x) \text{ is unknown function} \\
+y' &= x + y^2 && \dots \text{ exactly the same} \\
+\frac{d^2 u}{dt^2} &= - c u && u(t) \text{ is unknown function} \\
+\ddot u &= - c u && \dots \text{ exactly the same}
+\end{align*}
+    \item the unknown function in an ODE \alert{depends on one variable}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{contrast with PDEs}
+
+\begin{itemize}
+\item MATH 302 is about ODEs
+\item \dots but there are also \emph{partial differential equations} (PDEs)
+    \begin{itemize}
+    \item subscripts are often used to denote partial derivatives
+    \item examples:
+\begin{align*}
+\frac{\partial^2 u}{\partial t^2} &= c^2 \frac{\partial^2 u}{\partial x^2} && u(t,x) \text{ is unknown function} \\
+u_{tt} &= c^2 u_{xx} && \dots \text{ exactly the same PDE} \\
+w_t &= k(w_{xx} + w_{yy}) && w(t,x,y) \text{ is unknown function}
+\end{align*}
+    \item the unknown function in a PDE depends on more than one variable
+    \end{itemize}
+\item do not worry about PDEs!
+    \begin{itemize}
+    \item they are covered in MATH 432
+    \item I am just explaining here why people say ``ordinary''
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{order}
+
+\begin{itemize}
+\item the \alert{\emph{order}} of a differential equation is the maximum number of derivatives
+    \begin{itemize}
+    \item order has nothing to do with powers or exponentials
+    \item most of the differential equations in MATH 302 have order 1 or order 2
+    \end{itemize}
+\item examples:
+    \begin{itemize}
+    \item $y' = x + y^2$ has order one
+    \item $\ddot u = - c u$ has order two
+        \begin{itemize}
+        \item $c$ is just a constant in this context
+        \end{itemize}
+    \item $y^3 + \frac{d^4 y}{dx^4} = \big(\frac{d^2 y}{dx^2} + \sin x\big)^5$ has order four
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{two main operations on ODEs}
+
+\begin{itemize}
+\item there is more terminology to come \dots but let's \emph{do} something
+\item two common operations with differential equations are
+    \begin{itemize}
+    \item \alert{\emph{verify}} that a given function is a solution
+    \item \alert{\emph{construct}} a solution (``solve the differential equation'')
+    \end{itemize}
+
+\item \emph{example}:  verify that $y(x) = \sin(3 x)$ solves $y''+9y=0$
+
+\vspace{10mm}
+\item \emph{example}:  construct a solution to $y'=y^2$
+
+\vspace{30mm}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{visualization of solutions}
+
+\begin{itemize}
+\item a given differential equation generally has many solutions
+\item \emph{example (a)}: show that for any value of the \emph{parameter} $A$ the function $y(x) = A e^{-x^2/2}$ solves $\frac{dy}{dx} = - x y$
+
+\vspace{15mm}
+\item \emph{example (b)}: sketch several \emph{particular} solutions from \emph{(a)}
+
+\vspace{25mm}
+
+\phantom{foo}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{linear}
+
+\begin{itemize}
+\item back to terminology
+\item a differential equation is \alert{\emph{linear}} if it can be written as a sum with only first powers on the unknown function and its derivatives
+\item examples:
+    \begin{itemize}
+    \item $3 y'' - 7 y' + 8 y = \sin x$ is linear because it is in the form
+        $$a_2(x) \frac{d^2y}{dx^2} + a_1(x) \frac{dy}{dx} + a_0(x) y = g(x)$$
+    \item $x \frac{y'}{y} = x^2 + 5$ is linear because it it \emph{can} be written in the form
+        $$a_1(x) \frac{dy}{dx} + a_0(x) y = g(x)$$
+    (set: $a_1(x)=x$, $a_0(x)=-x^2-5$, $g(x)=0$)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{nonlinear}
+
+\begin{itemize}
+\item linear differential equations are special and easier
+    \begin{itemize}
+    \item nature has been generous by allowing good models of surprisingly-many situations to be built using linear differential equations
+    \end{itemize}
+\item most differential equations are \emph{nonlinear} which only means they are not linear
+\item examples:
+    \begin{itemize}
+    \item $y' = y^2$ is nonlinear
+    \item $y'' + \sin y =0$ is nonlinear
+    \end{itemize}
+\item one way to understand MATH 302:
+    \begin{itemize}
+    \item we will be able to solve \emph{some} nonlinear ODEs
+    \item we will be \emph{systematic} about solving linear ODEs
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{implicit solution}
+
+\begin{itemize}
+\item first, remember \alert{\emph{implicit differentiation}}
+    \begin{itemize}
+    \item \emph{example}:  find $dy/dx$ if\, $x \sin y + y^2 = \ln x$
+    \end{itemize}
+
+\vspace{20mm}
+\item the statement ``verify [this implicitly-defined function] is a solution of [this differential equation]'' asks for implicit differentiation
+    \begin{itemize}
+    \item \emph{example}:  verify $y=e^{xy}$ defines a solution of $(1-xy)y'=y^2$
+    \end{itemize}
+
+\vspace{30mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{extras}
+
+the book mentions more terminology; none of this is terribly important, but it is used in the rest of the semester:
+\begin{itemize}
+\item[page 5] \emph{normal form} means the highest derivative is on the left; the normal form of $y' - y^2=0$ is $y'=y^2$, and the normal form of $u''+9u=e^t$ is $u'' = e^t - 9u$
+\item[page 7] a function $y(x)$ can be discontinuous but when the book uses the term \emph{solution} for $y(x)$ then it solves a differential equation \emph{and} we assume it is continuous on some interval
+\item[page 11] a function like $F(x) = \int_a^x g(t)\,dt$ is an \emph{integral-defined function}; the most important thing to know is that the derivative is easy: $F'(x)=g(x)$
+    \begin{itemize}
+    \item[$\circ$] see Wed.~30 August worksheet
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{standard expectations}
+
+\textbf{expectations}:  to learn this material, just listening to a lecture is \emph{not} enough
+\begin{itemize}
+\item please \alert{\emph{read} section 1.1 in the textbook}
+    \begin{itemize}
+    \item[$\circ$] and browse section 1.2
+    \end{itemize}
+\item please \alert{\emph{do} the Homework for section 1.1}
+\item please \emph{look around} the \href{https://bueler.github.io/math302/}{\alert{bueler.github.io/math302}} website
+\item please find other videos and related content!
+\end{itemize}
+\end{frame}
+
+
+\end{document}
+

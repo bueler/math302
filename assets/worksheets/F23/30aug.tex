@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
+
+\usepackage{graphicx,color,enumitem}
+\usepackage{amsmath,amsthm,amsbsy}
+\usepackage{palatino}
+
+\usepackage{tikz}
+
+%% Setup aproblem environment, 
+%% aproblem items
+%% subproblems environment
+%% subproblem items
+\makeatletter
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newlength\probsep
+\newlength\pshrinking
+\newif\iffirstprob
+
+\newenvironment{aproblems}%
+  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
+  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
+  \let\hproblem\aproblem
+  \advance\linewidth -\pshrinking
+  \advance\@totalleftmargin\pshrinking
+  \advance\leftskip\pshrinking}%
+  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
+
+\newcommand{\aproblem}{%
+  \setcounter{subprobcount}{0}%
+  \stepcounter{probcount}%
+  \def\@currentlabel{\arabic{probcount}}%
+  \ifhmode
+    \unskip \par
+  \fi
+%  \addpenalty{-4000}%
+  \iffirstprob\else\addvspace\probsep\fi
+  \firstprobfalse
+  \hskip -\labelwidth\hskip -\labelsep 
+  \hbox to\labelwidth{\hss\textbf{\arabic{probcount}.}}\hskip\labelsep
+}%
+
+\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
+\newcommand{\skipproblem}{\stepcounter{probcount}}
+
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+\newcommand{\epart}[1]{\noindent \textbf{(#1)} \,}
+
+\doclabel{Math F302 Worksheet}
+\docdate{30 August 2023}
+
+\begin{document}
+\renewcommand{\d}{\displaystyle}
+
+\strut
+\centerline{{\Large \textsc{Some High Points of Calculus}}}
+
+\medskip
+\noindent
+This is a review of some calculus you will need for differential equations.
+
+\bigskip
+
+\begin{aproblems}
+\aproblem \emph{Chain rule.}  Recall the chain rule
+    $$\left[f\left(g(x)\right)\right]' = f'\left(g(x)\right)\, g'(x)$$
+
+\epart{a} Identify an outer function $f(x)$ and an inner function $g(x)$ if $f(g(x))=\sqrt{\tan x + 3 x}$.  Then compute the following derivative.
+    $$\left[\sqrt{\tan x + 3 x}\right]' = \hspace{4.0in}$$
+
+\vfill
+
+\epart{b} Construct your own chain rule example:
+\begin{align*}
+f(x) &= \phantom{\sin x sdfakljdklja f sdabj adfs asdfk afdklj asdf \Big|}\\
+g(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
+\left[f\left(g(x)\right)\right]' &=  \phantom{\Big|}
+\end{align*}
+
+\vfill
+\noindent (\emph{Make it different from} \textbf{(a)} \emph{and non-trivial but not too complicated.  In particular, neither $f(x)$ nor $g(x)$ should be as simple as a linear function, i.e.~$ax+b$.  Remember that $x^k,e^x,\ln x,b^x$, $\log_b x,\sin x,\cos x,\tan x,\sec x,\arcsin x$ are common functions from calculus which you must be able to correctly differentiate!  Use this problem to practice those that are least familiar?})
+
+\newpage
+\aproblem \emph{Indefinite integration.}  Remember that the indefinite integral just means ``anti-derivative,'' so $\int f(x)\,dx = F(x) + C$ means exactly the same thing as $\left(F(x)\right)' = f(x)$.  Recall you can do some integrals just by recognizing a derivative, perhaps with some fiddling with constants.
+
+\epart{a} Compute the indefinite integral:
+    $$\int \frac{1}{x}\,dx = \hspace{4.0in}$$
+
+\bigskip
+
+\epart{b} Compute the indefinite integral:
+    $$\int 3^{2x}\,dx = \hspace{4.0in}$$
+
+\bigskip
+
+\aproblem \emph{Integration by substitution.}  Substitution is \textbf{the chain rule in reverse}.  For example, from \textbf{1 (a)} we have
+\begin{align*}
+\int \frac{\sec^2 x + 3}{\sqrt{\tan x + 3 x}}\,dx &= \int \frac{du}{\sqrt{u}} \hspace{1.0in} [\text{with } u=\tan x + 3x] \\
+  &= 2 u^{1/2} + C = 2 \sqrt{\tan x + 3 x} + C
+\end{align*}
+(It is common to need to fiddle with constant factors like the ``$2$'' here.)  In general:
+   $$\int f'(g(x)) g'(x)\,dx = \int f'(u)\,du = f(u) + C = f(g(x)) + C$$
+
+\medskip
+
+\epart{a} Turn your chain rule example in \textbf{1 (b)} into an integration by substitution.
+
+\vfill
+
+\newpage
+\aproblem  \emph{Product rule and integration-by-parts.}  The product rule
+    $$\left[u(x) v(x)\right]' = u'(x) v(x) + u(x) v'(x)$$
+can be used in reverse too.  The indefinite integral of both sides of the above gives
+    $$u(x) v(x) = \int u'(x) v(x)\,dx + \int u(x) v'(x)\,dx.$$
+The main use of this is to exchange one of the last two integrals for the other, which is integration-by-parts:
+    $$\int u(x) v'(x)\,dx = u(x) v(x) - \int u'(x) v(x)\,dx.$$
+(You probably have this memorized as $\int u\, dv = u v - \int v\,du$.)
+
+\medskip
+
+\epart{a} Construct your own product rule example:
+\begin{align*}
+u(x) &= \phantom{\sin x sdfakljdklja f sdabj adfs asdfk afdklj asdf \Big|}\\
+v(x) &= \phantom{2^x + \ln x} \phantom{\Big|}\\
+\left[u(x) v(x)\right]' &=  \phantom{\Big|}
+\end{align*}
+
+\vspace{0.2in}
+(\emph{Again, make it non-trivial but not too complicated.})
+
+\medskip
+
+\epart{b} Turn the above example into an integration-by-parts example.
+
+\vfill
+
+\newpage
+\aproblem  \emph{Fundamental Theorem of Calculus (FTC).}  When you compute a definite integral by hand you usually use a form of the FTC:
+    $$\int_a^b f(x)\,dx = F(b) - F(a) \qquad \text{where } F'(x) = f(x)$$
+This says that doing an integral is the same as un-doing a derivative.
+
+Recall that if you do a definite integral by substitution then you can change the limits:
+    $$\int_{x=a}^{x=b} f(g(x))\,g'(x)\,dx = \int_{u=g(a)}^{u=g(b)} f(u)\,du = F(g(b)) - F(g(a))$$
+
+\epart{a}  Compute
+    $$\int_{\pi/6}^{\pi/2} \frac{\cos x}{1 + 9 \sin^2 x}\,dx = \phantom{\int_{3/2}^3 \frac{du/3}{1+u^2} =} \hspace{3.0in}$$
+
+\vspace{0.5in}
+
+There is another form of the FTC, often called ``FTC I.''  It says that a derivative un-does an integral:
+    $$\frac{d}{dx} \left(\int_a^x f(t)\,dt\right) = f(x)$$
+The integral inside the parentheses computes the area under the curve $y=f(t)$ from $t=a$ to $t=x$.  One should think of this area varying as $x$ changes, thus defining a function $g(x) = \int_a^x f(t)\,dt$.  One may answer some questions about $g(x)$ even when an antiderivative of the integrand is not known.
+
+\epart{b}  Suppose we define
+    $$g(x) = \int_2^x \sin(e^t)\,dt$$
+Compute the exact value of $g(2)$.
+
+\vspace{0.25in}
+
+\epart{c}  For the same function $g(x)$, find $g'(x)$.
+
+\vfill
+
+\end{aproblems}
+
+\end{document}
