@@ -32,4 +32,4 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 ---
 _Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
 
-[<img src="GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math302 "This page is a github repo.")
+[<img src="assets/images/GitHub-Mark-32px.png" align="right">](https://github.com/bueler/math302 "This page is a github repo.")
