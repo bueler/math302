@@ -3,7 +3,7 @@
 {% for homework in data.homework %}
 <tr>
   <td><b>{{ homework.name }}</b> &nbsp; &nbsp; Due {{ homework.due }}.<br><br>
-    {% if homework.override %}
+      {% if homework.override %}
       <table class="inner">
         <tr>
           <td>The textbook problems are poorly-aligned with</td>
@@ -15,21 +15,18 @@
           <td><a href="{{ data.home }}/{{ homework.override }}">please do the problems on this (PDF)</a>.</td>
         </tr>
       </table>
-    {% else %}
+      {% else %}
       <table class="inner">
       {% for section in homework.sections %}
+        {% if section.correct %}
         <tr>
-          <td><em>&#167;{{ section.section }}:</em> &nbsp; # {{ section.problems }}</td>
+          <td><em>&#167;{{ section.section }} graded for correctness:</em> <br>&nbsp;&nbsp;&nbsp;&nbsp; # {{ section.correct }}</td>
         </tr>
-        {% if section.cont %}
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ section.cont }}</td>
-          </tr>
         {% endif %}
-        {% if section.contcont %}
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ section.contcont }}</td>
-          </tr>
+        {% if section.complete %}
+        <tr>
+          <td><em>&#167;{{ section.section }} graded for completeness only:</em> <br>&nbsp;&nbsp;&nbsp;&nbsp; # {{ section.complete }}</td>
+        </tr>
         {% endif %}
         {% if section.supp %}
           <tr>

@@ -2,7 +2,26 @@ semester: Fall 2023
 home: assets/homework/F23
 homework:
 - name: Homework 1.1
-  due: 11:59pm FIXME
+  due: 11:59pm Wed 9/6
   sections:
   - section: 1.1
-    problems: FIXME
+    correct: 16, 26, 32
+    complete: 3, 5, 13, 19, 23, 25, 29, 33
+- name: Homework 1.2
+  due: 11:59pm Fri 9/8
+  sections:
+  - section: 1.2
+    correct: 
+    complete: 
+- name: Homework 1.3
+  due: 11:59pm Mon 9/11
+  sections:
+  - section: 1.3
+    correct: 
+    complete: 
+- name: Homework 2.1
+  due: 11:59pm Fri 9/15
+  sections:
+  - section: 2.1
+    correct: 
+    complete: 
