@@ -2,7 +2,7 @@
 <table class="asst-table">
 {% for homework in data.homework %}
 <tr>
-  <td><b>{{ homework.name }}</b> &nbsp; &nbsp; Due {{ homework.due }}.<br><br>
+  <td><b>Homework {{ homework.name }}</b> &nbsp; &nbsp; Due {{ homework.due }}.<br><br>
       {% if homework.override %}
       <table class="inner">
         <tr>
@@ -17,23 +17,24 @@
       </table>
       {% else %}
       <table class="inner">
-      {% for section in homework.sections %}
-        {% if section.correct %}
         <tr>
-          <td><em>&#167;{{ section.section }} graded for correctness:</em> <br>&nbsp;&nbsp;&nbsp;&nbsp; # {{ section.correct }}</td>
+          <td>please read section {{ homework.name }}</td>
+        </tr>
+        {% if homework.correct %}
+        <tr>
+          <td><em>graded for correctness:</em> <br>&nbsp;&nbsp;&nbsp;&nbsp; # {{ homework.correct }}</td>
         </tr>
         {% endif %}
-        {% if section.complete %}
+        {% if homework.complete %}
         <tr>
-          <td><em>&#167;{{ section.section }} graded for completeness only:</em> <br>&nbsp;&nbsp;&nbsp;&nbsp; # {{ section.complete }}</td>
+          <td><em>graded for completeness only:</em> <br>&nbsp;&nbsp;&nbsp;&nbsp; # {{ homework.complete }}</td>
         </tr>
         {% endif %}
-        {% if section.supp %}
+        {% if homework.supp %}
           <tr>
-            <td>see <a href="{{ data.home }}/{{ section.supp }}">special instructions (PDF)</a></td>
+            <td>see <a href="{{ data.home }}/{{ homework.supp }}">special instructions (PDF)</a></td>
           </tr>
         {% endif %}
-      {% endfor %}
       </table>
     {% endif %}
   </td>
