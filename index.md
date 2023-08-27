@@ -11,7 +11,7 @@ Welcome to the homepage of in-person **Math F302 Differential Equations** for Fa
 
 ### Canvas Website
 
-Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16214) for the lecture Zoom link, Homework and Exam solutions, and to see your grades.
+Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16214) for Homework and Exam solutions, to see your grades, and recorded lectures.
 
 ### Getting Started
 
@@ -21,7 +21,7 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 
 * See the [schedule](assets/general/F23/schedule.pdf).  Go there often to find out what happens next.
 
-* See the [daily materials](daily.html) tab, for slides and worksheets.  Zoom recordings of the lectures are on the [Canvas website](https://canvas.alaska.edu/courses/16214).
+* See the [daily materials](daily.html) tab, for slides and worksheets.  Zoom recordings of the lectures are Announcements on the [Canvas website](https://canvas.alaska.edu/courses/16214).
 
 * See the [Homework](homework.html), [Quizzes](quizzes.html), and [Exams](exams.html) tabs.
 
