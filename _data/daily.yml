@@ -10,4 +10,7 @@ daily:
 - name: Wednesday 30 August
   description: calculus review
   worksheet: assets/worksheets/F23/30aug.pdf
+- name: Friday 1 September
+  description: Section 1.2
+  slides: assets/slides/F23/1-2.pdf
 
