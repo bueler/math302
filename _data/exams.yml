@@ -4,6 +4,8 @@ exams:
 - name: Midterm Exam
   date: Wednesday 18 October
   info: <b>in class</b>
+  sections: 1.1, 1.2, 1.3, 2.1, 2.2, 2.3,
+  sectcont: 2.4, 2.6, 3.1, 3.2, 4.1, 4.2, 4.3, 4.4
 - name: Final Exam
   date: Wednesday 13 December
   info: <b>in class</b>, 10:15--12:15

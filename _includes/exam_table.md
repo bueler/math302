@@ -12,6 +12,16 @@
             <td>{{ exam.info }}</td>
         </tr>
         {% endif %}
+        {% if exam.sections %}
+        <tr>
+            <td>sections: {{ exam.sections }}</td>
+        </tr>
+        {% endif %}
+        {% if exam.sectcont %}
+        <tr>
+            <td>&nbsp; &nbsp; &nbsp; &nbsp; {{ exam.sectcont }}</td>
+        </tr>
+        {% endif %}
         {% if exam.reviewguide %}
         <tr>
             <td><a href="{{ data.home }}/{{ exam.reviewguide }}">review guide</a></td>
