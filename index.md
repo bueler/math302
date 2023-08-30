@@ -13,10 +13,6 @@ Welcome to the homepage of in-person **Math F302 Differential Equations** for Fa
 
 Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16214) for Homework and Exam solutions, to see your grades, and recorded lectures.
 
-### Textbook
-
-Dennis G. Zill, _A First Course in Differential Equations with Modeling Applications_, 11th ed., 2018 (ISBN-13: 978-1337604994)
-
 ### Getting Started
 
 * Attend lectures: MWF 10:30-11:30am, Gruening 408.
@@ -34,6 +30,12 @@ Dennis G. Zill, _A First Course in Differential Equations with Modeling Applicat
 ### Important Links
 
 * [Bueler's office hours](http://bueler.github.io/OffHrs.htm)
+
+### Textbook
+
+<img src="assets/images/zillcover.jpg" height="200">
+
+Dennis G. Zill, _A First Course in Differential Equations with Modeling Applications_, 11th ed., 2018 (ISBN-13: 978-1337604994)
 
 ---
 _Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
