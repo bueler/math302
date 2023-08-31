@@ -29,6 +29,8 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 
 ### Important Links
 
+* [Watch this 3blue1brown "tour of differential equations" video](https://www.youtube.com/watch?v=p_di4Zn4wz4)
+
 * [Bueler's office hours](http://bueler.github.io/OffHrs.htm)
 
 ### Textbook
