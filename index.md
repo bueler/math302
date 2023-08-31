@@ -29,11 +29,11 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 
 ### Important Links
 
+* [Bueler's office hours](http://bueler.github.io/OffHrs.htm)
+
 * [Watch this 3blue1brown "tour of differential equations" video](https://www.youtube.com/watch?v=p_di4Zn4wz4)
 
 * if you [solve this ridiculously hard partial differential equation problem](https://www.claymath.org/millennium/navier-stokes-equation/) about fluids then you get $1 million, but on the other hand every [fluids scientist or engineer takes for granted that they can solve that same problem very accurately if not exactly](https://www.youtube.com/watch?v=iKAVRgIrUOU)
-
-* [Bueler's office hours](http://bueler.github.io/OffHrs.htm)
 
 ### Textbook
 
