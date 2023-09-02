@@ -23,7 +23,7 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 
 * See the [daily materials](daily.html) tab, for slides and worksheets.  Zoom recordings of the lectures are Announcements on the [Canvas website](https://canvas.alaska.edu/courses/16214).
 
-* [Homework](homework.html) is assigned by section of the textbook, and you will need to turn it using [Gradescope](https://canvas.alaska.edu/courses/16214) by 11:59pm on the due date.  See the [schedule](assets/general/F23/schedule.pdf) for due dates.  Get to [Gradescope via the Canvas site](https://canvas.alaska.edu/courses/16214).
+* [Homework](homework.html) is assigned by section of the textbook.  Please turn it using [Gradescope](https://canvas.alaska.edu/courses/16214) by 11:59pm on the due date shown on the [schedule](assets/general/F23/schedule.pdf) and the [Homework](homework.html) tab.  Get to [Gradescope via the Canvas site](https://canvas.alaska.edu/courses/16214).
 
 * [Quizzes](quizzes.html) and [Exams](exams.html) happen on Wednesdays.  See the [schedule](assets/general/F23/schedule.pdf).
 
