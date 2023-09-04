@@ -1,0 +1,185 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+\usepackage{environ}
+
+\usepackage{tikz}
+
+\beamertemplatenavigationsymbolsempty
+
+\title{2.2 Separable Equations}
+
+\subtitle{a lecture for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{Fall 2023}
+
+
+\usetheme{Pittsburgh}
+
+
+\begin{document}
+
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+%\color{green!40!blue}
+\end{frame}
+
+
+\begin{frame}{regarding chapters 1 and 2}
+\begin{itemize}
+\item the purpose of textbook chapter 1 is to sketch the language and meaning of differential equations
+\item the purpose of chapter 2 is to actually solve some differential equations \underline{by hand}
+    \begin{itemize}
+    \item[$\circ$] section 2.2 is the first example: separable equations
+    \item[$\circ$] \alert{warning:} by-hand methods can be difficult or impossible on a given differential equation
+    \item[$\circ$] however, the examples where we know how to solve are often important in practice
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{separable differential equations}
+
+\begin{definition}
+a \emph{separable} differential equation can be put in the form
+        $$\boxed{\frac{dy}{dx} = g(x) h(y)}$$
+\end{definition}
+
+\begin{itemize}
+\item Example.
+        $$\frac{dy}{dx} = \frac{y\cos(x)}{1+y^2}$$
+%PUT IT IN THIS FORM
+\item \textbf{Not} an example.
+        $$\frac{dy}{dx} = \cos(x) + y$$
+\item Also \textbf{not} an example.
+        $$\frac{dy}{dx} = \sin(x + y^2)$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{emphasis on \emph{can}}
+
+\begin{definition}
+a \emph{separable} differential equation \alert{can} be put in the form
+        $$\boxed{\frac{dy}{dx} = g(x) h(y)}$$
+\end{definition}
+
+\begin{itemize}
+\item Example.
+        $$p(y) \frac{dy}{dx} = g(x)$$
+\uncover<2>{define $h(y)=1/p(y)$ to make into standard separable form}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{how to solve separable equations?}
+
+\begin{itemize}
+\item move $y$ stuff to left and $x$ to right:
+        $$\frac{dy}{dx} = g(x) h(y)$$
+    $$\frac{1}{h(y)} \frac{dy}{dx} = g(x)$$
+    $$\frac{1}{h(y)}\,dy = g(x)\,dx$$
+\item<2> integrate both sides:
+    $$\int \frac{1}{h(y)}\,dy = \int g(x)\, dx$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{how to solve separable equations?}
+
+\begin{itemize}
+\item alternative appearance with $p(y)=1/h(y)$:
+        $$p(y) \frac{dy}{dx} = g(x)$$
+\item<2> move $y$ stuff to left and $x$ to right:
+    $$p(y) \,dy = g(x)\,dx$$
+\item<2> integrate both sides:
+    $$\int p(y)\,dy = \int g(x)\, dx$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{why does it work?}
+
+\begin{itemize}
+\item the method works because of the chain rule
+\item the integrals you are really doing are both with respect to $x$:
+    $$\int p(y(x))\,\frac{dy}{dx}\,dx = \int g(x)\, dx$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{how do you finish up?}
+
+\begin{itemize}
+\item once you do the integrals
+    $$\int p(y)\,dy = \int g(x)\, dx$$
+then solve for $y$, if possible, to get an explicit solution
+\item if you cannot solve for $y$ then the solution remains implicit
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 1}
+\begin{itemize}
+\item example: find $y(x)$ if
+    $$\frac{dy}{dx} = x y^2$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{example 2}
+\begin{itemize}
+\item some familiar equations are also separable
+\item example: find $y(x)$ if
+    $$\frac{dy}{dx} = - 5 y$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{example 3}
+\begin{itemize}
+\item what if there are initial conditions?
+\item example: find $z(t)$ if $z(4)=1$ and
+    $$z' = \frac{e^{-z}}{t}$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{example 4}
+\begin{itemize}
+\item you may end up only knowing the solution implicitly
+\item example: find $y(x)$ if
+    $$\frac{dy}{dx} = \frac{x(1-x)}{y(2+y)}$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{standard expectations}
+
+to learn this material, just listening to a lecture is \emph{not} enough
+\begin{itemize}
+\item please \emph{read} section 2.2 in the textbook
+\item please \emph{do} the Homework for section 2.2
+\item search ``separable ODEs'' at YouTube to see more examples
+\end{itemize}
+\end{frame}
+
+\end{document}
+
