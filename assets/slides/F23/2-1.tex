@@ -8,14 +8,16 @@
 \beamertemplatenavigationsymbolsempty
 \setbeamertemplate{footline}[frame number]
 
-\title{2.1 Solution Curves (Without a Solution)}
+\newcommand{\ds}{\displaystyle}
+
+
+\title{2.1 Solution Curves \\ (direction fields and phase portraits)}
 
 \subtitle{a lecture for MATH F302 Differential Equations}
 
 \author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
 
 \date{Fall 2023}
-
 
 \usetheme{Pittsburgh}
 
@@ -59,12 +61,10 @@
 \end{frame}
 
 
-\begin{frame}{meaning of a differential equation}
+\begin{frame}{picturing a DE}
 
 \begin{itemize}
-\item the first-order DE
-    $$\frac{dy}{dx} = f(x,y)$$
-says:
+\item the first-order DE \quad $\ds \frac{dy}{dx} = f(x,y)$ \quad says:
     $$\boxed{\begin{matrix}
     \text{the slope of the} \\
     \text{solution } y(x) 
@@ -73,12 +73,14 @@ says:
     \text{a known function of} \\
     \text{the location } (x,y)
     \end{matrix}}$$
-\item compute a slope $m=\frac{dy}{dx}$ at each point $(x,y)$
-\item this literal reading of the DE means that
+
+\item this means that
 
 \centerline{\alert{we can \emph{draw} a picture of the DE itself}}
 
-\item whether or not we can do the calculus/algebra to find a solution formula $y(x)$
+by drawing the slope $m=\frac{dy}{dx}$ at each point $(x,y)$
+
+\item we can do this whether or not we can do the calculus/algebra to find a solution formula $y(x)$
 \end{itemize}
 \end{frame}
 
@@ -86,17 +88,21 @@ says:
 \begin{frame}{direction field}
 
 \begin{itemize}
-\item we can create a \emph{direction field} or \emph{slope field}:
+\item from the first-order DE $\ds \frac{dy}{dx} = f(x,y)$ we can create a \emph{direction field} or \emph{slope field}:
     \begin{enumerate}
     \item generate a grid of point in the $x$,$y$ plane
     \item for each point, draw a short line segment with the slope given by $f(x,y)$ at that point
     \end{enumerate}
 
 \bigskip
-\item \begin{minipage}[t]{0.39\textwidth}
-\emph{Example.}  By hand, draw a direction field for
+\item \begin{minipage}[t]{0.32\textwidth}
+\emph{Example.}  By hand, draw a direction field:
 $$\frac{dy}{dx} = x-y$$
-on the square $-3 \le x \le 3$, $-3 \le y \le 3$
+on the square
+
+$-3 \le x \le 3$,
+
+$-3 \le y \le 3$
 \end{minipage} 
 
 \vspace{20mm}
@@ -110,6 +116,7 @@ on the square $-3 \le x \le 3$, $-3 \le y \le 3$
 \item I \emph{happily} acknowledge that this is a job for a computer!
     \begin{itemize}
     \item see the \href{https://bueler.github.io/math302/codes.html}{Codes tab} at the public site
+    \item I will use a Python function \texttt{dirfield()}
     \end{itemize}
 
 \medskip
@@ -124,17 +131,17 @@ $\frac{dy}{dx} = x-y$ on the square $-3 \le x \le 3, -3 \le y \le 3$
 
 \medskip
 \scriptsize
-\texttt{def f(x,y):  return x - y}  \hfill $\longleftarrow$ \emph{from my Python code}
+\texttt{def f(x,y):  return x - y}  \hfill $\longleftarrow$ \emph{Python code}
 
 \texttt{dirfield(f,[-3,3,-3,3],mx=12,my=12)}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{picturing ODE IVPs}
+\begin{frame}{picturing IVPs}
 
 \begin{itemize}
-\item recall that we are often solving initial value problems
+\item recall that we are often solving initial value problems (IVPs)
 \item \emph{next main idea}:  one can \emph{see} the solution to an ODE IVP by plotting the initial point in the plane and then following the direction field from that point
 
 \bigskip
@@ -187,11 +194,12 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 \begin{itemize}
 \item there are two topics in \S 2.1:
     \begin{itemize}
-    \item direction fields for 1st-order DEs
-    \item autonomous 1st-order DEs
+    \item \alert{direction fields} for 1st-order DEs
+    \item \alert{autonomous} 1st-order DEs, and their \alert{phase portraits}
     \end{itemize}
 \item equally-important topics!
-\item both topics are about \emph{picturing DEs}, but ``autonomous'' is a special case where we can draw a simpler picture
+\item both topics are about \emph{picturing DEs}
+\item ``autonomous'' describes a special case where we can draw a simpler picture
 \end{itemize}
 \end{frame}
 
@@ -202,13 +210,15 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 \item \emph{definition}. a first-order differential equation is \emph{autonomous} if the function does not depend on the independent variable:
     $$\frac{dy}{dx} = f(y)$$
 
-\bigskip
+\medskip
     \begin{itemize}
     \item ``autonomous'' means ``independent of control''
     \item \dots above DE is not directly controlled by input variable $x$
-    \item \dots but the \emph{solution} $y(x)$ is still a function of $x$
-    \item a big idea: fundamental laws of nature are autonomous DEs
+    \item note that the \emph{solution} $y(x)$ is still a function of $x$
     \end{itemize}
+
+\bigskip
+\item a big idea: fundamental laws of nature are autonomous DEs, in which the independent variable is the time $t$
 \end{itemize}
 \end{frame}
 
@@ -238,18 +248,11 @@ $$\frac{dy}{dx} = 0.2 x^2 + y$$
 \begin{center}
 \begin{tabular}{c|c|c}
  & autonomous & nonautonomous \\ \hline
-linear \Large\strut & $y' = c\, y + d$ & $y' + P(x) y = g(x)$ \\ \hline
+linear \Large\strut & $y' + c\, y = d$ & $y' + P(x) y = g(x)$ \\ \hline
 nonlinear \Large\strut & $y' = f(y)$ & $y'=f(x,y)$
 \end{tabular}
 \end{center}
-
-\medskip
-    \begin{itemize}
-    \item which can we already solve by guess-and-check?
-    \end{itemize}
 \end{itemize}
-
-\vspace{20mm}
 \end{frame}
 
 
@@ -259,22 +262,22 @@ nonlinear \Large\strut & $y' = f(y)$ & $y'=f(x,y)$
 \item the direction field of an autonomous DE has redundancies
 
 \medskip
-\item \begin{minipage}[t]{0.32\textwidth} \small
-Example.  Use a computer to draw the direction field for $x \in [-3,3]$ and $y\in [-\pi,\pi]$.  Then draw the phase portrait. 
-    $$\frac{dy}{dx} = \cos(2y)$$
+\item \begin{minipage}[t]{0.35\textwidth} \small
+Example.  Consider
+$$\frac{dy}{dx} = \cos(2y)$$
+Use a computer to draw the direction field for $x \in [-3,3]$ and $y\in [-\pi,\pi]$.  Then draw the phase portrait.
 \end{minipage}
 
-\vspace{-30mm}
-\hfill \includegraphics[width=0.5\textwidth]{figs/autonomous-cos} \phantom{dfjsdf}
+\vspace{-35mm}
+\hfill \includegraphics[width=0.45\textwidth]{figs/autonomous-cos} \phantom{ldkjaf}
 % import numpy as np
 % def f(x,y):  return np.cos(2*y)
 % df.dirfield(f,[-3,3,-np.pi,np.pi],mx=21,my=21,slopeslinewidth=1.5)
 
 \bigskip
-\item so we will draw a simplified picture, a one-dimensional \emph{phase portrait}
+\item the one-dimensional \emph{phase portrait} is a simplified form of the direction field
     \begin{itemize}
     \item a.k.a.~\emph{phase line}
-    \item easiest to explain by an example \dots
     \end{itemize}
 
 \end{itemize}
@@ -332,23 +335,23 @@ summary:
     \item between critical points, evaluate the sign of $f(y)$
     \item draw an up or down arrow accordingly
 \end{itemize}
+
+\bigskip
+\emph{easy} if you know where you are going!
 \end{frame}
 
 
 \begin{frame}{classifying critical points}
 
 \begin{itemize}
-\item one may classify what one might see on a phase portrait
-
-\medskip
-\item a critical point $y=c$ is
+\item a critical point $y=c$ of an autonomous differential equation $\ds \frac{dy}{dx} = f(y)$ is
     \begin{itemize}
     \item \emph{attracting} or \emph{asymptotically stable} if
 \begin{equation}
         \lim_{x \to \infty} y(x) = c   \tag{$\ast$}
 \end{equation}
     for all initial points $(x_0,y_0)$ where $y_0$ is close to $c$,
-    \item \emph{semi-stable} if ($\ast$) only happens for $y_0$ one side of $c$, and
+    \item \emph{semi-stable} if ($\ast$) only happens for $y_0$ on one side of $c$, and
     \item \emph{repelling} or \emph{asymptotically unstable} otherwise
     \end{itemize}
 \end{itemize}
@@ -413,8 +416,6 @@ $$m \frac{dv}{dt} = m g - k v,$$
 
 \begin{frame}{looking ahead: next two sections 2.2, 2.3}
 
-FIXME FROM HERE
-
 \begin{itemize}
 \item the first four sections of the textbook (1.1, 1.2, 1.3, 2.1) are about the \emph{meaning} of differential equations
     \begin{itemize}
@@ -427,8 +428,8 @@ FIXME FROM HERE
 \bigskip
 \begin{tabular}{c|c|c}
  & autonomous & nonautonomous \\ \hline
-linear \Large\strut & $y' = c\, y + d$ & $y' + P(x) y = g(x)$ \\ \hline
-nonlinear \Large\strut & $y' = f(y)$ & 
+linear \Large\strut & $y' + c\, y = d$ \alert{2.2,2.3} & $y' + P(x) y = g(x)$  \alert{2.3}\\ \hline
+nonlinear \Large\strut & $y' = f(y)$ \alert{2.2} & 
 
 \begin{minipage}{45mm}
 \medskip
@@ -436,7 +437,7 @@ nonlinear \Large\strut & $y' = f(y)$ &
 \small
     \begin{tabular}{c|c}
     separable & nonseparable \\ \hline
-    $y'=g(x)h(y)$ & $y'=f(x,y)$
+    $y'=g(x)h(y)$ \alert{2.2} & $y'=f(x,y)$
     \end{tabular}
 \end{minipage}
 \end{tabular}
@@ -444,6 +445,8 @@ nonlinear \Large\strut & $y' = f(y)$ &
 
 
 \begin{frame}{this is not a CS class}
+
+FIXME FROM HERE
 
 \begin{itemize}
 \item you \emph{don't} have to know programming to do this class
