@@ -9,7 +9,7 @@ This page will grow over the course of the semester.  It has some computer codes
 
 ### Matlab/Octave: Visualization
 
-You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://www.gnu.org/software/octave/) with these.  (I use Octave, which is free and open source.)  The are online versions of both, including [Octave Online](https://octave-online.net/).
+You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://www.gnu.org/software/octave/) with these.  (I use Octave, which is free and open source.)
 
 * To generate direction fields (slope fields) in Matlab, see see the [wikipedia page on slope fields](https://en.wikipedia.org/wiki/Slope_field).
 
@@ -29,5 +29,6 @@ You will need to know [Python](https://www.python.org/) to use these.
 
 ### with just a web browser
 
+* The are online versions [Matlab online](https://matlab.mathworks.com/) and [Octave Online](https://octave-online.net/).
 * To generate direction fields without programming, try [desmos](https://www.desmos.com/).
 
