@@ -6,7 +6,7 @@ homework:
   correct: 16, 26, 32
   complete: 3, 5, 13, 19, 23, 25, 29, 33
 - name: 1.2
-  due: 11:59pm Fri 9/8
+  due: 11:59pm Sat 9/9
   correct: 4, 30
   complete: 1, 7, 13, 31, 33, 45, 47
 - name: 1.3
@@ -14,6 +14,6 @@ homework:
   correct: 3, 28
   complete: 1, 5, 15, 17, 19
 - name: 2.1
-  due: 11:59pm Fri 9/15
+  due: 11:59pm Sat 9/16
   correct: 2, 6, 22
   complete: 1, 7, 13, 21, 25, 39, 41
