@@ -17,6 +17,11 @@
       </table>
       {% else %}
       <table class="inner">
+        {% if homework.link %}
+        <tr>
+          <td> <a href="{{ homework.link }}">{{ homework.linktext }} </a></td>
+        </tr>
+        {% endif %}
         <tr>
           <td>please read section {{ homework.name }}</td>
         </tr>

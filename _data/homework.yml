@@ -14,6 +14,16 @@ homework:
   correct: 3, 28
   complete: 1, 5, 15, 17, 19
 - name: 2.1
+  link: https://c3d.libretexts.org/DirectionField/index.html
+  linktext: direction field plotter (not bad)
   due: 11:59pm Sat 9/16
   correct: 2, 6, 22
   complete: 1, 7, 13, 21, 25, 39, 41
+- name: 2.2
+  due: 11:59pm FIXME
+  correct: 
+  complete: 
+- name: 2.3
+  due: 11:59pm FIXME
+  correct: 
+  complete: 

@@ -5,13 +5,13 @@ title: Codes
 
 ## Codes
 
-This page will grow over the course of the semester.  It has some computer codes I wrote, either for visualization or as examples of numerical methods.  They are categorized by language (Matlab/Octave or Python), and ordered chronologically.
+This page will grow over the course of the semester.  It has some computer codes I wrote, either for visualization or as examples of numerical methods.  They are categorized by language (Matlab/Octave or Python), and ordered chronologically.  Note that there are online versions of Matlab ([Matlab online](https://matlab.mathworks.com/)) and Octave ([Octave Online](https://octave-online.net/)).
 
 ### Matlab/Octave: Visualization
 
 You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://www.gnu.org/software/octave/) with these.  (I use Octave, which is free and open source.)
 
-* To generate direction fields (slope fields) in Matlab, see see the [wikipedia page on slope fields](https://en.wikipedia.org/wiki/Slope_field).
+* [exdirfield.m](assets/codes/F23/exdirfield.m):  This is just one example.  To generate direction fields (slope fields) in Matlab/Octave and other languages, see the [wikipedia page on slope fields](https://en.wikipedia.org/wiki/Slope_field#Software_for_plotting_slope_fields).
 
 <!--
 * [streamcyl.m](assets/codes/F23/streamcyl.m): Generate a contour figure, showing streamlines around a cylinder, for Example 5 in the slides for section 2.4.
@@ -27,8 +27,8 @@ You will need to know [Python](https://www.python.org/) to use these.
 
 * [dirfield.py](assets/codes/F23/dirfield.py):  Generate a direction field.  I used this for images in some slides.
 
-### with just a web browser
+### no-programming solutions
 
-* The are online versions [Matlab online](https://matlab.mathworks.com/) and [Octave Online](https://octave-online.net/).
-* To generate direction fields without programming, try [desmos](https://www.desmos.com/).
-
+* To generate direction fields without programming, try one of these:
+    * [c3d.libretexts.org/DirectionField/index.html](https://c3d.libretexts.org/DirectionField/index.html)
+    * [www.geogebra.org/m/W7dAdgqc](https://www.geogebra.org/m/W7dAdgqc)
