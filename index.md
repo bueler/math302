@@ -27,11 +27,13 @@ Log in to [canvas.alaska.edu/courses/16214](https://canvas.alaska.edu/courses/16
 
 * [Quizzes](quizzes.html) and [Exams](exams.html) happen on Wednesdays.  See the [schedule](assets/general/F23/schedule.pdf).
 
-### Important Links
+### Useful Links
 
 * Bueler's [office hours](http://bueler.github.io/OffHrs.htm)
 
 * Watch this [3blue1brown "tour of differential equations" video](https://www.youtube.com/watch?v=p_di4Zn4wz4)
+
+* [Trefor Bazett](https://www.uvic.ca/science/math-statistics/people/home/faculty/bazett_trefor.php) has a [YouTube playlist of differential equations videos](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxde-SlgmWlCmNHroIWtujBw) which roughly follow the material in our course.  Start with this [introductory video for the series](https://www.youtube.com/watch?v=B5IjsTONKkw).
 
 * What are we studying? Check out these Wikipedia pages for the topics we will get to, introduced in this approximate order:
 
