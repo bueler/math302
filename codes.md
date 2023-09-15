@@ -26,6 +26,7 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 You will need to know [Python](https://www.python.org/) to use these.
 
 * [dirfield.py](assets/codes/F23/dirfield.py):  Generate a direction field.  I used this for images in some slides.
+* [quadde.py](assets/codes/F23/quadde.py):  Draw direction field and family of solutions for dy/dx = y^2 - 9, from section 2.2.
 
 ### no-programming solutions
 
