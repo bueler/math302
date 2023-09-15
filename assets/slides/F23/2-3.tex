@@ -50,7 +50,7 @@ or
 linear equation standard form: \qquad $\ds \frac{dy}{dx} + P(x) y = g(x)$
 
 \bigskip
-Examples:
+examples:
 \begin{itemize}
     \item
         $$\frac{dy}{dx} + y = x+3$$
@@ -68,7 +68,7 @@ Examples:
 linear equation standard form: \qquad $\ds \frac{dy}{dx} + P(x) y = g(x)$
 
 \bigskip
- \textbf{Not an example:}
+ \textbf{not an example:}
  \begin{itemize}
     \item
         $$y \frac{dy}{dx} = x+e^x$$
@@ -97,15 +97,18 @@ to solve a first-order, linear ordinary differential equation $y' + P(x) y = g(x
 
 
 \begin{frame}{recipe}
-for $y' + P(x) y = g(x)$ :
+for DE: \qquad $y' + P(x) y = g(x)$
 
 \bigskip
 \begin{enumerate}
 \item find $\mu(x)$ so that $\mu'(x) = P(x) \mu(x)$
-\item multiply both sides by $\mu$:
+\item multiply both sides of DE by $\mu$:
     $$\mu y' + \mu P y = \mu g$$
 \item recognize product rule:
-    $$(\mu y)' = \mu g$$
+\begin{align*}
+\mu y' + \mu' y &= \mu g \\
+(\mu y)' &= \mu g
+\end{align*}
 \item integrate:
     $$\mu(x) y(x) = \int \mu(x) g(x)\,dx$$
 \item solve for $y$:
@@ -115,7 +118,9 @@ for $y' + P(x) y = g(x)$ :
 
 
 \begin{frame}{integrating factor}
-\noindent \textbf{formula:}  the \alert{integrating factor} $\mu(x)$ is found by
+\noindent \textbf{formula:}  the \alert{integrating factor} $\mu(x)$, which solves
+    $$\mu'(x) = P(x) \mu(x),$$
+has formula
     $$\mu(x) = e^{\int P(x)\,dx}$$
 \end{frame}
 
@@ -129,60 +134,71 @@ for $y' + P(x) y = g(x)$ :
 \end{frame}
 
 
-\begin{frame}
-visualization of
+\begin{frame}{visualization (example 2)}
+
+\textbf{example:}
         $$\frac{dy}{dx} + y = x+3, \qquad y(0)=3$$
 
-\vspace{10mm}
-FIXME %\includegraphics<1>[width=0.8\textwidth]{lineardirfield}
-
-FIXME %\includegraphics<2>[width=0.8\textwidth]{lineardirfieldsoln}
+\centering
+\includegraphics[width=0.8\textwidth]{figs/lineardirfieldsoln}
 \end{frame}
 
 
-\begin{frame}
-\begin{itemize}
-    \item \textbf{Example}.  Newton's law of cooling
+\begin{frame}{example 3: Newton's law of cooling}
+\textbf{example:}
         $$\frac{dT}{dt} = k (T_m - T), \qquad T(0)=T_0$$
     where $k,T_m,T_0$ are constants
-\end{itemize}
 
 \vspace{5mm}
-\hfill FIXME %\includegraphics[width=0.8\textwidth]{coolingcurves}
+\hfill \includegraphics[width=0.7\textwidth]{figs/coolingcurves.png}
 \end{frame}
 
 
-\begin{comment}
-\begin{frame}
-\begin{itemize}
-    \item \textbf{Example}.  suppose we have a system with solution $s(t)$ which responds to an input $f(t)$:
+\begin{frame}{example 3: Newton's law of cooling}
+\textbf{example:}
+        $$\frac{dT}{dt} = k (T_m - T), \qquad T(0)=T_0$$
+
+\vspace{70mm}
+\end{frame}
+
+
+\begin{frame}{example 4: decaying response to pulses}
+\textbf{example:}  suppose we have a system with solution $s(t)$ which responds to an input $f(t)$:
+        $$\dot s = -k s + f(t), \qquad s(0)=0$$
+suppose the input $f(t)$ is a sequence of pulses as in this graph:
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{example 4: decaying response to pulses}
+\textbf{example:}
         $$\dot s = -k s + f(t), \qquad s(0)=0$$
     
-    suppose the input is pulses:
-\end{itemize}
-
-\vspace{5mm}
-FIXME %\includegraphics[width=0.8\textwidth]{pulsetrain}
+\vspace{60mm}
 \end{frame}
 
 
-\begin{frame}
-\begin{itemize}
-    \item \textbf{Example}.  
+\begin{frame}{example 4: decaying response to pulses}
+\textbf{example:}
         $$\dot s = -k s + f(t), \qquad s(0)=0$$
     
-    the solution is
-        $$s(t) = e^{-kt} \int_0^t e^{k\tau} f(\tau)\,d\tau$$
-\end{itemize}
+\textbf{solution:}
+\begin{align*}
+s(t) &= e^{-kt} \int_0^t e^{k\tau} f(\tau)\,d\tau \\
+     &= \int_0^t e^{-k(t-\tau)} f(\tau)\,d\tau
+\end{align*}
+interpret this?
+
+\vspace{30mm}
 \end{frame}
-\end{comment}
 
 
-\begin{frame}
-\begin{itemize}
-    \item \textbf{Example}.
+\begin{frame}{example 5: careful (cute) algebra}
+\textbf{example:}
         $$x^2 y' + x(x+2) y = e^x$$
-\end{itemize}
+
+\vspace{60mm}
 \end{frame}
 
 
@@ -191,9 +207,9 @@ FIXME %\includegraphics[width=0.8\textwidth]{pulsetrain}
 
 to learn this material, just listening to a lecture is \emph{not} enough
 \begin{itemize}
-\item please \emph{read} section 2.2 in the textbook
-\item please \emph{do} the Homework for section 2.2
-\item search ``separable ODEs'' at YouTube to see more examples
+\item please \emph{read} section 2.3 in the textbook
+\item please \emph{do} the Homework for section 2.3
+\item search ``linear ODEs'' at YouTube to see more examples
 \end{itemize}
 \end{frame}
 
