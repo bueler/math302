@@ -20,10 +20,10 @@ def ysolution(x,A):
 from dirfield import dirfield
 import matplotlib.pyplot as plt
 
-dirfield(f, [-5, 5, -6, 6], 16, 25)
-for A in [100.0, 10.0, 1.0, 0.0, -1.0, -10.0, -100.0, -1000.0]:
-    xx = np.linspace(-5,5,201)
+dirfield(f, [-2, 2, -6, 6], 16, 25)
+for A in [100.0, 10.0, 1.0, 0.0, -0.01, -0.1, -1.0, -10.0, -100.0, -1000.0]:
+    xx = np.linspace(-2,2,201)
     plt.plot(xx, ysolution(xx,A), 'r.')
 plt.xlabel('x'), plt.ylabel('y')
-plt.axis([-5, 5, -6, 6])
+plt.axis([-2, 2, -6, 6])
 plt.show()
