@@ -12,7 +12,7 @@ for n = 1:N+1
     % into a LaTeX document:
     %fprintf('%.2f & %.4f & %.4f & %.4f & %.2f \\\\\n',...
     %        x, y, exact, abs(y-exact), 100*abs(y-exact)/abs(exact))
-    y = y + h * y;      % this IS Euler's method
+    y = y + h * y;      % this is Euler's method
     x = x + h;
 end
 
