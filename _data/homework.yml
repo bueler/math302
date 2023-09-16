@@ -27,3 +27,10 @@ homework:
   due: 11:59pm Sat 9/23
   correct: 4, 22, 29
   complete: 3, 9, 21, 37, 45, 57
+- name: 2.4
+  due: 11:59pm Mon 9/25
+  correct: 4, 14, 16, 22
+  complete: 3, 11, 13, 21, 25, 27, 45
+#- name: 2.6
+#  due: 11:59pm Sat 9/30
+#  override: exercises2-6.pdf
