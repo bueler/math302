@@ -34,3 +34,4 @@ homework:
 - name: 2.6
   due: 11:59pm Sat 9/30
   override: exercises2-6.pdf
+  comment: I improved the book's exercises.

@@ -6,13 +6,10 @@
       {% if homework.override %}
       <table class="inner">
         <tr>
-          <td>The textbook problems are poorly-aligned with</td>
+          <td>{{ homework.comment }}</td>
         </tr>
         <tr>
-          <td>the section text and lecture.  Instead,</td>
-        </tr>
-        <tr>
-          <td><a href="{{ data.home }}/{{ homework.override }}">please do the problems on this (PDF)</a>.</td>
+          <td><a href="{{ data.home }}/{{ homework.override }}">Please do the problems on this (PDF).</a></td>
         </tr>
       </table>
       {% else %}
