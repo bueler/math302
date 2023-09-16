@@ -25,5 +25,5 @@ homework:
   complete: 3, 5, 16, 17, 33, 43, 47, 49
 - name: 2.3
   due: 11:59pm Sat 9/23
-  correct: 4, 22, 30
-  complete: 3, 9, 21, 29, 37, 45, 57
+  correct: 4, 22, 29
+  complete: 3, 9, 21, 37, 45, 57
