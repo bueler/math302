@@ -200,7 +200,7 @@ easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$, as follo
 
 \begin{itemize}
 \item assume we are solving an ODE IVP:  \, $\frac{dy}{dx} = f(x,y)$, $y(x_0)=y_0$
-\item if know the exact solution $y(x)$ then we can measure (evaluate) the error in the approximation, i.e.
+\item if we \alert{also know the exact solution $y(x)$} then we can measure (evaluate) the error in the approximation, i.e.
     $$y_n \approx y(x_n)$$
     \vspace{-4mm}
     \begin{itemize}
@@ -209,21 +209,22 @@ easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$, as follo
     \end{itemize}
 \item there are two common ways to report the error:
     \begin{enumerate}
+    \medskip
     \item \emph{absolute error} $=|y(x_n) - y_n|$
-    \item \emph{relative error} $=\frac{|y(x_n) - y_n|}{|y(x_n)|}$
+    
+    \medskip
+    \item \emph{relative error} $\ds=\frac{|y(x_n) - y_n|}{|y(x_n)|}$
     \end{enumerate}
-\item absolute error is the distance between actual value and approximation
-\item relative error divides this by the actual value
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{big caveat about measuring accuracy}
+\begin{frame}{caveat about measuring accuracy}
 
 \begin{itemize}
 \item you can only compute absolute or relative error \emph{if} the exact solution is known
-\item \dots but often the reason we use a numerical method like Euler's is \alert{because the exact solution is \emph{not} known}
-\item so examples where the absolute or relative error is computed are automatically ``toy examples''
+\item \dots but usually the reason we use a numerical method like Euler's is because the exact solution is \emph{not} known
+\item thus: examples where the absolute or relative error is computable are automatically ``toy examples''
 \end{itemize}
 \end{frame}
 
@@ -231,16 +232,15 @@ easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$, as follo
 \begin{frame}{example 2}
 
 \begin{itemize}
-\item this is exercise \#3 in \S 2.6 \dots a ``toy example''
 \item Example 2:  for the ODE IVP
     $$y'=y, \quad y(0)=1$$
 
     \begin{itemize}
-    \item[(a)] use Euler's method to get a 4-decimal approximation of $y(1)$
+    \item[(a)] find the exact solution
+    \item[(b)] use Euler's method to get an approximation of $y(1)$ which is accurate to four digits?
         \begin{itemize}
-        \item[$\circ$] use $h=0.1$ first, and then $h=0.05$
+        \item[$\circ$] try $h=0.1$ first, and then $h=0.05$?
         \end{itemize}
-    \item[(b)] find the exact solution
     \item[(c)] show in a table: $x_n$, $y_n$, the exact value $y(x_n)$, the absolute error, and the relative error
     \end{itemize}
 \end{itemize}
@@ -254,15 +254,16 @@ easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$, as follo
 
 \begin{itemize}
 \item so one can proceed by hand, but its tedious work \dots
-\item and it is an original purpose for which electronic computers were designed
-\item I used the Matlab/Octave code below
+\item \alert{this is the original purpose for which computers were designed}
+\item I used Matlab code below
     \begin{itemize}
-    \item see \href{https://bueler.github.io/math302/assets/codes/simpleeuler.m}{\color{cyan} \texttt{simpleeuler.m}} at the ``other'' tab on the course webpage
+    \item posted as \texttt{simpleeuler.m} at the Codes tab on the public site
     \end{itemize}
 \end{itemize}
 
-\bigskip
-\begin{Verbatim}[fontsize=\footnotesize]
+\medskip
+{\footnotesize
+\begin{Verbatim}
 h = 0.1;               % change to e.g. h=0.05
 N = 10;                % change to e.g. N=20
 x = 0;
@@ -270,10 +271,11 @@ y = 1;
 for n = 1:N+1
     exact = exp(x);
     [x, y, exact, abs(y-exact), 100*abs(y-exact)/abs(exact)]
-    y = y + h * y;     % this IS Euler's method
+    y = y + h * y;     % this is Euler's method
     x = x + h;
 end
 \end{Verbatim}
+}
 \end{frame}
 
 
@@ -298,11 +300,6 @@ $x_n$ & $y_n$ & actual value & abs.~error & rel.~error \\ \hline
 0.90 & 2.3579 & 2.4596 & 0.1017 & 4.13 \\
 1.00 & 2.5937 & 2.7183 & 0.1245 & 4.58
 \end{tabular}
-
-\normalsize
-\medskip
-\item for $h=0.001$ and $N=1000$ I get 0.05\% rel.~error:
-   $$y_{1000} = 2.71692 \approx 2.71828 = y(1)$$
 \end{itemize}
 \end{frame}
 
@@ -342,6 +339,12 @@ $x_n$ & $y_n$ & actual value & abs.~error & rel.~error \\ \hline
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figs/simpleeuler}
 \end{center}
+
+\footnotesize
+\begin{itemize}
+\item for $h=0.001$ and $N=1000$ I get 0.05\% rel.~error:
+   $$y_{1000} = 2.71692 \approx 2.71828 = y(1)$$
+\end{itemize}
 \end{frame}
 
 
