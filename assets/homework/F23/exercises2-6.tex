@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
+
+\usepackage{graphicx,color,enumitem}
+\usepackage{amsmath,amsthm,amsbsy}
+\usepackage{palatino}
+
+\usepackage{tikz}
+\usepackage[colorlinks=true]{hyperref}
+
+%% Setup aproblem environment, 
+%% aproblem items
+%% subproblems environment
+%% subproblem items
+\makeatletter
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newlength\probsep
+\newlength\pshrinking
+\newif\iffirstprob
+
+\newenvironment{aproblems}%
+  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
+  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
+  \let\hproblem\aproblem
+  \advance\linewidth -\pshrinking
+  \advance\@totalleftmargin\pshrinking
+  \advance\leftskip\pshrinking}%
+  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
+
+\newcommand{\aproblem}{%
+  \setcounter{subprobcount}{0}%
+  \stepcounter{probcount}%
+  \def\@currentlabel{\arabic{probcount}}%
+  \ifhmode
+    \unskip \par
+  \fi
+%  \addpenalty{-4000}%
+  \iffirstprob\else\addvspace\probsep\fi
+  \firstprobfalse
+  \hskip -\labelwidth\hskip -\labelsep 
+  \hbox to\labelwidth{\hss\textbf{E\arabic{probcount}.}}\hskip\labelsep
+}%
+
+\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
+\newcommand{\skipproblem}{\stepcounter{probcount}}
+
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+\newcommand{\epart}[1]{\noindent \textbf{(#1)} \,}
+
+\doclabel{Math F302 Worksheet}
+\docdate{created 16 September 2023}
+
+\begin{document}
+\renewcommand{\d}{\displaystyle}
+
+\strut
+\centerline{{\Large \textbf{Homework 2.6}}}
+
+\bigskip
+\centerline{{\large due 11:59pm Saturday 30 September, by Gradescope as usual}}
+
+\bigskip
+\centerline{{\large \underline{all} of these exercises will be graded for correctness}}
+
+\begin{quote}
+\emph{I have redone the book's exercises for Section 2.6, to be more targeted, but the spirit is the same.  You will need to do computations.  If you use a calculator it will be tedious (but doable).  If you choose Matlab, or etc., it will likely be quicker and more fun.}
+\end{quote}
+
+\medskip
+\begin{aproblems}
+\aproblem Consider the ODE IVP
+	$$y'=x+y^2, \qquad y(0)=0,$$
+and suppose we want to compute (or approximate or predict) $y(0.2)$.  I do not know how to solve this by hand.
+
+\epart{a} Use one of the tools you used on Homework 2.1 to draw a direction field.  Make sure it includes the relevant range of $x$ values.  Put the initial condition on the plot.
+
+\epart{b} Use Euler's method with $h=0.1$ to estimate $y(0.2)$.  Add this result to the plot.
+
+\epart{c} Use Euler's method with $h=0.05$ to estimate $y(0.2)$.  Add this result to the plot.
+
+\aproblem Consider the ODE IVP
+	$$y'=2xy, \qquad y(1)=1.$$
+I know how to solve this by hand, and so do you!  (It is separable; Section 2.2.)  This problem will help us see how accurate Euler's method is.
+
+\epart{a} Solve the problem exactly for $y(1.5)$.
+
+\epart{b} Use Euler's method with $h=0.1$ to estimate $y(1.5)$.  Build a table like Table 2.6.3 for this computation.
+
+\epart{c} Use Euler's method with $h=0.05$ to estimate $y(1.5)$.  Instead of building something tedious like the whole of Table 2.6.4, just show the last row of the table, i.e.~for $x_n=1.5$.
+
+\aproblem Consider the ODE IVP
+    $$\frac{dy}{dt} = - 0.2 y + 0.1 (1 + \sin(t))^6, \qquad y(0)=1.$$
+This is a linear ODE, so in theory you can use the methods of Section 2.3 to solve it, but actually you will not be able to do the integral.  So don't bother trying.
+
+\epart{a} Use Euler's method with $h=2$ to estimate $y(20)$.
+
+\epart{b} The answer from \textbf{(a)} is uselessly inaccurate.  Use \emph{any technology you want}\footnote{\texttt{wolframalpha.com} or similar if you don't want to write code.  Matlab's \texttt{ode45()} is a great option.  Try a couple of methods so that you are pretty sure you have captured the right answer?} to generate an accurate solution curve, and plot it.  Add the part \textbf{(a)} result to the plot.
+
+\end{aproblems}
+\end{document}
