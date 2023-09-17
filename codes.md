@@ -17,6 +17,7 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 ### Matlab: Numerical methods
 
 * [simpleeuler.m](assets/codes/F23/simpleeuler.m): Solve the simplest ODE IVP (y'=y,y(0)=1) by the Euler method.  See the slides for section 2.6.
+* [walkoutside.m](assets/codes/F23/walkoutside.m): Solve a Newton's law of cooling example by the Euler method.  Produces [this image](assets/codes/F23/walkoutside.png).  See the slides for section 2.6.
 
 ### Python
 
