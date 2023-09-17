@@ -1,9 +1,8 @@
-\documentclass{beamer}
+\documentclass[colorlinks]{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage{fancybox}
 \usepackage{environ,verbatim}
-
 \usepackage{tikz}
 
 \newcommand{\ds}{\displaystyle}
@@ -200,13 +199,29 @@ easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$, as follo
 
 \begin{itemize}
 \item assume we are solving an ODE IVP:  \, $\frac{dy}{dx} = f(x,y)$, $y(x_0)=y_0$
-\item if we \alert{also know the exact solution $y(x)$} then we can measure (evaluate) the error in the approximation, i.e.
+\item if we \alert{also know the exact solution $y(x)$} then we can measure (evaluate) the error in the approximation
     $$y_n \approx y(x_n)$$
     \vspace{-4mm}
     \begin{itemize}
     \item ``$y_n$'' is the number produced by Euler's method
     \item ``$y(x_n)$'' is the exact solution at the $x$-value $x_n$
     \end{itemize}
+\item picture this:
+\end{itemize}
+
+\vspace{25mm}
+\end{frame}
+
+
+\begin{frame}{measuring accuracy}
+
+\begin{itemize}
+\item context:
+\begin{align*}
+\frac{dy}{dx} &= f(x,y), \qquad y(x_0)=y_0 \\
+y(x) &= (\text{exact solution, a formula}) \\
+y_n &= (\text{numbers you compute from Euler's method})
+\end{align*}
 \item there are two common ways to report the error:
     \begin{enumerate}
     \medskip
@@ -224,7 +239,10 @@ easy to derive it from the direction field of $\frac{dy}{dx} = f(x,y)$, as follo
 \begin{itemize}
 \item you can only compute absolute or relative error \emph{if} the exact solution is known
 \item \dots but usually the reason we use a numerical method like Euler's is because the exact solution is \emph{not} known
-\item thus: examples where the absolute or relative error is computable are automatically ``toy examples''
+    \begin{itemize}
+    \item[$\circ$] in real applications we do not know the exact solution
+    \end{itemize}
+\item thus: \alert{examples where the absolute or relative error is computable are automatically ``toy examples''}
 \end{itemize}
 \end{frame}
 
@@ -372,66 +390,87 @@ $x_n$ & $y_n$ & actual value & abs.~error & rel.~error \\ \hline
 
 \begin{itemize}
 \item yes!
-\item here is a derivation, by picture, of the ``explicit midpoint rule''
-    \begin{itemize}
-    \item a.k.a.~``modified Euler method''
-    \item see \href{https://en.wikipedia.org/wiki/Midpoint_method}{\color{cyan} Wikipedia page for ``midpoint method''}
-    \item it is ``second order'' so it gets same accuracy in 10 steps that Euler does in 100 steps
-    \end{itemize}
+\item here is a derivation, by picture, of the ``explicit midpoint rule'':
 \end{itemize}
 
-\vspace{50mm}
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{are there better methods?}
+
+\begin{itemize}
+\item yes!
+\item Euler's method is only first order; it makes errors proportional to the step size $h$
+\item see the \href{https://en.wikipedia.org/wiki/Midpoint_method}{Wikipedia page for ``midpoint method''}
+    \begin{itemize}
+    \item[$\circ$] the explicit and implicit midpoint methods are ``second order''
+    \item[$\circ$] they can get the same accuracy in 10 steps that Euler does in 100 steps
+    \end{itemize}
+\item see the \href{https://en.wikipedia.org/wiki/Runge-Kutta_methods}{Wikipedia page for ``Runge-Kutta methods''}
+    \begin{itemize}
+    \item[$\circ$] the original RK method is ``fourth order'' so it can get the same accuracy in 10 steps that Euler does in 10000 steps
+    \item[$\circ$] we will return to this in Chapter 9
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 3}
+
+\begin{itemize}
+\item Example 3:  consider the ODE IVP
+    $$\frac{dT}{dt} = - 0.3 \left(T - T_m(t)\right), \quad T(0)=140$$
+where \quad $\ds T_m(t) = 75 - \left(\frac{60}{\pi}\right) \left(\frac{\pi}{2} + \arctan(10 (t - 5))\right)$
+\item what situation does this model?
+\end{itemize}
+
+\centering
+\includegraphics[width=0.6\textwidth]{figs/beforewalk.png}
+\end{frame}
+
+
+\begin{frame}{example 3: Newton's law of cooling}
+
+\begin{itemize}
+\small
+\item consider: ODE IVP $\ds\frac{dT}{dt} = - 0.3 \left(T - T_m(t)\right)$, $T(0)=140$, where $\ds T_m(t)$ is a step down from 75 to 15 at $t=5$
+
+\normalsize
+%Use the Euler method to solve a Newton's
+% law of cooling model for a cup of coffee.  You
+% carry it from a warm room to the cold outside:
+%    T'(t) = - 0.3 (T(t) - T_m(t))
+%    T(0) = 140
+% where
+%    T_m(t) = 75 - (60/pi) (pi/2 + arctan(10 (t - 5)))
+% This plots T(t) in red and T_m(t) in blue on
+% 0 <= t <= 10.  Units: t minutes, T(t) Fahrenheit.
+    
+\item approximate solution using Euler's method on $t\in[0,10]$:
+	$$T_{n+1} = T_n + h \left[- 0.3 \left(T - T_m(t_n)\right)\right]$$
+\item try $N=50$ steps of length $\ds h=10/50 = 0.2$ minutes?
+\end{itemize}
+
+\centering
+\includegraphics[width=0.6\textwidth]{figs/walkoutside.png}
 \end{frame}
 
 
 \begin{frame}{expectations}
 
-FIXME FROM HERE: SET UP A SMALL NUMBER OF PROBLEMS, LIKE THOSE IN THE BOOK BUT ALSO SOLVING EXACTLY FOR SOME OF THE EXAMPLES; MAKE/MODIFY THE LAST SLIDES TO HELP WITH THIS
-
 \begin{itemize}
-\item to learn this material, just watching this video is \emph{not} enough!
+\item to learn this material, just listening to a lecture is \emph{not} enough!
 
 \item also:
      \begin{itemize}
-     \item \emph{watch} ``found online'' videos at
-
-     \centerline{\href{https://bueler.github.io/math302/week4.html}{\tt \color{cyan} bueler.github.io/math302/week4.html}}
-     \item \emph{try-out} Euler's method codes at the same link
      \item \emph{read} section 2.6 in the textbook
-         \begin{itemize}
-         \item mentions the well-known ``fourth order Runge-Kutta method'', even better than the explicit midpoint rule above
-         \end{itemize}
-     \item \emph{do} the WebAssign exercises for section 2.6
+     \item \emph{try out} the Euler's method codes at the \href{https://bueler.github.io/math302/codes.html}{Codes tab}
+     \item \emph{do} Homework 2.6
      \end{itemize}
-
-\bigskip
-\item by the way, Euler's and other numerical methods return in Chapter 9 \dots
 \end{itemize}
 \end{frame}
 
-
-\begin{frame}{expectations}
-
-to learn this material, just listening to a lecture is \emph{not} enough
-\begin{itemize}
-\item please \emph{read} section 2.4 in the textbook
-\item please \emph{do} the Homework for section 2.4
-\item search ``exact ODEs'' at YouTube to see more examples
-\end{itemize}
-
-
-\bigskip
-the biggest issue in \S 2.4 for most students:
-
-\alert{\centerline{partial derivative and integral skills are rusty}}
-
-\bigskip
-\begin{itemize}
-\item work on fixing this now!
-\item actually \emph{read} the relevant parts of a calculus book, starting with material on: (i) partial derivatives, (ii) vector fields, (iii) gradients, (iv) differentials
-\item find a calculus III student and explain these topics to them
-\end{itemize}
-\end{frame}
 
 \end{document}
 

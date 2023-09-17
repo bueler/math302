@@ -30,3 +30,6 @@ daily:
 - name: Monday 18 September
   description: Section 2.4
   slides: assets/slides/F23/2-4.pdf
+- name: Friday 22 September
+  description: Section 2.6
+  slides: assets/slides/F23/2-6.pdf
