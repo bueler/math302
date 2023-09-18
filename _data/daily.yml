@@ -25,11 +25,15 @@ daily:
 - name: Wednesday 13 September
   description: no new material
 - name: Friday 15 September
+  description: no new material
+- name: Monday 18 September
   description: Section 2.3
   slides: assets/slides/F23/2-3.pdf
-- name: Monday 18 September
+- name: Wednesday 20 September
   description: Section 2.4
   slides: assets/slides/F23/2-4.pdf
 - name: Friday 22 September
+  description: no new material
+- name: Monday 25 September
   description: Section 2.6
   slides: assets/slides/F23/2-6.pdf
