@@ -25,6 +25,7 @@ You will need to know [Python](https://www.python.org/) to use these.
 
 * [dirfield.py](assets/codes/F23/dirfield.py):  Generate a direction field.  I used this for images in some slides.
 * [quadde.py](assets/codes/F23/quadde.py):  Draw direction field and family of solutions for dy/dx = y^2 - 9, from section 2.2.  Generates [this image](assets/codes/F23/quadde.png).  The solution family I wrote down in lecture is correct, but many solutions blow-up in finite time.
+* [e1.py](assets/codes/F23/e1.py):  Direction field and Euler solutions for E1 on Homework 2.6.
 
 ### no-programming solutions
 
