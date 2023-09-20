@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage[top=0.9in, bottom=0.9in, left=0.9in, right=1.1in]{geometry}
+
+\usepackage{graphicx,color,enumitem}
+\usepackage{amsmath,amsthm,amsbsy}
+\usepackage{palatino}
+
+\usepackage{tikz}
+
+%% Setup aproblem environment, 
+%% aproblem items
+%% subproblems environment
+%% subproblem items
+\makeatletter
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newlength\probsep
+\newlength\pshrinking
+\newif\iffirstprob
+
+\newenvironment{aproblems}%
+  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
+  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
+  \let\hproblem\aproblem
+  \advance\linewidth -\pshrinking
+  \advance\@totalleftmargin\pshrinking
+  \advance\leftskip\pshrinking}%
+  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
+
+\newcommand{\aproblem}{%
+  \setcounter{subprobcount}{0}%
+  \stepcounter{probcount}%
+  \def\@currentlabel{\arabic{probcount}}%
+  \ifhmode
+    \unskip \par
+  \fi
+%  \addpenalty{-4000}%
+  \iffirstprob\else\addvspace\probsep\fi
+  \firstprobfalse
+  \hskip -\labelwidth\hskip -\labelsep 
+  \hbox to\labelwidth{\hss\textbf{\arabic{probcount}.}}\hskip\labelsep
+}%
+
+\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
+\newcommand{\skipproblem}{\stepcounter{probcount}}
+
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+\newcommand{\epart}[1]{\noindent \textbf{(#1)} \,}
+\newcommand{\ds}{\displaystyle}
+
+\doclabel{Math F302 Worksheet}
+\docdate{20 September 2023}
+
+\begin{document}
+\renewcommand{\d}{\displaystyle}
+
+\centerline{{\Large \textsc{Some DEs to solve}}}
+
+\medskip
+\noindent
+You know how to solve first-order \emph{separable} (section 2.2) and \emph{linear} DEs.  Decide if these are separable or linear (or both or neither), and find the general solution if possible.
+
+\bigskip
+
+\begin{aproblems}
+\aproblem \quad $\ds \frac{dy}{dx} = 1 + x^2$
+\vspace{0.3in}
+
+\aproblem \quad $\ds \frac{dy}{dx} = 1 + y^2$
+\vfill
+
+\aproblem \quad $\ds \frac{dy}{dx} = 1 + y$
+\vfill
+
+\aproblem \quad $\ds \frac{dy}{dx} = 1 + x y$
+\vfill
+
+\aproblem \quad $\ds \frac{dy}{dx} = 1 + x y^2$
+\vfill
+
+\aproblem \quad $\ds \frac{dy}{dx} = x + x y$
+\vfill
+
+\end{aproblems}
+
+\end{document}

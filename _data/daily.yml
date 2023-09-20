@@ -32,6 +32,7 @@ daily:
 - name: Wednesday 20 September
   description: Section 2.4
   slides: assets/slides/F23/2-4.pdf
+  worksheet: assets/worksheets/F23/20sep.pdf
 - name: Friday 22 September
   description: no new material
 - name: Monday 25 September
