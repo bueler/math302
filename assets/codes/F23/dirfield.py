@@ -48,14 +48,14 @@ def dirfield(f,xybox,
         plt.plot([0,0],[xybox[2]-dy, xybox[3]+dy],
                  lw=1,color=axescolor)
 
-    lhx = 0.4*dx  # x half-length of slope lines
-    lhy = 0.4*dy  # y half-length of slope lines
+    hx = 0.35*dx  # maximum x half-length of slope lines
     for j in range(mx):
         for k in range(my):
             m = f(x[j],y[k])
-            theta = np.arctan(m)
-            plt.plot([x[j]-lhx*np.cos(theta),x[j]+lhx*np.cos(theta)],
-                     [y[k]-lhy*np.sin(theta),y[k]+lhy*np.sin(theta)],
+            theta = 0.9 * np.arctan(m / (dy/dx))  # correctly-scaled angle for user box?
+            lhx = hx * np.cos(theta)
+            plt.plot([x[j]-lhx,x[j]+lhx],
+                     [y[k]-lhx*m,y[k]+lhx*m],
                      lw=slopeslinewidth,color=slopescolor)
 
 def genfig(name,transparent=False,trim=False):
