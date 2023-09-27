@@ -35,3 +35,7 @@ homework:
   due: 11:59pm Sat 9/30
   override: exercises2-6.pdf
   comment: I improved the book's exercises.
+- name: 3.1
+  due: 11:59pm Mon 10/2
+  correct: 4, 14, 44
+  complete: 3, 11, 15, 19, 21, 35
