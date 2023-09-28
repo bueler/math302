@@ -39,3 +39,7 @@ homework:
   due: 11:59pm Mon 10/2
   correct: 6, 14, 44
   complete: 3, 11, 15, 19, 21, 35
+- name: 3.2
+  due: 11:59pm Sat 10/7
+  correct: 2
+  complete: 1, 5, 19
