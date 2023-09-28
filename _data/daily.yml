@@ -40,5 +40,10 @@ daily:
   description: Section 2.6
   slides: assets/slides/F23/2-6.pdf
 - name: Wednesday 27 September
+  description: no new material
+- name: Friday 29 September
   description: Section 3.1
   slides: assets/slides/F23/3-1.pdf
+- name: Monday 2 October
+  description: Section 3.2
+  slides: assets/slides/F23/3-2.pdf

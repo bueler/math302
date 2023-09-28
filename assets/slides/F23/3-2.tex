@@ -2,8 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{fancybox}
-\usepackage{environ,verbatim}
-\usepackage{tikz}
+\usepackage{environ,fancyvrb,tikz}
 
 \newcommand{\ds}{\displaystyle}
 \newcommand{\grad}{\nabla}
@@ -97,16 +96,11 @@
 \item {\color{blue} integral 4} was needed for first-order linear equations (\S2.3) and will keep re-appearing in chapter 4 and onward:
     $$\int x^n e^{ax}\,dx = \hspace{80mm}$$
 
-\vspace{35mm}
+\vspace{30mm}
 
-    \begin{itemize}
-    \item[example (a):] $\int x e^x\,dx = $
-    
-    \bigskip\bigskip
-    \item[example (b):] $\int_0^\infty x^2 e^{-x}\,dx = $
-    
-    \bigskip\bigskip
-    \end{itemize}
+$$\int x e^x\,dx = \hspace{80mm}$$
+
+$$\int_0^\infty x^2 e^{-x}\,dx = \hspace{80mm}$$
 \end{itemize}
 \end{frame}
 
@@ -171,8 +165,18 @@
      \begin{itemize}
      \item but separable!
      \end{itemize}
-\item \emph{at right:} draw phase portrait and typical solutions
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{explanation 1, cont.$^2$}
+
+\begin{itemize}
+\item a formula with the desired property: $\ds \frac{dP}{dt} = b P \left(N-P\right)$, $b>0$
+\item draw phase portrait and typical solutions
+\end{itemize}
+
+\vspace{50mm}
 \end{frame}
 
 
@@ -231,22 +235,18 @@ solves $\frac{dP}{dt} = P \left(a-bP\right)$ and $P(0)=P_0$
 
 \normalsize
 \begin{itemize}
-\item I modified part (b) to make it visual
-\item step 1: put the Table in a (Matlab) code
+\item first I put the Table in a Matlab code and plotted it
 
-\begin{Verbatim}[fontsize=\scriptsize]
+\medskip
+\begin{Verbatim}[fontsize=\footnotesize,xleftmargin=7mm]
 year = 1790:10:1950;    % list of 17 values
 pop = [  3.929,   5.308,   7.240,   9.638,  12.866, ...
         17.069,  23.192,  31.433,  38.558,  50.156, ...
         62.948,  75.996,  91.972, 105.711, 122.775, ...
        131.669, 150.697];
-\end{Verbatim}
-
-\item \dots and plot it; see result on next slide
-
-\begin{Verbatim}[fontsize=\scriptsize]
-plot(year, pop, '.k', 'markersize', 20)
-xlabel('census year'),  ylabel('population in millions')
+plot(year, pop, '.k')
+xlabel('census year')
+ylabel('population in millions')
 axis([1780 1960 0 160]),  grid on
 \end{Verbatim}
 \end{itemize}
@@ -265,18 +265,47 @@ axis([1780 1960 0 160]),  grid on
 
 \begin{itemize}
 \item we are supposed to construct a logistic model using the 1790, 1850, 1910 populations
-\item we use those years to determine $P_0,a,b$ in $P(t)=\frac{aP_0}{bP_0+(a-bP_0) e^{-at}}$
-\item let $t$ be the number of years after 1790, so $P_0=3.929$ (in millions)
-\item now 2 equations in 2 unknowns $a,b$:
+\item we use those years to determine $P_0,a,b$ in
+$$P(t)=\frac{aP_0}{bP_0+(a-bP_0) e^{-at}} = \frac{a}{b+(a/P_0-b) e^{-at}}$$
+\item let $t$ be number of years after 1790: $P_0=3.929$ (millions)
+\item now 2 equations in 2 unknowns $a,b$ from $P(60)=23.192$ and $P(120)=91.972$:
 \small
 \begin{align*}
-23.192 = \frac{aP_0}{aP_0 + (a-bP_0) e^{-60 a}}, \quad 91.972 = \frac{aP_0}{aP_0 + (a-bP_0) e^{-120 a}}
+23.192 &= \frac{a}{b+(a/3.929-b) e^{-60a}} \\
+91.972 &= \frac{a}{b+(a/3.929-b) e^{-120a}}
 \end{align*}
 \normalsize
-\item this algebra job is hard! FIXME
-\item I used Newton's method (not shown) to get
-    $$N=197.274, \quad A=49.2096, \quad b=0.000158863$$
-\item on the next slide I plot $P(t) = \frac{N}{1 + A e^{-Nbt}}$ in red on top of the data; the fit is surprisingly good!
+\item this algebra job is hard!
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+\frametitle{exercise 4, cont.$^2$}
+
+\noindent \textbf{Problem.}  Solve 2 equations in 2 unknowns $a,b$:
+\small
+\begin{align*}
+23.192 &= \frac{a}{b+(a/3.929-b) e^{-60a}} \\
+91.972 &= \frac{a}{b+(a/3.929-b) e^{-120a}}
+\end{align*}
+
+\noindent \textbf{My solution.}  I typed into \texttt{wolframalpha.com}:
+
+\begin{Verbatim}[fontsize=\footnotesize,xleftmargin=7mm]
+solve: 23.192 = a / (b + (a/3.929 - b) e^(-60a)),
+       91.972 = a / (b + (a/3.929 - b) e^(-120a))
+\end{Verbatim}
+
+It gave me one \emph{real} answer:
+	$$a = 0.0313395, b = 0.000158863$$
+
+\bigskip
+\begin{itemize}
+\item checking: with our values of $P_0,a,b$ it returns $P(60)=23.192$ and $P(120)=91.972$.
+
+\item on the next slide I plot $P(t)$ in red on top of the data; the fit is surprisingly good!
 \end{itemize}
 \end{frame}
 
@@ -290,8 +319,8 @@ axis([1780 1960 0 160]),  grid on
 \vspace{-2mm}
 \begin{itemize}
 \item in our model:
-    $$\lim_{t\to \infty} P(t) = \lim_{t\to \infty} \frac{N}{1 + A e^{-Nbt}} = \frac{N}{1+0} = N = 197 \text{ million}$$
-\item in fact the current US population is quite a bit larger than that, about 328 million at the start of 2019
+    $$\lim_{t\to \infty} P(t) = \lim_{t\to \infty} \frac{a}{b+(a/P_0-b) e^{-at}} = \frac{a}{b} = 197 \text{ million}$$
+\item in fact the current US population is definitely larger than that, about 328 million at the start of 2019
 \end{itemize}
 \end{frame}
 
@@ -309,7 +338,6 @@ where $k>0$ and the positive direction is downward.
 \end{quotation}
 
 \begin{itemize}
-\item I simplified the statement in (b), and removed part (c)
 \item note $m>0$ and $g>0$
 \item my first step is to simplify by dividing by $m$ and factoring $g$:
     $$\frac{dv}{dt} = g - \frac{k}{m} v^2 = g \left(1 - \frac{k}{mg} v^2\right)$$
@@ -331,6 +359,11 @@ where $k>0$ and the positive direction is downward.
 
 \begin{frame}{exercise 15, finished}
 
+\begin{quotation}
+\noindent (b) Determine the terminal velocity.  Compare to a phase portrait of the DE.
+\end{quotation}
+
+\vspace{60mm}
 \end{frame}
 
 
@@ -342,6 +375,7 @@ where $k>0$ and the positive direction is downward.
     \begin{itemize}
     \item \emph{read} example 2 on pages 100--101 regarding a chemical equation
     \item look for ``logistic differential equation'' on YouTube or Google
+    \item do you actually know how to do the integrals at the start of these slides?
     \item do Homework 3.2
     \end{itemize}
 \item up next are second-order linear equations in section 4.1
