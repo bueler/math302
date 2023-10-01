@@ -33,7 +33,7 @@
 			{% endif %}
 			{% if material.solutions %}
 			<tr>
-			    <td><a href="{{ material.solutions }}">solutions</a></td>
+			    <td><a href="{{ material.solutions }}">worksheet solutions</a></td>
 			</tr>
 			{% endif %}
 			{% if material.mfile %}
