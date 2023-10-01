@@ -23,12 +23,12 @@
 		<table class="inner">
 			{% if material.slides %}
 		  <tr>
-			    <td><a href="{{ material.slides }}">PDF slides</a></td>
+			    <td><a href="{{ material.slides }}">slides</a></td>
 			</tr>
 			{% endif %}
 			{% if material.worksheet %}
 		  <tr>
-			    <td><a href="{{ material.worksheet }}">PDF worksheet</a></td>
+			    <td><a href="{{ material.worksheet }}">worksheet</a></td>
 			</tr>
 			{% endif %}
 			{% if material.solutions %}
