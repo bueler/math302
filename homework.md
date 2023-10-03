@@ -14,6 +14,7 @@ title: Homework
     * See the [uploading Help page](techHelp.html) for scanning/uploading advice.
   * As indicated below, part of your Homework will be graded for correctness, and most just on completion and effort.  You should always get 100% on the latter!
   * Also see this [Advice on Doing Homework](hw-advice.html)!
+  * The sections are <span style="color:HotPink">**IN REVERSE ORDER**</span> so you don't have to scroll so far.
 
 <div style="padding-bottom: 10px"></div>
 
