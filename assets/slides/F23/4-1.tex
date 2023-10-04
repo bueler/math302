@@ -47,7 +47,7 @@ plan for these slides
 \item a first look at how to solve constant-coefficient, second-order linear equations (from \S4.3)
 \item a whole bunch of new language for higher-order linear equations
     \begin{itemize}
-    \item basically, \S4.1 is a lot of new words
+    \item basically, \alert{\S4.1 is a lot of new words}
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -70,7 +70,7 @@ plan for these slides
     \begin{itemize}
     \item \emph{homogeneous} means the right-hand side is zero
     \item \emph{constant-coefficient} means $b$ is constant
-    \item the solution is (``by inspection''?)
+    \item the solution is (``by inspection'')
         $$y(x) = A e^{-bx}$$
     \end{itemize}
 \end{itemize}
@@ -121,11 +121,11 @@ plan for these slides
 
 \begin{frame}{higher-order linear DEs: overview}
 
-for $n$th-order linear equations
+main idea of \S4.1:  for $n$th-order linear equations
 \begin{equation*}
-    a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = g(x)
+    a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = g(x),
 \end{equation*}
-\alert{new versions of all four comments in red on the previous slides still apply}
+\alert{new versions of all previous comments in red still apply!}
 \end{frame}
 
 
@@ -151,7 +151,7 @@ any multiple of, or sum of, solutions is again a solution
 
 \begin{frame}{solutions exist}
 
-\begin{theorem}  
+\begin{block}{Theorem 4.1.1}
 \begin{itemize}
 \item Consider the linear DE
 \begin{equation*}
@@ -166,7 +166,7 @@ y'(x_0) &= y_1 \\
 y^{(n-1)}(x_0) &= y_{n-1}
 \end{align*}
 \end{itemize}
-\end{theorem}
+\end{block}
 \end{frame}
 
 
@@ -210,9 +210,9 @@ y^{(n-1)}(x_0) &= y_{n-1}
 \begin{frame}{linear combination}
 
 \begin{itemize}
-\item examples 1 and 2 are from \S 4.3 but they let me illustrate the language introduced in \S 4.1 \alert{$\longleftarrow$ read this section!}
+\item examples 1 and 2 are from \S 4.3 (\alert{next}) but they let me illustrate the language introduced in \S 4.1 \alert{$\longleftarrow$ \emph{read} this!}
 \item for example,
-\begin{theorem}
+\begin{block}{Theorem 4.1.2}
 If $y_1(x), y_2(x), \dots, y_n(x)$ solve a linear and homogeneous DE
 \begin{equation*}
     a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = 0
@@ -220,7 +220,7 @@ If $y_1(x), y_2(x), \dots, y_n(x)$ solve a linear and homogeneous DE
 then any linear combination
     $$y(x) = c_1 y_1(x) + c_2 y_2(x) + \dots + c_n y_n(x)$$
 is also a solution.
-\end{theorem}
+\end{block}
 
 \item idea: for linear and homogeneous DEs you can form a more general solution from any set of solutions
     \begin{itemize}
@@ -261,8 +261,8 @@ are linearly dependent because
 
 \begin{itemize}
 \item generally it would require linear algebra thinking to check whether a set of functions is linearly independent
-\item \emph{but} there is a determinant to save you from thinking!
-\item definition.  given functions $f_1(x),\dots,f_n(x)$ the \emph{Wronskian} is the deteriminant where the rows are derivatives:
+\item \emph{but} there is a \alert{determinant} to save you from thinking!
+\item definition.  given functions $f_1(x),\dots,f_n(x)$ the \alert{Wronskian} is the determinant where the rows are derivatives:
     $$W(f_1,\dots,f_n) = \det \left(\begin{bmatrix}
     f_1 & f_2 & \dots & f_n \\
     f_1' & f_2' & \dots & f_n' \\
@@ -278,25 +278,26 @@ are linearly dependent because
 \end{frame}
 
 
-\begin{frame}{theorem}
+\begin{frame}{role of the Wronskian}
 
-\begin{theorem}  Suppose $\{y_1(x),y_2(x),\dots,y_n(x)\}$ are solutions of a homogeneous linear $n$th-order differential equation on some interval.  Then
+\begin{block}{Theorem 4.1.3}
+Suppose $\{y_1(x),y_2(x),\dots,y_n(x)\}$ are solutions of a homogeneous linear $n$th-order differential equation on some interval.  Then
 \begin{itemize}
 \item The set of solutions is linearly-independent if and only if the Wronskian $W(y_1,\dots,y_n)$ is nonzero on the interval.
 \item If the Wronskian $W(y_1,\dots,y_n)$ is nonzero at some point on the interval then it is nonzero on the whole interval.
 \end{itemize}
-\end{theorem}
-
+\end{block}
 \end{frame}
 
 
 \begin{frame}{fundamental set}
 
-definition.  a set of $n$ linearly-independent solutions $\{y_1(x),y_2(x),\dots,y_n(x)\}$ of the homogeneous linear $n$th-order differential equation
+\begin{block}{definition.}  a set of $n$ linearly-independent solutions $\{y_1(x),y_2(x),\dots,y_n(x)\}$ of the homogeneous linear $n$th-order differential equation
 \begin{equation*}
     a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y' + a_0(x) y = 0
 \end{equation*}
 is a \emph{fundamental set of solutions}
+\end{block}
 
 \begin{itemize}
 \item once you have a fundamental set then the \emph{general solution} of the above DE is
@@ -346,9 +347,9 @@ to learn this material, just listening to a lecture is \emph{not} enough
              \end{tabular}
 
 \bigskip
-         \item the homogeneous case is central for a while (\S4.3, 4.2)
-         \item more on nonhomogeneous equations is in \S4.4
-         \item there is quite a bit of new language in \S4.1!
+         \item the homogeneous case will be central for a while (\S4.3, 4.2)
+         \item more on nonhomogeneous equations in \S4.4
+         \item \alert{too much new language in \S4.1!}
 \end{itemize}
 \end{frame}
 
