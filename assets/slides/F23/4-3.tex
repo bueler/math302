@@ -1,0 +1,316 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+\usepackage{environ,fancyvrb}
+
+\usepackage{tikz}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\grad}{\nabla}
+\newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
+
+
+\beamertemplatenavigationsymbolsempty
+
+\title{4.3 Homogeneous linear equations \\ with constant coefficients}
+
+\subtitle{a lecture for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{Fall 2023}
+
+
+\usetheme{Pittsburgh}
+
+
+\begin{document}
+
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+\end{frame}
+
+\begin{frame}{linear, homogeneous, constant-coefficient}
+
+\begin{itemize}
+\item recall from \S4.1 slides that \underline{linear} DEs which are \underline{homogeneous} and \underline{constant-coefficient} \alert{always have exponential solutions}
+    \begin{itemize}
+    \item \emph{fact}: you can always find at least one solution $y=e^{mx}$
+    \item but each of the \underline{underlined} words is important to this fact
+    \end{itemize}
+\item \emph{example 1}: solve the ODE IVP
+    $$y'' -2 y' - 4 y = 0, \quad y(-1)=4, \, y'(-1)=0$$
+
+\vspace{30mm}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 1, finished}
+
+\vspace{35mm}
+
+\hfill \includegraphics[width=0.5\textwidth]{figs/expodeivp2nd}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{example 1: how I did it}
+
+\begin{itemize}
+\item here is how I solved for the constants and made the figure using Matlab:
+
+\bigskip
+\begin{Verbatim}[fontsize=\small]
+w = 1-sqrt(5);  z = 1+sqrt(5);
+A = [exp(-w), exp(-z); w*exp(-w), z*exp(-z)];
+b = [4; 0];
+c = A \ b           % get: c(1)=0.8409, c(2)=28.119
+
+x = -2:.01:1;
+y = c(1) * exp(w*x) + c(2) * exp(z*x); 
+plot(x,y),  grid on,  xlabel x,  ylabel y
+axis([-2 0.5 0 50])
+hold on,  plot(-1,4,'ko','markersize',12),  hold off
+\end{Verbatim}
+
+\bigskip
+\item I am committed to helping you use a computer for math!
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 2}
+
+\begin{itemize}
+\item \emph{example 2}: find the general solution of the ODE
+    $$y'' + y = 0$$
+\end{itemize}
+
+\vspace{55mm}
+\end{frame}
+
+
+\begin{frame}{Euler's helpful identity}
+
+\begin{itemize}
+\item Euler recognized the connection between imaginary numbers and trig functions:
+    $$e^{i\theta} = \cos\theta + i \sin\theta$$
+\item \emph{exercise}: Explain \emph{Euler's identity} above using the Taylor series of $e^x,\cos x,\sin x$ at basepoint $x_0=0$.  Also draw a picture.
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{example 3}
+
+\begin{itemize}
+\item from Euler's identity we also know
+    $$e^{a+ib} = e^a(\cos b + i \sin b) \hspace{50mm}$$
+\item \emph{example 3}: find the general solution of the ODE
+    $$y''-4y'+5y=0$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{the major facts of \S4.3}
+
+for constant-coefficient and homogeneous linear ODEs
+    $$a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = 0$$
+
+\begin{itemize}
+\item substitution of $y=e^{mx}$ yields (polynomial) \emph{auxiliary equation}
+    $$a_n m^n + a_{n-1} m^{n-1} + \dots + a_1 m + a_0 = 0$$
+\item any polynomial eqn.~has at least one \emph{complex} root (solution)
+    \begin{itemize}
+    \item auxiliary eqn.~has at least $1$ and at most $n$ distinct roots
+    \item some roots may be repeated
+    \end{itemize}
+\item there is a \underline{recipe (next slide!)} which generates a fundamental set of $n$ real solutions and a general solution to the ODE:
+    $$y_1(x),\dots,y_n(x) \quad \implies \quad y(x) = c_1 y_1(x) + \dots + c_n y_n(x)$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{main recipe of \S4.3}
+
+find all roots of the auxiliary equation
+    $$a_n m^n + a_{n-1} m^{n-1} + \dots + a_1 m + a_0 = 0$$
+and then build a fundamental solution set this way:
+\begin{itemize}
+\item[case I:]   if $m$ is a real root then
+    $$e^{mx} \,\, \text{ is in the set}$$
+\item[case II:]  if $m$ is a real root which is repeated $k$ times then
+    $$e^{mx}, \, x e^{mx}, \, \dots, \, x^{k-1} e^{mx} \,\, \text{ are in the set}$$
+\item[case III:] if $m=a\pm i b$ is a complex root then
+    $$e^{ax} \cos(bx), \, e^{ax} \sin(bx) \,\, \text{ are in the set}$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{exercise 5 in \S4.3}
+
+\begin{itemize}
+\item \emph{exercise 5}:  find the general solution of the second-order DE
+    $$y''+8y'+16y=0$$
+\end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{exercise 23 in \S4.3}
+
+\begin{itemize}
+\item \emph{exercise 23}:  find the general solution of the higher-order DE
+    $$y^{(4)} + y''' + y'' = 0$$
+\end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{exercise 55 in \S4.3}
+
+\begin{itemize}
+\item \emph{exercise 55}:  find a constant-coefficient, homogeneous linear DE whose general solution is
+    $$y(x) = c_1 e^{-x} \cos x + c_2 e^{-x} \sin x$$
+\end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{like exercise 69 in \S4.3}
+
+\begin{itemize}
+\item \emph{like exercise 69}:  solve the ODE IVP
+\begin{align*}
+& 2 y^{(4)} + 13 y''' + 21 y'' + 2 y' - 8 y = 0 \\
+& y(0)=-2, \, y'(0)=6, \, y''(0)=3, \, y'''(0)=\tfrac{1}{2}
+\end{align*}
+\emph{hint}.  you may use a computer algebra system (CAS)
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{exercise 69: how to do it}
+
+\begin{Verbatim}[fontsize=\footnotesize]
+>> m = roots([2,13,21,2,-8])'
+m =
+          -4          -2          -1         0.5
+>> A = [1 1 1 1; m; m.^2; m.^3]
+A =
+           1           1           1           1
+          -4          -2          -1         0.5
+          16           4           1        0.25
+         -64          -8          -1       0.125
+>> b = [-2 6 3 0.5]';
+>> c = A \ b
+c =
+    -0.48148
+         5.4
+     -12.222
+      5.3037
+\end{Verbatim}
+
+\medskip
+\emph{conclusion}:  \alert{a computer is very effective} \dots if you know where you are going
+\end{frame}
+
+
+\begin{frame}{hyperbolic functions}
+
+\begin{itemize}
+\item Euler's identity $\alert{e^{i\theta}=\cos\theta+i\sin\theta}$, for complex exponentials, has an analog for real exponentials
+
+\noindent \begin{minipage}[t]{0.45\textwidth}
+\item by definition:
+\begin{align*}
+\cosh x &= \frac{e^x + e^{-x}}{2} \\
+\sinh x &= \frac{e^x - e^{-x}}{2}
+\end{align*}
+
+\vspace{-5mm}
+    \begin{itemize}
+    \item the even and odd parts of the exponential, resp.
+    \item called \emph{hyperbolic} functions
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.46\textwidth}
+\vspace{5mm}
+
+\hfill \includegraphics[width=0.9\textwidth]{figs/coshsinh}
+\end{minipage}
+
+\bigskip
+\item it is easy to see that
+    \begin{itemize}
+    \item $\alert{e^x = \cosh x + \sinh x}$
+    \item $(\cosh x)' = \sinh x$, \, $(\sinh x)' = \cosh x$
+    \item $y=c_1 \cosh x + c_2 \sinh x$ is a general solution to $y''-y=0$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{some nice cases}
+
+\begin{itemize}
+\item the following general solutions can all be computed by substituting $y=e^{mx}$, and getting the auxiliary equation, etc.
+\item \dots but it is good to \emph{quickly} apply these special cases:
+\newcommand{\genarrow}{\qquad \longrightarrow \qquad}
+\begin{align*}
+ &\quad\,\, {\scriptsize \begin{matrix} \text{has general} \\ \text{solution} \end{matrix} } \\
+y' = k y &\genarrow y=Ae^{kx} \\
+y'' + k^2 y = 0 &\genarrow y=c_1\cos(kx) + c_2\sin(kx) \\
+y'' - k^2 y = 0 &\genarrow \left[\begin{matrix} y=c_1e^{kx}+c_2e^{-kx} \\
+                                      \text{or} \\
+                                      y=b_1\cosh(k x) + b_2\sinh(k x)\end{matrix}\right] \\
+y'' = 0 &\genarrow y=c_1 + c_2 x
+\end{align*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{expectations}
+
+to learn this material, just listening to a lecture is \emph{not} enough
+     \begin{itemize}
+     \item \emph{read} section 4.3 in the textbook
+     \item find YouTube videos on ``second order differential equations'' \dots then look for the constant-coefficient case
+     \item for \S4.3 you at least need to know these terms:
+
+\medskip
+             \begin{tabular}{ll}
+             \emph{homogeneous} \\
+             \emph{linearly (in)dependent} \\
+             \emph{Wronskian} \\
+             \emph{fundamental set of solutions} \\
+             \emph{linear combination} \\
+             \emph{general solution}
+             \end{tabular}
+
+\medskip
+     \item when we go back to \S4.2:  why does the repeated-roots case generate additional linearly-independent solutions via extra factors of ``$x$''?
+     \end{itemize}
+\end{frame}
+
+\end{document}
+
