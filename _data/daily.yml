@@ -1,8 +1,8 @@
 semester: Fall 2023
 daily:
-#- name: Wednesday 4 October
-#  description: Section 4.1
-#  slides: assets/slides/F23/4-1.pdf
+- name: Wednesday 4 October
+  description: Section 4.1
+  slides: assets/slides/F23/4-1.pdf
 - name: Monday 2 October
   description: Section 3.2
   slides: assets/slides/F23/3-2.pdf
