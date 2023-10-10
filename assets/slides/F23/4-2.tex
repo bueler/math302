@@ -1,0 +1,189 @@
+\documentclass[dvipsnames]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+\usepackage{environ,fancyvrb}
+
+\usepackage{tikz}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\grad}{\nabla}
+\newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
+
+
+\beamertemplatenavigationsymbolsempty
+
+\title{4.2 Reduction of order}
+
+\subtitle{a lecture for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{Fall 2023}
+
+
+\usetheme{Pittsburgh}
+
+
+\begin{document}
+
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+\end{frame}
+
+
+
+\begin{frame}{a 2nd-order example}
+
+\begin{itemize}
+\item for this example, \S4.3 methods \emph{do not} work
+
+\dots but we can find the solution anyway
+\item \emph{example 1}: find the general solution: \quad $x y'' + y' = 0$
+\end{itemize}
+
+% solve by:
+%  x u' + u = 0
+%  du/u = -dx/x
+%  ln|u| = - ln|x| + c
+%  y' = u = A/x
+%  y = A ln|x| + c_1
+% fund set:  {1,ln|x|}
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{the \S4.3 rule needing explanation}
+
+\begin{itemize}
+\item the next example is one we \emph{do} know how to solve
+
+\dots but via a \S4.3 rule for which I owe you justification
+\item \emph{example 2}:  find the general solution: \quad $y'' - 6 y' + 9 y = 0$
+\end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{reducing the order 1: first illustration}
+
+\begin{itemize}
+\item \emph{reduction of order} is a technique:
+    \begin{itemize}
+    \item substitute $y(x) = u(x) y_1(x)$
+    \item derive a DE for $u$ which has no zeroth-order term
+    \item solve a first-order equation for $w=u'$
+    \end{itemize}
+\item key understanding: the \alert{purpose} is to \alert{find another linearly-independent solution} given you have $y_1(x)$
+\item \emph{example 2 again}:  $y_1(x)=e^{3x}$ is known; find another
+    $$y'' - 6 y' + 9 y = 0 \hspace{70mm}$$
+\end{itemize}
+
+\vspace{50mm}
+\end{frame}
+
+
+\begin{frame}{reducing the order 2: general case}
+
+suppose $y_1(x)$ is a solution to 2nd-order homogeneous DE
+    $$y'' + P(x) y' +  Q(x) y \stackrel{\ast}{=} 0,$$
+and we seek another solution of the form $y(x) = u(x) y_1(x)$:
+\begin{itemize}
+\item compute $y' = u' y_1 + u y_1'$ and $y'' = u'' y_1 + 2 u' y_1' + u y_1''$
+    $$\hspace{-70mm} \text{\footnotesize  \emph{check it}: } \quad y'' = $$
+\item substitute into $\ast$:
+    $$(u'' y_1 + 2 u' y_1' + u y_1'') + P (u' y_1 + u y_1') + Q u y_1 = 0$$
+\item group by derivatives on $u$:
+    $$y_1 u'' + (2 y_1' + P y_1) u' + ({\color{Green} y_1'' + P y_1' + Q y_1}) u = 0$$
+\item term in {\color{Green} green} is zero (\emph{why?}) so $u$ solves
+    $$y_1 u'' + (2 y_1' + P y_1) u' = 0$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{reducing the order 3: a first-order equation}
+
+\begin{itemize}
+\item we are seeking a solution of the form $y = u y_1$, and $u$ solves
+    $$y_1 u'' + (2 y_1' + P y_1) u' = 0$$
+\item there is \alert{no zeroth-order term} so we can solve it
+\item the equation is first-order and separable for $w=u'$:
+\begin{gather*}
+y_1 w' + (2 y_1' + P y_1) w = 0 \\
+\frac{dw}{dx} = -\frac{(2 y_1' + P y_1) w}{y_1} \\
+\frac{dw}{w} = - \left(2 \frac{y_1'}{y_1} + P\right)\, dx \\
+\int \frac{dw}{w} = - 2 \int \frac{y_1'(x)}{y_1(x)}\,dx - \int P(x)\,dx
+\end{gather*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{reducing the order 4: the second solution}
+
+\begin{itemize}
+\item continuing:
+\begin{gather*}
+\int \frac{dw}{w} = - 2 \int \frac{y_1'(x)}{y_1(x)}\,dx - \int P(x)\,dx \\
+\ln|w(x)| = - 2 \ln|y_1(x)| - \int P(x)\,dx + C \\
+w(x) = c_1 \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}
+\end{gather*}
+\item recall $u'=w$; thus integrating again gives
+    $$u(x) = c_1 \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx + c_2$$
+\item the second solution is \alert{the new part of $y=uy_1$}:
+    $$y_2(x) = y_1(x) \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx$$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{example 4}
+
+\begin{itemize}
+\item in this example we tell a complete story: we \emph{guess} a first solution and then derive a second one by reduction of order
+\item \emph{example 4}: find the general solution (for $x>0$)
+    $$x^2 y'' + 5 x y' + 4 y = 0$$
+\end{itemize}
+
+\vspace{60mm}
+\end{frame}
+
+
+\begin{frame}{example 4, finished}
+
+\vspace{60mm}
+
+\hfill $y(x) = c_1 x^{-2} + c_2 x^{-2} \ln x$
+\end{frame}
+
+
+\begin{frame}{expectations}
+
+to learn this material, just listening to a lecture is \emph{not} enough
+     \begin{itemize}
+     \item \emph{read} section 4.2 in the textbook
+     
+\item note example 4 is a \emph{Cauchy-Euler} type of differential equation
+     \begin{itemize}
+     \item covered in \S 4.7 \dots which we will otherwise skip
+     \end{itemize}
+\item to do reduction of order on a quiz or exam you have a \alert{choice}
+\item do you
+     \begin{enumerate}
+     \item memorize \fbox{$y_2(x) = y_1(x) \int \frac{e^{-\int P(x)\,dx}}{y_1(x)^2}\,dx$}\,?
+
+\medskip
+     \item or substitute $y(x) = u(x) y_1(x)$ and see how it comes out?
+     \end{enumerate}
+     \end{itemize}
+\end{frame}
+
+\end{document}
+
