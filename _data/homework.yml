@@ -3,7 +3,7 @@ home: assets/homework/F23
 homework:
 - name: 4.4
   due: 11:59pm Mon 10/23
-  correct: 2, 8, 28, 34
+  correct: 2, 10, 28, 34
   complete: 1, 5, 7, 15, 19, 27, 31, 33
 - name: 4.2
   due: 11:59pm Sat 10/21
