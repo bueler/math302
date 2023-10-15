@@ -6,6 +6,8 @@ exams:
   info: <b>in class</b>
   sections: 1.1, 1.2, 1.3, 2.1, 2.2, 2.3,
   sectcont: 2.4, 3.1, 3.2, 4.1, 4.3
+  sample: samplemid.pdf
+  #samplesolutions: samplemidsolns.pdf
 - name: Final Exam
   date: Wednesday 13 December
   info: <b>in class</b>, 10:15--12:15

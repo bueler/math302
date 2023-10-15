@@ -41,9 +41,14 @@
   </td>
   <td>
       <table class="inner">
-        {% if exam.blank %}
+        {% if exam.sample %}
         <tr>
-            <td><a href="{{ data.home }}/{{ exam.blank }}">blank</a></td>
+            <td><a href="{{ data.home }}/{{ exam.sample }}">sample exam</a></td>
+        </tr>
+        {% endif %}
+        {% if exam.samplesolutions %}
+        <tr>
+            <td><a href="{{ data.home }}/{{ exam.samplesolutions }}">solutions to sample</a></td>
         </tr>
         {% endif %}
         {% if exam.solutions %}
