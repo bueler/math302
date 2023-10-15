@@ -1,8 +1,12 @@
 semester: Fall 2023
 daily:
-- name: Friday 13 October
+- name: Wednesday 18 October
+  description: Midterm Exam!
+- name: Monday 16 October
   description: Section 4.2
   slides: assets/slides/F23/4-2.pdf
+- name: Friday 13 October
+  description: no new material
 - name: Wednesday 11 October
   description: Section 4.3
   slides: assets/slides/F23/4-3.pdf
