@@ -14,6 +14,7 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [exdirfield.m](assets/codes/F23/exdirfield.m):  This is just one example.  To generate direction fields (slope fields) in Matlab/Octave and other languages, see the [wikipedia page on slope fields](https://en.wikipedia.org/wiki/Slope_field#Software_for_plotting_slope_fields).
 * [streamcyl.m](assets/codes/F23/streamcyl.m): Generate a contour figure, showing streamlines around a cylinder, for Example 5 in the slides for section 2.4.
 * [census.m](assets/codes/F23/census.m): Plot some US census data for an example in the slides in section 3.2.
+* [massspringplot.m](assets/codes/F23/massspringplot.m): Used for section 5.1 slides.
 
 ### Matlab: Numerical methods
 
