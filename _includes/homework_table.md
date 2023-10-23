@@ -20,7 +20,11 @@
         </tr>
         {% endif %}
         <tr>
+        {% if homework.readsection %}
+          <td>please read section {{ homework.readsection }}</td>
+        {% else %}
           <td>please read section {{ homework.name }}</td>
+        {% endif %}
         </tr>
         {% if homework.correct %}
         <tr>

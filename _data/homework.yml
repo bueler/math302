@@ -1,7 +1,13 @@
 semester: Fall 2023
 home: assets/homework/F23
 homework:
+- name: 5.1 part II
+  readsection: 5.1
+  due: 11:59pm Mon 10/30
+  correct: 30, 37, 38
+  complete: 3, 25, 41, 43
 - name: 5.1 part I
+  readsection: 5.1
   due: 11:59pm Sat 10/28
   correct: 6, 26
   complete: 7, 11, 23, 27, 29
