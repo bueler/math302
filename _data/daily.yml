@@ -4,6 +4,7 @@ daily:
   description: Section 5.1
   slides: assets/slides/F23/5-1.pdf
   worksheet: assets/worksheets/F23/23oct.pdf
+  solutions: assets/worksheets/F23/solns/23oct.jpg
 - name: Friday 20 October
   description: Section 4.4
   slides: assets/slides/F23/4-4.pdf
