@@ -16,6 +16,7 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [census.m](assets/codes/F23/census.m): Plot some US census data for an example in the slides in section 3.2.
 * [massspringplot.m](assets/codes/F23/massspringplot.m): Used for section 5.1 slides.
 * [dampingcases.m](assets/codes/F23/dampingcases.m): Used for section 5.1 slides.  Calls [massspringplot.m](assets/codes/F23/massspringplot.m).  Generates [this figure](assets/codes/F23/figs/dampingcases.pdf).
+* [pendmovie.m](assets/codes/F23/pendmovie.m):  Make a movie of a nonlinear pendulum, using [Matlab's ode45]().  Generates [this .gif movie](assets/codes/S19/pendmovie.gif).
 
 ### Matlab: Numerical methods
 
