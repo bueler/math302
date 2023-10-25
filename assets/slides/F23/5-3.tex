@@ -2,7 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{fancybox}
-\usepackage{environ,fancyvrb}
+\usepackage{environ,fancyvrb,xspace}
 
 \usepackage{tikz}
 
@@ -12,7 +12,7 @@
 \newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
 \newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
 
-\newcommand{\Matlab}{\textsc{Matlab}}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
 
 \newcommand\enumnum[1]{{\renewcommand{\insertenumlabel}{#1}%
       \usebeamertemplate{enumerate item} \,}}
@@ -47,11 +47,13 @@
 
 \begin{frame}{outline}
 
-examples of nonlinear 2nd-order differential equations (DEs):
+examples of \alert{nonlinear} 2nd-order differential equations (DEs):
 
 \begin{itemize}
 \item pendulum (\S 5.3)
-\item using a numerical solver in \Matlab (see \S4.10)
+    \begin{itemize}
+    \item[$\circ$] using a numerical solver in \Matlab (see \S4.10)
+    \end{itemize}
 \item hard and soft springs (\S 5.3)
 \item non-constant gravity: from earth to high orbit (\S 5.3)
 \item dependent variable missing (\S 4.10)
@@ -65,18 +67,18 @@ examples of nonlinear 2nd-order differential equations (DEs):
 \begin{column}{0.7\textwidth}
 \begin{itemize}
 \item suppose a pendulum oscillates (swings back and forth) without resistance
-\item if you believe my \S5.1 slides then it must be modeled by a 2nd-order linear DE
+\item because it oscillates it must be modeled by a 2nd-order linear DE
      \begin{itemize}
-     \item this is true for small oscillations 
-     \item for bigger oscillations (more than 20$^\circ$?) a nonlinear model is more accurate
+     \item approximately linear for small oscillations 
+     \item for bigger oscillations ($>20^\circ$?) a nonlinear model is more accurate
      \end{itemize}
-\item the DE which comes from the diagram:
+\item from the diagram:
     $$m \ell \frac{d^2\theta}{dt^2} = - mg \sin\theta$$
 
 \vspace{-2mm}
      \begin{itemize}
      \item you are not responsible for the derivation
-     \item \dots but $s=\ell \theta$ is arclength, so $\ell \frac{d^2\theta}{dt^2}$ is acceleration, and only the tangential force is relevant
+     \item but: $s=\ell \theta$ is arclength, so $\ell \frac{d^2\theta}{dt^2}$ is acceleration, and only the tangential force causes motion
      \end{itemize}
 \end{itemize}
 \end{column}
@@ -93,10 +95,12 @@ examples of nonlinear 2nd-order differential equations (DEs):
 \item divide by $m\ell$ and move term: \quad $\displaystyle \frac{d^2\theta}{dt^2} + \frac{g}{\ell} \sin\theta = 0$
 \item if $\displaystyle \omega = \sqrt{\frac{g}{\ell}}$ then \, $\displaystyle \boxed{\frac{d^2\theta}{dt^2} + \omega^2 \sin\theta = 0}$ \, for any angle
 \item recall $\sin\theta \approx \theta$ for small $\theta$ because $\sin z = z - \frac{z^3}{3!} + \frac{z^5}{5!} - \dots$
-\item a \emph{small angle model}:
+\item a \emph{small-angle model}:
     $$\boxed{\frac{d^2\theta}{dt^2} + \omega^2 \theta = 0} \hspace{20mm}$$
     \begin{itemize}
-    \item solution: $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
+    \item small-angle solution:
+
+$\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
     \end{itemize}
 \end{itemize}
 
@@ -111,16 +115,16 @@ examples of nonlinear 2nd-order differential equations (DEs):
 \begin{center}
 \begin{tabular}{c|c}
 nonlinear: any angles & linearized: small angles \\ \hline
-$\Huge \strut$ $\displaystyle {\color{Green} \theta'' + \omega^2 \sin\theta = 0}$ & $\displaystyle \theta'' + \omega^2 \theta = 0$ \\ \hline
+$\Huge \strut$ $\displaystyle \alert{\theta'' + \omega^2 \sin\theta = 0}$ & $\displaystyle \theta'' + \omega^2 \theta = 0$ \\ \hline
 $\huge \strut$ solution? & $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
 \end{tabular}
 \end{center}
 
 \begin{itemize}
 \item $\omega = \sqrt{g/\ell\,}$ in both DEs
-\item we don't know how to solve a nonlinear DE like a {\color{Green} pendulum}
+\item we do \emph{not} know how to solve a nonlinear DE like this pendulum
     \begin{itemize}
-    \item the term ``${\color{Green} \sin\theta}$'' is not linear: $\sin(a+b)\ne \sin(a)+\sin(b)$
+    \item the term $\alert{\sin\theta}$ is not linear: $\sin(a+b)\ne \sin(a)+\sin(b)$
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -129,20 +133,28 @@ $\huge \strut$ solution? & $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
 \begin{frame}{what to do about a nonlinear DE?}
 
 \begin{itemize}
-\item for example, the pendulum DE:
-    $$\theta'' + \omega^2 \sin\theta = 0$$
-\item \alert{read section 4.10!}  $\quad \longleftarrow$ \emph{gives advice, not a method}
+\item for example, the pendulum DE: \quad $\theta'' + \omega^2 \sin\theta = 0$
 \item what to do about a nonlinear equation like this?
     \begin{itemize}
     \item $\theta=e^{rt}$ is not a solution for any $r$ (real or complex)
-    \item using the concept of \emph{energy} makes progress (Mini-Project 3) \dots but we get a hard-to-solve 1st-order equation
-    \item using infinite series can make progress too (Chapter 6) \dots but basically only gives approximations
     \end{itemize}
-\item numerical approximations can be used for an IVP!
+\item[1.] \alert{read section 4.10}  $\quad \longleftarrow$ \emph{gives advice, not a method}
+\item[2.] use concept of \emph{energy}
     \begin{itemize}
-    \item Euler's method? \dots inefficient but would work
-    \item \emph{but} the equation is second order \dots how does Euler even work?
-    \item next: using an efficient ``black box'' solver in \footnotesize \Matlab
+    \item makes progress (up-coming worksheet)
+    \item but we just get a 1st-order DE which we might be unsolveable
+    \end{itemize}
+\item[3.] use \emph{infinite series}
+    \begin{itemize}
+    \item makes progress (Chapter 6)
+    \item but only gives approximations
+    \end{itemize}
+\item[4.] \emph{numerical approximations}
+    \begin{itemize}
+    \item Euler's method is just first of many such methods
+    \item more in Chapter 9
+    \item requires a specific IVP
+    \item example next: using an efficient ``black box'' solver in \footnotesize \Matlab
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -151,12 +163,13 @@ $\huge \strut$ solution? & $\theta(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t)$
 \begin{frame}{systems of 1st-order ODEs}
 
 \medskip
+need this idea:
 
-   \centerline{idea: \alert{2nd-order ODE is equivalent to a system of 1st-order ODEs}}
+   \centerline{\alert{a 2nd-order ODE is equivalent to a system of 1st-order ODEs}}
 
 \bigskip
 \noindent \emph{Example.} convert into a 1st-order system:
-    $$x''+5(x')^2+\sin x \stackrel{\ast}{=} \sqrt{t}$$
+    $$x''+5(x')^2+\sin x = \sqrt{t}$$
 
 \noindent \emph{Solution.}  Second derivative $x''(t)$ is merely the derivative of $x'(t)$.  So give $x'$ a name:
     $$y = x'.$$
@@ -167,10 +180,6 @@ Rearrange above two equations to a system:
 x' &= y \\
 y' &= - 5 y^2 - \sin x + \sqrt{t}
 \end{align*}
-
-\medskip
-\scriptsize
-\alert{Summary: Ignore the complexity of $\ast$.  Don't solve anything, just restate the problem.}
 \end{frame}
 
 
@@ -248,7 +257,7 @@ ans =  0.068907
 \medskip
 where \texttt{tspan = [t0 tf]}, integrates the system of differential equations $y'=f(t,y)$ from \texttt{t0} to \texttt{tf} with initial conditions \texttt{y0}. Each row in the solution array \texttt{y} corresponds to a value returned in column vector \texttt{t}.
 \end{quote}
-\item see the \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\Matlab page} for examples of functions $f(t,y)$ for the \texttt{odefun} argument
+\item see the above \Matlab page for examples of functions $f(t,y)$ for the \texttt{odefun} argument
 \item note further fine print about the \texttt{tspan} argument:
    \begin{itemize}
    \footnotesize
@@ -513,7 +522,7 @@ ans =
 \small
 a bit of hard-earned \alert{extra credit} for any of these:
 \begin{enumerate}
-\item energy methods allow you to solve the above problem \emph{by hand}; see Mini-Project 3 and do so
+\item energy methods allow you to solve the above problem \emph{by hand}; see upcoming worksheet on how to do it
 \item one can add air drag by a reasonable model and use same numerical methods; do so
 \item given air drag from \enumnum{2}, will the bullet survive the heating? (ceramic bullet?)
     \begin{itemize}
@@ -536,7 +545,7 @@ a bit of hard-earned \alert{extra credit} for any of these:
     \item it uses a pair of \href{https://en.wikipedia.org/wiki/Runge_Kutta_methods}{Runge-Kutta} methods
     \item \dots so it can adaptively choose its step size
     \item see the \href{https://www.mathworks.com/help/matlab/ref/ode45.html}{\Matlab reference page for \texttt{ode45}}
-    \item covered in Chapter 9 ($=$ \href{https://bueler.github.io/math302/week10.html}{Week 10})
+    \item covered in Chapter 9
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -555,7 +564,7 @@ $y'' = f(t,y,y')$ & \emph{too general} &  \\ \hline
 $y'' = f(t)$ & just antidifferentiate & $y' = F(t)+c \large\strut$ \\
 & & where $F(t) = \int f(t)\,dt$ \\ \hline
 $y'' = f(y)$ & compute energy & $\frac{1}{2} (y')^2 + P(y) = c \large\strut$\\
-& \emph{[Mini-Project 3]} & where $P(z) = -\int f(z)\,dz$ \\ \hline
+& \emph{[worksheet]} & where $P(z) = -\int f(z)\,dz$ \\ \hline
 $y'' = f(y')$ & substitute $u=y'$ & $Q(y') = t + c \large\strut$\\
 & \emph{[\S4.10]} & where $Q(u)=\int \frac{du}{f(u)}$
 \end{tabular}
