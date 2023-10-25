@@ -2,6 +2,7 @@ function massspringplot(m,beta,k,x0,v0,T)
 % MASSSPRINGPLOT  Make a plot on 0 < t < T of solution to
 %     m x'' + beta x' + k x = 0
 % with initial conditions x(0) = x0, x'(0) = v0.
+% Usage:  massspringplot(m,beta,k,x0,v0,T)
 
 omega = sqrt(k/m);  lambda = beta/(2*m);
 D = lambda^2 - omega^2;
