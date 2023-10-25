@@ -1,5 +1,7 @@
 semester: Fall 2023
 daily:
+- name: Wednesday 25 October
+  description: no new material
 - name: Monday 23 October
   description: Section 5.1
   slides: assets/slides/F23/5-1.pdf
