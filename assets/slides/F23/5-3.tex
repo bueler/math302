@@ -311,9 +311,9 @@ This is $z'=f(t,z)$ so:
 >> [tt,zz] = ode45(f,[0:.01:20],[3;0]);
 >> plot(tt,zz),  xlabel t
 \end{Verbatim}
-\item one can also make a \href{https://bueler.github.io/math302/assets/codes/pendmovie.gif}{movie}
+\item one can also make a \href{https://bueler.github.io/math302/assets/codes/S19/pendmovie.gif}{movie}
     \begin{itemize}
-    \item see \href{https://bueler.github.io/math302/assets/codes/pendmovie.m}{\texttt{pendmovie.m}} at \href{https://bueler.github.io/math302/codes.html}{Codes} at \href{https://bueler.github.io/math302/}{\texttt{bueler.github.io/math302}}
+    \item see \href{https://bueler.github.io/math302/assets/codes/F23/pendmovie.m}{\texttt{pendmovie.m}} at the public \href{https://bueler.github.io/math302/codes.html}{Codes tab}
     \end{itemize}
 \end{itemize}
 
@@ -447,14 +447,12 @@ and use \texttt{ode45}:
 
 \small
 
-\noindent \emph{example}.  We want to use a bullet weighting 100 grams to destroy a satellite in geosynchronous (geostationary) orbit, approximately $36,000$ km.  What velocity is needed if we ignore air drag?
+\noindent \emph{example}.  We want to use a bullet weighting 100 grams to destroy a satellite in geosynchronous (geostationary) orbit, approximately $36000$ km.  What velocity is needed if we ignore air drag?
 
 \medskip
-\noindent \emph{solution}.  Constant gravity $g$ will \emph{not} do.
+\noindent \emph{solution}.  Constant gravity $g$ will \emph{not} do.  The gravity decreases
 
-\noindent The gravity decreases as the bullet rises.
-
-\noindent From \S5.3 we read Newton's law of gravitation:
+\noindent as the bullet rises.  \S5.3 states Newton's law of gravitation:
     $$m y'' = -k \frac{Mm}{y^2} \text{ where $m=$(bullet mass), $M=$(earth mass)}$$
 
 \vspace{-30mm}
@@ -468,7 +466,7 @@ After simplification (see text), and with initial conditions, this is
 We take $R=6.4\times 10^6$ m $=$(radius of earth) and $g=9.8$.  (\emph{Note bullet mass does not matter.  Earth's mass is built into $g$.})
 
 \medskip
-Question: Find $V$ so that the maximum of $y(t)$ is $3.6\times 10^7$ m.
+\alert{The Question: Find $V$ so that the maximum of $y(t)$ solving the above IVP is $3.6\times 10^7$ m.}
 \end{frame}
 
 
@@ -522,9 +520,9 @@ ans =
 \small
 a bit of hard-earned \alert{extra credit} for any of these:
 \begin{enumerate}
-\item energy methods allow you to solve the above problem \emph{by hand}; see upcoming worksheet on how to do it
-\item one can add air drag by a reasonable model and use same numerical methods; do so
-\item given air drag from \enumnum{2}, will the bullet survive the heating? (ceramic bullet?)
+\item energy methods allow you to solve the above problem \emph{by hand}; see upcoming worksheet on how to do it,
+\item but on the other hand one can add air drag by a reasonable model and use the \emph{same} numerical method from \Matlab; do so
+\item given air drag from \enumnum{2}, will the bullet survive the heating? (ablative ceramic-coated tungsten bullet?)
     \begin{itemize}
     \item this will need another DE coupled to the first
     \end{itemize}
@@ -592,40 +590,19 @@ $y'' = f(y')$ & substitute $u=y'$ & $Q(y') = t + c \large\strut$\\
 
 \begin{frame}{expectations}
 
-\begin{itemize}
-\item just watching this video is \emph{not} enough!
+to learn this material, just listening to a lecture is \emph{not} enough
      \begin{itemize}
-     \item see ``found online'' videos at
-
-     \centerline{\href{https://bueler.github.io/math302/week8.html}{\tt \color{cyan} bueler.github.io/math302/week8.html}}
      \item \emph{read} section 4.10 in the textbook
          \begin{itemize}
          \item skip the ``Use of Taylor series'' material \dots we'll get to it later
          \end{itemize}
      \item \emph{read} section 5.3 in the textbook
          \begin{itemize}
-         \item you can safely skip the material on ``Telephone wires'' (a boundary value problem \dots not in Math 302)
+         \item you can safely skip the material on ``Telephone wires'' (boundary value problems are not covered in Math 302)
          \end{itemize}
-     \item \emph{do} the WebAssign exercises for section 5.3, which include some problems from 4.10
-     \item compare Mini-Project 3 to these slides \dots different but some overlap of ideas
-     \end{itemize}
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}{expectations}
-
-to learn this material, just listening to a lecture is \emph{not} enough
-     \begin{itemize}
-     \item \emph{read} section 5.1 in the textbook
-         \begin{itemize}
-         \item material on ``double spring systems'' (p.~201) can be skipped
-         \item while I discussed electrical circuits in these slides, I will not ask about it on quizzes or exams
-         \end{itemize}
-     \item do Homework 5.1
+     \item take the whole thing seriously by going and finding some good youtube videos etc. on ODE simulations
+     \item do Homework 5.3
      \end{itemize}
 \end{frame}
 
 \end{document}
-
