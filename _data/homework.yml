@@ -1,6 +1,10 @@
 semester: Fall 2023
 home: assets/homework/F23
 homework:
+- name: 5.3
+  due: 11:59pm Sat 11/4
+  override: exercises5-3.pdf
+  comment: I greatly improved the book's exercises.
 - name: 5.1 part II
   readsection: 5.1
   due: 11:59pm Mon 10/30
