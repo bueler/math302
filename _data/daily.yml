@@ -1,8 +1,13 @@
 semester: Fall 2023
 daily:
-- name: Friday 27 October
+- name: Wednesday 1 November
+  description: Quiz 4; Section 6.1
+  slides: assets/slides/F23/6-1.pdf
+- name: Monday 30 October
   description: Section 5.3 (and bit of 4.10)
   slides: assets/slides/F23/5-3.pdf
+- name: Friday 25 October
+  description: no new material
 - name: Wednesday 25 October
   description: no new material
 - name: Monday 23 October
