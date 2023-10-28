@@ -7,12 +7,12 @@ daily:
   description: Section 5.3 (and bit of 4.10)
   slides: assets/slides/F23/5-3.pdf
 - name: Friday 25 October
-  description: no new material
+  description: no new slides
 - name: Wednesday 25 October
-  description: no new material
-- name: Monday 23 October
   description: Section 5.1
   slides: assets/slides/F23/5-1.pdf
+- name: Monday 23 October
+  description: no new slides
   worksheet: assets/worksheets/F23/23oct.pdf
   solutions: assets/worksheets/F23/solns/23oct.jpg
 - name: Friday 20 October
@@ -24,17 +24,17 @@ daily:
   description: Section 4.2
   slides: assets/slides/F23/4-2.pdf
 - name: Friday 13 October
-  description: no new material
+  description: no new slides
 - name: Wednesday 11 October
   description: Quiz 3; Section 4.3
   slides: assets/slides/F23/4-3.pdf
 - name: Monday 9 October
-  description: no new material
+  description: no new slides
 - name: Friday 6 October
   description: Section 4.1
   slides: assets/slides/F23/4-1.pdf
 - name: Wednesday 4 October
-  description: no new material
+  description: no new slides
 - name: Monday 2 October
   description: Section 3.2
   slides: assets/slides/F23/3-2.pdf
@@ -49,7 +49,7 @@ daily:
   description: Section 2.6
   slides: assets/slides/F23/2-6.pdf
 - name: Friday 22 September
-  description: no new material
+  description: no new slides
 - name: Wednesday 20 September
   description: Section 2.4
   slides: assets/slides/F23/2-4.pdf
@@ -59,7 +59,7 @@ daily:
   description: Section 2.3
   slides: assets/slides/F23/2-3.pdf
 - name: Friday 15 September
-  description: no new material
+  description: no new slides
 - name: Wednesday 13 September
   description: Quiz 1
 - name: Monday 11 September
@@ -84,4 +84,3 @@ daily:
 #  more: x
 #  mfile: x
 #  image: x
-
