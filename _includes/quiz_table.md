@@ -12,6 +12,11 @@
                 <td>sections: {{ quiz.sections }}</td>
             </tr>
             {% endif %}
+            {% if quiz.blank %}
+            <tr>
+                <td><a href="{{ data.home }}/{{ quiz.blank }}">blank</a></td>
+            </tr>
+            {% endif %}
         </table>
     </td>
 </tr>
