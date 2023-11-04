@@ -2,15 +2,15 @@ semester: Fall 2023
 home: assets/homework/F23
 homework:
 - name: 6.2
-  due: 11:59pm Sat 11/11
+  due: 11:59pm Mon 11/13 (updated)
   correct: 4, 8, 20
   complete: 1, 3, 7, 19, 21, 26
 - name: 6.1
-  due: 11:59pm Mon 11/6
+  due: 11:59pm Sat 11/11 (updated)
   correct: 2, 8, 12, 26, 32
   complete: 1, 7, 13, 15, 19, 27, 33
 - name: 5.3
-  due: 11:59pm Sat 11/4
+  due: 11:59pm Mon 11/6 (updated)
   override: exercises5-3.pdf
   comment: I greatly improved the book's exercises.
 - name: 5.1 part II
