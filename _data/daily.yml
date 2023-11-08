@@ -1,6 +1,9 @@
 semester: Fall 2023
 daily:
-- name: Monday 10 November
+- name: Wednesday 15 November
+  description: Quiz 5; Section 7.2
+  slides: assets/slides/F23/7-2.pdf
+- name: Monday 13 November
   description: Section 7.1
   slides: assets/slides/F23/7-1.pdf
 - name: Friday 10 November
