@@ -7,7 +7,8 @@ daily:
   description: Section 7.1
   slides: assets/slides/F23/7-1.pdf
 - name: Friday 10 November
-  description: no new material
+  description: no new slides
+  worksheet: assets/worksheets/F23/10nov.pdf
 - name: Wednesday 8 November
   description: Section 6.2
   slides: assets/slides/F23/6-2.pdf

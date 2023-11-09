@@ -65,7 +65,7 @@
 \newcommand{\ds}{\displaystyle}
 
 \doclabel{Math F302 Worksheet}
-\docdate{23 October 2023}
+\docdate{10 November 2023}
 
 
 \begin{document}
@@ -78,9 +78,9 @@
 
 \vspace{-20mm}
 
-%\def\BEAVER{}
+\def\BEAVER{}
 %\def\MOOSE{}
-\def\TURTLE{}
+%\def\TURTLE{}
 
 \ifdefined\BEAVER
 \hfill \includegraphics[height=30mm]{figs/beaver.jpg}
@@ -92,20 +92,24 @@
 \fi
 \fi
 
-\vspace{-6mm}
+\vspace{-10mm}
 \noindent
-Team effort! 
+\fbox{
+{\footnotesize
+Team effort!  Find at least the first \emph{five} coefficients ($c_0,c_1,c_2,c_3,c_4$).}
+}
 
+\medskip
 \ifdefined\BEAVER
 \noindent Find the solution of the ODE IVP by an appropriate power series:
-    $$y' + (x-1) y = x^2, \quad y(1) = 2$$
+    $$y' + (x-1) y = 3, \quad y(1) = 2$$
 \else
 \ifdefined\MOOSE
-\noindent Find the general solution by a power series about the ordinary point $x=0$:
-    $$(x+1) y'' + y' + y = 0$$
+\noindent Use the power series method to solve the initial value problem:
+    $$(x+1) y'' + y = 0, \quad y(0)=0, \, y'(0)=1$$
 \else
 \noindent Use the power series method to solve the initial value problem:
-    $$\ds y'' + (x+1)  y = 0, \quad y(0)=1, \, y'(0)=0$$
+    $$y'' + (x+1)  y = 0, \quad y(0)=1, \, y'(0)=0$$
 \fi
 \fi
 \vfill
