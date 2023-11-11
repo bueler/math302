@@ -16,6 +16,7 @@ quizzes:
 - name: Quiz 4
   date: Wednesday 1 November
   sections: 4.2, 4.4, 5.1
+  blank: quiz4.pdf
 - name: Quiz 5
   date: Wednesday 15 November
   sections: 5.3, 6.1, 6.2
