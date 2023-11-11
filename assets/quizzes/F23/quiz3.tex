@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1.2in, bottom=0.75in, left=1in, right=1in, headheight=1.0in, headsep=0pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=middle, xlabel={$x$}, ylabel={$y$}}}
+\pgfplotsset{compat=1.16}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,bm,array,multicol,enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Commands to set various header/footer components.
+\makeatletter
+\def\doctitle#1{\gdef\@doctitle{#1}}
+\doctitle{Use {\tt\textbackslash doctitle\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\doccourse#1{\gdef\@doccourse{#1}}
+\let\@doccourse\@empty
+\def\docscoring#1{\gdef\@docscoring{#1}}
+\let\@docscoring\@empty
+\def\docversion#1{\gdef\@docversion{#1}}
+\let\@docversion\@empty
+\makeatother
+
+% Headers and footers layout.
+\makeatletter
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clears all headers/footers.
+\lhead{\emph{\@doctitle\hfill\@docdate} \medskip
+\ifnum \value{page} > 1\relax\else\\
+\emph{Name: \rule{3.5in}{1pt}\hfill \@docscoring}
+\fi}
+
+\rfoot{\emph{\@docversion}}
+\lfoot{\emph{\@doccourse}}
+\cfoot{\emph{\thepage}}
+\renewcommand{\headrulewidth}{0pt}%
+\makeatother
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+% A problem is a section-like command. Use \problem{5} for a problem worth 5 points.
+\newcounter{probcount}
+\newcounter{subprobcount}
+\setcounter{probcount}{0}
+
+\newcommand{\problem}[1]{%
+\par
+\addvspace{4pt}%
+\setcounter{subprobcount}{0}%
+\stepcounter{probcount}%
+\makebox[0pt][r]{\emph{\arabic{probcount}.}\hskip1ex}\emph{[#1 points]}\hskip1ex}
+
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+
+% Subproblems are an enumerate-like environment with a consistent
+% numbering scheme.  Use \begin{subproblems}\item...\item...\end{subproblems}
+\newenvironment{subproblems}{%
+\begin{enumerate}[itemindent=8pt,leftmargin=0pt]%
+\setcounter{enumi}{\value{subprobcount}}%
+\renewcommand{\labelenumi}{\emph{\textsl{\alph{enumi})}} \,}%
+}%
+{%
+\setcounter{subprobcount}{\value{enumi}}%
+\end{enumerate}%
+}
+
+% Blanks for answers in normal and math mode.
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\mblank}[1]{\underline{\hspace{#1}}}
+\def\emptybox(#1,#2){\framebox{\parbox[c][#2]{#1}{\rule{0pt}{0pt}}}}
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\threeopts}{{\small \hspace{-6mm} $\begin{matrix} \text{\textsc{converges}} \\ \text{\textsc{absolutely}} \end{matrix}$ \qquad\qquad $\begin{matrix} \text{\textsc{converges}} \\ \text{\textsc{conditionally}} \end{matrix}$ \qquad\qquad \textsc{diverges}} \bigskip}
+
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+
+\newcommand{\bT}{\mathbf{T}}
+
+\newcommand{\grad}{\nabla}
+\newcommand{\Div}{\nabla\cdot}
+
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+\newcommand{\vv}[2]{\mathrm{\left<#1,#2\right>}}
+\newcommand{\vvv}[3]{\mathrm{\left<#1,#2,#3\right>}}
+
+
+\doctitle{\hspace{-6mm} Math 302 Differential Equations: \,{\large Quiz 3}}
+\docdate{11 October, 2023}
+\doccourse{}
+\docversion{}
+\docscoring{\fbox{{\LARGE \strut}\hspace{0.8in} / 25}}
+
+
+\begin{document}
+25 minutes maximum.  No aids (book, calculator, etc.) are permitted.  Show all work and use proper notation for full credit.  Answers should be in reasonably-simplified form.  25 points possible.
+
+% like built from 3.1 #20 (not assigned)
+\problem{9}  The rate at which an object cools depends on its exposed surface area $S$, among other things.  We can include this effect in Newton's law of cooling:
+	$$\frac{dT}{dt} = k S (T_m-T).$$
+Here $k$, $S$, and $T_m$ are all constant, and $k$ and $S$ are positive.
+
+\begin{subproblems}
+\item Find the general solution $T(t)$.
+\vfill
+
+\item Consider water bottles with water at initial temperature $10^\circ$ C which are put outside when it is winter in Fairbanks, say at $-20^\circ$ C.  Use this information to give an updated formula $T(t)$.  (\textsl{Hint.  Your formula will still have constants $k$ and $S$ unknown.})
+\vspace{2.0in}
+\end{subproblems}
+
+
+\clearpage\newpage
+% from 2 October worksheet, and section 3.2
+\problem{4}  Compute and simplify the following integral: \quad $\ds \int \frac{dz}{z(a-bz)}$
+\vfill
+
+% exactly 4.1 #17 (assigned)
+\problem{4}  Determine whether the following set of functions is linearly-independent on the interval $(-\infty,\infty)$:
+	$$f_1(x) = 5, \quad f_2(x) = \cos^2 x, \quad f_3(x) = \sin^2 x$$
+\vspace{3.0in}
+
+
+\clearpage\newpage
+% exactly 4.1 #23 (assigned), structured in parts
+\problem{8}  Consider this differential equation, and these functions:
+	$$y'' - y' - 12 y = 0; \qquad e^{-3x}, \quad e^{4x}$$
+
+\begin{subproblems}
+\item Verify that the given functions are solutions of the differential equation.
+\vfill
+
+\item Show that they form a fundamental set of solutions.
+\vfill
+
+\item Form the general solution.
+\vspace{1.0in}
+\end{subproblems}
+
+
+\clearpage\newpage
+% 2.2 example 3
+\noindent \emph{Extra Credit. [1 point]} \, Returning to your answer to problem \textbf{1 b)} on the first page, show that the time it takes to reach the freezing point for the water in the bottles ($0^\circ$ C) is inversely proportional to the surface area of the bottle, all other things being equal.
+\vfill
+
+\noindent \hrule
+
+\bigskip
+\centerline{\footnotesize \textsc{extra space}}
+\vfill
+\end{document}

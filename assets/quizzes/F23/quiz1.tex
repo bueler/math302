@@ -1,0 +1,179 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1.2in, bottom=0.75in, left=1in, right=1in, headheight=1.0in, headsep=0pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=middle, xlabel={$x$}, ylabel={$y$}}}
+\pgfplotsset{compat=1.16}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,bm,array,multicol,enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Commands to set various header/footer components.
+\makeatletter
+\def\doctitle#1{\gdef\@doctitle{#1}}
+\doctitle{Use {\tt\textbackslash doctitle\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\doccourse#1{\gdef\@doccourse{#1}}
+\let\@doccourse\@empty
+\def\docscoring#1{\gdef\@docscoring{#1}}
+\let\@docscoring\@empty
+\def\docversion#1{\gdef\@docversion{#1}}
+\let\@docversion\@empty
+\makeatother
+
+% Headers and footers layout.
+\makeatletter
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clears all headers/footers.
+\lhead{\emph{\@doctitle\hfill\@docdate} \medskip
+\ifnum \value{page} > 1\relax\else\\
+\emph{Name: \rule{3.5in}{1pt}\hfill \@docscoring}
+\fi}
+
+\rfoot{\emph{\@docversion}}
+\lfoot{\emph{\@doccourse}}
+\cfoot{\emph{\thepage}}
+\renewcommand{\headrulewidth}{0pt}%
+\makeatother
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+% A problem is a section-like command. Use \problem{5} for a problem worth 5 points.
+\newcounter{probcount}
+\newcounter{subprobcount}
+\setcounter{probcount}{0}
+
+\newcommand{\problem}[1]{%
+\par
+\addvspace{4pt}%
+\setcounter{subprobcount}{0}%
+\stepcounter{probcount}%
+\makebox[0pt][r]{\emph{\arabic{probcount}.}\hskip1ex}\emph{[#1 points]}\hskip1ex}
+
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+
+% Subproblems are an enumerate-like environment with a consistent
+% numbering scheme.  Use \begin{subproblems}\item...\item...\end{subproblems}
+\newenvironment{subproblems}{%
+\begin{enumerate}[itemindent=8pt,leftmargin=0pt]%
+\setcounter{enumi}{\value{subprobcount}}%
+\renewcommand{\labelenumi}{\emph{\textsl{\alph{enumi})}} \,}%
+}%
+{%
+\setcounter{subprobcount}{\value{enumi}}%
+\end{enumerate}%
+}
+
+% Blanks for answers in normal and math mode.
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\mblank}[1]{\underline{\hspace{#1}}}
+\def\emptybox(#1,#2){\framebox{\parbox[c][#2]{#1}{\rule{0pt}{0pt}}}}
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\threeopts}{{\small \hspace{-6mm} $\begin{matrix} \text{\textsc{converges}} \\ \text{\textsc{absolutely}} \end{matrix}$ \qquad\qquad $\begin{matrix} \text{\textsc{converges}} \\ \text{\textsc{conditionally}} \end{matrix}$ \qquad\qquad \textsc{diverges}} \bigskip}
+
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+
+\newcommand{\bT}{\mathbf{T}}
+
+\newcommand{\grad}{\nabla}
+\newcommand{\Div}{\nabla\cdot}
+
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+\newcommand{\vv}[2]{\mathrm{\left<#1,#2\right>}}
+\newcommand{\vvv}[3]{\mathrm{\left<#1,#2,#3\right>}}
+
+
+\doctitle{Math 302 Differential Equations: \,{\large Quiz 1}}
+\docdate{13 September, 2023}
+\doccourse{}
+\docversion{}
+\docscoring{\fbox{{\LARGE \strut}\hspace{0.8in} / 25}}
+
+\begin{document}
+25 minutes maximum.  No aids (book, calculator, etc.) are permitted.  Show all work and use proper notation for full credit.  Answers should be in reasonably-simplified form.  25 points possible.
+
+% like 1.1 #33 (assigned), but with slight change to numbers
+\problem{4}  Find values of $m$ so that the function $y=e^{mx}$ is a solution of this differential equation:
+	$$y'' + 5 y' + 6 y = 0 \hspace{5.0in}$$
+\vfill
+
+% like 1.2 #31 a c (assigned); a is the same, b is easier, c asks question like c
+\problem{6}
+\begin{subproblems}
+\item Verify that $y=-1/(x+c)$ is a one-parameter family of solutions of the differential equation $y'=y^2$.
+\vfill
+
+\item Find the solution $y(x)$ of the initial value problem: \qquad $\ds y' = y^2, \quad y(1)=1$.
+\vfill
+
+\item What is the largest interval of definition $I$ for the solution in part \emph{\textsl{b)}}?
+\vspace{1.0in}
+\end{subproblems}
+
+
+\clearpage\newpage
+% exactly 1.1 #28 (not assigned)
+\problem{5}  Verify that
+    $$y(x) = e^{-x^2} + e^{-x^2} \int_0^x e^{t^2}\,dt$$
+is a solution to the differential equation $\ds \frac{dy}{dx} + 2 x y = 1$.
+\vfill
+
+% like 1.3 #17 (assigned), with simplified air resistance
+\problem{4}  Determine a differential equation for the (instantaneous) velocity $v(t)$ of a falling body of mass $m$ if air resistance is proportional to the velocity.  Assume the upward direction is positive.  (\textsl{Hints.  $ma=F$ where $F$ is the net force.  The only forces are the two shown in the figure.  Denote the acceleration of gravity by $g>0$.})
+
+\vspace{-1mm}
+\hfill \includegraphics[width=0.35\textwidth]{figs/einstein.jpg}
+\vspace{1.0in}
+
+
+\clearpage\newpage
+% like 1.2 #8 (#7 was assigned)
+\problem{6}  I claim that $x = c_1 \cos t + c_2 \sin t$ is a two-parameter family of solutions of the second-order differential equation $x'' + x = 0$.
+
+\begin{subproblems}
+\item Verify this claim.
+\vspace{2.0in}
+
+\item Find the solution of the initial value problem with $x(\pi/2)=0$ and $x'(\pi/2)=1$.
+\vfill
+\end{subproblems}
+
+% fair because I gave such an example in class
+\noindent \emph{Extra Credit. [1 point]} \, Write down a differential equation which does not have any real solutions.  Provide a one-sentence explanation of why it has no solutions.  (\textsl{Hint.  Do not be limited by normal form $dy/dx = f(x,y)$.})
+\vspace{2.0in}
+
+\clearpage\newpage
+\noindent \hrule
+
+\bigskip
+\centerline{\footnotesize \textsc{extra space}}
+\vfill
+\end{document}
