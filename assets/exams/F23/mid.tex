@@ -1,0 +1,199 @@
+\documentclass[11pt]{amsart}
+%\pagestyle{empty} 
+\setlength{\topmargin}{-0.5in} % usually -0.25in
+\addtolength{\textheight}{1.2in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.95in}
+\addtolength{\evensidemargin}{-0.95in}
+\addtolength{\textwidth}{1.9in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amssymb,xspace}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+
+\newtheorem*{lem*}{Lemma}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\bbf}{\mathbf{f}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\Log}{\operatorname{Log}}
+
+\newcommand{\grad}{\nabla}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.} }
+\newcommand{\pts}[1]{(\emph{#1 pts})}
+
+\newcommand{\probpts}[2]{\prob{#1} \pts{#2} \quad}
+\newcommand{\ppartpts}[2]{\textbf{(#1)} \pts{#2} \quad}
+\newcommand{\epartpts}[2]{\medskip\noindent \textbf{(#1)} \pts{#2} \quad}
+
+\newcommand{\boxy}[1]{\fbox{\Huge \strut \hspace{#1mm} \strut}}
+\newcommand{\boxycontent}[2]{\fbox{\quad {\large #2} {\Huge \strut \hspace{#1mm} \strut}}}
+
+
+\begin{document}
+\hfill \Large Name:\underline{\phantom{Ed Bueler really really long long long name}}
+\medskip
+
+\scriptsize \noindent Math 302 Differential Equations (Bueler) \hfill Wednesday 18 October 2023
+\medskip
+
+\LARGE\centerline{\textbf{Midterm Exam}}
+
+\smallskip
+\begin{quote}
+\large
+\textbf{In-class.  No book, notes, electronics, calculator, internet access, or communication with other people.  Please write your solution in the box if provided.  100 points possible.  \underline{65 minutes} maximum!}
+\end{quote}
+
+\normalsize
+
+\thispagestyle{empty}
+
+% 2.2 #6 essentially
+\probpts{1}{6}  Solve the differential equation by separation of variables: \quad $\ds \frac{dy}{dx} - 2 x y^2 = 0$
+\vfill
+
+\hfill $\boxycontent{80}{$y(x)=$}$
+
+% Quiz 1 #2
+\probpts{2}{6}  Verify that $y(t) = 1 / (c - t)$ is a one-parameter family of solutions of the differential equation \quad $\ds \frac{dy}{dt} = y^2$.
+\vfill
+
+
+\clearpage
+\newpage
+% 2.4 #3 essentially
+\probpts{3}{15}  Determine whether the differential equation is exact.  If it is exact, solve it and write the solution in the box: \quad {\huge \strut}$\ds \left(8 y^3 - 4x\right) \frac{dy}{dx} = 5x + 4y$
+\vfill
+
+\hfill $\boxy{90}$
+
+
+\clearpage
+\newpage
+% 2.3 #29
+\probpts{4}{15}  Solve the initial value problem, assuming $L,R,E,i_0$ are constants:
+
+\medskip
+\hspace{19mm} $\ds L\frac{di}{dt} + R i = E$, \quad $i(0)=i_0$
+\vfill
+
+\hfill $\boxycontent{90}{$i(t)=$}$
+
+
+\clearpage
+\newpage
+% update of Quiz 3 #4
+\prob{5}  \ppartpts{a}{8}  Find the general solution: \quad $\ds y'' - y' - 12 y = 0$
+\vfill
+
+\hfill $\boxycontent{80}{$y(x)=$}$
+
+\bigskip
+\epartpts{b}{8}  Show that your general solution in part \textbf{(a)} is built from a fundamental set of solutions.
+\vfill
+
+
+\clearpage
+\newpage
+% Quiz 2 #1,2
+\prob{6}  \ppartpts{a}{5}  The direction field of the following differential equation is shown: \quad $\ds \frac{dx}{dt} = 1 + t x$
+
+For each of the following points, sketch an approximate solution curve.
+
+\medskip
+\begin{itemize}
+\item $x(0)=-1$
+
+\medskip
+\item $x(-2)=2$
+\end{itemize}
+
+\vspace{-10mm}
+\hfill \includegraphics[width=0.7\textwidth]{figs/xtdirfield.png}
+
+\bigskip
+\epartpts{b}{8}  Find the general solution of the differential equation in part \textbf{(a)}.  You may write the solution in integral form if you do not know how to do an integral.
+\vfill
+
+\hfill $\boxycontent{90}{$x(t)=$}$
+
+
+\clearpage
+\newpage
+\prob{7}  \ppartpts{a}{5}  Newton's law of cooling/warming says that the rate of change of an object's temperature is proportional to the difference between its temperature and a constant ambient temperature.  Write this differential equation, a model for the temperature $T(t)$.  (\emph{Hint.  This model has two constants.})
+
+\vspace{5mm}
+
+\hfill $\boxy{90}$ \phantom{lkadjsf asdf adskfj}
+
+\bigskip
+\epartpts{b}{5}  Find the general solution of the differential equation in part \textbf{(a)}.
+\vfill
+
+\hfill $\boxycontent{90}{$T(t)=$}$
+
+\bigskip
+\epartpts{c}{5}  A thermometer---\emph{it is the object here}---is initially at room temperature $20^\circ$ C.  It is put in boiling water at $100^\circ$ C.  After 2 seconds the thermometer reads $60^\circ$ C.  What is the constant of proportionality in the above model?
+\vfill
+\hfill $\boxy{60}$
+
+
+\clearpage
+\newpage
+% like 4.3 #16
+\prob{8}  \ppartpts{a}{7}  Find the general solution of this third-order, constant-coefficient, homogeneous, and linear differential equation: \quad {\LARGE \strut} {\large $\ds y''' + y' = 0$}
+\vfill
+
+\hfill $\boxycontent{80}{$y(x)=$}$
+
+\bigskip
+\epartpts{b}{7}  The general solution in part \textbf{(a)} is a linear combination of three specific functions $f_1(x),f_2(x),f_3(x)$.  State these functions and then compute and simplify the Wronskian.
+\vfill
+
+\hfill $\boxycontent{60}{$W(f_1,f_2,f_3)=$}$
+
+
+\bigskip
+\probpts{Extra Credit}{3}  Find the general solution on $(0,\infty)$: \quad $x y'' - y' = 0$
+\vspace{2.0in}
+
+
+\clearpage
+\newpage
+\thispagestyle{empty}
+\begin{center}
+\small
+\textsc{blank space (full page)}
+\end{center}
+\vfill
+
+\end{document}

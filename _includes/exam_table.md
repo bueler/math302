@@ -51,6 +51,11 @@
             <td><a href="{{ data.home }}/{{ exam.samplesolutions }}">solutions to sample</a></td>
         </tr>
         {% endif %}
+        {% if exam.blank %}
+        <tr>
+            <td><a href="{{ data.home }}/{{ exam.blank }}">blank</a></td>
+        </tr>
+        {% endif %}
         {% if exam.solutions %}
         <tr>
             <td><a href="{{ data.home }}/{{ exam.solutions }}">solutions</a></td>
