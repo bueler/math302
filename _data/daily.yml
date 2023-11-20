@@ -1,5 +1,8 @@
 semester: Fall 2023
 daily:
+- name: Monday 27 November
+  description: Section 7.3
+  slides: assets/slides/F23/7-3.pdf
 - name: Monday 20 November
   description: over Zoom; Section 7.2
   slides: assets/slides/F23/7-2.pdf
