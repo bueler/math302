@@ -1,0 +1,374 @@
+\documentclass[dvipsnames,colorlinks]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+\usepackage{environ,fancyvrb,xspace,empheq}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,decorations.pathreplacing,fadings,positioning}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\grad}{\nabla}
+\newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+\newcommand\enumnum[1]{{\renewcommand{\insertenumlabel}{#1}%
+      \usebeamertemplate{enumerate item} \,}}
+
+
+\beamertemplatenavigationsymbolsempty
+
+\title{3.3 Systems of first-order ODEs \\ are models of everything}
+
+\subtitle{a lecture for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{Fall 2023}
+
+
+\usetheme{Pittsburgh}
+
+
+\begin{document}
+
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+\end{frame}
+
+
+\begin{frame}{first-order systems}
+
+\begin{itemize}
+\item a \emph{system of two first-order equations}:
+\begin{align*}
+\frac{dx}{dt} &= f(t,x,y) \\
+\frac{dy}{dt} &= g(t,x,y)
+\end{align*}
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item the solution is the pair of functions $x(t),y(t)$
+    \item we say system is \emph{coupled} if $f$ depends on $y$ or $g$ depends on $x$
+    \end{itemize}
+
+\item $f$ and $g$ can be any formulas; here's a silly example:
+
+\vspace{-3mm}
+\scriptsize
+\begin{align*}
+\frac{dx}{dt} &= t^5 + x^6 + y^7 \\
+\frac{dy}{dt} &= \arctan(y + \sin(x + \cos(t)))
+\end{align*}
+\normalsize
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{easily-solvable example}
+
+\begin{itemize}
+\item \emph{example 1.}  find the general solution to
+\begin{align*}
+\frac{dx}{dt} &= - 2 x\\
+\frac{dy}{dt} &= x - y
+\end{align*}
+\end{itemize}
+
+\noindent \emph{solution.}
+
+\vspace{45mm}
+\hfill \tiny \emph{special properties: (1) one-way coupled and (2) linear and (3) homogeneous}
+\end{frame}
+
+
+\begin{frame}{the system can be any size}
+
+\begin{itemize}
+\item notation for two equations:
+\footnotesize
+\begin{align*}
+\frac{dx_1}{dt} &= g_1(t,x_1,x_2) \\
+\frac{dx_2}{dt} &= g_2(t,x_1,x_2)
+\end{align*}
+\normalsize
+\item system of $n$ equations:
+\alert{
+\begin{align*}
+\frac{dx_1}{dt} &= g_1(t,x_1,x_2,\dots,x_n) \\
+\frac{dx_2}{dt} &= g_2(t,x_1,x_2,\dots,x_n) \\
+                &\qquad \vdots \\
+\frac{dx_n}{dt} &= g_n(t,x_1,x_2,\dots,x_n)
+\end{align*}
+}
+    \vspace{-2mm}
+    \begin{itemize}
+    \item solution is set of $n$ functions $x_1(t),x_2(t),\dots,x_n(t)$
+    \item in practical, modern fluids simulations: $n\ge 10^6$
+    \item such systems are also the physics in video games
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\emph{most} math models are systems of DEs}
+
+\begin{itemize}
+\item systems of ODEs are \alert{common}
+\item \dots because most real things involve
+
+    \begin{itemize}
+    \item \alert{many parts} \hfill $x_1,\dots,x_n$
+
+\medskip
+    \item \alert{changing in time} \hfill $\frac{dx_i}{dt}=g_i(\dots)$
+
+\medskip
+    \item \alert{interacting with each other} \hfill $g_i$ depends on $x_j$
+    \end{itemize}
+
+\bigskip
+\item everything is modeled this way:
+    \begin{enumerate}
+    \item populations of hares and lynx
+    \item the galaxy
+    \item your body
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{radioactive decay series}
+
+\begin{itemize}
+\item read about it in \S3.3
+
+    \begin{itemize}
+    \item often one-way coupled
+    \item simple cases can be easy/solvable (e.g.~example 1)
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figs/thorium232-decay}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{connected tanks}
+
+\begin{itemize}
+\item \emph{example 2.}  Three 100 gallon tanks have brine solutions and are connected as shown.  The tanks are always full.  $x_1(t),x_2(t),x_3(t)$ pounds of salt are in each tank, respectively.
+    \begin{itemize}
+    \item[(a)] What equations must hold for the flow rates $a,b,c,d,e,f$?
+    \item[(b)] Suppose $a=2,d=4,e=5$ in gal/min.  Compute $b,c,f$.
+    \item[(c)] Write a first-order ODE system for $x_1(t),x_2(t),x_3(t)$.
+    \end{itemize}
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figs/three-tanks}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{connected tanks, cont.}
+
+\noindent \emph{solution.}
+
+\vspace{45mm}
+
+\hfill \begin{minipage}{0.55\textwidth}
+\includegraphics[width=\textwidth]{figs/three-tanks}
+
+\scriptsize
+\hfill given $a=2,d=4,e=5$
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}{higher order equations become systems}
+
+\begin{itemize}
+\item \alert{any} individual (a.k.a.~\emph{scalar}) ODE can be turned into a first-order system
+\item for example, a damped nonlinear pendulum for $\theta(t)$:
+    $$m \ell \theta'' + \beta \theta' + mg \sin\theta = 0$$
+becomes this system:
+\begin{align*}
+x_1' &= x_2 \\
+x_2' &= -\left(\frac{\beta}{m\ell}\right) x_2 - \left(\frac{g}{\ell}\right) \sin(x_1)
+\end{align*}
+    \begin{itemize}
+    \item just name $\theta$ as $x_1$ and name $\theta'$ as $x_2$
+    \item \small solve for the derivative because that is the standard form
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{a 4th order ODE as a system}
+
+\begin{itemize}
+\item \emph{example 3.}  write the following fourth-order ODE as a first-order system:
+    $$y^{(4)} - 4 y''' + 7 y'' + 10 y' - y = \sin(3t)$$
+\end{itemize}
+
+\noindent \emph{solution.}
+
+\vspace{45mm}
+\end{frame}
+
+
+\begin{frame}{hares and lynx}
+
+\begin{itemize}
+\item consider this ``Lotka-Volterra'' model
+\begin{align*}
+\frac{dx}{dt} &= 0.7 x - 1.3 xy \\
+\frac{dy}{dt} &= xy - y
+\end{align*}
+
+\vspace{-2mm}
+    \begin{itemize}
+    \item $x(t)$ is the number of prey
+    \item $y(t)$ is the number of predators
+    \item constants merely representative
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+\hfill \includegraphics[width=0.6\textwidth]{figs/hares-lynx}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{like \S3.3 \#11}
+
+\begin{itemize}
+\item \emph{example 4.}  solve numerically for $0\le t\le 60$:
+\begin{align*}
+\frac{dx}{dt} &= 0.7 x - 1.3 xy & x(0)=1\\
+\frac{dy}{dt} &= xy - y  & y(0)=1
+\end{align*}
+\end{itemize}
+
+\vspace{-2mm}
+\noindent \emph{solution.}
+\begin{Verbatim}[fontsize=\small]
+>> f = @(t,z) [0.7*z(1)-1.3*z(1)*z(2); z(1)*z(2)-z(2)];
+>> [tt,zz] = ode45(f,0:.1:60,[1;1]);
+>> plot(tt,zz),  xlabel t
+>> legend('prey','predators')
+\end{Verbatim}
+
+
+\vspace{-7mm}
+\hfill \includegraphics[width=0.45\textwidth]{figs/lotka-time}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{\emph{phase plane}: a different view}
+
+\begin{itemize}
+\item a different view is to plot $x=z_1$ versus $y=z_2$
+
+\begin{Verbatim}[fontsize=\small]
+>> figure(2)
+>> plot(zz(:,1),zz(:,2),'k')   % curve in black
+>> xlabel('x(t)  prey'),  ylabel('y(t)  predators')
+\end{Verbatim}
+
+\bigskip
+\mbox{\includegraphics[width=0.44\textwidth]{figs/lotka-time}\quad \includegraphics[width=0.46\textwidth]{figs/lotka-phase}}
+\item we will get back to this view in Chapter 8
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{beyond: PDEs and pattern generation}
+
+\small
+\begin{itemize}
+\item consider this system of \emph{partial} differential equations:
+\scriptsize
+\begin{align*}
+\frac{\partial u}{\partial t} &= D_u \left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right) -uv^2+\phi(1-u) \\
+\frac{\partial v}{\partial t} &= D_v \left(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2}\right) + uv^2-(\phi+\kappa)v
+\end{align*}
+\small
+
+    \begin{itemize}
+    \item[$\circ$] $D_u,D_v,\phi,\kappa$ are all constants
+    \end{itemize}
+\item it is a model\footnote{\tiny J.~E.~Pearson (1993). \emph{Complex patterns in a simple system}, Science, 261, 189--192} of a reaction between two chemicals $u$ and $v$, similar to Lotka-Volterra (predator-prey) system
+\item and a model of how the leopard got her spots
+\end{itemize}
+
+\mbox{\includegraphics[width=0.23\textwidth]{figs/pattern0}\quad\includegraphics[width=0.23\textwidth]{figs/pattern2}\quad\includegraphics[width=0.23\textwidth]{figs/pattern4}\quad\includegraphics[width=0.23\textwidth]{figs/pattern6}}
+
+\bigskip
+\end{frame}
+
+
+
+\begin{frame}{ODE systems from circuits}
+
+\begin{itemize}
+\item the voltage $v(t)$ and current $i(t)$ in an electrical circuits changes in time
+\item each element in a circuit (network) has a little model:
+
+\begin{tabular}{lcc}
+resistor & $v = iR$ & \includegraphics[height=10mm,trim=0 3mm 0 -3mm]{figs/circuit-element-R} \\
+inductor & $v = L \frac{di}{dt}$ & \includegraphics[height=13mm,trim=0 5mm 0 -5mm]{figs/circuit-element-L} \\
+resistor & $v = \frac{q}{C}$ & \includegraphics[height=12mm,trim=0 5mm 0 -5mm]{figs/circuit-element-C}
+\end{tabular}
+
+\bigskip \bigskip
+\item \emph{Kirchoff's laws} allow you to assemble systems of ODEs from these elements
+\item building such models is the heart of electical engineering
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{a linear ODE system for an RLC circuit}
+
+\begin{itemize}
+\item I'll do an example, but you are \emph{not} responsible for doing this!
+\item \emph{example 5.} construct a system of first-order ODEs for the currents $i_1,i_2,i_3$ in this electical circuit
+
+\bigskip
+\includegraphics[width=0.3\textwidth]{figs/new-rlc-circuit}
+\end{itemize}
+
+\vspace{30mm}
+\end{frame}
+
+
+\begin{frame}{expectations}
+
+to learn this material, just listening to a lecture is \emph{not} enough
+     \begin{itemize}
+     \item \emph{read} section 3.3
+         \begin{itemize}
+             \item what are you actually responsible for?  \alert{be able to do computations like in examples 1--4}
+             \item \dots \emph{and} be able to do radioactive decay series examples
+
+             \hspace{4mm} ${\color{blue} \circ}$ read the section!
+         \item you are \emph{not} responsible for electrical circuits as in example 5
+         \end{itemize}
+     \item do Homework 3.3
+     \end{itemize}
+\end{frame}
+
+\end{document}
