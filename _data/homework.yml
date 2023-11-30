@@ -1,6 +1,10 @@
 semester: Fall 2023
 home: assets/homework/F23
 homework:
+- name: 3.3
+  due: 11:59pm Mon 12/4
+  correct: 2, 8, 11
+  complete: 1, 9, 17
 - name: 7.3
   due: 11:59pm Sat 12/2
   correct: 16, 26, 46, 66
