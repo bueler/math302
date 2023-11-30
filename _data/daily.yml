@@ -1,5 +1,8 @@
 semester: Fall 2023
 daily:
+- name: Monday 4 December
+  description: Section 8.1
+  slides: assets/slides/F23/8-1.pdf
 - name: Friday 1 December
   description: Section 3.3
   slides: assets/slides/F23/3-3.pdf
