@@ -17,6 +17,7 @@ You can use [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave]
 * [massspringplot.m](assets/codes/F23/massspringplot.m): Used for section 5.1 slides.
 * [dampingcases.m](assets/codes/F23/dampingcases.m): Used for section 5.1 slides.  Calls [massspringplot.m](assets/codes/F23/massspringplot.m).  Generates [this figure](assets/codes/F23/figs/dampingcases.pdf).
 * [pendmovie.m](assets/codes/F23/pendmovie.m):  Make a movie of a nonlinear pendulum, using [Matlab's ode45]().  Generates [this .gif movie](assets/codes/S19/pendmovie.gif).
+* [brines.m](assets/codes/F23/brines.m): Used for section 8.1 slides.  Generates [this figure](assets/slides/F23/figs/brines-xvt.pdf) and [this figure](assets/slides/F23/figs/brines-3d.pdf).
 
 ### Matlab: Numerical methods
 
