@@ -1,8 +1,10 @@
 semester: Fall 2023
 daily:
-- name: Wednesday 29 November
+- name: Friday 1 December
   description: Section 3.3
   slides: assets/slides/F23/3-3.pdf
+- name: Wednesday 29 November
+  description: no new material
 - name: Monday 27 November
   description: Section 7.3
   slides: assets/slides/F23/7-3.pdf
