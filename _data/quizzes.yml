@@ -20,5 +20,6 @@ quizzes:
 - name: Quiz 5
   date: Wednesday 15 November
   sections: 5.3, 6.1, 6.2
+  blank: quiz5.pdf
 - name: Quiz 6
   date: Wednesday 6 December
