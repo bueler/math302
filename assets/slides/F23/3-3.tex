@@ -229,7 +229,7 @@ x_2' &= -\left(\frac{\beta}{m\ell}\right) x_2 - \left(\frac{g}{\ell}\right) \sin
 \end{frame}
 
 
-\begin{frame}{hares and lynx}
+\begin{frame}{snowshoe hares and lynx}
 
 \begin{itemize}
 \item consider this ``Lotka-Volterra'' model
@@ -291,35 +291,8 @@ x_2' &= -\left(\frac{\beta}{m\ell}\right) x_2 - \left(\frac{g}{\ell}\right) \sin
 
 \bigskip
 \mbox{\includegraphics[width=0.44\textwidth]{figs/lotka-time}\quad \includegraphics[width=0.46\textwidth]{figs/lotka-phase}}
-\item we will get back to this view in Chapter 8
 \end{itemize}
 \end{frame}
-
-
-\begin{frame}{beyond: PDEs and pattern generation}
-
-\small
-\begin{itemize}
-\item consider this system of \emph{partial} differential equations:
-\scriptsize
-\begin{align*}
-\frac{\partial u}{\partial t} &= D_u \left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right) -uv^2+\phi(1-u) \\
-\frac{\partial v}{\partial t} &= D_v \left(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2}\right) + uv^2-(\phi+\kappa)v
-\end{align*}
-\small
-
-    \begin{itemize}
-    \item[$\circ$] $D_u,D_v,\phi,\kappa$ are all constants
-    \end{itemize}
-\item it is a model\footnote{\tiny J.~E.~Pearson (1993). \emph{Complex patterns in a simple system}, Science, 261, 189--192} of a reaction between two chemicals $u$ and $v$, similar to Lotka-Volterra (predator-prey) system
-\item and a model of how the leopard got her spots
-\end{itemize}
-
-\mbox{\includegraphics[width=0.23\textwidth]{figs/pattern0}\quad\includegraphics[width=0.23\textwidth]{figs/pattern2}\quad\includegraphics[width=0.23\textwidth]{figs/pattern4}\quad\includegraphics[width=0.23\textwidth]{figs/pattern6}}
-
-\bigskip
-\end{frame}
-
 
 
 \begin{frame}{ODE systems from circuits}
@@ -331,7 +304,7 @@ x_2' &= -\left(\frac{\beta}{m\ell}\right) x_2 - \left(\frac{g}{\ell}\right) \sin
 \begin{tabular}{lcc}
 resistor & $v = iR$ & \includegraphics[height=10mm,trim=0 3mm 0 -3mm]{figs/circuit-element-R} \\
 inductor & $v = L \frac{di}{dt}$ & \includegraphics[height=13mm,trim=0 5mm 0 -5mm]{figs/circuit-element-L} \\
-resistor & $v = \frac{q}{C}$ & \includegraphics[height=12mm,trim=0 5mm 0 -5mm]{figs/circuit-element-C}
+capacitor & $v = \frac{q}{C}$ & \includegraphics[height=12mm,trim=0 5mm 0 -5mm]{figs/circuit-element-C}
 \end{tabular}
 
 \bigskip \bigskip
