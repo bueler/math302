@@ -1,6 +1,10 @@
 semester: Fall 2023
 home: assets/homework/F23
 homework:
+- name: 8.4
+  due: 11:59pm Mon 12/11
+  override: exercises8-4.pdf
+  comment: I improved on the book's exercises.
 - name: 8.1
   due: 11:59pm Sat 12/9
   correct: 4, 12, 20, 22
