@@ -1,0 +1,44 @@
+
+\newcommand{\LL}[1]{\mathcal{L}\left\{#1\right\}}
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{align*}
+\LL{1} &= \frac{1}{s} \\
+\LL{t} &= \frac{1}{s^2} \\
+\LL{t^n} &= \frac{n!}{s^{n+1}} \\
+\LL{t^{-1/2}} &= \frac{\sqrt{\pi}}{s^{1/2}} \\
+\LL{t^{1/2}} &= \frac{\sqrt{\pi}}{2s^{3/2}} \\
+\LL{t^\alpha} &= \frac{\Gamma(\alpha+1)}{s^{\alpha+1}} \\
+\LL{e^{at}} &= \frac{1}{s-a} \\
+\LL{\sin(kt)} &= \frac{k}{s^2+k^2} \\
+\LL{\cos(kt)} &= \frac{s}{s^2+k^2} \\
+\LL{\sinh(kt)} &= \frac{k}{s^2-k^2} \\
+\LL{\cosh(kt)} &= \frac{s}{s^2-k^2}
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{align*}
+\LL{te^{at}} &= \frac{1}{(s-a)^2} \\
+\LL{t^n e^{at}} &= \frac{n!}{(s-a)^{n+1}} \\
+\LL{e^{at}\sin(kt)} &= \frac{k}{(s-a)^2+k^2} \\
+\LL{e^{at}\cos(kt)} &= \frac{s-a}{(s-a)^2+k^2} \\
+\LL{t\sin(kt)} &= \frac{2ks}{(s^2+k^2)^2} \\
+\LL{t\cos(kt)} &= \frac{s^2-k^2}{(s^2+k^2)^2} \\
+\LL{e^{at}f(t)} &= F(s-a) && \\
+\LL{\mathcal{U}(t-a)} &= \frac{e^{-as}}{s} \\
+\LL{f(t-a) \mathcal{U}(t-a)} &= e^{-as} F(s) \\
+\LL{g(t) \mathcal{U}(t-a)} &= e^{-as} \LL{g(t+a)} \\
+\LL{t^n f(t)} &= (-1)^n \frac{d^n}{ds^n}F(s)
+\end{align*}
+\end{minipage}
+
+\medskip
+\begin{center}
+\begin{minipage}[t]{0.7\textwidth}
+\begin{gather*}
+\LL{f^{(n)}(t)} = s^n F(s) - s^{n-1} f(0) - \dots - f^{(n-1)}(0) \\
+(f\ast g)(t) = \int_0^t f(\tau)g(t-\tau)\,d\tau \\
+\LL{f\ast g} = F(s) G(s)
+\end{gather*}
+\end{minipage}
+\end{center}

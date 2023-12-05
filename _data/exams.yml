@@ -13,6 +13,9 @@ exams:
 - name: Final Exam
   date: Wednesday 13 December
   info: <b>in class</b>, 10:15--12:15
+  sample: samplefinal.pdf
+  samplecomments: (ignore 9 ... not covered Fall 2023)
+  samplesolutions: samplefinalsolns.pdf
   #reviewguide: midreview.pdf
   #doc: finalessays.pdf
   #rubric: finalrubric.pdf
