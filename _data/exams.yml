@@ -9,10 +9,10 @@ exams:
   sample: samplemid.pdf
   samplesolutions: samplemidsolns.pdf
   blank: mid.pdf
+  solutions: midsolns.pdf
 - name: Final Exam
   date: Wednesday 13 December
   info: <b>in class</b>, 10:15--12:15
   #reviewguide: midreview.pdf
-  #solutions: midsolns.pdf
   #doc: finalessays.pdf
   #rubric: finalrubric.pdf
