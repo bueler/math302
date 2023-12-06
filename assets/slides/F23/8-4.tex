@@ -1,0 +1,326 @@
+\documentclass[dvipsnames,colorlinks]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+\usepackage{environ,fancyvrb,xspace,empheq}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,decorations.pathreplacing,fadings,positioning}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\grad}{\nabla}
+\newcommand{\ih}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jh}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\vF}{\boldsymbol{\vec{\textbf{F}}}}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+\newcommand\enumnum[1]{{\renewcommand{\insertenumlabel}{#1}%
+      \usebeamertemplate{enumerate item} \,}}
+
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bX}{\mathbf{X}}
+
+
+\beamertemplatenavigationsymbolsempty
+
+\title{8.4 The matrix exponential solves systems}
+
+\subtitle{a lecture for MATH F302 Differential Equations}
+
+\author{Ed Bueler, Dept.~of Mathematics and Statistics, UAF}
+
+\date{Fall 2023}
+
+
+\usetheme{Pittsburgh}
+
+
+\begin{document}
+
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+
+
+\begin{frame}
+\titlepage
+
+\centerline{\tiny for textbook: \, D. Zill, \emph{A First Course in Differential Equations with Modeling Applications}, 11th ed.}
+\end{frame}
+
+
+\begin{frame}{solving the simplest ODEs}
+
+\begin{itemize}
+\item \emph{simplest scalar ODE:}
+    $$y'=ay \qquad \text{has solution} \qquad y(t) = c e^{at}$$
+
+\bigskip
+\item \emph{simplest system of ODEs:}
+    $$\bX'=\bA \bX \qquad \text{has solution} \qquad \alert{\bX(t) = e^{\bA t}\bC}$$
+    \begin{itemize}
+    \item the last formula is \alert{new in \S8.4}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{what does $e^{\bA t}$ mean?}
+
+\begin{itemize}
+\item what does $e^{\bA t}$ mean?
+   \begin{itemize}
+   \item what does $e^{at}$ mean?
+       \begin{itemize}
+       \item[$\ast$] what does $e^x$ mean?  \alert{$\longleftarrow$ we know this one!}
+\begin{align*}
+e^x &= 1 + x + \frac{x^2}{2} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots = \sum_{k=0}^\infty \frac{x^k}{k!}
+\end{align*}
+       \end{itemize}
+   \end{itemize}
+
+\medskip
+\item \emph{definition.} if $\bA$ is a square matrix and $t$ is any number then
+\begin{align*}
+e^{\bA t} &= \bI + \bA t + \bA^2 \frac{t^2}{2} + \bA^3 \frac{t^3}{3!} + \bA^4 \frac{t^4}{4!} + \dots \\
+    &= \sum_{k=0}^\infty \bA^k \frac{t^k}{k!}
+\end{align*}
+   \begin{itemize}
+   \item note $\bA^0 = \bI$ makes sense if we believe $x^0=1$
+   \item also recall $0!=1$
+   \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like an exercise on Homework \S8.4}
+
+\begin{itemize}
+\item $e^{\bA t} = \bI + \bA t + \bA^2 \frac{t^2}{2} + \bA^3 \frac{t^3}{3!} + \bA^4 \frac{t^4}{4!} + \dots$
+
+\medskip
+\item \emph{example 1}.  use the above series to compute $e^{\bA t}$ and $e^{-\bA t}$, in simplified form, if
+    $$\bA = \begin{pmatrix} 3 & 0 \\ 0 & -1 \end{pmatrix}     \hspace{80mm}$$
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{like an exercise on Homework \S8.4}
+
+\begin{itemize}
+\item \emph{example 2}.  use the series definition to compute $e^{\bA t}$, in simplified form, if
+    $$\bA = \begin{pmatrix} 0 & 0 & 0 \\ 2 & 0 & 0 \\ -1 & 3 & 0 \end{pmatrix}     \hspace{80mm}$$
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{like an exercise on Homework \S8.4}
+
+\begin{itemize}
+\item \emph{example 3}.  use the series definition to compute $e^{\bA t}$, in simplified form, if
+    $$\bA = \begin{pmatrix} -3 & -3 & -3 \\ 1 & 1 & 1 \\ 2 & 2 & 2 \end{pmatrix}     \hspace{80mm}$$
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{last two were special}
+
+\begin{itemize}
+\item \emph{example 1} illustrates that \emph{diagonal} matrices are easy to exponentiate
+\item \emph{example 2} and \emph{example 3} had unusual matrices with the property that some power was the zero matrix:
+    $$\bA^k = \mathbf{0}$$
+\item but the above are not typical cases
+\item for most $\bA$:
+    \begin{itemize}
+    \item $e^{\bA t}$ has infinitely-many nonzero terms
+    \item the pattern is harder to see
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{like an exercise on Homework \S8.4}
+
+\begin{itemize}
+\item \emph{example 4}.  use the series definition to compute $e^{\bA t}$, in simplified form, if
+    $$\bA = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}     \hspace{80mm}$$
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{derivative of $e^{\bA t}$}
+
+\begin{itemize}
+\item \emph{fact 1.}
+    $$\alert{\frac{d}{dt}\left(e^{\bA t}\right) = \bA e^{\bA t}}$$
+\small
+\begin{proof}
+
+\vspace{-5mm}
+\footnotesize
+\begin{align*}
+\frac{d}{dt}\left(e^{\bA t}\right) &= \frac{d}{dt}\left(\bI + \bA t + \bA^2 \frac{t^2}{2} + \bA^3 \frac{t^3}{3!} + \bA^4 \frac{t^4}{4!} + \dots\right) \\
+    &= \mathbf{0} + \bA + \bA^2 \frac{2t}{2} + \bA^3 \frac{3 t^2}{3!} + \bA^4 \frac{4 t^3}{4!} + \dots \\
+    &= \bA \left(\bI + \bA t + \bA^2 \frac{t^2}{2} + \bA^3 \frac{t^3}{3!} + \dots\right) = \bA e^{\bA t}
+\end{align*}
+\end{proof}
+\normalsize
+
+\medskip
+\item \emph{fact 2.}  if $\bX(t) = e^{\bA t}\bC$ then $\bX'=\bA \bX$
+
+\medskip
+\item \emph{fact 3.}  if $\bX(t) = e^{\bA t}\bC$ then $\bX(0) = \bC$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{the matrix exponential solves systems}
+
+\noindent in summary:
+\begin{enumerate}
+\item for the ODE
+    $$\bX' = \bA \bX$$
+the general solution is
+    $$\bX(t) = e^{\bA t} \bC$$
+where $\ds \bC=\begin{pmatrix}c_1 \\ \vdots \\ c_n\end{pmatrix}$ is a vector of unknown constants
+\item for the ODE IVP
+    $$\bX' = \bA \bX, \qquad \bX(0)=\bX_0$$
+the solution is
+    $$\bX(t) = e^{\bA t} \bX_0$$
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{use a computer \dots}
+
+\begin{itemize}
+\item for the ODE IVP
+$$\bX' = \bA \bX, \qquad \bX(0)=\bC$$
+suppose you want the solution at time $t$:
+    $$\bX(T) = e^{\bA t} \bC$$
+
+\medskip
+\item with Matlab or Octave:
+\begin{Verbatim}[fontsize=\small]
+>> A = [...];            % enter square matrix A
+>> C = [...];            % enter column vector C
+>> t = ...               % set the time
+>> expm(A*t) * C         % bam! done!
+\end{Verbatim}
+
+\medskip
+\item \texttt{expm()} computes the matrix exponential
+    \begin{itemize}
+    \item be careful \dots \texttt{exp()} is \emph{not} what you want
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{\dots for fast numbers}
+
+\begin{itemize}
+\item \emph{example 5}.  solve the initial value problem for $x(2),y(2),z(2)$:
+\begin{align*}
+x' &= 2 x - 5 y + z & x(0)&=-2 \\
+y' &= - x + y + 3 z & y(0)&=0 \\
+z' &= x - 2 y - z   & z(0)&=3
+\end{align*}
+\end{itemize}
+
+\noindent \emph{solution.}
+\begin{Verbatim}[fontsize=\small]
+>> A = [2 -5 1; -1 1 3; 1 -2 -1];
+>> C = [-2; 0; 3];
+>> expm(A*2) * C
+ans =
+     -1227.9
+      68.564
+     -381.69
+\end{Verbatim}
+
+\medskip
+so: \quad $x(2)=-1227.9$, $y(2)=68.564$, $z(2)=-381.69$
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{can you check it?}
+
+\begin{itemize}
+\item what tool would help us quickly check previous slide result?
+    \begin{itemize}
+    \item consider all the tools in the whole course \dots
+    \end{itemize}
+\item \emph{answer.}  the most general tool is \alert{numerical approximation}
+
+\bigskip
+\item \emph{example 5, cont.}  check the solution on the previous slide
+\end{itemize}
+
+\noindent \emph{solution.}
+\begin{Verbatim}[fontsize=\small]
+>> f = @(t,U) [2*U(1)-5*U(2)+U(3); ...
+               -U(1)+U(2)+3*U(3); ...
+               U(1)-2*U(2)-U(3)];
+>> [tt,UU] = ode45(f,[0,2],[-2;0;3]);
+>> UU(end,:)
+ans =
+     -1227.9      68.565      -381.7
+\end{Verbatim}
+\end{frame}
+
+
+\begin{frame}{by-hand usage?}
+
+\begin{itemize}
+\item as long as we can compute $e^{\bA t}$ by hand, we can solve an ODE by hand using the matrix exponential
+\item \emph{example 6}.  use $\bX(t)=e^{\bA t}\bC$ to find the general solution of the given system
+    $$\bX' = \begin{pmatrix} 0 & 0 & 0 \\ 2 & 0 & 0 \\ -1 & 3 & 0 \end{pmatrix} \bX    \hspace{70mm}$$
+\end{itemize}
+
+\vspace{40mm}
+\end{frame}
+
+
+\begin{frame}{expectations}
+
+\begin{itemize}
+\item to learn this material, just listening to a lecture is \emph{not} enough
+     \begin{itemize}
+     \item \emph{read} section 8.4
+     \item \emph{read} and do Homework 8.4
+     \end{itemize}
+
+\item I hope you have learned something from this course!
+     \begin{itemize}
+     \item perhaps even found it interesting?
+     \item note that
+         \begin{itemize}
+         \item MATH 302 discrete mathematics
+         \item MATH 314 linear algebra
+         \item STAT 300 probability and statistics
+         \item MATH 265 introduction to mathematical proof
+         \end{itemize}
+         are courses of more-or-less comparable level to MATH 302
+     \item a mathematics minor requires calculus I,II,III \,\alert{$\checkmark$}, and three MATH courses at the 300/400 level (including MATH 265 and STAT 300 as special cases) \dots \,\alert{$\checkmark$ on one of those!}
+     \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
