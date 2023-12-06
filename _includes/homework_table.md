@@ -9,7 +9,7 @@
           <td>{{ homework.comment }}</td>
         </tr>
         <tr>
-          <td><a href="{{ data.home }}/{{ homework.override }}">Please do the problems on this (PDF).</a></td>
+          <td><a href="{{ data.home }}/{{ homework.override }}">Please do the problems on this PDF.</a></td>
         </tr>
       </table>
       {% else %}

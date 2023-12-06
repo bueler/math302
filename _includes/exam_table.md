@@ -48,7 +48,7 @@
         {% endif %}
         {% if exam.samplecomments %}
         <tr>
-            <td>&nbsp; &nbsp; &nbsp; &nbsp; {{ exam.samplecomments }}</td>
+            <td>&nbsp; &nbsp; {{ exam.samplecomments }}</td>
         </tr>
         {% endif %}
         {% if exam.samplesolutions %}
