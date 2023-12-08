@@ -13,6 +13,8 @@ exams:
 - name: Final Exam
   date: Wednesday 13 December
   info: <b>in class</b>, 10:15--12:15
+  sections: all previous, 4.4, 5.1, 6.1,
+  sectcont: 6.2, 7.1, 7.2, 3.3, 8.1, 8.4
   sample: samplefinal.pdf
   samplecomments: (ignore 9 ... not covered Fall 2023)
   samplesolutions: samplefinalsolns.pdf
